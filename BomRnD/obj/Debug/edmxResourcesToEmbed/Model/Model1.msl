@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gla43158_QLSXCW1ModelStoreContainer" CdmEntityContainer="gla43158_QLSXCW1Entities">
+    <EntitySetMapping Name="BOM_BomBtp">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomBtp">
+        <MappingFragment StoreEntitySet="BOM-BomBtp">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TenTiengTrung" ColumnName="TenTiengTrung" />
+          <ScalarProperty Name="MaBanVe" ColumnName="MaBanVe" />
+          <ScalarProperty Name="MaBTPTW" ColumnName="MaBTPTW" />
+          <ScalarProperty Name="MaBTPVN" ColumnName="MaBTPVN" />
+          <ScalarProperty Name="ChatLieu" ColumnName="ChatLieu" />
+          <ScalarProperty Name="QuyCach" ColumnName="QuyCach" />
+          <ScalarProperty Name="T" ColumnName="T" />
+          <ScalarProperty Name="W" ColumnName="W" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="UnitERP" ColumnName="UnitERP" />
+          <ScalarProperty Name="UnitSx" ColumnName="UnitSx" />
+          <ScalarProperty Name="TyLeChuyenDoi" ColumnName="TyLeChuyenDoi" />
+          <ScalarProperty Name="MaKeToanERP" ColumnName="MaKeToanERP" />
+          <ScalarProperty Name="MaPLLonERP" ColumnName="MaPLLonERP" />
+          <ScalarProperty Name="MaPLNhoERP" ColumnName="MaPLNhoERP" />
+          <ScalarProperty Name="MaPL4ERP" ColumnName="MaPL4ERP" />
+          <ScalarProperty Name="MaPLLonSx" ColumnName="MaPLLonSx" />
+          <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOM_BomNl">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomNl">
+        <MappingFragment StoreEntitySet="BOM-BomNl">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TenTiengTrung" ColumnName="TenTiengTrung" />
+          <ScalarProperty Name="ChatLieu" ColumnName="ChatLieu" />
+          <ScalarProperty Name="QuyCach" ColumnName="QuyCach" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="UnitERP" ColumnName="UnitERP" />
+          <ScalarProperty Name="UnitSx" ColumnName="UnitSx" />
+          <ScalarProperty Name="TyLeChuyenDoi" ColumnName="TyLeChuyenDoi" />
+          <ScalarProperty Name="MaKeToanERP" ColumnName="MaKeToanERP" />
+          <ScalarProperty Name="MaPLLonERP" ColumnName="MaPLLonERP" />
+          <ScalarProperty Name="MaPLNhoERP" ColumnName="MaPLNhoERP" />
+          <ScalarProperty Name="MaPL4ERP" ColumnName="MaPL4ERP" />
+          <ScalarProperty Name="MaPLLonSx" ColumnName="MaPLLonSx" />
+          <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOM_BomTp">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTp">
+        <MappingFragment StoreEntitySet="BOM-BomTp">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="TenTiengTrung" ColumnName="TenTiengTrung" />
+          <ScalarProperty Name="QuyCach" ColumnName="QuyCach" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="UnitERP" ColumnName="UnitERP" />
+          <ScalarProperty Name="UnitSx" ColumnName="UnitSx" />
+          <ScalarProperty Name="TyLeChuyenDoi" ColumnName="TyLeChuyenDoi" />
+          <ScalarProperty Name="MaKeToanERP" ColumnName="MaKeToanERP" />
+          <ScalarProperty Name="MaPLLonERP" ColumnName="MaPLLonERP" />
+          <ScalarProperty Name="MaPLNhoERP" ColumnName="MaPLNhoERP" />
+          <ScalarProperty Name="MaPL4ERP" ColumnName="MaPL4ERP" />
+          <ScalarProperty Name="MaPLLonSx" ColumnName="MaPLLonSx" />
+          <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOM_MaKeToanERP">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaKeToanERP">
+        <MappingFragment StoreEntitySet="BOM-MaKeToanERP">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOM_MaPL4ERP">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPL4ERP">
+        <MappingFragment StoreEntitySet="BOM-MaPL4ERP">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOM_MaPLLonERP">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLLonERP">
+        <MappingFragment StoreEntitySet="BOM-MaPLLonERP">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOM_MaPLNhoERP">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLNhoERP">
+        <MappingFragment StoreEntitySet="BOM-MaPLNhoERP">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BOM_Unit">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_Unit">
+        <MappingFragment StoreEntitySet="BOM-Unit">
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRole">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

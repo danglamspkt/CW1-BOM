@@ -4,8 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BomRnD"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" 
+        
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+    
+        DataContext="{StaticResource MainVM}"
+    
+        Name="mainWindow"
+    
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="800" Width="1500" Icon="/icon.png" WindowState="Maximized">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" 
+                               CommandParameter="{Binding ElementName=mainWindow}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Homedata}" 
+                               CommandParameter="{Binding ElementName=UCMain}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
         <TextBlock>dang lam spkt</TextBlock>
     </Grid>
