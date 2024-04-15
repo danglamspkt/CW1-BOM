@@ -22,6 +22,7 @@
         <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitE__6477ECF3" ManuallyRouted="false" />
         <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitS__656C112C" ManuallyRouted="false" />
         <AssociationConnector Association="gla43158_QLSXCW1Model.FK__Users__IdRole__04E4BC85" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_Image" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

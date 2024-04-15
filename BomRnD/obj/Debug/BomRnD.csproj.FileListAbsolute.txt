@@ -62,3 +62,6 @@ C:\WPF\CW1-BOM\BomRnD\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\LoginWindow.g.cs
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\LoginWindow.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\BomRnD_Content.g.cs
+C:\WPF\CW1-BOM\BomRnD\bin\Debug\BlurryControls.dll
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControl1\ControlBarBaseUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControl1\ControlBarBaseUC.baml

@@ -68,6 +68,15 @@
     <Property Name="MaPLNhoSx" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="BOM-Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar(max)" />
+    <Property Name="IDImage" Type="nvarchar(max)" />
+    <Property Name="Link" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="BOM-MaKeToanERP">
     <Key>
       <PropertyRef Name="MaHang" />
@@ -213,6 +222,7 @@
     <EntitySet Name="BOM-BomBtp" EntityType="Self.BOM-BomBtp" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-BomNl" EntityType="Self.BOM-BomNl" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-BomTp" EntityType="Self.BOM-BomTp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BOM-Image" EntityType="Self.BOM-Image" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-MaKeToanERP" EntityType="Self.BOM-MaKeToanERP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-MaPL4ERP" EntityType="Self.BOM-MaPL4ERP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-MaPLLonERP" EntityType="Self.BOM-MaPLLonERP" Schema="dbo" store:Type="Tables" />

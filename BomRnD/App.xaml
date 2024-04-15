@@ -8,7 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
 
-                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="Teal" SecondaryColor="Green" />
+                <materialDesign:BundledTheme BaseTheme="Light"  PrimaryColor="Teal" SecondaryColor="Green" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
 
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
@@ -17,6 +17,8 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
 
                 <ResourceDictionary Source="/ResourceXAML/MainResource.xaml"></ResourceDictionary>
+
+                <ResourceDictionary Source="pack://application:,,,/BlurryControls;component/Themes/Generic.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

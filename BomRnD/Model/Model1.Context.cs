@@ -35,5 +35,6 @@ namespace BomRnD.Model
         public virtual DbSet<BOM_Unit> BOM_Unit { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<BOM_Image> BOM_Image { get; set; }
     }
 }

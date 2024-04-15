@@ -26,6 +26,9 @@ namespace BomRnD.ViewModel
         private bool _checkbox;
         public bool checkbox { get => _checkbox; set { _checkbox = value; OnPropertyChanged(); } }
 
+        private Uri _BGSource;
+        public Uri BGSource { get => _BGSource; set { _BGSource = value; OnPropertyChanged(); } }
+
 
         public ICommand LoginCommand { get; set; }
         public ICommand PasswordChangedCommand { get; set; }
@@ -35,6 +38,8 @@ namespace BomRnD.ViewModel
         // mọi thứ xử lý sẽ nằm trong này
         public LoginViewModel()
         {
+            string uri = "https://drive.google.com/uc?id=" + DataProvider.Ins.DB.BOM_Image.Where(x => x.Id == 1).First().IDImage;
+            BGSource = new Uri(uri);
             IsLogin = false;
             Password = "";
             Username = BomRnD.Properties.Settings.Default.UserName;
@@ -64,8 +69,6 @@ namespace BomRnD.ViewModel
         {
             if (p == null)
                 return;
-
-
             string passEncode = MD5Hash(Base64Encode(Password));
 
             var account = DataProvider.Ins.DB.Users.Where(y => y.UserName == Username && y.Password == passEncode).Count();

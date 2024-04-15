@@ -136,5 +136,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="BOM_Image">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_Image">
+        <MappingFragment StoreEntitySet="BOM-Image">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="IDImage" ColumnName="IDImage" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

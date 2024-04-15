@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="gla43158_QLSXCW1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="gla43158_QLSXCW1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BOM-BomBtp">
           <Key>
             <PropertyRef Name="MaHang" />
@@ -72,6 +72,15 @@
           <Property Name="MaPLLonSx" Type="nvarchar(max)" />
           <Property Name="MaPLNhoSx" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="BOM-Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DisplayName" Type="nvarchar(max)" />
+          <Property Name="IDImage" Type="nvarchar(max)" />
+          <Property Name="Link" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="BOM-MaKeToanERP">
           <Key>
@@ -218,6 +227,7 @@
           <EntitySet Name="BOM-BomBtp" EntityType="Self.BOM-BomBtp" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BOM-BomNl" EntityType="Self.BOM-BomNl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BOM-BomTp" EntityType="Self.BOM-BomTp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOM-Image" EntityType="Self.BOM-Image" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BOM-MaKeToanERP" EntityType="Self.BOM-MaKeToanERP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BOM-MaPL4ERP" EntityType="Self.BOM-MaPL4ERP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BOM-MaPLLonERP" EntityType="Self.BOM-MaPLLonERP" Schema="dbo" store:Type="Tables" />
@@ -254,8 +264,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="gla43158_QLSXCW1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -521,7 +530,17 @@
             <End Role="UserRole" EntitySet="UserRole" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="BOM_Image" EntityType="gla43158_QLSXCW1Model.BOM_Image" />
         </EntityContainer>
+        <EntityType Name="BOM_Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -660,6 +679,16 @@
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOM_Image">
+            <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_Image">
+              <MappingFragment StoreEntitySet="BOM-Image">
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="IDImage" ColumnName="IDImage" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

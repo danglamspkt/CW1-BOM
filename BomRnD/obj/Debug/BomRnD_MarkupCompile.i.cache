@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\WPF\CW1-BOM\BomRnD\App.xaml
-3338219967
+4-2138683313
 2739969757
-24959868769
-44-2144321245
-LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;
+272427678
+45-1207771248
+LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControl1\ControlBarBaseUC.xaml;
 
-False
+True
 

@@ -262,5 +262,15 @@
       <End Role="UserRole" EntitySet="UserRole" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
+    <EntitySet Name="BOM_Image" EntityType="gla43158_QLSXCW1Model.BOM_Image" />
   </EntityContainer>
+  <EntityType Name="BOM_Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
