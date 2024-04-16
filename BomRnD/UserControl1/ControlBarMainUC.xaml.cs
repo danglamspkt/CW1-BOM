@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BomRnD.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,21 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BomRnD
+namespace BomRnD.UserControl1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ControlBarMainUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ControlBarMainUC : UserControl
     {
-        public MainWindow()
+        public ControlBarViewModel Viewmodel { get; set; }
+
+        public ControlBarMainUC()
         {
             InitializeComponent();
-        }
-
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-
+            this.DataContext = Viewmodel = new ControlBarViewModel();
         }
     }
 }

@@ -65,3 +65,5 @@ C:\WPF\CW1-BOM\BomRnD\obj\Debug\BomRnD_Content.g.cs
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\BlurryControls.dll
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControl1\ControlBarBaseUC.g.cs
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControl1\ControlBarBaseUC.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControl1\ControlBarMainUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControl1\ControlBarMainUC.baml

@@ -195,6 +195,9 @@
     <Compile Include="UserControl1\ControlBarBaseUC.xaml.cs">
       <DependentUpon>ControlBarBaseUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1\ControlBarMainUC.xaml.cs">
+      <DependentUpon>ControlBarMainUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -220,6 +223,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControl1\ControlBarBaseUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl1\ControlBarMainUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
