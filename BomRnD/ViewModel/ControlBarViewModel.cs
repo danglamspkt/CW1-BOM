@@ -25,7 +25,8 @@ namespace BomRnD.ViewModel
                 var w = window as Window;
                 if (w != null)
                 {
-                    w.Close();
+                    var check = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Quit app", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (check == MessageBoxResult.Yes) w.Close();
                 }
             }
             );

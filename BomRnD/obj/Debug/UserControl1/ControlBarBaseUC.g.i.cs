@@ -10,6 +10,7 @@
 //------------------------------------------------------------------------------
 
 using BomRnD.UserControl1;
+using DevExpress.Xpf.DXBinding;
 using MaterialDesignThemes.MahApps;
 using MaterialDesignThemes.Wpf;
 using MaterialDesignThemes.Wpf.Converters;

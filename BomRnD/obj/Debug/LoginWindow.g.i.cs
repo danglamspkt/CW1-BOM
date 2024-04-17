@@ -13,6 +13,7 @@ using BlurryControls.Controls;
 using BomRnD;
 using BomRnD.UserControl1;
 using BomRnD.ViewModel;
+using DevExpress.Xpf.DXBinding;
 using MaterialDesignThemes.MahApps;
 using MaterialDesignThemes.Wpf;
 using MaterialDesignThemes.Wpf.Converters;

@@ -1,30 +1,50 @@
-﻿<Window x:Class="BomRnD.MainWindow"
+﻿<Window xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BomRnD"
-        mc:Ignorable="d"      
+        xmlns:local="clr-namespace:BomRnD"      
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         
         
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"         
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        xmlns:uc="clr-namespace:BomRnD.UserControl1"
+    
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" 
+        xmlns:viewmodel="clr-namespace:BomRnD.ViewModel" 
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}" 
+        x:Class="BomRnD.MainWindow"
+        mc:Ignorable="d"         
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="{materialDesign:MaterialDesignFont}"
         
-        xmlns:uc="clr-namespace:BomRnD.UserControl1"
-    
         DataContext="{StaticResource MainVM}"
-    
-        Name="mainWindow"
+        
+        x:Name="mainWindow"
         Background="#262624"
         Foreground="#f2f2f2"
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="800" Width="1500" WindowState="Maximized">
+
+
+    <Window.Resources>
+        <Style x:Key="CustomColorMaterialDesign3NavigationListBoxItem"
+           TargetType="{x:Type ListBoxItem}"
+           BasedOn="{StaticResource MaterialDesign3.NavigationDrawerListBoxItem}">
+            <Setter Property="Width" Value="260" />
+            <Setter Property="Background" Value="#f2f2f2" />
+            <Setter Property="materialDesign:NavigationDrawerAssist.CornerRadius" Value="16" />
+            <Setter Property="materialDesign:NavigationDrawerAssist.IconSize" Value="30" />
+            <Setter Property="Height" Value="60" />
+            <Setter Property="Foreground" Value="#f25244" />
+        </Style>
+    </Window.Resources>
+
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -38,156 +58,198 @@
     </i:Interaction.Triggers>
 
 
-    <Window.Resources>
-        <Style x:Key="CustomColorMaterialDesign3NavigationListBoxItem"
-           TargetType="ListBoxItem"
-           BasedOn="{StaticResource MaterialDesign3.NavigationDrawerListBoxItem}">
-            <Setter Property="Width" Value="200" />
-            <Setter Property="Background" Value="#f2e205" />
-            <Setter Property="Foreground" Value="#f2f2f2" />
-        </Style>
-    </Window.Resources>
-
-
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <uc:ControlBarMainUC Tag="{Binding Title, ElementName=mainWindow}"></uc:ControlBarMainUC>
+            <uc:ControlBarMainUC Tag="{Binding Title, ElementName=mainWindow}"/>
         </Grid>
         <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            
             <Grid HorizontalAlignment="Left"
-                  Width="200">
+                  Width="auto">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Text="LUXSO" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32" FontFamily="Arial Black" Margin="20" Foreground="#f2f2f2"></TextBlock>
+                <TextBlock Grid.Row="0" Text="LUXSO" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32" FontFamily="Arial Black" Margin="20" Foreground="#f2f2f2"/>
                 <StackPanel Grid.Row="1">
-                    <Grid
-                        Width="200"
-                        Background="#262624">
-                        <Grid.RowDefinitions>
-                            <RowDefinition
-                                Height="auto" />
-                            <RowDefinition
-                                Height="*" />
-                        </Grid.RowDefinitions>
-                        <Button x:Name="DrawerFAB"
-                  Height="56"
-                  Margin="16,6,16,32"
-                  HorizontalContentAlignment="Left"
-                  materialDesign:ButtonAssist.CornerRadius="16"
-                  Background="{DynamicResource SecondaryHueMidBrush}"
-                  BorderThickness="0"
-                  DockPanel.Dock="Top"
-                  Foreground="{DynamicResource SecondaryHueMidBrushForeground}">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Width="24"
-                                       Height="24"
-                                       VerticalAlignment="Center"
-                                       Kind="Github" />
-                                <TextBlock Margin="20,0,0,0"
-                         VerticalAlignment="Center"
-                         FontSize="20"
-                         Text="Source Code" />
-                            </StackPanel>
-                        </Button>
-                        <ListBox
-                            Grid.Row="1"
-                            VerticalAlignment="Top"
-                            Foreground="#E8DEF8"
-                            SelectedIndex="0">
-
-                            
-
-                            <ListBoxItem>
-                                <ListBoxItem.Style>
-                                    <Style
-                                        TargetType="ListBoxItem"
-                                        BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
-                                            Value="Circle" />
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
-                                            Value="CircleOutline" />
-                                    </Style>
-                                </ListBoxItem.Style>
-                                <TextBlock
-                                    Text="Very Long Text Test"
-                                    TextWrapping="Wrap" />
-                            </ListBoxItem>
-                            <ListBoxItem Selected="ListBoxItem_Selected">
-                                <ListBoxItem.Style>
-                                    <Style
-                                        TargetType="ListBoxItem"
-                                        BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
-                                            Value="Triangle" />
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
-                                            Value="TriangleOutline" />
-                                    </Style>
-                                </ListBoxItem.Style>
-                                <TextBlock
-                                    Text="Test 1" />
-                            </ListBoxItem>
-                            <ListBoxItem>
-                                <ListBoxItem.Style>
-                                    <Style
-                                        TargetType="ListBoxItem"
-                                        BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
-                                            Value="Receipt" />
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
-                                            Value="ReceiptOutline" />
-                                    </Style>
-                                </ListBoxItem.Style>
-                                <TextBlock
-                                    Text="Test 2" />
-                            </ListBoxItem>
-                            <ListBoxItem>
-                                <ListBoxItem.Style>
-                                    <Style
-                                        TargetType="ListBoxItem"
-                                        BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
-                                            Value="Square" />
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
-                                            Value="SquareOutline" />
-                                    </Style>
-                                </ListBoxItem.Style>
-                                <TextBlock
-                                    Text="Test 3" />
-                            </ListBoxItem>
-                            <ListBoxItem>
-                                <ListBoxItem.Style>
-                                    <Style
-                                        TargetType="ListBoxItem"
-                                        BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
-                                            Value="Pentagon" />
-                                        <Setter
-                                            Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
-                                            Value="PentagonOutline" />
-                                    </Style>
-                                </ListBoxItem.Style>
-                                <TextBlock
-                                Text="Test 4" />
-                            </ListBoxItem>
-                        </ListBox>
-                    </Grid>
+                    <ListBox                        
+                        VerticalAlignment="Top"
+                        Foreground="#E8DEF8"
+                        SelectedIndex="{Binding SelectedIndex}"
+                        SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
+                        <ListBoxItem>
+                            <ListBoxItem.Style>
+                                <Style
+                                    TargetType="{x:Type ListBoxItem}"
+                                    BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
+                                        Value="Home" />
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
+                                        Value="HomeOutline" />
+                                </Style>
+                            </ListBoxItem.Style>
+                            <TextBlock
+                                Text="Trang chủ"
+                                FontSize="20"/>
+                        </ListBoxItem>
+                        <ListBoxItem Selected="ListBoxItem_Selected">
+                            <ListBoxItem.Style>
+                                <Style
+                                    TargetType="{x:Type ListBoxItem}"
+                                    BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
+                                        Value="PaletteSwatch" />
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
+                                        Value="PaletteSwatchOutline" />
+                                </Style>
+                            </ListBoxItem.Style>
+                            <TextBlock
+                                Text="BOM tổng hợp" 
+                                TextWrapping="Wrap"
+                                FontSize="20"/>
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <ListBoxItem.Style>
+                                <Style
+                                    TargetType="{x:Type ListBoxItem}"
+                                    BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
+                                        Value="LinkCircle" />
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
+                                        Value="LinkCircleOutline" />
+                                </Style>
+                            </ListBoxItem.Style>
+                            <TextBlock
+                                Text="BOM nguyên liệu" 
+                                FontSize="20"/>
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <ListBoxItem.Style>
+                                <Style
+                                    TargetType="{x:Type ListBoxItem}"
+                                    BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
+                                        Value="PackageVariant" />
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
+                                        Value="PackageVariantClosed" />
+                                </Style>
+                            </ListBoxItem.Style>
+                            <TextBlock
+                                Text="BOM linh kiện" 
+                                FontSize="20"/>
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <ListBoxItem.Style>
+                                <Style
+                                    TargetType="{x:Type ListBoxItem}"
+                                    BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
+                                        Value="RobotHappy" />
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
+                                        Value="RobotHappyOutline" />
+                                </Style>
+                            </ListBoxItem.Style>
+                            <TextBlock
+                                Text="BOM khác" 
+                                FontSize="20"/>
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <ListBoxItem.Style>
+                                <Style
+                                    TargetType="{x:Type ListBoxItem}"
+                                    BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.SelectedIcon"
+                                        Value="AccountWrench" />
+                                    <Setter
+                                        Property="materialDesign:NavigationDrawerAssist.UnselectedIcon"
+                                        Value="AccountWrenchOutline" />
+                                </Style>
+                            </ListBoxItem.Style>
+                            <TextBlock
+                                Text="Cài đặt" 
+                                FontSize="20"/>
+                        </ListBoxItem>
+                    </ListBox>                    
                 </StackPanel>
+                <StackPanel Grid.Row="2" Height="50">                 
+                    <TextBlock Grid.Row="2" Text="Đăng xuất" FontSize="20" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Height="40" Width="40"
+                                                 Foreground="White"
+                                                 Kind="Logout"
+                                                 Margin="0 0 10 -10"/>
+                    <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Foreground" Value="#f2f2f2"></Setter>
+                                <Setter Property="TextDecorations" Value="None"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="LightGray"></Setter>
+                                        <Setter Property="TextDecorations" Value="Underline"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseLeftButtonUp">
+                                <i:InvokeCommandAction Command="{Binding reloginCommand}" 
+                                   CommandParameter="{Binding ElementName=mainWindow}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <materialDesign:Card UniformCornerRadius="40" 
+                                     Background="#f2f2f2"
+                                     materialDesign:ElevationAssist.Elevation="Dp24"
+                                     Margin="20">
+                    <Grid x:Name="UCMain">
+                        
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+            
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <TextBlock Text="Xin chào"></TextBlock>
+                    <TextBlock Text="{Binding DisplayName}"></TextBlock>
+                </StackPanel>
+                
+                <Calendar Grid.Row="1" 
+                          Style="{StaticResource MaterialDesignCalendarPortrait}"
+                          materialDesign:CalendarAssist.IsHeaderVisible="False"
+                          Background="#262624" Foreground="#f2f2f2"
+                          Margin="0 20 0 20"
+                          VerticalAlignment="Bottom"/>
+
             </Grid>
         </Grid>
     </Grid>
