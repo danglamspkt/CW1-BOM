@@ -19,6 +19,10 @@ namespace BomRnD.Model
         public string UserName { get; set; }
         public string Password { get; set; }
         public int IdRole { get; set; }
+        public string ChucVu { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
+        public string IDHinhAnh { get; set; }
+        public string LinkHinh { get; set; }
     
         public virtual UserRole UserRole { get; set; }
     }

@@ -97,3 +97,15 @@ C:\WPF\CW1-BOM\BomRnD\bin\Debug\de\DevExpress.Xpf.Core.v21.2.resources.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\es\DevExpress.Xpf.Core.v21.2.resources.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\ja\DevExpress.Xpf.Core.v21.2.resources.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\ru\DevExpress.Xpf.Core.v21.2.resources.dll
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomNL\BomNLMainUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomNL\BomNLMainUC.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomKhac\BomKhacMainUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomLK\BomLKMainUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHMainUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlHome\HomeMainUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlSetting\SettingMainUC.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomKhac\BomKhacMainUC.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomLK\BomLKMainUC.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHMainUC.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlHome\HomeMainUC.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlSetting\SettingMainUC.baml

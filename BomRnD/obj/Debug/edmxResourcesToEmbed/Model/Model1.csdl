@@ -138,6 +138,10 @@
     <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IdRole" Type="Int32" Nullable="false" />
     <NavigationProperty Name="UserRole" Relationship="Self.FK__Users__IdRole__04E4BC85" FromRole="Users" ToRole="UserRole" />
+    <Property Name="ChucVu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="IDHinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LinkHinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK__BOM_BomBt__UnitE__6FE99F9F">
     <End Role="BOM_Unit" Type="Self.BOM_Unit" Multiplicity="0..1" />

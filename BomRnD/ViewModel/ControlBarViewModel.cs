@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -75,6 +76,7 @@ namespace BomRnD.ViewModel
             while (parent.Parent != null)
             {
                 parent = parent.Parent as FrameworkElement;
+
             }
 
             return parent;

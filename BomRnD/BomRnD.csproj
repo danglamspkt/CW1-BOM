@@ -175,7 +175,13 @@
     <Compile Include="Model\BOM_MaPLLonERP.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\BOM_MaPLLonSx.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\BOM_MaPLNhoERP.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BOM_MaPLNhoSx.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\BOM_Unit.cs">
@@ -209,8 +215,23 @@
     <Compile Include="UserControl1\ControlBarMainUC.xaml.cs">
       <DependentUpon>ControlBarMainUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomKhac\BomKhacMainUC.xaml.cs">
+      <DependentUpon>BomKhacMainUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomLK\BomLKMainUC.xaml.cs">
+      <DependentUpon>BomLKMainUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomNL\BomNLMainUC.xaml.cs">
       <DependentUpon>BomNLMainUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHMainUC.xaml.cs">
+      <DependentUpon>BomTHMainUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\HomeMainUC.xaml.cs">
+      <DependentUpon>HomeMainUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSetting\SettingMainUC.xaml.cs">
+      <DependentUpon>SettingMainUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
@@ -244,7 +265,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlBomKhac\BomKhacMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomLK\BomLKMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlBomNL\BomNLMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlHome\HomeMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlSetting\SettingMainUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -285,6 +326,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="UserControlHome\error 404.png" />
     <Resource Include="icon.png" />
     <Resource Include="LogoCSPS2.jpg" />
     <Resource Include="BackgroundLogin.JPG" />

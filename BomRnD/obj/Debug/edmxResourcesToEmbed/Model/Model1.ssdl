@@ -133,6 +133,10 @@
     <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Password" Type="nvarchar(max)" />
     <Property Name="IdRole" Type="int" Nullable="false" />
+    <Property Name="ChucVu" Type="nvarchar(max)" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="IDHinhAnh" Type="nvarchar(max)" />
+    <Property Name="LinkHinh" Type="nvarchar(max)" />
   </EntityType>
   <Association Name="FK__BOM-BomBt__UnitE__6FE99F9F">
     <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />

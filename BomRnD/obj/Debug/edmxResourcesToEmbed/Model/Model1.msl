@@ -128,6 +128,10 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="LinkHinh" ColumnName="LinkHinh" />
+          <ScalarProperty Name="IDHinhAnh" ColumnName="IDHinhAnh" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
