@@ -1,14 +1,14 @@
 ﻿
-FC:\WPF\CW1-BOM\BomRnD\App.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\LoginWindow.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\MainWindow.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\ResourceXAML\MainResource.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControl1\ControlBarBaseUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControl1\ControlBarMainUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlBomKhac\BomKhacMainUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKMainUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLMainUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHMainUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlHome\HomeMainUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlSetting\SettingMainUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\App.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\LoginWindow.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\MainWindow.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\ResourceXAML\MainResource.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControl1\ControlBarBaseUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControl1\ControlBarMainUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControlBomKhac\BomKhacMainUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControlBomLK\BomLKMainUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControlBomNL\BomNLMainUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControlBomTH\BomTHMainUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControlHome\HomeMainUC.xaml;;
+FC:\WPF\CW1\CW1-BOM\BomRnD\UserControlSetting\SettingMainUC.xaml;;
 

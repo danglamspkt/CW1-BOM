@@ -232,7 +232,7 @@
                                   HorizontalScrollBarVisibility="Auto"
                                   VerticalScrollBarVisibility="Auto">
                         <Grid x:Name="UCMain"
-                                    Margin="20"
+                                    Margin="15 5 15 5"
                                     Width="auto"
                                     Height="auto">
                             

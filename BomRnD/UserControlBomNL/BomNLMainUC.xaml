@@ -17,10 +17,20 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="80" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0"
+        <TextBlock Grid.Row="0"
+                   Text="BOM NGUYÊN LIỆU"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   FontSize="32"
+                   FontFamily="Arial"
+                   FontWeight="Bold"
+                   Margin="5"
+                   Foreground="#f2f2f2"></TextBlock>
+        <StackPanel Grid.Row="1"
                     Orientation="Horizontal">
             <materialDesign:Card Height="50"
                                  Width="150"
@@ -70,9 +80,8 @@
                                  Margin="10"
                                  UniformCornerRadius="15">
                 <StackPanel VerticalAlignment="Center">
-                    <ComboBox DisplayMemberPath="DisplayName"
-                              ItemsSource="{Binding PLNholist}"
-                              Text="{Binding MaPLNho, Mode=TwoWay}"
+                    <ComboBox ItemsSource="{Binding Seachlist}" 
+                              Text="{Binding MaTim, Mode=TwoWay}"
                               Foreground="Black"
                               FontWeight="Bold"
                               Margin="10 5 10 5"
@@ -80,9 +89,46 @@
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                     </ComboBox>
                 </StackPanel>
+            </materialDesign:Card>            
+                    
+            <TextBox  Text="{Binding TimKiem, Mode=TwoWay}"
+                              Foreground="Black"
+                              Background="White"
+                              FontSize="16"
+                              Height="50"
+                              Width="250"
+                              Style="{StaticResource MaterialDesignOutlinedTextBox}">                    
+            </TextBox>
 
-            </materialDesign:Card>
-                        
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    Background="Orange"
+                    Width="50"
+                    Height="50"
+                    Margin="10"
+                    Command="{Binding TimNLcommand}"
+                    CommandParameter="{Binding ElementName=BomNLData}">
+                <materialDesign:PackIcon Width="24"
+                                         Height="24"
+                                         Kind="Magnify" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    Background="Orange"
+                    Width="50"
+                    Height="50"
+                    Margin="10"
+                    Command="{Binding ThemNLcommand}"
+                    CommandParameter="{Binding ElementName=BomNLData}">
+                <materialDesign:PackIcon Width="24"
+                                         Height="24"
+                                         Kind="Plus" />
+            </Button>
+
+
         </StackPanel>
+        <WrapPanel x:Name="BomNLData"
+                   Grid.Row="2">
+            
+        </WrapPanel>
     </Grid>
 </UserControl>
