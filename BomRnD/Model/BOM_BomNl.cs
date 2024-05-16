@@ -14,6 +14,12 @@ namespace BomRnD.Model
     
     public partial class BOM_BomNl
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public BOM_BomNl()
+        {
+            this.BOM_BomTH = new HashSet<BOM_BomTH>();
+        }
+    
         public string MaHang { get; set; }
         public string DisplayName { get; set; }
         public string TenTiengTrung { get; set; }
@@ -29,11 +35,13 @@ namespace BomRnD.Model
         public Nullable<int> MaPL4ERP { get; set; }
         public string MaPLLonSx { get; set; }
         public string MaPLNhoSx { get; set; }
-        public string UserName { get; set; }
         public string IDImg { get; set; }
         public string LinkImg { get; set; }
+        public string UserName { get; set; }
     
         public virtual BOM_Unit BOM_Unit { get; set; }
         public virtual BOM_Unit BOM_Unit1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BOM_BomTH> BOM_BomTH { get; set; }
     }
 }

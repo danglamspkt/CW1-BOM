@@ -25,18 +25,20 @@ namespace BomRnD.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<BOM_BomBtp> BOM_BomBtp { get; set; }
-        public virtual DbSet<BOM_BomNl> BOM_BomNl { get; set; }
-        public virtual DbSet<BOM_BomTp> BOM_BomTp { get; set; }
         public virtual DbSet<BOM_MaKeToanERP> BOM_MaKeToanERP { get; set; }
         public virtual DbSet<BOM_MaPL4ERP> BOM_MaPL4ERP { get; set; }
         public virtual DbSet<BOM_MaPLLonERP> BOM_MaPLLonERP { get; set; }
         public virtual DbSet<BOM_MaPLNhoERP> BOM_MaPLNhoERP { get; set; }
-        public virtual DbSet<BOM_Unit> BOM_Unit { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<BOM_Image> BOM_Image { get; set; }
         public virtual DbSet<BOM_MaPLLonSx> BOM_MaPLLonSx { get; set; }
         public virtual DbSet<BOM_MaPLNhoSx> BOM_MaPLNhoSx { get; set; }
+        public virtual DbSet<Dev_Lang> Dev_Lang { get; set; }
+        public virtual DbSet<BOM_BomBtp> BOM_BomBtp { get; set; }
+        public virtual DbSet<BOM_BomNl> BOM_BomNl { get; set; }
+        public virtual DbSet<BOM_BomTp> BOM_BomTp { get; set; }
+        public virtual DbSet<BOM_BomTH> BOM_BomTH { get; set; }
+        public virtual DbSet<BOM_Unit> BOM_Unit { get; set; }
     }
 }

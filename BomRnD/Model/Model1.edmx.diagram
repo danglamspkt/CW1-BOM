@@ -4,28 +4,35 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="53995a2ab19049a28442a05ab969b9fc" Name="Diagram1">
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomBtp" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomNl" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomTp" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaKeToanERP" Width="2.125" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPL4ERP" Width="2.5" PointX="8.5" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLLonERP" Width="2.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLNhoERP" Width="2.375" PointX="8.875" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_Unit" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.UserRole" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.Users" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomBt__UnitE__6FE99F9F" ManuallyRouted="false" />
-        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomBt__UnitS__70DDC3D8" ManuallyRouted="false" />
-        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__628FA481" ManuallyRouted="false" />
-        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitE__6477ECF3" ManuallyRouted="false" />
-        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitS__656C112C" ManuallyRouted="false" />
+      <Diagram DiagramId="53995a2ab19049a28442a05ab969b9fc" Name="Diagram1" ZoomLevel="121">
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaKeToanERP" Width="2.125" PointX="24.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPL4ERP" Width="2.5" PointX="27.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLLonERP" Width="2.5" PointX="24.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLNhoERP" Width="2.375" PointX="27.625" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.UserRole" Width="1.5" PointX="24.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.Users" Width="1.5" PointX="26.75" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="gla43158_QLSXCW1Model.FK__Users__IdRole__04E4BC85" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_Image" Width="1.5" PointX="10.375" PointY="0.75" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLLonSx" Width="1.5" PointX="5.375" PointY="10.75" />
-        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLNhoSx" Width="1.5" PointX="7.375" PointY="10.75" />
-      </Diagram>
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_Image" Width="1.5" PointX="29.125" PointY="1.125" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLLonSx" Width="1.5" PointX="24.125" PointY="11.125" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_MaPLNhoSx" Width="1.5" PointX="26.125" PointY="11.125" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.Dev_Lang" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomBtp" Width="1.5" PointX="10.5" PointY="5.75" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomNl" Width="1.5" PointX="8.375" PointY="5.875" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomTp" Width="1.5" PointX="12.375" PointY="5.75" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomTH" Width="1.5" PointX="10.625" PointY="1.25" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_Unit" Width="1.5" PointX="10.25" PointY="13.125" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomBt__UnitE__6FE99F9F" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomBt__UnitS__70DDC3D8" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__65370702" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__662B2B3B" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__671F4F74" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__2CF2ADDF" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__2DE6D218" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__6442E2C9" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitE__6477ECF3" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitS__656C112C" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

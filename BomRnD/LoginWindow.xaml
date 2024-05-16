@@ -101,8 +101,8 @@
                                         <RowDefinition Height="80"></RowDefinition>
                                         <RowDefinition Height="80"></RowDefinition>
                                         <RowDefinition Height="50"></RowDefinition>
-                                        <RowDefinition Height="150"></RowDefinition>
-                                        <RowDefinition Height="70"></RowDefinition>
+                                        <RowDefinition Height="120"></RowDefinition>
+                                        <RowDefinition Height="100"></RowDefinition>
                                     </Grid.RowDefinitions>
 
                                     <!--logo-->
@@ -117,7 +117,7 @@
 
                                     <!--Title-->
                                     <Grid Grid.Row="1">
-                                        <TextBlock  Text="Đăng nhập"
+                                        <TextBlock  Text="{Binding LOG0001, Mode=TwoWay}"
                                                     VerticalAlignment="Center"
                                                     HorizontalAlignment="Center"
                                                     FontWeight="Bold"
@@ -143,7 +143,7 @@
                                                      Width="320"
                                                      FontSize="18"
                                                      VerticalAlignment="Center"
-                                                     materialDesign:HintAssist.Hint="Tên đăng nhập"
+                                                     materialDesign:HintAssist.Hint="{Binding LOG0002, Mode=TwoWay}"
                                                      AcceptsReturn="True"
                                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                                      TextWrapping="Wrap">
@@ -172,7 +172,7 @@
                                                 Width="320"
                                                 FontSize="18"
                                                 VerticalAlignment="Center"
-                                                materialDesign:HintAssist.Hint="Mật khẩu"
+                                                materialDesign:HintAssist.Hint="{Binding LOG0003, Mode=TwoWay}"
                                                 Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}">
                                                 <i:Interaction.Triggers>
                                                     <i:EventTrigger EventName="PasswordChanged">
@@ -193,7 +193,7 @@
                                             VerticalAlignment="Center" HorizontalAlignment="Left"
                                             
                                             x:Name="RemberAccount"
-                                            Content="Ghi nhớ tài khoản"
+                                            Content="{Binding LOG0004, Mode=TwoWay}"
                                             FontSize="15"
                                             IsChecked="{Binding checkbox}">
                                             <CheckBox.Style>
@@ -208,7 +208,7 @@
                                             </CheckBox.Style>
                                         </CheckBox>
                                         <TextBlock  
-                                            Text="Quên mật khẩu"                               
+                                            Text="{Binding LOG0005, Mode=TwoWay}"                               
                                             VerticalAlignment="Center"
                                             HorizontalAlignment="Right"
                                             FontSize="15">
@@ -242,13 +242,14 @@
                                                   materialDesign:ButtonProgressAssist.Opacity="0.08"
                                                   materialDesign:ButtonProgressAssist.IndicatorForeground="White"
                                                   materialDesign:ButtonProgressAssist.Value="-1"
-                                                  Content="Login"
+                                                  Content="{Binding LOG0001, Mode=TwoWay}"
                                                   Command="{Binding LoginCommand}"
                                                   CommandParameter="{Binding ElementName=loginWindow}"
                                                   Width="300" Height="50"
                                                   materialDesign:ButtonAssist.CornerRadius="25"
                                                   Style="{StaticResource MaterialDesignRaisedButton}"
-                                                  Background="#f26241">
+                                                  Background="#f26241"
+                                                  Foreground="#f2f2f2">
 
                                             
 
@@ -257,29 +258,28 @@
 
                                     <!--ForgetPass-->
                                     <Grid Grid.Row="6">
-                                        <TextBlock  Text="Đăng ký tài khoản"                               
-                                                    VerticalAlignment="Center"
-                                                    HorizontalAlignment="Center"
-                                                    FontSize="15">
-                                            <TextBlock.Style>
-                                                <Style TargetType="TextBlock">
-                                                    <Setter Property="Foreground" Value="Gray"></Setter>
-                                                    <Setter Property="TextDecorations" Value="None"></Setter>
-                                                    <Style.Triggers>
-                                                        <Trigger Property="IsMouseOver" Value="True">
-                                                            <Setter Property="Foreground" Value="DarkGray"></Setter>
-                                                            <Setter Property="TextDecorations" Value="Underline"></Setter>
-                                                        </Trigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </TextBlock.Style>
-                                            <i:Interaction.Triggers>
-                                                <i:EventTrigger EventName="MouseLeftButtonUp">
-                                                    <i:InvokeCommandAction Command="{Binding SignUp}" 
-                                                        CommandParameter="{Binding ElementName=loginWindow}"/>
-                                                </i:EventTrigger>
-                                            </i:Interaction.Triggers>
-                                        </TextBlock>
+                                        <StackPanel VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center">
+                                            <ComboBox materialDesign:HintAssist.Hint="{Binding LOG0006, Mode=TwoWay}"                
+                                                      MinWidth="120"
+                                                      Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                                                      SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}"
+                                                      Text="{Binding lang}"
+                                                      materialDesign:ColorZoneAssist.Mode="PrimaryLight"
+                                                      FontSize="14"
+                                                      Foreground="Black">
+                                                <ComboBoxItem Content="Tiếng Việt"
+                                                              IsSelected="True"/>
+                                                <ComboBoxItem Content="English" />
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="SelectionChanged">
+                                                        <i:InvokeCommandAction Command="{Binding langchanged}"
+                                                                               CommandParameter="{Binding ElementName=combobox}" />
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </ComboBox>  
+                                        </StackPanel>
+                                        
                                     </Grid>
 
                                 </Grid>

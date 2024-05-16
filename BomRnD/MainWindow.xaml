@@ -12,18 +12,20 @@
         d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         x:Class="BomRnD.MainWindow"
         mc:Ignorable="d"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.Foreground="#f2f2f2"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="{materialDesign:MaterialDesignFont}"
         DataContext="{StaticResource MainVM}"
         x:Name="mainWindow"
         Background="#262624"
-        Foreground="#f2f2f2"
+        Foreground="#F2F2F2"
+        
+        
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow"
+        Title="LUXSO"
         Height="800"
         Width="1500"
         WindowState="Maximized">
@@ -36,7 +38,7 @@
             <Setter Property="Width"
                     Value="260" />
             <Setter Property="Background"
-                    Value="#f2f2f2" />
+                    Value="#f25244" />
             <Setter Property="materialDesign:NavigationDrawerAssist.CornerRadius"
                     Value="16" />
             <Setter Property="materialDesign:NavigationDrawerAssist.IconSize"
@@ -44,7 +46,7 @@
             <Setter Property="Height"
                     Value="60" />
             <Setter Property="Foreground"
-                    Value="#f25244" />
+                    Value="#f2f2f2" />
         </Style>
     </Window.Resources>
 
@@ -92,7 +94,7 @@
                            FontFamily="Arial Black"
                            Margin="20"
                            Foreground="#f2f2f2" />
-                <StackPanel Grid.Row="1">
+                <StackPanel Grid.Row="1">                    
                     <ListBox VerticalAlignment="Top"
                              Foreground="#E8DEF8"
                              SelectedIndex="{Binding SelectedIndex}"
@@ -107,7 +109,7 @@
                                             Value="HomeOutline" />
                                 </Style>
                             </ListBoxItem.Style>
-                            <TextBlock Text="Trang chủ"
+                            <TextBlock Text="{Binding MNP0001, Mode=TwoWay}"
                                        FontSize="20" />
                         </ListBoxItem>
                         <ListBoxItem Selected="ListBoxItem_Selected">
@@ -120,7 +122,7 @@
                                             Value="PaletteSwatchOutline" />
                                 </Style>
                             </ListBoxItem.Style>
-                            <TextBlock Text="BOM tổng hợp"
+                            <TextBlock Text="{Binding MNP0002, Mode=TwoWay}"
                                        TextWrapping="Wrap"
                                        FontSize="20" />
                         </ListBoxItem>
@@ -134,7 +136,7 @@
                                             Value="LinkCircleOutline" />
                                 </Style>
                             </ListBoxItem.Style>
-                            <TextBlock Text="BOM nguyên liệu"
+                            <TextBlock Text="{Binding MNP0003, Mode=TwoWay}"
                                        FontSize="20" />
                         </ListBoxItem>
                         <ListBoxItem>
@@ -147,7 +149,7 @@
                                             Value="PackageVariantClosed" />
                                 </Style>
                             </ListBoxItem.Style>
-                            <TextBlock Text="BOM linh kiện"
+                            <TextBlock Text="{Binding MNP0004, Mode=TwoWay}"
                                        FontSize="20" />
                         </ListBoxItem>
                         <ListBoxItem>
@@ -160,7 +162,7 @@
                                             Value="RobotHappyOutline" />
                                 </Style>
                             </ListBoxItem.Style>
-                            <TextBlock Text="BOM khác"
+                            <TextBlock Text="{Binding MNP0005, Mode=TwoWay}"
                                        FontSize="20" />
                         </ListBoxItem>
                         <ListBoxItem>
@@ -173,24 +175,26 @@
                                             Value="AccountWrenchOutline" />
                                 </Style>
                             </ListBoxItem.Style>
-                            <TextBlock Text="Cài đặt"
+                            <TextBlock Text="{Binding MNP0006, Mode=TwoWay}"
                                        FontSize="20" />
                         </ListBoxItem>
                     </ListBox>
                 </StackPanel>
                 <StackPanel Grid.Row="2"
-                            Height="50">
+                            Height="50" Orientation="Horizontal">
+                    <materialDesign:PackIcon Height="30"
+                                             Width="30"
+                                             Foreground="White"
+                                             Kind="Logout"
+                                             Margin="0 0 10 -10"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center" />
                     <TextBlock Grid.Row="2"
-                               Text="Đăng xuất"
+                               Text="{Binding MNP0007, Mode=TwoWay}"
                                FontSize="20"
                                Foreground="White"
                                HorizontalAlignment="Center"
-                               VerticalAlignment="Center">
-                        <materialDesign:PackIcon Height="40"
-                                                 Width="40"
-                                                 Foreground="White"
-                                                 Kind="Logout"
-                                                 Margin="0 0 10 -10" />
+                               VerticalAlignment="Center">                        
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
                                 <Setter Property="Foreground"
@@ -219,10 +223,11 @@
             </Grid>
 
             <Grid Grid.Column="1">
-                <materialDesign:Card UniformCornerRadius="40"
-                                     Background="#f2f2f2"
-                                     materialDesign:ElevationAssist.Elevation="Dp24"
-                                     Margin="20">
+                <materialDesign:Card UniformCornerRadius="40"                                     
+                                     materialDesign:ElevationAssist.Elevation="Dp0"
+                                     Margin="20"
+                                     Background="#F26241"
+                                     Foreground="Black">
                     <ScrollViewer materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
                                   HorizontalScrollBarVisibility="Auto"
                                   VerticalScrollBarVisibility="Auto">
@@ -243,7 +248,7 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Row="0">
-                    <TextBlock Text="Xin chào"></TextBlock>
+                    <TextBlock Text="{Binding MNP0008, Mode=TwoWay}"></TextBlock>
                     <StackPanel Orientation="Horizontal">
                         <StackPanel x:Name="ACImg"
                                     HorizontalAlignment="Left"

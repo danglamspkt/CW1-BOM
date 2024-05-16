@@ -10,6 +10,7 @@ using MahApps.Metro.Controls;
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,36 @@ namespace BomRnD.ViewModel
         private int _SelectedIndex;
         public int SelectedIndex { get => _SelectedIndex; set { _SelectedIndex = value; OnPropertyChanged(); } }
 
+
+        private ObservableCollection<SysLang> _datalanglist;
+        public ObservableCollection<SysLang> datalanglist { get => _datalanglist; set { _datalanglist = value; OnPropertyChanged(); } }
+
+        private string _MNP0001;
+        public string MNP0001 { get => _MNP0001; set { _MNP0001 = value; OnPropertyChanged(); } }
+
+        private string _MNP0002;
+        public string MNP0002 { get => _MNP0002; set { _MNP0002 = value; OnPropertyChanged(); } }
+
+        private string _MNP0003;
+        public string MNP0003 { get => _MNP0003; set { _MNP0003 = value; OnPropertyChanged(); } }
+
+        private string _MNP0004;
+        public string MNP0004 { get => _MNP0004; set { _MNP0004 = value; OnPropertyChanged(); } }
+
+        private string _MNP0005;
+        public string MNP0005 { get => _MNP0005; set { _MNP0005 = value; OnPropertyChanged(); } }
+
+        private string _MNP0006;
+        public string MNP0006 { get => _MNP0006; set { _MNP0006 = value; OnPropertyChanged(); } }
+
+        private string _MNP0007;
+        public string MNP0007 { get => _MNP0007; set { _MNP0007 = value; OnPropertyChanged(); } }
+
+        private string _MNP0008;
+        public string MNP0008 { get => _MNP0008; set { _MNP0008 = value; OnPropertyChanged(); } }
+
+
+
         private ListBoxItem _SelectedItem;
         public ListBoxItem SelectedItem
         {
@@ -100,10 +131,11 @@ namespace BomRnD.ViewModel
         public MainViewModel()
         {
             txbTitle = "Phần mềm quản lý sản xuất CW3";
-
+            langdata();
 
             LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
+                
                 Isloaded = true;
                 if (p == null)
                     return;
@@ -120,6 +152,7 @@ namespace BomRnD.ViewModel
                 if (loginVM.IsLogin)
                 {
                     p.Show();
+                    langdata();
                     Userlogin = BomRnD.Properties.Settings.Default.account;
                     DisplayName = DataProvider.Ins.DB.Users.Where(x => x.UserName == Userlogin).First().DisplayName;
                     Userlevel = DataProvider.Ins.DB.Users.Where(x => x.UserName == Userlogin).First().IdRole;
@@ -161,12 +194,43 @@ namespace BomRnD.ViewModel
                 Application.Current.Shutdown();
                 System.Windows.Forms.Application.Restart();
             });
+        }
 
-            Thoat = new RelayCommand<Window>((p) => { return true; }, (p) =>
+        void langdata()
+        {
+
+            if (BomRnD.Properties.Settings.Default.Lang == "English")
             {
-                var check = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Quit app", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (check == MessageBoxResult.Yes) { Application.Current.Shutdown(); } else { }
-            });
+                datalanglist = new ObservableCollection<SysLang>();
+                var data = DataProvider.Ins.DB.Dev_Lang.Where(y => y.Id.Contains("MNP"));
+                foreach (var item in data)
+                {
+                    SysLang sysLang = new SysLang();
+                    sysLang.ID = item.Id;
+                    sysLang.data = item.Eng;
+                    datalanglist.Add(sysLang);
+                }
+            }
+            else
+            {
+                datalanglist = new ObservableCollection<SysLang>();
+                var data = DataProvider.Ins.DB.Dev_Lang.Where(y => y.Id.Contains("MNP"));
+                foreach (var item in data)
+                {
+                    SysLang sysLang = new SysLang();
+                    sysLang.ID = item.Id;
+                    sysLang.data = item.Viet;
+                    datalanglist.Add(sysLang);
+                }
+            }
+            MNP0001 = datalanglist.Where(y => y.ID == "MNP0001").First().data;
+            MNP0002 = datalanglist.Where(y => y.ID == "MNP0002").First().data;
+            MNP0003 = datalanglist.Where(y => y.ID == "MNP0003").First().data;
+            MNP0004 = datalanglist.Where(y => y.ID == "MNP0004").First().data;
+            MNP0005 = datalanglist.Where(y => y.ID == "MNP0005").First().data;
+            MNP0006 = datalanglist.Where(y => y.ID == "MNP0006").First().data;
+            MNP0007 = datalanglist.Where(y => y.ID == "MNP0007").First().data;
+            MNP0008 = datalanglist.Where(y => y.ID == "MNP0008").First().data;
 
         }
 
