@@ -229,7 +229,7 @@
                                      Background="#F26241"
                                      Foreground="Black">
                     <ScrollViewer materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
-                                  HorizontalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled"
                                   VerticalScrollBarVisibility="Auto">
                         <Grid x:Name="UCMain"
                                     Margin="15 5 15 5"

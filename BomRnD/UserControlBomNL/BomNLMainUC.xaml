@@ -17,7 +17,7 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="80" />
             <RowDefinition Height="80" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
@@ -49,10 +49,10 @@
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                     </ComboBox>
                 </StackPanel>
-                
+
 
             </materialDesign:Card>
-            
+
             <materialDesign:Card Height="50"
                                  Width="150"
                                  HorizontalAlignment="Left"
@@ -80,7 +80,7 @@
                                  Margin="10"
                                  UniformCornerRadius="15">
                 <StackPanel VerticalAlignment="Center">
-                    <ComboBox ItemsSource="{Binding Seachlist}" 
+                    <ComboBox ItemsSource="{Binding Seachlist}"
                               Text="{Binding MaTim, Mode=TwoWay}"
                               Foreground="Black"
                               FontWeight="Bold"
@@ -89,15 +89,15 @@
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                     </ComboBox>
                 </StackPanel>
-            </materialDesign:Card>            
-                    
+            </materialDesign:Card>
+
             <TextBox  Text="{Binding TimKiem, Mode=TwoWay}"
-                              Foreground="Black"
-                              Background="White"
-                              FontSize="16"
-                              Height="50"
-                              Width="250"
-                              Style="{StaticResource MaterialDesignOutlinedTextBox}">                    
+                      Foreground="Black"
+                      Background="White"
+                      FontSize="16"
+                      Height="50"
+                      Width="250"
+                      Style="{StaticResource MaterialDesignOutlinedTextBox}">
             </TextBox>
 
             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
@@ -126,9 +126,13 @@
 
 
         </StackPanel>
-        <WrapPanel x:Name="BomNLData"
+        <StackPanel x:Name="BomNLData"
                    Grid.Row="2">
             
-        </WrapPanel>
+        </StackPanel>
+
+        
+                              
+
     </Grid>
 </UserControl>
