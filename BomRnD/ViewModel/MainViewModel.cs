@@ -34,6 +34,8 @@ namespace BomRnD.ViewModel
         public Grid UCMain { get => _UCMain; set { _UCMain = value; OnPropertyChanged(); } }
 
         public UserControl uc { get; set; }
+        public UserControl uctitle { get; set; }
+        public UserControl uccontrol { get; set; }
 
         private string _txbTitle;
         public string txbTitle { get => _txbTitle; set { _txbTitle = value; OnPropertyChanged(); } }
@@ -101,27 +103,44 @@ namespace BomRnD.ViewModel
                     {
                         case 0:
                             uc = new HomeMainUC();
+                            uctitle = new UserControl();
+                            uccontrol = new UserControl();
                             break;
                         case 1:
                             uc = new BomTHMainUC();
+                            uctitle = new UserControl();
+                            uccontrol = new UserControl();
                             break;
                         case 2:
                             uc = new BomNLMainUC();
+                            uctitle = new BomNLMainTItleUC();
+                            uccontrol = new BomNLMainControlUC();
                             break;
                         case 3:
                             uc = new BomLKMainUC();
+                            uctitle = new BomLKMainTitleUC();
+                            uccontrol = new BomLKMainControlUC();
                             break;
                         case 4:
                             uc = new BomKhacMainUC();
+                            uctitle = new UserControl();
+                            uccontrol = new UserControl();
                             break;
                         case 5:
                             uc = new SettingMainUC();
+                            uctitle = new UserControl();
+                            uccontrol = new UserControl();
                             break;
                     }                    
                     if (win.UCMain != null)
                     {
                         win.UCMain.Children.Clear();
                         win.UCMain.Children.Add(uc);
+                        win.UCTilte.Children.Clear();
+                        win.UCTilte.Children.Add(uctitle);
+                        win.UCControl.Children.Clear();
+                        win.UCControl.Children.Add(uccontrol);
+
                     } 
                 }
             }

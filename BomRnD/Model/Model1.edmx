@@ -13,6 +13,7 @@
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="TenTiengTrung" Type="nvarchar(max)" />
           <Property Name="MaBanVe" Type="nvarchar" MaxLength="60" />
+          <Property Name="MaBanVe2" Type="nvarchar" MaxLength="60" />
           <Property Name="MaBTPTW" Type="nvarchar" MaxLength="60" />
           <Property Name="MaBTPVN" Type="nvarchar" MaxLength="60" />
           <Property Name="ChatLieu" Type="nvarchar(max)" />
@@ -31,6 +32,12 @@
           <Property Name="MaPL4ERP" Type="int" />
           <Property Name="MaPLLonSx" Type="nvarchar(max)" />
           <Property Name="MaPLNhoSx" Type="nvarchar(max)" />
+          <Property Name="IDImg" Type="nvarchar(max)" />
+          <Property Name="LinkImg" Type="nvarchar(max)" />
+          <Property Name="IDBV" Type="nvarchar(max)" />
+          <Property Name="LinkBV" Type="nvarchar(max)" />
+          <Property Name="IDBV2" Type="nvarchar(max)" />
+          <Property Name="LinkBV2" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="BOM-BomNl">
@@ -50,8 +57,8 @@
           <Property Name="MaPLLonERP" Type="int" />
           <Property Name="MaPLNhoERP" Type="int" />
           <Property Name="MaPL4ERP" Type="int" />
-          <Property Name="MaPLLonSx" Type="nvarchar(max)" />
-          <Property Name="MaPLNhoSx" Type="nvarchar(max)" />
+          <Property Name="MaPLLonSx" Type="nvarchar" MaxLength="40" />
+          <Property Name="MaPLNhoSx" Type="nvarchar" MaxLength="40" />
           <Property Name="IDImg" Type="nvarchar(max)" />
           <Property Name="LinkImg" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
@@ -185,7 +192,7 @@
           <Property Name="IDHinhAnh" Type="nvarchar(max)" />
           <Property Name="LinkHinh" Type="nvarchar(max)" />
         </EntityType>
-        <Association Name="FK__BOM-BomBt__UnitE__7849DB76">
+        <Association Name="FK__BOM-BomBt__UnitE__0B5CAFEA">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -197,7 +204,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomBt__UnitS__793DFFAF">
+        <Association Name="FK__BOM-BomBt__UnitS__0C50D423">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -209,7 +216,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomNl__UnitE__2CF2ADDF">
+        <Association Name="FK__BOM-BomNl__UnitE__0F2D40CE">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="*" />
           <ReferentialConstraint>
@@ -221,7 +228,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomNl__UnitS__2DE6D218">
+        <Association Name="FK__BOM-BomNl__UnitS__10216507">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="*" />
           <ReferentialConstraint>
@@ -257,7 +264,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__756D6ECB">
+        <Association Name="FK__BOM-BomTH__MaBtp__0880433F">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -269,7 +276,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__76619304">
+        <Association Name="FK__BOM-BomTH__MaBtp__09746778">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -281,7 +288,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__7755B73D">
+        <Association Name="FK__BOM-BomTH__MaBtp__0A688BB1">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -293,7 +300,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaMua__6442E2C9">
+        <Association Name="FK__BOM-BomTH__MaMua__11158940">
           <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -345,19 +352,19 @@
           <EntitySet Name="Dev-Lang" EntityType="Self.Dev-Lang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__BOM-BomBt__UnitE__7849DB76" Association="Self.FK__BOM-BomBt__UnitE__7849DB76">
+          <AssociationSet Name="FK__BOM-BomBt__UnitE__0B5CAFEA" Association="Self.FK__BOM-BomBt__UnitE__0B5CAFEA">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomBt__UnitS__793DFFAF" Association="Self.FK__BOM-BomBt__UnitS__793DFFAF">
+          <AssociationSet Name="FK__BOM-BomBt__UnitS__0C50D423" Association="Self.FK__BOM-BomBt__UnitS__0C50D423">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomNl__UnitE__2CF2ADDF" Association="Self.FK__BOM-BomNl__UnitE__2CF2ADDF">
+          <AssociationSet Name="FK__BOM-BomNl__UnitE__0F2D40CE" Association="Self.FK__BOM-BomNl__UnitE__0F2D40CE">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomNl__UnitS__2DE6D218" Association="Self.FK__BOM-BomNl__UnitS__2DE6D218">
+          <AssociationSet Name="FK__BOM-BomNl__UnitS__10216507" Association="Self.FK__BOM-BomNl__UnitS__10216507">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
           </AssociationSet>
@@ -369,19 +376,19 @@
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__756D6ECB" Association="Self.FK__BOM-BomTH__MaBtp__756D6ECB">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__0880433F" Association="Self.FK__BOM-BomTH__MaBtp__0880433F">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__76619304" Association="Self.FK__BOM-BomTH__MaBtp__76619304">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__09746778" Association="Self.FK__BOM-BomTH__MaBtp__09746778">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__7755B73D" Association="Self.FK__BOM-BomTH__MaBtp__7755B73D">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__0A688BB1" Association="Self.FK__BOM-BomTH__MaBtp__0A688BB1">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaMua__6442E2C9" Association="Self.FK__BOM-BomTH__MaMua__6442E2C9">
+          <AssociationSet Name="FK__BOM-BomTH__MaMua__11158940" Association="Self.FK__BOM-BomTH__MaMua__11158940">
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
@@ -398,14 +405,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="gla43158_QLSXCW1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="BOM_MaKeToanERP">
-          <Key>
-            <PropertyRef Name="MaHang" />
-          </Key>
-          <Property Name="MaHang" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="BOM_MaPL4ERP">
           <Key>
             <PropertyRef Name="MaHang" />
@@ -466,7 +465,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="gla43158_QLSXCW1Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="BOM_MaKeToanERP" EntityType="Self.BOM_MaKeToanERP" />
           <EntitySet Name="BOM_MaPL4ERP" EntityType="Self.BOM_MaPL4ERP" />
           <EntitySet Name="BOM_MaPLLonERP" EntityType="Self.BOM_MaPLLonERP" />
           <EntitySet Name="BOM_MaPLNhoERP" EntityType="Self.BOM_MaPLNhoERP" />
@@ -481,7 +479,6 @@
           <EntitySet Name="BOM_MaPLNhoSx" EntityType="gla43158_QLSXCW1Model.BOM_MaPLNhoSx" />
           <EntitySet Name="Dev_Lang" EntityType="gla43158_QLSXCW1Model.Dev_Lang" />
           <EntitySet Name="BOM_BomBtp" EntityType="gla43158_QLSXCW1Model.BOM_BomBtp" />
-          <EntitySet Name="BOM_BomNl" EntityType="gla43158_QLSXCW1Model.BOM_BomNl" />
           <EntitySet Name="BOM_BomTp" EntityType="gla43158_QLSXCW1Model.BOM_BomTp" />
           <EntitySet Name="BOM_BomTH" EntityType="gla43158_QLSXCW1Model.BOM_BomTH" />
           <EntitySet Name="BOM_Unit" EntityType="gla43158_QLSXCW1Model.BOM_Unit" />
@@ -505,18 +502,6 @@
             <End Role="BOM_BomBtp" EntitySet="BOM_BomBtp" />
             <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM_BomNl__UnitE__2CF2ADDF" Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__2CF2ADDF">
-            <End Role="BOM_Unit" EntitySet="BOM_Unit" />
-            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
-          </AssociationSet>
-          <AssociationSet Name="FK__BOM_BomNl__UnitS__2DE6D218" Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__2DE6D218">
-            <End Role="BOM_Unit" EntitySet="BOM_Unit" />
-            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
-          </AssociationSet>
-          <AssociationSet Name="FK__BOM_BomTH__MaMua__6442E2C9" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__6442E2C9">
-            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
-            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
-          </AssociationSet>
           <AssociationSet Name="FK__BOM_BomTp__UnitE__6477ECF3" Association="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitE__6477ECF3">
             <End Role="BOM_Unit" EntitySet="BOM_Unit" />
             <End Role="BOM_BomTp" EntitySet="BOM_BomTp" />
@@ -527,6 +512,20 @@
           </AssociationSet>
           <AssociationSet Name="FK__BOM_BomTH__MaTp__634EBE90" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90">
             <End Role="BOM_BomTp" EntitySet="BOM_BomTp" />
+            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
+          </AssociationSet>
+          <EntitySet Name="BOM_BomNl" EntityType="gla43158_QLSXCW1Model.BOM_BomNl" />
+          <EntitySet Name="BOM_MaKeToanERP" EntityType="gla43158_QLSXCW1Model.BOM_MaKeToanERP" />
+          <AssociationSet Name="FK__BOM_BomNl__UnitE__0F2D40CE" Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__0F2D40CE">
+            <End Role="BOM_Unit" EntitySet="BOM_Unit" />
+            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomNl__UnitS__10216507" Association="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__10216507">
+            <End Role="BOM_Unit" EntitySet="BOM_Unit" />
+            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomTH__MaMua__11158940" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__11158940">
+            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
             <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
           </AssociationSet>
           </EntityContainer>
@@ -596,32 +595,13 @@
           <NavigationProperty Name="BOM_BomTH1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__662B2B3B" FromRole="BOM_BomBtp" ToRole="BOM_BomTH" />
           <NavigationProperty Name="BOM_BomTH2" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__671F4F74" FromRole="BOM_BomBtp" ToRole="BOM_BomTH" />
           <Property Name="NGC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="BOM_BomNl">
-          <Key>
-            <PropertyRef Name="MaHang" />
-          </Key>
-          <Property Name="MaHang" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="TenTiengTrung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ChatLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="QuyCach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Version" Type="Int32" />
-          <Property Name="UnitERP" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="UnitSx" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="TyLeChuyenDoi" Type="Double" />
-          <Property Name="MaKeToanERP" Type="Int32" />
-          <Property Name="MaPLLonERP" Type="Int32" />
-          <Property Name="MaPLNhoERP" Type="Int32" />
-          <Property Name="MaPL4ERP" Type="Int32" />
-          <Property Name="MaPLLonSx" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="MaPLNhoSx" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaBanVe2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
           <Property Name="IDImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LinkImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="BOM_Unit" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__2CF2ADDF" FromRole="BOM_BomNl" ToRole="BOM_Unit" />
-          <NavigationProperty Name="BOM_Unit1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__2DE6D218" FromRole="BOM_BomNl" ToRole="BOM_Unit" />
-          <NavigationProperty Name="BOM_BomTH" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__6442E2C9" FromRole="BOM_BomNl" ToRole="BOM_BomTH" />
+          <Property Name="IDBV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkBV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDBV2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkBV2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BOM_BomTp">
           <Key>
@@ -662,8 +642,8 @@
           <NavigationProperty Name="BOM_BomBtp" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__65370702" FromRole="BOM_BomTH" ToRole="BOM_BomBtp" />
           <NavigationProperty Name="BOM_BomBtp1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__662B2B3B" FromRole="BOM_BomTH" ToRole="BOM_BomBtp" />
           <NavigationProperty Name="BOM_BomBtp2" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__671F4F74" FromRole="BOM_BomTH" ToRole="BOM_BomBtp" />
-          <NavigationProperty Name="BOM_BomNl" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__6442E2C9" FromRole="BOM_BomTH" ToRole="BOM_BomNl" />
           <NavigationProperty Name="BOM_BomTp" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90" FromRole="BOM_BomTH" ToRole="BOM_BomTp" />
+          <NavigationProperty Name="BOM_BomNl" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__11158940" FromRole="BOM_BomTH" ToRole="BOM_BomNl" />
         </EntityType>
         <EntityType Name="BOM_Unit">
           <Key>
@@ -674,10 +654,10 @@
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BOM_BomBtp" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomBt__UnitE__6FE99F9F" FromRole="BOM_Unit" ToRole="BOM_BomBtp" />
           <NavigationProperty Name="BOM_BomBtp1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomBt__UnitS__70DDC3D8" FromRole="BOM_Unit" ToRole="BOM_BomBtp" />
-          <NavigationProperty Name="BOM_BomNl" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__2CF2ADDF" FromRole="BOM_Unit" ToRole="BOM_BomNl" />
-          <NavigationProperty Name="BOM_BomNl1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__2DE6D218" FromRole="BOM_Unit" ToRole="BOM_BomNl" />
           <NavigationProperty Name="BOM_BomTp" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitE__6477ECF3" FromRole="BOM_Unit" ToRole="BOM_BomTp" />
           <NavigationProperty Name="BOM_BomTp1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitS__656C112C" FromRole="BOM_Unit" ToRole="BOM_BomTp" />
+          <NavigationProperty Name="BOM_BomNl" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__0F2D40CE" FromRole="BOM_Unit" ToRole="BOM_BomNl" />
+          <NavigationProperty Name="BOM_BomNl1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__10216507" FromRole="BOM_Unit" ToRole="BOM_BomNl" />
         </EntityType>
         <Association Name="FK__BOM_BomBt__UnitE__6FE99F9F">
           <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
@@ -739,42 +719,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM_BomNl__UnitE__2CF2ADDF">
-          <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
-          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="BOM_Unit">
-              <PropertyRef Name="Unit" />
-            </Principal>
-            <Dependent Role="BOM_BomNl">
-              <PropertyRef Name="UnitERP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__BOM_BomNl__UnitS__2DE6D218">
-          <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
-          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="BOM_Unit">
-              <PropertyRef Name="Unit" />
-            </Principal>
-            <Dependent Role="BOM_BomNl">
-              <PropertyRef Name="UnitSx" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__BOM_BomTH__MaMua__6442E2C9">
-          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="0..1" />
-          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="BOM_BomNl">
-              <PropertyRef Name="MaHang" />
-            </Principal>
-            <Dependent Role="BOM_BomTH">
-              <PropertyRef Name="MaMuaHang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__BOM_BomTp__UnitE__6477ECF3">
           <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
           <End Type="gla43158_QLSXCW1Model.BOM_BomTp" Role="BOM_BomTp" Multiplicity="*" />
@@ -811,21 +755,82 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="BOM_BomNl">
+          <Key>
+            <PropertyRef Name="MaHang" />
+          </Key>
+          <Property Name="MaHang" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TenTiengTrung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChatLieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuyCach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="Int32" />
+          <Property Name="UnitERP" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="UnitSx" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="TyLeChuyenDoi" Type="Double" />
+          <Property Name="MaKeToanERP" Type="Int32" />
+          <Property Name="MaPLLonERP" Type="Int32" />
+          <Property Name="MaPLNhoERP" Type="Int32" />
+          <Property Name="MaPL4ERP" Type="Int32" />
+          <Property Name="MaPLLonSx" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="MaPLNhoSx" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="IDImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BOM_Unit" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__0F2D40CE" FromRole="BOM_BomNl" ToRole="BOM_Unit" />
+          <NavigationProperty Name="BOM_Unit1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__10216507" FromRole="BOM_BomNl" ToRole="BOM_Unit" />
+          <NavigationProperty Name="BOM_BomTH" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__11158940" FromRole="BOM_BomNl" ToRole="BOM_BomTH" />
+        </EntityType>
+        <EntityType Name="BOM_MaKeToanERP">
+          <Key>
+            <PropertyRef Name="MaHang" />
+          </Key>
+          <Property Name="MaHang" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__BOM_BomNl__UnitE__0F2D40CE">
+          <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_Unit">
+              <PropertyRef Name="Unit" />
+            </Principal>
+            <Dependent Role="BOM_BomNl">
+              <PropertyRef Name="UnitERP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomNl__UnitS__10216507">
+          <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_Unit">
+              <PropertyRef Name="Unit" />
+            </Principal>
+            <Dependent Role="BOM_BomNl">
+              <PropertyRef Name="UnitSx" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomTH__MaMua__11158940">
+          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_BomNl">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM_BomTH">
+              <PropertyRef Name="MaMuaHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="gla43158_QLSXCW1ModelStoreContainer" CdmEntityContainer="gla43158_QLSXCW1Entities">
-          <EntitySetMapping Name="BOM_MaKeToanERP">
-            <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaKeToanERP">
-              <MappingFragment StoreEntitySet="BOM-MaKeToanERP">
-                <ScalarProperty Name="MaHang" ColumnName="MaHang" />
-                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="BOM_MaPL4ERP">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPL4ERP">
               <MappingFragment StoreEntitySet="BOM-MaPL4ERP">
@@ -917,6 +922,13 @@
           <EntitySetMapping Name="BOM_BomBtp">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomBtp">
               <MappingFragment StoreEntitySet="BOM-BomBtp">
+                <ScalarProperty Name="LinkBV2" ColumnName="LinkBV2" />
+                <ScalarProperty Name="IDBV2" ColumnName="IDBV2" />
+                <ScalarProperty Name="LinkBV" ColumnName="LinkBV" />
+                <ScalarProperty Name="IDBV" ColumnName="IDBV" />
+                <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
+                <ScalarProperty Name="IDImg" ColumnName="IDImg" />
+                <ScalarProperty Name="MaBanVe2" ColumnName="MaBanVe2" />
                 <ScalarProperty Name="NGC" ColumnName="NGC" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
@@ -937,30 +949,6 @@
                 <ScalarProperty Name="MaBTPVN" ColumnName="MaBTPVN" />
                 <ScalarProperty Name="MaBTPTW" ColumnName="MaBTPTW" />
                 <ScalarProperty Name="MaBanVe" ColumnName="MaBanVe" />
-                <ScalarProperty Name="TenTiengTrung" ColumnName="TenTiengTrung" />
-                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
-                <ScalarProperty Name="MaHang" ColumnName="MaHang" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="BOM_BomNl">
-            <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomNl">
-              <MappingFragment StoreEntitySet="BOM-BomNl">
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
-                <ScalarProperty Name="IDImg" ColumnName="IDImg" />
-                <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
-                <ScalarProperty Name="MaPLLonSx" ColumnName="MaPLLonSx" />
-                <ScalarProperty Name="MaPL4ERP" ColumnName="MaPL4ERP" />
-                <ScalarProperty Name="MaPLNhoERP" ColumnName="MaPLNhoERP" />
-                <ScalarProperty Name="MaPLLonERP" ColumnName="MaPLLonERP" />
-                <ScalarProperty Name="MaKeToanERP" ColumnName="MaKeToanERP" />
-                <ScalarProperty Name="TyLeChuyenDoi" ColumnName="TyLeChuyenDoi" />
-                <ScalarProperty Name="UnitSx" ColumnName="UnitSx" />
-                <ScalarProperty Name="UnitERP" ColumnName="UnitERP" />
-                <ScalarProperty Name="Version" ColumnName="Version" />
-                <ScalarProperty Name="QuyCach" ColumnName="QuyCach" />
-                <ScalarProperty Name="ChatLieu" ColumnName="ChatLieu" />
                 <ScalarProperty Name="TenTiengTrung" ColumnName="TenTiengTrung" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
@@ -1009,6 +997,39 @@
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="Unit" ColumnName="Unit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOM_BomNl">
+            <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomNl">
+              <MappingFragment StoreEntitySet="BOM-BomNl">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
+                <ScalarProperty Name="IDImg" ColumnName="IDImg" />
+                <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
+                <ScalarProperty Name="MaPLLonSx" ColumnName="MaPLLonSx" />
+                <ScalarProperty Name="MaPL4ERP" ColumnName="MaPL4ERP" />
+                <ScalarProperty Name="MaPLNhoERP" ColumnName="MaPLNhoERP" />
+                <ScalarProperty Name="MaPLLonERP" ColumnName="MaPLLonERP" />
+                <ScalarProperty Name="MaKeToanERP" ColumnName="MaKeToanERP" />
+                <ScalarProperty Name="TyLeChuyenDoi" ColumnName="TyLeChuyenDoi" />
+                <ScalarProperty Name="UnitSx" ColumnName="UnitSx" />
+                <ScalarProperty Name="UnitERP" ColumnName="UnitERP" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="QuyCach" ColumnName="QuyCach" />
+                <ScalarProperty Name="ChatLieu" ColumnName="ChatLieu" />
+                <ScalarProperty Name="TenTiengTrung" ColumnName="TenTiengTrung" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOM_MaKeToanERP">
+            <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaKeToanERP">
+              <MappingFragment StoreEntitySet="BOM-MaKeToanERP">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="MaHang" ColumnName="MaHang" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

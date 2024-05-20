@@ -10,13 +10,13 @@
              xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
              d:DataContext="{d:DesignInstance Type=viewmodel:BOMNguyenLieuViewModel}"
              DataContext="{StaticResource BomNLVM}"
-             
+                          
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              TextElement.FontWeight="Medium"
              TextElement.FontSize="14">
     
     <Grid>
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="80" />
             <RowDefinition Height="80" />
             <RowDefinition Height="auto" />
@@ -125,7 +125,7 @@
             </Button>
 
 
-        </StackPanel>
+        </StackPanel>-->
         <StackPanel x:Name="BomNLData"
                    Grid.Row="2">
             

@@ -19,10 +19,10 @@ namespace BomRnD.Model
         {
             this.BOM_BomBtp = new HashSet<BOM_BomBtp>();
             this.BOM_BomBtp1 = new HashSet<BOM_BomBtp>();
-            this.BOM_BomNl = new HashSet<BOM_BomNl>();
-            this.BOM_BomNl1 = new HashSet<BOM_BomNl>();
             this.BOM_BomTp = new HashSet<BOM_BomTp>();
             this.BOM_BomTp1 = new HashSet<BOM_BomTp>();
+            this.BOM_BomNl = new HashSet<BOM_BomNl>();
+            this.BOM_BomNl1 = new HashSet<BOM_BomNl>();
         }
     
         public string Unit { get; set; }
@@ -34,12 +34,12 @@ namespace BomRnD.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BOM_BomBtp> BOM_BomBtp1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BOM_BomNl> BOM_BomNl { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BOM_BomNl> BOM_BomNl1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BOM_BomTp> BOM_BomTp { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BOM_BomTp> BOM_BomTp1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BOM_BomNl> BOM_BomNl { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BOM_BomNl> BOM_BomNl1 { get; set; }
     }
 }

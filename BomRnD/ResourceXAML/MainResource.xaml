@@ -1,9 +1,12 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿
+    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:viewmodel="clr-namespace:BomRnD.ViewModel">
-    
+
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
+    <viewmodel:ControlBarViewModel x:Key="CBVM"></viewmodel:ControlBarViewModel>
     <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
     <viewmodel:BOMNguyenLieuViewModel x:Key="BomNLVM"></viewmodel:BOMNguyenLieuViewModel>
+    <viewmodel:BomBTPViewModel x:Key="BomBTPVM"></viewmodel:BomBTPViewModel>
 
 </ResourceDictionary>

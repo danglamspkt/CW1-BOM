@@ -234,14 +234,38 @@
     <Compile Include="UserControl1\ControlBarBaseUC.xaml.cs">
       <DependentUpon>ControlBarBaseUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1\ControlBarInfoUC.xaml.cs">
+      <DependentUpon>ControlBarInfoUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1\ControlBarMainUC.xaml.cs">
       <DependentUpon>ControlBarMainUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlBomKhac\BomKhacMainUC.xaml.cs">
       <DependentUpon>BomKhacMainUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomLK\BomLKInfoWindows.xaml.cs">
+      <DependentUpon>BomLKInfoWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomLK\BomLKMainControlUC.xaml.cs">
+      <DependentUpon>BomLKMainControlUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomLK\BomLKMainTitleUC.xaml.cs">
+      <DependentUpon>BomLKMainTitleUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomLK\BomLKMainUC.xaml.cs">
       <DependentUpon>BomLKMainUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomNL\BomNLAddWindows.xaml.cs">
+      <DependentUpon>BomNLAddWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomNL\BomNLInfoWindows.xaml.cs">
+      <DependentUpon>BomNLInfoWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomNL\BomNLMainControlUC.xaml.cs">
+      <DependentUpon>BomNLMainControlUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomNL\BomNLMainTItleUC.xaml.cs">
+      <DependentUpon>BomNLMainTItleUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlBomNL\BomNLMainUC.xaml.cs">
       <DependentUpon>BomNLMainUC.xaml</DependentUpon>
@@ -256,6 +280,7 @@
       <DependentUpon>SettingMainUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\BomBTPViewModel.cs" />
     <Compile Include="ViewModel\BOMNguyenLieuViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -284,6 +309,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControl1\ControlBarInfoUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl1\ControlBarMainUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -292,7 +321,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlBomLK\BomLKInfoWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomLK\BomLKMainControlUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomLK\BomLKMainTitleUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlBomLK\BomLKMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomNL\BomNLAddWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomNL\BomNLInfoWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomNL\BomNLMainControlUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomNL\BomNLMainTItleUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -27,7 +27,7 @@ namespace BomRnD.Model
         public virtual BOM_BomBtp BOM_BomBtp { get; set; }
         public virtual BOM_BomBtp BOM_BomBtp1 { get; set; }
         public virtual BOM_BomBtp BOM_BomBtp2 { get; set; }
-        public virtual BOM_BomNl BOM_BomNl { get; set; }
         public virtual BOM_BomTp BOM_BomTp { get; set; }
+        public virtual BOM_BomNl BOM_BomNl { get; set; }
     }
 }

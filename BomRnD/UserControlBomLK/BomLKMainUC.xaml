@@ -4,15 +4,133 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BomRnD.UserControlBomLK"
-             mc:Ignorable="d" 
-             
+             mc:Ignorable="d"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             
+             xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:BomBTPViewModel}"
+             DataContext="{StaticResource BomBTPVM}"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-            TextElement.Foreground="{DynamicResource MaterialDesignBody}"            
-            TextElement.FontWeight="Medium"
-            TextElement.FontSize="14">
+             TextElement.FontWeight="Medium"
+             TextElement.FontSize="14">
+
     <Grid>
-        <TextBlock Foreground="Black">Bom linh kiện</TextBlock>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   Text="BOM NGUYÊN LIỆU"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   FontSize="32"
+                   FontFamily="Arial"
+                   FontWeight="Bold"
+                   Margin="5"
+                   Foreground="#f2f2f2"></TextBlock>
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal">
+            <materialDesign:Card Height="50"
+                                 Width="150"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Margin="10"
+                                 UniformCornerRadius="15">
+                <StackPanel VerticalAlignment="Center">
+                    <ComboBox DisplayMemberPath="DisplayName"
+                              ItemsSource="{Binding PLLonlist}"
+                              Text="{Binding MaPLLon, Mode=TwoWay}"
+                              Foreground="Black"
+                              FontWeight="Bold"
+                              Margin="10 5 10 5"
+                              materialDesign:HintAssist.Hint="Bộ lọc 1"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                    </ComboBox>
+                </StackPanel>
+
+
+            </materialDesign:Card>
+
+            <materialDesign:Card Height="50"
+                                 Width="150"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Margin="10"
+                                 UniformCornerRadius="15">
+                <StackPanel VerticalAlignment="Center">
+                    <ComboBox DisplayMemberPath="DisplayName"
+                              ItemsSource="{Binding PLNholist}"
+                              Text="{Binding MaPLNho, Mode=TwoWay}"
+                              Foreground="Black"
+                              FontWeight="Bold"
+                              Margin="10 5 10 5"
+                              materialDesign:HintAssist.Hint="Bộ lọc 2"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                    </ComboBox>
+                </StackPanel>
+
+            </materialDesign:Card>
+
+            <materialDesign:Card Height="50"
+                                 Width="150"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Margin="10"
+                                 UniformCornerRadius="15">
+                <StackPanel VerticalAlignment="Center">
+                    <ComboBox ItemsSource="{Binding Seachlist}"
+                              Text="{Binding MaTim, Mode=TwoWay}"
+                              Foreground="Black"
+                              FontWeight="Bold"
+                              Margin="10 5 10 5"
+                              materialDesign:HintAssist.Hint="Tìm kiếm"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                    </ComboBox>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <TextBox  Text="{Binding TimKiem, Mode=TwoWay}"
+                      Foreground="Black"
+                      Background="White"
+                      FontSize="16"
+                      Height="50"
+                      Width="250"
+                      Style="{StaticResource MaterialDesignOutlinedTextBox}">
+            </TextBox>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    Background="Orange"
+                    Width="50"
+                    Height="50"
+                    Margin="10"
+                    Command="{Binding TimNLcommand}"
+                    CommandParameter="{Binding ElementName=BomNLData}">
+                <materialDesign:PackIcon Width="24"
+                                         Height="24"
+                                         Kind="Magnify" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    Background="Orange"
+                    Width="50"
+                    Height="50"
+                    Margin="10"
+                    Command="{Binding ThemNLcommand}"
+                    CommandParameter="{Binding ElementName=BomNLData}">
+                <materialDesign:PackIcon Width="24"
+                                         Height="24"
+                                         Kind="Plus" />
+            </Button>
+
+
+        </StackPanel>-->
+        <StackPanel x:Name="BomBTPData"
+                    Grid.Row="2">
+
+        </StackPanel>
+
+
+
+
     </Grid>
 </UserControl>

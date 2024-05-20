@@ -6,9 +6,10 @@
              xmlns:local="clr-namespace:BomRnD.UserControl1"
              mc:Ignorable="d"              
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"             
-             
-             
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:ControlBarViewModel}"
+             DataContext="{StaticResource CBVM}"
              Name="ucControlBar">
 
     <i:Interaction.Triggers>

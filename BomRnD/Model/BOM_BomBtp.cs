@@ -45,6 +45,13 @@ namespace BomRnD.Model
         public string MaPLNhoSx { get; set; }
         public string UserName { get; set; }
         public string NGC { get; set; }
+        public string MaBanVe2 { get; set; }
+        public string IDImg { get; set; }
+        public string LinkImg { get; set; }
+        public string IDBV { get; set; }
+        public string LinkBV { get; set; }
+        public string IDBV2 { get; set; }
+        public string LinkBV2 { get; set; }
     
         public virtual BOM_Unit BOM_Unit { get; set; }
         public virtual BOM_Unit BOM_Unit1 { get; set; }

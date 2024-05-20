@@ -1,0 +1,421 @@
+﻿<Window x:Class="BomRnD.UserControlBomNL.BomNLAddWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BomRnD.UserControlBomNL"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:BomRnD.UserControl1"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:BOMNguyenLieuViewModel}"
+        DataContext="{StaticResource BomNLVM}"
+        mc:Ignorable="d"
+        TextElement.Foreground="Black"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        x:Name="mainWindow"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="Nguyên liệu information"
+        Height="650"
+        Width="800"
+        WindowState="Normal">
+ 
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}"
+                                   CommandParameter="{Binding ElementName=mainWindow}" />
+        </i:EventTrigger>
+        <!--<i:EventTrigger EventName="Loaded">
+        <i:InvokeCommandAction Command="{Binding Homedata}" 
+                           CommandParameter="{Binding ElementName=UCMain}"/>
+    </i:EventTrigger>-->
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarInfoUC Tag="{Binding Title, ElementName=mainWindow}" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="350"
+                            Height="572"
+                            VerticalAlignment="Center">
+                    <StackPanel x:Name="NLAvar"
+                                Width="300"
+                                Height="300"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">                        
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Margin="0 65 0 0">
+                        <TextBlock Text="Link google drive hình ảnh"
+                                   HorizontalAlignment="Center"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Margin="20 5 5 0">
+                        </TextBlock>
+                        <TextBox Text="{Binding MaHang, Mode=TwoWay}"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                 materialDesign:HintAssist.IsFloating="False"                                 
+                                 Padding="5"
+                                 Width="300"
+                                 HorizontalAlignment="Center"
+                                 FontSize="14"
+                                 FontWeight="Bold"
+                                 Margin="5">
+                        </TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+                <Grid Width="450"
+                      Height="622">
+                    <ScrollViewer Grid.Row="2"
+                                  materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto">
+                        <Grid>
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Mã Hàng Mới"
+                                           FontSize="32"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Center"
+                                           Margin="20">
+                                    
+                                </TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel >
+                                        <TextBlock Text="Mã hàng"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaHang, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Display Name"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaHang, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Chất liệu"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding ChatLieu, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Quy cách"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding QuyCach, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Đơn vị (ERP)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding UnitERP, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Đơn vị (Sản xuất)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding UnitSx, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Tỷ lệ chuyển đổi"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding TyLeChuyenDoi, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Version"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding Version, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Mã kế toán (ERP)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaKeToanERP, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Mã phân loại lớn (ERP)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaPLLonERP, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Mã phân loại nhỏ (ERP)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaPLNhoERP, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Mã phân loại cuối (ERP)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaPL4ERP, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Mã phân loại lớn (sản xuất)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaPLLonSx, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Mã phân loại nhỏ (sản xuất)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MaPLNhoSx, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+                                <Button Content="Lưu"
+                                        Command="{Binding LoginCommand}"
+                                        CommandParameter="{Binding ElementName=loginWindow}"
+                                        Width="200"
+                                        Height="40"
+                                        Margin="20"
+                                        materialDesign:ButtonAssist.CornerRadius="25"
+                                        Style="{StaticResource MaterialDesignRaisedButton}"
+                                        Background="#f26241"
+                                        Foreground="#f2f2f2">
+                                    
+                                </Button>
+
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

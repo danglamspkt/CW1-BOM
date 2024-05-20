@@ -38,7 +38,7 @@
             <Setter Property="Width"
                     Value="260" />
             <Setter Property="Background"
-                    Value="#f25244" />
+                    Value="#FFFEBEAA" />
             <Setter Property="materialDesign:NavigationDrawerAssist.CornerRadius"
                     Value="16" />
             <Setter Property="materialDesign:NavigationDrawerAssist.IconSize"
@@ -226,18 +226,33 @@
                 <materialDesign:Card UniformCornerRadius="40"                                     
                                      materialDesign:ElevationAssist.Elevation="Dp0"
                                      Margin="20"
-                                     Background="#F26241"
+                                     Background="#FFFEBEAA"
                                      Foreground="Black">
-                    <ScrollViewer materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
-                                  HorizontalScrollBarVisibility="Disabled"
-                                  VerticalScrollBarVisibility="Auto">
-                        <Grid x:Name="UCMain"
-                                    Margin="15 5 15 5"
-                                    Width="auto"
-                                    Height="auto">
-                            
-                        </Grid>
-                    </ScrollViewer>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <StackPanel x:Name="UCTilte"
+                                    Grid.Row="0" 
+                                    Margin="10"/>
+                        <StackPanel x:Name="UCControl"
+                                    Grid.Row="1"
+                                    Margin="10" />
+                        <ScrollViewer Grid.Row="2"
+                                      materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
+                                      HorizontalScrollBarVisibility="Disabled"
+                                      VerticalScrollBarVisibility="Auto">
+                            <Grid x:Name="UCMain"
+                                  Margin="15 5 15 5"
+                                  Width="auto"
+                                  Height="auto">
+
+                            </Grid>
+                        </ScrollViewer>
+                    </Grid>
+                    
                 </materialDesign:Card>
             </Grid>
 

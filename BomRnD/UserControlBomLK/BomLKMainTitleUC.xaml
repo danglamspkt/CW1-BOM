@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="BomRnD.UserControlBomLK.BomLKMainTitleUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BomRnD.UserControlBomLK"
+             mc:Ignorable="d"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:BomBTPViewModel}"
+             DataContext="{StaticResource BomBTPVM}"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.FontWeight="Medium"
+             TextElement.FontSize="14">
+
+    <Grid>
+
+        <TextBlock Text="BOM LINH KIỆN"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   FontSize="32"
+                   FontFamily="Arial"
+                   FontWeight="Bold"
+                   Margin="5"
+                   Foreground="#f2f2f2"></TextBlock>
+
+
+
+
+
+    </Grid>
+</UserControl>

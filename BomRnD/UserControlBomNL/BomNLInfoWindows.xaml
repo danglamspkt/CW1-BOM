@@ -1,0 +1,274 @@
+﻿<Window x:Class="BomRnD.UserControlBomNL.BomNLInfoWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BomRnD.UserControlBomNL"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:BomRnD.UserControl1"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:BOMNguyenLieuViewModel}"
+        DataContext="{StaticResource BomNLVM}"
+        mc:Ignorable="d"
+        TextElement.Foreground="Black"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        x:Name="mainWindow"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="Nguyên liệu information"
+        Height="600"
+        Width="800"
+        WindowState="Normal">
+    
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}"
+                                   CommandParameter="{Binding ElementName=mainWindow}" />
+        </i:EventTrigger>
+        <!--<i:EventTrigger EventName="Loaded">
+        <i:InvokeCommandAction Command="{Binding Homedata}" 
+                           CommandParameter="{Binding ElementName=UCMain}"/>
+    </i:EventTrigger>-->
+    </i:Interaction.Triggers>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarInfoUC Tag="{Binding Title, ElementName=mainWindow}" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel x:Name="NLAvar" Width="350" Height="572" VerticalAlignment="Center">
+                    
+                </StackPanel>
+                <Grid Width="450" Height="572">
+                    <ScrollViewer Grid.Row="2"
+                                  materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto">
+                        <Grid>
+                            <StackPanel Margin="10">
+                                <TextBlock Text="{Binding MaHang}"
+                                           HorizontalAlignment="Left"
+                                           FontSize="32"
+                                           FontWeight="Bold"
+                                           Margin="5 20 5 5"
+                                           Foreground="#FF6F6F6F">
+
+                                </TextBlock>
+                                <TextBlock Text="{Binding DisplayName}"
+                                           HorizontalAlignment="Left"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           Margin="5">
+
+                                </TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Chất liệu:"
+                                               HorizontalAlignment="Left"
+                                               FontSize="16"
+                                               FontWeight="Bold"
+                                               Margin="5"
+                                               Width="150">
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding ChatLieu}"
+                                               HorizontalAlignment="Left"
+                                               FontSize="16"
+                                               FontWeight="Bold"
+                                               Margin="5">
+
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Quy cách:"
+                                               HorizontalAlignment="Left"
+                                               FontSize="16"
+                                               FontWeight="Bold"
+                                               Margin="5"
+                                               Width="150">
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding QuyCach}"
+                                               HorizontalAlignment="Left"
+                                               FontSize="16"
+                                               FontWeight="Bold"
+                                               Margin="5">
+
+                                    </TextBlock>
+                                </StackPanel>
+                                
+                                <Expander HorizontalAlignment="Stretch"
+                                          Header="Thông tin chi tiết"
+                                          FontWeight="Bold">
+                                    <StackPanel Margin="24,8,24,16"
+                                                Orientation="Vertical"
+                                                TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Version:"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding Version}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Đơn vị (ERP):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding UnitERP}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Đơn vị (Sản xuất):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding UnitSx}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Tỷ lệ chuyển đổi:"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding TyLeChuyenDoi}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Mã kế toán (ERP):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding MaKeToanERP}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Mã phân loại lớn (ERP):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding MaPLLonERP}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Mã phân loại nhỏ (ERP):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding MaPLNhoERP}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Mã phân loại cuối (ERP):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding MaPL4ERP}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Mã phân loại lớn (sản xuất):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding MaPLLonSx}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Mã phân loại nhỏ (sản xuất):"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Margin="5"
+                                                       Width="210">
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding MaPLNhoSx}"
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"
+                                                       FontWeight="Normal"
+                                                       Margin="5">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        
+                                    </StackPanel>
+                                </Expander>
+
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

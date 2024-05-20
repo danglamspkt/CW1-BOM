@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\WPF\\CW1-BOM\\BomRnD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\usercontrolbomnl\\bomnladdwindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomnl\\bomnladdwindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\viewmodel\\bomnguyenlieuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:viewmodel\\bomnguyenlieuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\usercontrolbomnl\\bomnlmainuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomnl\\bomnlmainuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\usercontrolbomnl\\bomnlinfowindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomnl\\bomnlinfowindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\usercontrolbomlk\\bomlkinfowindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomlk\\bomlkinfowindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\viewmodel\\bombtpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:viewmodel\\bombtpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\model\\bom_bomnl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:model\\bom_bomnl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 353,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,63 +58,114 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "BomNLAddWindows.xaml",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomNL\\BomNLAddWindows.xaml",
+              "RelativeDocumentMoniker": "UserControlBomNL\\BomNLAddWindows.xaml",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomNL\\BomNLAddWindows.xaml",
+              "RelativeToolTip": "UserControlBomNL\\BomNLAddWindows.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-20T08:10:22.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BomBTPViewModel.cs",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BomBTPViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\BomBTPViewModel.cs",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BomBTPViewModel.cs",
+              "RelativeToolTip": "ViewModel\\BomBTPViewModel.cs",
+              "ViewState": "AQIAANcBAAAAAAAAAAAiwPABAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T07:15:25.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BOMNguyenLieuViewModel.cs",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BOMNguyenLieuViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\BOMNguyenLieuViewModel.cs",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BOMNguyenLieuViewModel.cs",
+              "RelativeToolTip": "ViewModel\\BOMNguyenLieuViewModel.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAswJQAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T01:43:06.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BomLKInfoWindows.xaml",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomLK\\BomLKInfoWindows.xaml",
+              "RelativeDocumentMoniker": "UserControlBomLK\\BomLKInfoWindows.xaml",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomLK\\BomLKInfoWindows.xaml",
+              "RelativeToolTip": "UserControlBomLK\\BomLKInfoWindows.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-20T07:14:08.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BOM_BomNl.cs",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\Model\\BOM_BomNl.cs",
+              "RelativeDocumentMoniker": "Model\\BOM_BomNl.cs",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\Model\\BOM_BomNl.cs",
+              "RelativeToolTip": "Model\\BOM_BomNl.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwCcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T04:12:05.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LoginViewModel.cs",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModel\\LoginViewModel.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAgwJgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T01:45:34.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "LoginWindow.xaml",
               "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\LoginWindow.xaml",
               "RelativeToolTip": "LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-16T04:24:12.026Z",
+              "WhenOpened": "2024-05-20T01:12:43.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-16T03:36:27.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-16T03:35:21.135Z",
+              "WhenOpened": "2024-05-20T01:01:06.78Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BomNLMainUC.xaml",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomNL\\BomNLMainUC.xaml",
-              "RelativeDocumentMoniker": "UserControlBomNL\\BomNLMainUC.xaml",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomNL\\BomNLMainUC.xaml",
-              "RelativeToolTip": "UserControlBomNL\\BomNLMainUC.xaml",
+              "DocumentIndex": 4,
+              "Title": "BomNLInfoWindows.xaml",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomNL\\BomNLInfoWindows.xaml",
+              "RelativeDocumentMoniker": "UserControlBomNL\\BomNLInfoWindows.xaml",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomNL\\BomNLInfoWindows.xaml",
+              "RelativeToolTip": "UserControlBomNL\\BomNLInfoWindows.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-16T03:02:24.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BOMNguyenLieuViewModel.cs",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BOMNguyenLieuViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\BOMNguyenLieuViewModel.cs",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BOMNguyenLieuViewModel.cs",
-              "RelativeToolTip": "ViewModel\\BOMNguyenLieuViewModel.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T03:15:21.865Z",
+              "WhenOpened": "2024-05-20T01:01:00.061Z",
               "EditorCaption": ""
             }
           ]

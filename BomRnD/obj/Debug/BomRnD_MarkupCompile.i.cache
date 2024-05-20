@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\WPF\CW1-BOM\BomRnD\App.xaml
-111717951553
+191316381562
 2739969757
-401322688130
+49-980235477
 561847486389
-LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControl1\ControlBarBaseUC.xaml;UserControl1\ControlBarMainUC.xaml;UserControlBomKhac\BomKhacMainUC.xaml;UserControlBomLK\BomLKMainUC.xaml;UserControlBomNL\BomNLMainUC.xaml;UserControlBomTH\BomTHMainUC.xaml;UserControlHome\HomeMainUC.xaml;UserControlSetting\SettingMainUC.xaml;
+LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControl1\ControlBarBaseUC.xaml;UserControl1\ControlBarInfoUC.xaml;UserControl1\ControlBarMainUC.xaml;UserControlBomKhac\BomKhacMainUC.xaml;UserControlBomLK\BomLKInfoWindows.xaml;UserControlBomLK\BomLKMainControlUC.xaml;UserControlBomLK\BomLKMainTitleUC.xaml;UserControlBomLK\BomLKMainUC.xaml;UserControlBomNL\BomNLAddWindows.xaml;UserControlBomNL\BomNLInfoWindows.xaml;UserControlBomNL\BomNLMainControlUC.xaml;UserControlBomNL\BomNLMainTItleUC.xaml;UserControlBomNL\BomNLMainUC.xaml;UserControlBomTH\BomTHMainUC.xaml;UserControlHome\HomeMainUC.xaml;UserControlSetting\SettingMainUC.xaml;
 
 True
 
