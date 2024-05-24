@@ -166,6 +166,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Basic Info\MaKeToanERPWindow.xaml.cs">
+      <DependentUpon>MaKeToanERPWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Info\PL4ERPWindow.xaml.cs">
+      <DependentUpon>PL4ERPWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Info\PLLonERPWindow.xaml.cs">
+      <DependentUpon>PLLonERPWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Info\PLLonSxWindow.xaml.cs">
+      <DependentUpon>PLLonSxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Info\PLNhoERPWindow.xaml.cs">
+      <DependentUpon>PLNhoERPWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Info\PLNhoSxWindow.xaml.cs">
+      <DependentUpon>PLNhoSxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Basic Info\UnitWindow.xaml.cs">
+      <DependentUpon>UnitWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -258,6 +279,9 @@
     <Compile Include="UserControlBomNL\BomNLAddWindows.xaml.cs">
       <DependentUpon>BomNLAddWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomNL\BomNLEditWindows.xaml.cs">
+      <DependentUpon>BomNLEditWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomNL\BomNLInfoWindows.xaml.cs">
       <DependentUpon>BomNLInfoWindows.xaml</DependentUpon>
     </Compile>
@@ -280,11 +304,40 @@
       <DependentUpon>SettingMainUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\BasicViewModel.cs" />
     <Compile Include="ViewModel\BomBTPViewModel.cs" />
     <Compile Include="ViewModel\BOMNguyenLieuViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Page Include="Basic Info\MaKeToanERPWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Basic Info\PL4ERPWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Basic Info\PLLonERPWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Basic Info\PLLonSxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Basic Info\PLNhoERPWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Basic Info\PLNhoSxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Basic Info\UnitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -338,6 +391,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlBomNL\BomNLAddWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomNL\BomNLEditWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

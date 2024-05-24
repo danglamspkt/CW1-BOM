@@ -48,7 +48,7 @@
                             BorderBrush="Transparent">
                         <materialDesign:PackIcon Kind="WindowMaximize" />
                     </Button>-->
-                    <Button Command="{Binding CloseWindowCommand}"
+                    <Button Command="{Binding CloseWindowCommand2}"
                             CommandParameter="{Binding ElementName=ucControlBar}"
                             ToolTip="Đóng"
                             ToolBar.OverflowMode="AsNeeded"

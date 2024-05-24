@@ -236,3 +236,19 @@ C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomLK\BomLKInfoWindows.g.cs
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomLK\BomLKInfoWindows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomNL\BomNLAddWindows.g.cs
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomNL\BomNLAddWindows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomNL\BomNLEditWindows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomNL\BomNLEditWindows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\UnitWindow.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\UnitWindow.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\MaKeToanERPWindow.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PL4ERPWindow.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLLonERPWindow.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLLonSxWindow.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLNhoERPWindow.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLNhoSxWindow.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\MaKeToanERPWindow.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PL4ERPWindow.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLLonERPWindow.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLLonSxWindow.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLNhoERPWindow.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\Basic Info\PLNhoSxWindow.baml

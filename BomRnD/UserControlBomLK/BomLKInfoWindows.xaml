@@ -12,6 +12,7 @@
         d:DataContext="{d:DesignInstance Type=viewmodel:BomBTPViewModel}"
         DataContext="{StaticResource BomBTPVM}"
         mc:Ignorable="d"
+        Background="#FFFFF8F5"
         TextElement.Foreground="Black"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"

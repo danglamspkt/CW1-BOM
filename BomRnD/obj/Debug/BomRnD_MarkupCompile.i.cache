@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\WPF\CW1-BOM\BomRnD\App.xaml
-191316381562
+27-672031233
 2739969757
-49-980235477
+58-1546133546
 561847486389
-LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControl1\ControlBarBaseUC.xaml;UserControl1\ControlBarInfoUC.xaml;UserControl1\ControlBarMainUC.xaml;UserControlBomKhac\BomKhacMainUC.xaml;UserControlBomLK\BomLKInfoWindows.xaml;UserControlBomLK\BomLKMainControlUC.xaml;UserControlBomLK\BomLKMainTitleUC.xaml;UserControlBomLK\BomLKMainUC.xaml;UserControlBomNL\BomNLAddWindows.xaml;UserControlBomNL\BomNLInfoWindows.xaml;UserControlBomNL\BomNLMainControlUC.xaml;UserControlBomNL\BomNLMainTItleUC.xaml;UserControlBomNL\BomNLMainUC.xaml;UserControlBomTH\BomTHMainUC.xaml;UserControlHome\HomeMainUC.xaml;UserControlSetting\SettingMainUC.xaml;
+Basic Info\MaKeToanERPWindow.xaml;Basic Info\PL4ERPWindow.xaml;Basic Info\PLLonERPWindow.xaml;Basic Info\PLLonSxWindow.xaml;Basic Info\PLNhoERPWindow.xaml;Basic Info\PLNhoSxWindow.xaml;Basic Info\UnitWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControl1\ControlBarBaseUC.xaml;UserControl1\ControlBarInfoUC.xaml;UserControl1\ControlBarMainUC.xaml;UserControlBomKhac\BomKhacMainUC.xaml;UserControlBomLK\BomLKInfoWindows.xaml;UserControlBomLK\BomLKMainControlUC.xaml;UserControlBomLK\BomLKMainTitleUC.xaml;UserControlBomLK\BomLKMainUC.xaml;UserControlBomNL\BomNLAddWindows.xaml;UserControlBomNL\BomNLEditWindows.xaml;UserControlBomNL\BomNLInfoWindows.xaml;UserControlBomNL\BomNLMainControlUC.xaml;UserControlBomNL\BomNLMainTItleUC.xaml;UserControlBomNL\BomNLMainUC.xaml;UserControlBomTH\BomTHMainUC.xaml;UserControlHome\HomeMainUC.xaml;UserControlSetting\SettingMainUC.xaml;
 
 True
 

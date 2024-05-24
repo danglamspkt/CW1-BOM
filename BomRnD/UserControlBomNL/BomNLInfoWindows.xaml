@@ -12,6 +12,7 @@
         d:DataContext="{d:DesignInstance Type=viewmodel:BOMNguyenLieuViewModel}"
         DataContext="{StaticResource BomNLVM}"
         mc:Ignorable="d"
+        Background="#FFFFF8F5"
         TextElement.Foreground="Black"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
@@ -46,9 +47,22 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel Orientation="Horizontal">
-                <StackPanel x:Name="NLAvar" Width="350" Height="572" VerticalAlignment="Center">
-                    
-                </StackPanel>
+                <StackPanel Width="350"
+                            Height="572"
+                            VerticalAlignment="Center">
+                    <StackPanel x:Name="NLAvar"
+                                Height="400">
+
+                    </StackPanel>
+                    <Button Content="edit"
+                            Padding="2"
+                            Height="35"
+                            Width="100"
+                            Margin="5 0 0 0"
+                            Background="Teal"
+                            Command="{Binding SuaNLcommand}" />
+                </StackPanel> 
+                
                 <Grid Width="450" Height="572">
                     <ScrollViewer Grid.Row="2"
                                   materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"

@@ -1,0 +1,66 @@
+﻿<Window x:Class="BomRnD.Basic_Info.UnitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BomRnD.Basic_Info"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:BomRnD.UserControl1"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:BasicViewModel}"
+        DataContext="{StaticResource BasicVM}"        
+        TextElement.Foreground="Black"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        x:Name="mainWindow"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFFFF8F5"
+        Title="Đơn vị"
+        FontWeight="Bold"
+        Height="400"
+        Width="420"
+        WindowState="Normal">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedUnitCommand}"
+                                   CommandParameter="{Binding ElementName=mainWindow}" />
+        </i:EventTrigger>
+        <!--<i:EventTrigger EventName="Loaded">
+        <i:InvokeCommandAction Command="{Binding Homedata}" 
+                           CommandParameter="{Binding ElementName=UCMain}"/>
+    </i:EventTrigger>-->
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarInfoUC Tag="{Binding Title, ElementName=mainWindow}" />
+        </Grid>
+        <Grid Grid.Row="1">
+
+            <DataGrid AutoGenerateColumns="False"
+                      ItemsSource="{Binding Unitlist}"
+                      IsReadOnly="True"
+                      Background="Transparent">
+                <DataGrid.Columns>                    
+                    <DataGridTextColumn Header="ID đơn vị"
+                                        Binding="{Binding Unit}"
+                                        Width="150"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Display Name"
+                                        Binding="{Binding DisplayName}"
+                                        Width="250"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

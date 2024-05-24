@@ -1,5 +1,6 @@
 ﻿
 FC:\WPF\CW1-BOM\BomRnD\App.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\Basic Info\UnitWindow.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\LoginWindow.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\MainWindow.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\ResourceXAML\MainResource.xaml;;
@@ -7,9 +8,12 @@ FC:\WPF\CW1-BOM\BomRnD\UserControl1\ControlBarBaseUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControl1\ControlBarInfoUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControl1\ControlBarMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomKhac\BomKhacMainUC.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKInfoWindows.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKMainControlUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKMainTitleUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKMainUC.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLAddWindows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLEditWindows.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLInfoWindows.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLMainControlUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLMainTItleUC.xaml;;
@@ -17,6 +21,10 @@ FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlHome\HomeMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlSetting\SettingMainUC.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKInfoWindows.xaml;;
-FC:\WPF\CW1-BOM\BomRnD\UserControlBomNL\BomNLAddWindows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\Basic Info\MaKeToanERPWindow.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\Basic Info\PL4ERPWindow.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLLonERPWindow.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLLonSxWindow.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLNhoERPWindow.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLNhoSxWindow.xaml;;
 

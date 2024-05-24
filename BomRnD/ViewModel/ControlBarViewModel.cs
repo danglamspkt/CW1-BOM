@@ -22,6 +22,7 @@ namespace BomRnD.ViewModel
 
         #region commands
         public ICommand CloseWindowCommand { get; set; }
+        public ICommand CloseWindowCommand2 { get; set; }
         public ICommand MaximizeWindowCommand { get; set; }
         public ICommand MinimizeWindowCommand { get; set; }
         public ICommand MouseMoveWindowCommand { get; set; }
@@ -38,6 +39,16 @@ namespace BomRnD.ViewModel
                 {
                     var check = MessageBox.Show(CTB0001, "Quit app", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (check == MessageBoxResult.Yes) w.Close();
+                }
+            }
+            );
+            CloseWindowCommand2 = new RelayCommand<UserControl>((p) => { return p == null ? false : true; }, (p) => {
+                FrameworkElement window = GetWindowParent(p);
+                var w = window as Window;
+                langdata();
+                if (w != null)
+                {
+                    w.Close();
                 }
             }
             );

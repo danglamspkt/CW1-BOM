@@ -20,14 +20,16 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Title="Nguyên liệu information"
-        Height="650"
-        Width="800"
+        Background="#FFFFF8F5"
+        Title="Thêm mã Nguyên liệu"
+        FontWeight="Bold"
+        Height="690"
+        Width="820"
         WindowState="Normal">
  
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}"
+            <i:InvokeCommandAction Command="{Binding LoadedaddCommand}"
                                    CommandParameter="{Binding ElementName=mainWindow}" />
         </i:EventTrigger>
         <!--<i:EventTrigger EventName="Loaded">
@@ -53,16 +55,20 @@
                                 Width="300"
                                 Height="300"
                                 HorizontalAlignment="Center"
-                                VerticalAlignment="Center">                        
+                                VerticalAlignment="Center">
+                        <materialDesign:PackIcon Kind="Image" 
+                                                 Width="300"
+                                                 Height="300"
+                                                 Foreground="Gray"/>
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Center" Margin="0 65 0 0">
+                    <StackPanel HorizontalAlignment="Center" Margin="0 40 0 0">
                         <TextBlock Text="Link google drive hình ảnh"
                                    HorizontalAlignment="Center"
                                    FontSize="14"
                                    FontWeight="Bold"
                                    Margin="20 5 5 0">
                         </TextBlock>
-                        <TextBox Text="{Binding MaHang, Mode=TwoWay}"
+                        <TextBox Text="{Binding LinkImg, Mode=TwoWay}"
                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                  materialDesign:HintAssist.IsFloating="False"                                 
@@ -71,13 +77,46 @@
                                  HorizontalAlignment="Center"
                                  FontSize="14"
                                  FontWeight="Bold"
-                                 Margin="5">
+                                 Margin="5">                            
                         </TextBox>
                     </StackPanel>
 
+                    <StackPanel HorizontalAlignment="Center"
+                                Margin="0 10 0 0">
+                        <TextBlock Text="ID hình ảnh"
+                                   HorizontalAlignment="Center"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Margin="20 5 5 0">
+                        </TextBlock>
+                        <TextBox Text="{Binding IDImg, Mode=TwoWay}"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                 materialDesign:HintAssist.IsFloating="False"
+                                 Padding="5"
+                                 Width="300"
+                                 HorizontalAlignment="Center"
+                                 FontSize="14"
+                                 FontWeight="Bold"
+                                 Margin="5">                            
+                        </TextBox>
+                    </StackPanel>
+                    <Button Content="Update Image"
+                            Command="{Binding ChangeLinkingCommand}"
+                            CommandParameter="{Binding ElementName=NLAvar}"
+                            Width="150"
+                            Height="40"
+                            Margin="5"
+                            materialDesign:ButtonAssist.CornerRadius="25"
+                            Style="{StaticResource MaterialDesignRaisedButton}"
+                            Background="Teal"
+                            Foreground="Black">
+
+                    </Button>
+
                 </StackPanel>
-                <Grid Width="450"
-                      Height="622">
+                <Grid Width="470"
+                      Height="652">
                     <ScrollViewer Grid.Row="2"
                                   materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
                                   HorizontalScrollBarVisibility="Disabled"
@@ -88,11 +127,11 @@
                                            FontSize="32"
                                            FontWeight="Bold"
                                            HorizontalAlignment="Center"
-                                           Margin="20">
+                                           Margin="10">
                                     
                                 </TextBlock>
-                                <StackPanel Orientation="Horizontal">
-                                    <StackPanel >
+                                
+                                    <StackPanel HorizontalAlignment="Center">
                                         <TextBlock Text="Mã hàng"
                                                    HorizontalAlignment="Left"
                                                    FontSize="14"
@@ -100,7 +139,31 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaHang, Mode=TwoWay}"
+                                        <TextBox Text="{Binding MaHang2, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                    
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Display Name"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding DisplayName2, Mode=TwoWay}"
                                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                                  materialDesign:HintAssist.IsFloating="False"
@@ -114,14 +177,14 @@
                                     </StackPanel>
 
                                     <StackPanel Margin="10 0 0 0">
-                                        <TextBlock Text="Display Name"
+                                        <TextBlock Text="Tên tiếng trung"
                                                    HorizontalAlignment="Left"
                                                    FontSize="14"
                                                    FontWeight="Bold"
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaHang, Mode=TwoWay}"
+                                        <TextBox Text="{Binding TenTiengTrung2, Mode=TwoWay}"
                                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                                  materialDesign:HintAssist.IsFloating="False"
@@ -144,7 +207,7 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding ChatLieu, Mode=TwoWay}"
+                                        <TextBox Text="{Binding ChatLieu2, Mode=TwoWay}"
                                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                                  materialDesign:HintAssist.IsFloating="False"
@@ -165,7 +228,7 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding QuyCach, Mode=TwoWay}"
+                                        <TextBox Text="{Binding QuyCach2, Mode=TwoWay}"
                                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                                  materialDesign:HintAssist.IsFloating="False"
@@ -188,17 +251,29 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding UnitERP, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Orientation="Horizontal"
+                                                    Margin="5">
+                                            <ComboBox ItemsSource="{Binding Unitlist}"
+                                                      DisplayMemberPath="Unit"
+                                                      Text="{Binding UnitERP2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold" />
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadUnitCommand}" />
+                                        </StackPanel>
+                                        
                                     </StackPanel>
 
                                     <StackPanel Margin="10 0 0 0">
@@ -209,17 +284,30 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding UnitSx, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Margin="5"
+                                                    Orientation="Horizontal">
+                                            <ComboBox ItemsSource="{Binding Unitlist}"
+                                                      DisplayMemberPath="Unit"
+                                                      Text="{Binding UnitSx2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold">
+                                            </ComboBox>
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadUnitCommand}" />
+                                        </StackPanel>
+                                        
                                     </StackPanel>
                                 </StackPanel>
 
@@ -232,7 +320,7 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding TyLeChuyenDoi, Mode=TwoWay}"
+                                        <TextBox Text="{Binding TyLeChuyenDoi2, Mode=TwoWay}"
                                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                                  materialDesign:HintAssist.IsFloating="False"
@@ -253,7 +341,7 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding Version, Mode=TwoWay}"
+                                        <TextBox Text="{Binding Version2, Mode=TwoWay}"
                                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                                  materialDesign:HintAssist.IsFloating="False"
@@ -276,17 +364,29 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaKeToanERP, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Margin="5"
+                                                    Orientation="Horizontal">
+                                            <ComboBox ItemsSource="{Binding KeToanERPlist}"
+                                                      DisplayMemberPath="MaHang"
+                                                      Text="{Binding MaKeToanERP2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold">
+                                            </ComboBox>
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadKtERPCommand}" />
+                                        </StackPanel>
                                     </StackPanel>
 
                                     <StackPanel Margin="10 0 0 0">
@@ -297,17 +397,29 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaPLLonERP, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Margin="5"
+                                                    Orientation="Horizontal">
+                                            <ComboBox ItemsSource="{Binding PLLonERPlist}"
+                                                      DisplayMemberPath="MaHang"
+                                                      Text="{Binding MaPLLonERP2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold">
+                                            </ComboBox>
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadPLLERPCommand}" />
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
 
@@ -320,17 +432,29 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaPLNhoERP, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Margin="5"
+                                                    Orientation="Horizontal">
+                                            <ComboBox ItemsSource="{Binding PLNhoERPlist}"
+                                                      DisplayMemberPath="MaHang"
+                                                      Text="{Binding MaPLNhoERP2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold">
+                                            </ComboBox>
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadPLNERPCommand}" />
+                                        </StackPanel>
                                     </StackPanel>
 
                                     <StackPanel Margin="10 0 0 0">
@@ -341,17 +465,29 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaPL4ERP, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Margin="5"
+                                                    Orientation="Horizontal">
+                                            <ComboBox ItemsSource="{Binding PL4ERPlist}"
+                                                      DisplayMemberPath="MaHang"
+                                                      Text="{Binding MaPL4ERP2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold">
+                                            </ComboBox>
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadPL4ERPCommand}" />
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
 
@@ -364,17 +500,29 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaPLLonSx, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Margin="5"
+                                                    Orientation="Horizontal">
+                                            <ComboBox ItemsSource="{Binding PLLonlist2}"
+                                                      DisplayMemberPath="MaHang"
+                                                      Text="{Binding MaPLLonSx2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold">
+                                            </ComboBox>
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadPLLSxCommand}" />
+                                        </StackPanel>
                                     </StackPanel>
 
                                     <StackPanel Margin="10 0 0 0">
@@ -385,25 +533,37 @@
                                                    Margin="20 5 5 0"
                                                    Width="180">
                                         </TextBlock>
-                                        <TextBox Text="{Binding MaPLNhoSx, Mode=TwoWay}"
-                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                 materialDesign:HintAssist.IsFloating="False"
-                                                 Padding="5"
-                                                 Width="200"
-                                                 HorizontalAlignment="Left"
-                                                 FontSize="14"
-                                                 FontWeight="Bold"
-                                                 Margin="5">
-                                        </TextBox>
+                                        <StackPanel Margin="5"
+                                                    Orientation="Horizontal">
+                                            <ComboBox ItemsSource="{Binding PLNholist2}"
+                                                      DisplayMemberPath="MaHang"
+                                                      Text="{Binding MaPLNhoSx2, Mode=TwoWay}"
+                                                      materialDesign:ComboBoxAssist.MaxLength="10"
+                                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                      materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                      materialDesign:HintAssist.IsFloating="False"
+                                                      Padding="5"
+                                                      Width="160"
+                                                      HorizontalAlignment="Left"
+                                                      FontSize="14"
+                                                      FontWeight="Bold">
+                                            </ComboBox>
+                                            <Button Content="..."
+                                                    Padding="2"
+                                                    Height="35"
+                                                    Width="35"
+                                                    Margin="5 0 0 0"
+                                                    Background="Teal"
+                                                    Command="{Binding LoadPLNSxCommand}" />
+                                        </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <Button Content="Lưu"
-                                        Command="{Binding LoginCommand}"
-                                        CommandParameter="{Binding ElementName=loginWindow}"
+                                        Command="{Binding AddCommand}"
+                                        CommandParameter="{Binding ElementName=mainWindow}"
                                         Width="200"
                                         Height="40"
-                                        Margin="20"
+                                        Margin="5"
                                         materialDesign:ButtonAssist.CornerRadius="25"
                                         Style="{StaticResource MaterialDesignRaisedButton}"
                                         Background="#f26241"
