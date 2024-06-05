@@ -20,15 +20,15 @@
         x:Name="mainWindow"
         Background="#262624"
         Foreground="#F2F2F2"
-        
-        
-        ResizeMode="NoResize"
-        WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Title="LUXSO"
         Height="800"
         Width="1500"
-        WindowState="Maximized">
+        WindowStyle="None"
+        Top="0"
+        WindowState="Maximized"
+        BorderBrush="#FF2F49D8"
+        BorderThickness="0.5">
 
 
     <Window.Resources>

@@ -264,6 +264,9 @@
     <Compile Include="UserControlBomKhac\BomKhacMainUC.xaml.cs">
       <DependentUpon>BomKhacMainUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomLK\BomLKAddWindows.xaml.cs">
+      <DependentUpon>BomLKAddWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomLK\BomLKInfoWindows.xaml.cs">
       <DependentUpon>BomLKInfoWindows.xaml</DependentUpon>
     </Compile>
@@ -371,6 +374,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlBomKhac\BomKhacMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomLK\BomLKAddWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

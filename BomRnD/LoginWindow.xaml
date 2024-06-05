@@ -11,23 +11,21 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:viewmodel="clr-namespace:BomRnD.ViewModel" 
         d:DataContext="{d:DesignInstance Type=viewmodel:LoginViewModel}"
-        
         xmlns:uc="clr-namespace:BomRnD.UserControl1"
-        
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{materialDesign:MaterialDesignFont}"
-         
-         
         DataContext="{StaticResource LoginVM}"         
         Name="loginWindow"
-        
-            
         ResizeMode="NoResize"
         WindowStyle="None"
-
-         WindowStartupLocation="CenterScreen"
-         Title="LoginWindow" Height="800" Width="1300" WindowState="Normal">
+        WindowStartupLocation="CenterScreen"
+        Title="LoginWindow"
+        Height="800"
+        Width="1300"
+        WindowState="Normal"
+        BorderBrush="#FF2F49D8"
+        BorderThickness="0.5">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>

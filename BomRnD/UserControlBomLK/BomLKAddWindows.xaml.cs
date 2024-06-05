@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BomRnD
+namespace BomRnD.UserControlBomLK
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BomLKAddWindows.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BomLKAddWindows : Window
     {
-        public MainWindow()
+        public BomLKAddWindows()
         {
             InitializeComponent();
-            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-
-        }
-
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

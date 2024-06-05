@@ -115,6 +115,9 @@ namespace BomRnD.ViewModel
         public string MaPLNhoSx { get => _MaPLNhoSx; set { _MaPLNhoSx = value; OnPropertyChanged(); } }
 
 
+
+
+        public BomLKInfoWindows bomLKInfoWindows;
         public ICommand TimLkcommand { get; set; }
         public ICommand ThemLkcommand { get; set; }
 
@@ -470,16 +473,15 @@ namespace BomRnD.ViewModel
                     stackPanel1.Children.Add(textBlock2);
 
                     TextBlock textBlock3 = new TextBlock();
-                    textBlock3.Text = item.ChatLieu + " " + item.T.ToString() + " * " + item.W.ToString() + " * " + item.L.ToString();
+                    if (string.IsNullOrEmpty(item.QuyCach)) textBlock3.Text = item.ChatLieu + " " + item.T.ToString() + " * " + item.W.ToString() + " * " + item.L.ToString();
+                    else textBlock3.Text = item.QuyCach;
                     textBlock3.HorizontalAlignment = HorizontalAlignment.Center;
                     textBlock3.VerticalAlignment = VerticalAlignment.Center;
                     textBlock3.Margin = new Thickness(10);
                     stackPanel1.Children.Add(textBlock3);
 
                     button.Click += (sender, args) =>
-                    {
-                        BomLKInfoWindows bomLKInfoWindows = new BomLKInfoWindows();
-                        bomLKInfoWindows.Show();
+                    {                        
                         MaHang = item.MaHang;
                         DisplayName = item.DisplayName;
                         MaBanVe = item.MaBanVe;
@@ -502,6 +504,9 @@ namespace BomRnD.ViewModel
                         MaPL4ERP = item.MaPL4ERP;
                         MaPLLonSx = item.MaPLLonSx;
                         MaPLNhoSx = item.MaPLNhoSx;
+
+                        bomLKInfoWindows = new BomLKInfoWindows();
+                        bomLKInfoWindows.Show();
 
                         if (item.LinkImg == null)
                         {

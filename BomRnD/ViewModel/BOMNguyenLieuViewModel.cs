@@ -21,6 +21,7 @@ using BomRnD.UserControlBomTH;
 using BomRnD.UserControlHome;
 using BomRnD.UserControlSetting;
 using BomRnD.Basic_Info;
+using MahApps.Metro.Controls;
 
 namespace BomRnD.ViewModel
 {
@@ -232,11 +233,16 @@ namespace BomRnD.ViewModel
         private string _IDImg3;
         public string IDImg3 { get => _IDImg3; set { _IDImg3 = value; OnPropertyChanged(); } }
 
+        public BomNLInfoWindows bomNLInfoWindows;
+
+        bool editdone = false;
+
 
         public ICommand TimNLcommand { get; set; }
         public ICommand ThemNLcommand { get; set; }
         public ICommand SuaNLcommand { get; set; }
         public ICommand AddCommand { get; set; }
+        public ICommand EditCommand { get; set; }
         public ICommand LoadedaddCommand { get; set; }
         public ICommand LoadedEditCommand { get; set; }
         public ICommand LoadUnitCommand { get; set; }
@@ -279,7 +285,7 @@ namespace BomRnD.ViewModel
 
             BOMNLPage = 1;
 
-            TimNLcommand = new RelayCommand<StackPanel>((p) => { return true; }, (p) =>
+            TimNLcommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 BOMNLPage = 1;
 
@@ -292,15 +298,15 @@ namespace BomRnD.ViewModel
                 win.UCMain.Children.Add(stackPanel);
             });
 
-            ThemNLcommand = new RelayCommand<WrapPanel>((p) => { return true; }, (p) =>
+            ThemNLcommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 BomNLAddWindows bomNLAddWindows = new BomNLAddWindows();
-                bomNLAddWindows.Show();
+                bomNLAddWindows.ShowDialog();
             });
-            SuaNLcommand = new RelayCommand<WrapPanel>((p) => { return true; }, (p) =>
+            SuaNLcommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 BomNLEditWindows bomNLEditWindows = new BomNLEditWindows();
-                bomNLEditWindows.Show();
+                bomNLEditWindows.ShowDialog();
             });
 
 
@@ -352,7 +358,7 @@ namespace BomRnD.ViewModel
 
             });
 
-            LoadedEditCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
+            LoadedEditCommand = new RelayCommand<StackPanel>((p) => { return true; }, (p) =>
             {
                 Unitlist = new ObservableCollection<BOM_Unit>(DataProvider.Ins.DB.BOM_Unit);
                 PLLonlist2 = new ObservableCollection<BOM_MaPLLonSx>(DataProvider.Ins.DB.BOM_MaPLLonSx);
@@ -380,9 +386,8 @@ namespace BomRnD.ViewModel
                 LinkImg3 = infolist.LinkImg;
                 IDImg3 = infolist.IDImg;
 
-                BomNLEditWindows bomNLEditWindows = new BomNLEditWindows();
 
-                if (infolist.LinkImg == null)
+                if (infolist.LinkImg == null || string.IsNullOrEmpty(infolist.LinkImg))
                 {
                     PackIcon packIcon = new PackIcon();
                     packIcon.Width = 300;
@@ -390,10 +395,10 @@ namespace BomRnD.ViewModel
                     packIcon.HorizontalAlignment = HorizontalAlignment.Center;
                     packIcon.VerticalAlignment = VerticalAlignment.Center;
                     packIcon.Margin = new Thickness(10);
-                    packIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Image;
+                    packIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Image360;
                     packIcon.Foreground = System.Windows.Media.Brushes.Black;
-                    bomNLEditWindows.NLAvar.Children.Clear();
-                    bomNLEditWindows.NLAvar.Children.Add(packIcon);
+                    p?.Children.Clear();
+                    p.Children.Add(packIcon);
                 }
                 else
                 {
@@ -406,8 +411,8 @@ namespace BomRnD.ViewModel
                     imageBrush.VerticalAlignment = VerticalAlignment.Center;
                     string uri = "https://drive.google.com/uc?id=" + infolist.IDImg;
                     imageBrush.Source = new BitmapImage(new Uri(uri));
-                    bomNLEditWindows.NLAvar.Children.Clear();
-                    bomNLEditWindows.NLAvar.Children.Add(imageBrush);
+                    p?.Children.Clear();
+                    p.Children.Add(imageBrush);
                 }
 
             });
@@ -415,6 +420,10 @@ namespace BomRnD.ViewModel
             AddCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
                 addNL();
+            });
+            EditCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
+            {
+                editNL();
             });
 
             ChangeLinkingCommand = new RelayCommand<StackPanel>((p) => { return true; }, (p) =>
@@ -437,7 +446,7 @@ namespace BomRnD.ViewModel
                 }
                 string uri = "https://drive.google.com/uc?id=" + IDImg;
                 imageBrush.Source = new BitmapImage(new Uri(uri));
-                p.Children.Clear();
+                p?.Children.Clear();
                 p.Children.Add(imageBrush);
                 
             });
@@ -462,7 +471,7 @@ namespace BomRnD.ViewModel
                 }
                 string uri = "https://drive.google.com/uc?id=" + IDImg3;
                 imageBrush.Source = new BitmapImage(new Uri(uri));
-                p.Children.Clear();
+                p?.Children.Clear();
                 p.Children.Add(imageBrush);
 
             });
@@ -517,6 +526,48 @@ namespace BomRnD.ViewModel
                 MaPLNhoSx2 = null;
                 LinkImg = null;
                 IDImg = null;
+            }
+        }
+
+        void editNL()
+        {
+            var bOM_BomNl = DataProvider.Ins.DB.BOM_BomNl.Where(y => y.MaHang == MaHang3).FirstOrDefault();            
+            {
+                bOM_BomNl.MaHang = MaHang3;
+                bOM_BomNl.QuyCach = QuyCach3;
+                bOM_BomNl.DisplayName = DisplayName3;
+                bOM_BomNl.TenTiengTrung = TenTiengTrung3;
+                bOM_BomNl.ChatLieu = ChatLieu3;
+                bOM_BomNl.UnitERP = UnitERP3;
+                bOM_BomNl.UnitSx = UnitSx3;
+                bOM_BomNl.TyLeChuyenDoi = TyLeChuyenDoi3;
+                bOM_BomNl.Version = Version3;
+                bOM_BomNl.MaKeToanERP = MaKeToanERP3;
+                bOM_BomNl.MaPLLonERP = MaPLLonERP3;
+                bOM_BomNl.MaPLNhoERP = MaPLNhoERP3;
+                bOM_BomNl.MaPL4ERP = MaPL4ERP3;
+                bOM_BomNl.MaPLLonSx = MaPLLonSx3;
+                bOM_BomNl.MaPLNhoSx = MaPLNhoSx3;
+                bOM_BomNl.LinkImg = LinkImg3;
+                bOM_BomNl.IDImg = IDImg3;
+                bOM_BomNl.UserName = Properties.Settings.Default.UserName;
+                DataProvider.Ins.DB.SaveChanges();
+                MaHang = MaHang3;
+                DisplayName = DisplayName3;
+                ChatLieu = ChatLieu3;
+                QuyCach = QuyCach3;
+                Version = Version3;
+                UnitERP = UnitERP3;
+                UnitSx = UnitSx3;
+                TyLeChuyenDoi = TyLeChuyenDoi3;
+                MaKeToanERP = MaKeToanERP3;
+                MaPLLonERP = MaPLLonERP3;
+                MaPLNhoERP = MaPLNhoERP3;
+                MaPL4ERP = MaPL4ERP3;
+                MaPLLonSx = MaPLLonSx3;
+                MaPLNhoSx = MaPLNhoSx3;
+                editdone = true;
+
             }
         }
 
@@ -764,8 +815,7 @@ namespace BomRnD.ViewModel
 
                     button.Click += (sender, args) =>
                     {
-                        BomNLInfoWindows bomNLInfoWindows = new BomNLInfoWindows();
-                        bomNLInfoWindows.Show();
+                        
                         MaHang = item.MaHang;
                         DisplayName = item.DisplayName;
                         ChatLieu = item.ChatLieu;
@@ -781,6 +831,8 @@ namespace BomRnD.ViewModel
                         MaPLLonSx = item.MaPLLonSx;
                         MaPLNhoSx = item.MaPLNhoSx;
 
+                        bomNLInfoWindows = new BomNLInfoWindows();
+                        bomNLInfoWindows.Show();
                         if (item.LinkImg == null)
                         {
                             PackIcon packIcon = new PackIcon();
@@ -896,7 +948,6 @@ namespace BomRnD.ViewModel
 
         void showinfo(object sender, RoutedEventArgs e, string mahang)
         {
-            BomNLInfoWindows bomNLInfoWindows = new BomNLInfoWindows();
             bomNLInfoWindows.Show();
             var bomnl = DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang==mahang).FirstOrDefault();
 

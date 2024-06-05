@@ -24,7 +24,9 @@
         Title="Bán thành phẩm information"
         Height="600"
         Width="900"
-        WindowState="Normal">
+        WindowState="Normal"
+        BorderBrush="#FF2F49D8"
+        BorderThickness="0.5">
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -47,11 +49,20 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel Orientation="Horizontal">
-                <StackPanel x:Name="LKAvar"
-                            Width="350"
+                <StackPanel Width="350"
                             Height="572"
                             VerticalAlignment="Center">
+                    <StackPanel x:Name="LKAvar"
+                                Height="400">
 
+                    </StackPanel>
+                    <Button Content="edit"
+                            Padding="2"
+                            Height="35"
+                            Width="100"
+                            Margin="5 0 0 0"
+                            Background="Teal"
+                            Command="{Binding SuaNLcommand}" />
                 </StackPanel>
                 <Grid Width="550"
                       Height="572">
@@ -63,21 +74,22 @@
                             <StackPanel Margin="10">
                                 <TextBox BorderThickness="0"
                                          IsReadOnly="True"
-                                         Text="{Binding MaHang}"
-                                           HorizontalAlignment="Left"
+                                         Text="{Binding MaHang, Mode=OneTime}"
+                                           HorizontalAlignment="Center"
                                            FontSize="32"
                                            FontWeight="Bold"
-                                           Margin="5 10 5 5"
-                                           Foreground="#FF6F6F6F">
+                                           Margin="10"
+                                           Foreground="Red">
 
                                 </TextBox>
                                 <TextBox BorderThickness="0"
                                          IsReadOnly="True"
-                                          Text="{Binding DisplayName}"
-                                           HorizontalAlignment="Left"
-                                           FontSize="24"
-                                           FontWeight="Bold"
-                                           Margin="5">
+                                         Text="{Binding DisplayName, Mode=OneTime}"
+                                         HorizontalAlignment="Left"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         Foreground="Red"
+                                         Margin="5">
 
                                 </TextBox>
 
@@ -91,11 +103,11 @@
                                     </TextBlock>
                                     <TextBox BorderThickness="0"
                                              IsReadOnly="True"
-                                             Text="{Binding MaBanVe}"
-                                               HorizontalAlignment="Left"
-                                               FontSize="16"
-                                               FontWeight="Bold"
-                                               Margin="5">
+                                             Text="{Binding MaBanVe, Mode=OneTime}"
+                                             HorizontalAlignment="Left"
+                                             FontSize="16"
+                                             Foreground="Red"
+                                             Margin="5">
 
                                     </TextBox>
                                 </StackPanel>
@@ -109,11 +121,11 @@
                                         </TextBlock>
                                         <TextBox BorderThickness="0"
                                                  IsReadOnly="True"
-                                                 Text="{Binding T}"
+                                                 Text="{Binding T, Mode=OneTime}"
                                                    HorizontalAlignment="Center"
                                                    FontSize="16"
-                                                   FontWeight="Bold"
-                                                   Margin="5">
+                                                 Foreground="Red"
+                                                 Margin="5">
 
                                         </TextBox>
                                     </StackPanel>
@@ -127,11 +139,11 @@
                                         </TextBlock>
                                         <TextBox BorderThickness="0"
                                                  IsReadOnly="True"
-                                                 Text="{Binding W}"
+                                                 Text="{Binding W, Mode=OneTime}"
                                                    HorizontalAlignment="Center"
                                                    FontSize="16"
-                                                   FontWeight="Bold"
-                                                   Margin="5">
+                                                 Foreground="Red"
+                                                 Margin="5">
 
                                         </TextBox>
                                     </StackPanel>
@@ -145,11 +157,11 @@
                                         </TextBlock>
                                         <TextBox BorderThickness="0"
                                                  IsReadOnly="True"
-                                                 Text="{Binding L}"
+                                                 Text="{Binding L, Mode=OneTime}"
                                                    HorizontalAlignment="Center"
                                                    FontSize="16"
-                                                   FontWeight="Bold"
-                                                   Margin="5">
+                                                 Foreground="Red"
+                                                 Margin="5">
 
                                         </TextBox>
                                     </StackPanel>
@@ -164,11 +176,11 @@
                                     </TextBlock>
                                     <TextBox BorderThickness="0"
                                              IsReadOnly="True"
-                                             Text="{Binding ChatLieu}"
+                                             Text="{Binding ChatLieu, Mode=OneTime}"
                                                HorizontalAlignment="Left"
                                                FontSize="16"
-                                               FontWeight="Bold"
-                                               Margin="5">
+                                             Foreground="Red"
+                                             Margin="5">
 
                                     </TextBox>
                                 </StackPanel>
@@ -182,11 +194,11 @@
                                     </TextBlock>
                                     <TextBox BorderThickness="0"
                                              IsReadOnly="True"
-                                             Text="{Binding QuyCach}"
+                                             Text="{Binding QuyCach, Mode=OneTime}"
                                                HorizontalAlignment="Left"
                                                FontSize="16"
-                                               FontWeight="Bold"
-                                               Margin="5">
+                                             Foreground="Red"
+                                             Margin="5">
 
                                     </TextBox>
                                 </StackPanel>
@@ -207,11 +219,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaBanVe2}"
+                                                     Text="{Binding MaBanVe2, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -224,11 +236,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaBTPTW}"
+                                                     Text="{Binding MaBTPTW, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -241,11 +253,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaBTPVN}"
+                                                     Text="{Binding MaBTPVN, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -258,11 +270,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding NGC}"
+                                                     Text="{Binding NGC, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -275,11 +287,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding Version}"
+                                                     Text="{Binding Version, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -292,11 +304,12 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding UnitERP}"
+                                                     Text="{Binding UnitERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
                                                        FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -309,11 +322,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding UnitSx}"
+                                                     Text="{Binding UnitSx, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -326,11 +339,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding TyLeChuyenDoi}"
+                                                     Text="{Binding TyLeChuyenDoi, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -343,11 +356,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaKeToanERP}"
+                                                     Text="{Binding MaKeToanERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -360,11 +373,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaPLLonERP}"
+                                                     Text="{Binding MaPLLonERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -377,11 +390,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaPLNhoERP}"
+                                                     Text="{Binding MaPLNhoERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -394,11 +407,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaPL4ERP}"
+                                                     Text="{Binding MaPL4ERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -411,11 +424,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaPLLonSx}"
+                                                     Text="{Binding MaPLLonSx, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
@@ -428,11 +441,11 @@
                                             </TextBlock>
                                             <TextBox BorderThickness="0"
                                                      IsReadOnly="True"
-                                                     Text="{Binding MaPLNhoSx}"
+                                                     Text="{Binding MaPLNhoSx, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
-                                                       Margin="5">
+                                                     Foreground="Red"
+                                                     Margin="5">
                                             </TextBox>
                                         </StackPanel>
 

@@ -19,13 +19,15 @@
         FontFamily="{materialDesign:MaterialDesignFont}"
         x:Name="mainWindow"
         ResizeMode="NoResize"
-        WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Title="Nguyên liệu information"
         Height="600"
         Width="800"
-        WindowState="Normal">
-    
+        WindowState="Normal"
+        WindowStyle="None"
+        BorderBrush="#FF2F49D8"
+        BorderThickness="0.5">
+
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}"
@@ -36,7 +38,7 @@
                            CommandParameter="{Binding ElementName=UCMain}"/>
     </i:EventTrigger>-->
     </i:Interaction.Triggers>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -61,27 +63,28 @@
                             Margin="5 0 0 0"
                             Background="Teal"
                             Command="{Binding SuaNLcommand}" />
-                </StackPanel> 
-                
-                <Grid Width="450" Height="572">
+                </StackPanel>
+
+                <Grid Width="450"
+                      Height="572">
                     <ScrollViewer Grid.Row="2"
                                   materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
                                   HorizontalScrollBarVisibility="Disabled"
                                   VerticalScrollBarVisibility="Auto">
                         <Grid>
                             <StackPanel Margin="10">
-                                <TextBlock Text="{Binding MaHang}"
-                                           HorizontalAlignment="Left"
+                                <TextBlock Text="{Binding MaHang, Mode=OneTime}"
+                                           HorizontalAlignment="Center"
                                            FontSize="32"
                                            FontWeight="Bold"
-                                           Margin="5 20 5 5"
-                                           Foreground="#FF6F6F6F">
+                                           Margin="10"
+                                           Foreground="Red">
 
                                 </TextBlock>
-                                <TextBlock Text="{Binding DisplayName}"
+                                <TextBlock Text="{Binding DisplayName, Mode=OneTime}"
                                            HorizontalAlignment="Left"
                                            FontSize="24"
-                                           FontWeight="Bold"
+                                           Foreground="Red"
                                            Margin="5">
 
                                 </TextBlock>
@@ -93,10 +96,10 @@
                                                Margin="5"
                                                Width="150">
                                     </TextBlock>
-                                    <TextBlock Text="{Binding ChatLieu}"
+                                    <TextBlock Text="{Binding ChatLieu, Mode=OneTime}"
                                                HorizontalAlignment="Left"
                                                FontSize="16"
-                                               FontWeight="Bold"
+                                               Foreground="Red"
                                                Margin="5">
 
                                     </TextBlock>
@@ -109,15 +112,15 @@
                                                Margin="5"
                                                Width="150">
                                     </TextBlock>
-                                    <TextBlock Text="{Binding QuyCach}"
+                                    <TextBlock Text="{Binding QuyCach, Mode=OneTime}"
                                                HorizontalAlignment="Left"
                                                FontSize="16"
-                                               FontWeight="Bold"
+                                               Foreground="Red"
                                                Margin="5">
 
                                     </TextBlock>
                                 </StackPanel>
-                                
+
                                 <Expander HorizontalAlignment="Stretch"
                                           Header="Thông tin chi tiết"
                                           FontWeight="Bold">
@@ -132,10 +135,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding Version}"
+                                            <TextBlock Text="{Binding Version, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -147,10 +150,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding UnitERP}"
+                                            <TextBlock Text="{Binding UnitERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -162,10 +165,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding UnitSx}"
+                                            <TextBlock Text="{Binding UnitSx, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -177,10 +180,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding TyLeChuyenDoi}"
+                                            <TextBlock Text="{Binding TyLeChuyenDoi, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -192,10 +195,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding MaKeToanERP}"
+                                            <TextBlock Text="{Binding MaKeToanERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -207,10 +210,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding MaPLLonERP}"
+                                            <TextBlock Text="{Binding MaPLLonERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -222,10 +225,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding MaPLNhoERP}"
+                                            <TextBlock Text="{Binding MaPLNhoERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -237,10 +240,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding MaPL4ERP}"
+                                            <TextBlock Text="{Binding MaPL4ERP, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -252,10 +255,10 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding MaPLLonSx}"
+                                            <TextBlock Text="{Binding MaPLLonSx, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
@@ -267,14 +270,14 @@
                                                        Margin="5"
                                                        Width="210">
                                             </TextBlock>
-                                            <TextBlock Text="{Binding MaPLNhoSx}"
+                                            <TextBlock Text="{Binding MaPLNhoSx, Mode=OneTime}"
                                                        HorizontalAlignment="Left"
                                                        FontSize="16"
-                                                       FontWeight="Normal"
+                                                       Foreground="Red"
                                                        Margin="5">
                                             </TextBlock>
                                         </StackPanel>
-                                        
+
                                     </StackPanel>
                                 </Expander>
 

@@ -22,6 +22,8 @@ namespace BomRnD
         public LoginWindow()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+
         }
     }
 }
