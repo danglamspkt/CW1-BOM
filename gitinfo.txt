@@ -1,0 +1,249 @@
+ Những lệnh Git cơ bản thường dùng:
+1. Create a new remote repository:
+Tạo một tài khoản Git và tạo một kho lưu trữ từ xa (remote repository).
+
+{Phần này tạo trên GitHub} https://github.com/
+
+2. Git version:
+  $ git --v
+Kiểm tra phiên bản của Git.
+3. Git config:
+   $ git config --g user.name "Dev name"
+   $ git config --g user.email "Dev email"
+   $ git config --list
+Định cấu hình các biến cấu hình chung – Nếu bạn đang làm việc với các developer khác, bạn sẽ cần biết ai đang kiểm tra mã xuất nhập và thực hiện thay đổi.
+4. Git help:
+Nếu bạn cần hỗ trợ, hãy sử dụng các lệnh:
+
+$ git help -a or $ git help --all - Hướng dẫn bạn có thể làm được những gì, tất cả các lệnh có thể.
+
+$ git config --help or $ git help config - Đưa bạn tới trang hướng dẫn chính thống của Git.
+
+$ git command -help . Xem tất cả các tùy chọn có sẵn cho lệnh cụ thể
+
+5. Git mkdir:
+$ git mkdir folder_name  - Tạo repository trong hệ thống local.
+
+ $ cd folder_name - Di chuyển đến folder_name repository vừa tạo ra.
+
+6. Git remote:
+$ git remote add origin https... <url> - Liên kết đến remote repository (local & GitHub)
+
+$ git remote set-url <name> <new url> - Thay đổi địa chỉ của remote repository đã Liên kết vào địa chỉ của <new url>.
+
+$ git remote rename <old> <new> - Thay đổi tên của remote repository đã Liên kết.
+
+7. Git init:
+$ git init (Khởi tạo git trong thư mục dự án của bạn) - Lệnh này được dùng khi bạn muốn tạo một phiên bản git mới cho một dự án.
+
+8. Git status:
+$ git status
+
+$ git status --short 
+
+(Kiểm tra trạng thái của kho lưu trữ)
+
+Giải thích:
+        ?? - Tập tin không bị theo dõi
+        A - Tệp được thêm vào giai đoạn
+        M - Tệp đã sửa đổi
+        D - Các tệp đã xóa
+Câu lệnh Git status dùng để kiểm tra status của repository.
+9. Git add:
+  $ git add .   (Chú ý dấu chấm)    
+Hoặc:
+
+$ git add --all  (git add -A)
+
+$ git add index.html (có thể chỉ định trực tiếp tên tệp cần add)
+
+Add những thay đổi (bạn đã tạo mới hoặc chỉnh sửa) để thực hiện commit.
+10. Git commit
+$ git commit -m "Thông điệp của bạn"
+
+Git commit: Ghi lại các thay đổi vào kho lưu trữ. (Cần thêm các thông điệp rõ ràng vào mỗi mục commit)
+Cách đặt tên branch hay commit nên rõ ràng, thể hiện branch đó, commit đó thực hiện feature gì hay là fix bug gì... (thường thì sẽ theo quy định của công ty)
+11. Git diff:
+$ git diff So sánh sự khác biệt kể từ lần commit cuối cùng của bạn.
+
+$ git log Xem lịch sử làm việc với git (lịch sử commit)
+
+12. Git push:
+$ git push -u origin branch_mane - Push (đẩy) branch vào remote repository.
+
+$ git push - Push (đẩy) tất cả mọi thay đổi (đã commit) lên remote repository.
+
+$ git push -d origin branch_mane - Xóa một branch trên remote repository.
+
+$ git push -f origin branch_mane - Push force sẽ apply toàn bộ log ở local của bạn lên branch ở repo, bất chấp log 2 nơi khác nhau. (Xóa vĩnh viễn branch cũ Push branch mới. Dễ gây conflict cho người khác cẩn trọng trước khi dùng)
+
+13. Git branch:
+$ git branch -M branch_mane (main) - Đổi tên nhánh chính.
+
+$ git branch- Kiểm tra các nhánh hiện có của bạn ở local.
+
+$ git branch -c branch_mane Hoặc:
+
+$ git checkout -b branch_mane (Tạo và chuyển luôn sang nhánh mới) - Tạo một nhánh có tên “branch_mane” và hợp nhất (merge) nó với nhánh chính.
+
+$ git branch -d branch_mane - Xóa một nhánh tại local có tên: "branch_mane" (branch đã được hợp nhất (push) vào remote repository)
+
+$ git branch -D branch_mane - Xóa một nhánh tại local có tên: "branch_mane" (branch đã commit nhưng chưa hợp nhất vào remote repository)
+
+$ git branch -a - Kiểm tra các branch hiện có trên remote repo của bạn.
+
+14. Git checkout:
+$ git checkout -b branch_mane (Tạo và chuyển luôn sang nhánh mới)
+
+$ git checkout branch_mane - Lệnh trên giúp di chuyển không gian làm việc, kiểm tra tệp giữa các branch_mane.
+
+15. Git fetch: (Lấy code về nhưng chưa muốn merge)
+$ git fetch origin
+
+Git fetch cho phép CẬP NHẬT để xem điều gì đã thay đổi trên GitHub của bạn.
+Lệnh fetch (xác nhận nội dung thay đổi trong branch của remote repository) nhưng nội dung branch của local repository không bị thay đổi.
+16. Git merge: (merge kết hợp nhánh hiện tại, với một nhánh được chỉ định.)
+Di chuyển về branch cần hợp nhất bằng lệnh checkout.
+$ git checkout branch_mane1 (Nhánh nhận hợp nhất or nhánh hiện tại)
+
+Tiến hành hợp nhất:
+$ git merge branch_mane2 (Nhánh chỉ định hợp nhất)
+
+(Nhánh hiện tại là nhánh bạn đang đứng, nhánh chỉ định là nhánh sau lệnh $ git merge)
+
+Lệnh trên giúp hợp nhất các branch (Hợp nhất branch_mane2 vào branch_mane1). (Chú ý xử lý xung đột code)
+
+17. Git pull: (Hợp nhất từ xa)
+$ git pull origin main - Git pull kéo tất cả các thay đổi từ main về local.
+
+$ git pull - Git pull kéo tất cả các thay đổi từ branch_mane về local.
+
+$ git pull origin - Git pull kéo tất cả các thay đổi từ kho lưu trữ từ xa vào branch bạn đang làm việc. (pull là sự kết hợp của 2 lệnh khác nhau: fetch và merge)
+
+$ git pull --rebase (Cach pull chống xung đột)
+
+Git clone:
+$ git clone <url>  (Địa chỉ dự án bạn muốn Clone) - Clone dự án có sẵn trên GitHub. $ git clone <url> folder_name - Clone đồng thời đổi tên dự án theo ý bạn khi save vào local.
+
+19. Git stash:
+$ git stash save # Hoặc $ git stash - Lưu lại công việc đang làm ở branch này để chuyển sang branch khác (Khi bạn chưa muốn commit code)
+
+$ git stash list - Xem lại lịch sử thay đổi.
+
+$ git stash show stash@{n} - Xem lại lịch sử thay đổi cụ thể của lần stash save{n}.
+
+$ git stash apply stash@{1} - Apply thay đổi của lần stash save{n}.
+
+$ git stash clear - Xoá toàn bộ stash.
+
+20. Git rebase: (Hợp nhất code)
+Di chuyển về nhánh nhận sự hợp nhất.
+$ git checkout branch_mane1
+
+Tiến hành hợp nhất.
+$ git rebase branch_mane2 (Code từ branch_mane2 được hợp nhất vào branch_mane1)
+
+Tương đồng với merge nhưng có sự khác biệt như sau:
+
+Merge: Chỉ lấy nội dung commit cuối cùng của hai nhánh, tích hợp tạo thành commit mới. Các commit trước đó được giữ nguyên không thay đổi.
+Rebase: Lấy code từ branch_mane2, từ những commit ở branch_mane2 tích hợp đồng thời tái tạo lại commit mới ở branch_mane1 (Các commit đã tồn tại bị bỏ đi).
+21. Git revert:
+$ git revert <commit_id>
+
+Lệnh này tạo commit đảo ngược commit có commit_id được chọn.
+$ git reset –hard <commit_id> - Lệnh này xoá toàn bộ các commit trước đó, đưa branch về trạng thái của commit_id được chọn.
+
+$ git reset –soft <commit_id> - Đưa branch về trạng thái của commit_id được chọn. Giữ nguyên tất cả thay đổi của file và các thay đổi ở stage. (Được khuyến khích sử dụng)
+
+Note:
+
+Nhấn phím mũi tên chỉ xuống để đọc tiếp nội dung bị che khuất phía dưới.
+Nhấn phím chữ 'q' để thoát khỏi chế độ xem, đưa bạn về dấu nhắc lệnh branch hiện tại.
+II/. Mẹo ghi nhớ lệnh Git rất đơn giản:
+Copy toàn bộ hoặc một phần nội dung bài viết (hoặc tự tóm tắt lại theo ý hiểu) của bạn. Dùng VSCode tạo một file có phần mở rộng .txt (tên file rõ ràng dễ nhớ). Sau đó lưu nội dung bạn vừa tóm tắt vào file vừa tạo, lưu file vào Workspace của bạn.
+
+Mỗi lần làm việc với dự án cần dùng đến, thì Open file đó ngay trên VSCode thôi. Sẽ rất thuận tiện cho việc xem lại gõ lại theo... (Việc gó lại được khuyến khích để mưa dầm thì...). Nếu bạn nào lười THẤM thì có thể copy and paste (chú ý đổi tên branch, thay đổi nội dung commit... cho phù hơp). OK! "Nhớ lke mạnh nha!"
+
+III/. Tổng quan một quy trình làm việc với Git:
+Tất nhiên rồi! Đối với những proDev, lỡ có quên... chỉ một dòng lệnh: $ git help -a là lại Ok. Nhưng với những bạn mới dù $ git help -a thì cũng không biết bắt đầu từ đâu? Không biết thực thi dòng lệnh nào trong giai đoạn nào?
+
+Các bạn đừng quá lo lắng, bức tranh tổng quát sau sẽ giúp các bạn phần nào giải tỏa được những băn khoăn đó:
+
+Trong hướng dẫn này, tôi mặc định rằng các bạn đã có cho mình một tài khoản GitHub và thành thạo với việc tạo một kho lưu trữ từ xa (remote repository) trên GitHub nha. (Phần này tạo trên GitHub) Nếu bạn nào chưa tạo được remote repository thì xem lại bài giảng này nhé:
+
+gitTeam.png
+
+A/. Quy trình chủ động: (Bạn chủ động triển khai một dự án mới)
+1/. Cài đặt, tạo tài khoản Github:
+Bạn có thể tạo Github account tại đây https://github.com/signup/free
+
+Cài đặt Github client vào máy cá nhân https://desktop.github.com/
+
+2/. Cấu hình Github client để làm việc với máy chủ Github
+Cấu hình Github client được hướng dẫn cụ thể trên Github, mình xin tóm lược một số bước chính:
+
+Tạo SSH key: https://github.com/centic9/generate-and-send-ssh-key
+
+Cài đặt thông tin cá nhân:
+
+$ git config --g user.name “Tên của bạn”
+
+$ git config --g user.email “Địa chỉ email của bạn”
+
+3/. Khởi tạo repo:
+Khởi tạo thư mục repo trên máy client (máy của lập trình viên)
+mkdir (Đường dẫn bạn muốn đặt thư mục repo)
+
+cd (Tên repo vừa tạo) để chuyển sang repo đó làm việc $ git init
+
+4/. Đưa file từ client lên Github:
+Kết nối tới Github repo
+$ git remote add origin git@github.com:(Tên repo)
+
+Chú ý: Luôn cập nhật server trước khi push nội dung mới từ client lên bằng lệnh git pull: $ git pull git@github.com:(Tên repo) main
+
+Sau khi có một repo và kết nối với sever là bạn đã sẵn sàng cho việc ra mắt một dự án rồi.
+
+Công việc bây giờ là: Code... code... và code...! và sau đó:
+
+Kiểm tra trạng thái thay đổi $ git status
+
+Add file vào danh sách commit (bỏ qua nếu không có file mới được tạo) $ git add -A  (all files)
+
+Commit những thay đổi trước khi push: $ git commit -a -m “Thông tin về commit” (-a Tất cả thay đổi)
+
+Tải lên server nhánh main $ git push -u origin main
+
+Tạo nhánh (branch) riêng:
+
+Xem toàn bộ các nhánh đang có $ git branch -a
+
+Tạo nhánh mới $ git branch <tên mới>
+
+Chuyển nhánh git checkout <tên nhánh>
+
+Xóa nhánh $ git branch -d <Tên branch>
+
+Nhập nhánh con vào nhánh hiện tại $ git merge <Tên nhánh>
+
+5/. Settings và xuất bản GitHub Pages thôi nào!
+B/. Quy trình bị động: (Bạn được Sếp giao hoặc tham gia dự án cùng Team)
+Từ bước 1 đến bước 3 (Tương tự như trên)
+Chỉ khác là sau bước 3 thì bước tiếp theo là bạn Clone dự án: (Sau khi tạo repo thành công) Chắc chắn rằng bạn đang đứng tại repo cần lưu dự án và chạy lệnh:
+
+$ git clone <url> (Địa chỉ dự án bạn muốn Clone) Rồi lại tiếp tục Code... code... theo yêu cầu và lặp lại quy trình các bước như trên để xuất bản dự án.
+
+Trên đây là một số bước cơ bản để làm việc nhóm với Git. Mục đích chính của mình nhằm giúp các bạn hiểu được các giai đoạn sử dụng dòng lệnh cho phù hợp. Còn thực chất một quy trình làm việc nhóm thực tế sẽ còn rất nhiều công đoạn, nhiều việc phải làm... Nhưng cũng chỉ xoay quanh một số lênh thường dùng bạn nên nắm chắc và hiểu về chúng!
+
+Liệt kê một số lệnh hay dùng
+touch “tên file”  (Tạo 1 file)
+
+echo “nội dung” > “tên file” (viết nội dung vào trong file)
+
+git remote add origin git@github.com:<tên repo>  (Tạo kết nối tới Github server)
+
+git pull git@github.com:<tên repo> <tên branch>  (Cập nhật dữ liệu từ server)
+
+git status (Xem trạng thái hiện tại) git add -A (add all file đã thay đổi, chuẩn bị cho commit) git commit -a -m “Thông tin note”  (commit all file để chuẩn bị push) git push origin <+ tên nhánh muốn push lên>  (Gửi nội dung đã commit lên server vào nhánh...)
+
+Chúc các bạn sức khỏe và thành công!
