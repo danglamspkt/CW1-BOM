@@ -267,6 +267,9 @@
     <Compile Include="UserControlBomLK\BomLKAddWindows.xaml.cs">
       <DependentUpon>BomLKAddWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomLK\BomLKEditWindows.xaml.cs">
+      <DependentUpon>BomLKEditWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomLK\BomLKInfoWindows.xaml.cs">
       <DependentUpon>BomLKInfoWindows.xaml</DependentUpon>
     </Compile>
@@ -300,6 +303,9 @@
     <Compile Include="UserControlBomTH\BomTHMainUC.xaml.cs">
       <DependentUpon>BomTHMainUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomTp\BomTPMainControlUC.xaml.cs">
+      <DependentUpon>BomTPMainControlUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlHome\HomeMainUC.xaml.cs">
       <DependentUpon>HomeMainUC.xaml</DependentUpon>
     </Compile>
@@ -310,6 +316,7 @@
     <Compile Include="ViewModel\BasicViewModel.cs" />
     <Compile Include="ViewModel\BomBTPViewModel.cs" />
     <Compile Include="ViewModel\BOMNguyenLieuViewModel.cs" />
+    <Compile Include="ViewModel\BomTPViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -381,6 +388,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlBomLK\BomLKEditWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlBomLK\BomLKInfoWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -422,6 +433,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlBomTH\BomTHMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTp\BomTPMainControlUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -499,6 +514,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

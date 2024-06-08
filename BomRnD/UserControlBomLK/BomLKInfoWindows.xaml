@@ -62,7 +62,7 @@
                             Width="100"
                             Margin="5 0 0 0"
                             Background="Teal"
-                            Command="{Binding SuaNLcommand}" />
+                            Command="{Binding SuaLkcommand}" />
                 </StackPanel>
                 <Grid Width="550"
                       Height="572">

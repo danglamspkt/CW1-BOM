@@ -27,4 +27,7 @@ FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLLonERPWindow.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLLonSxWindow.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLNhoERPWindow.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\Basic Info\PLNhoSxWindow.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKAddWindows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomLK\BomLKEditWindows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTp\BomTPMainControlUC.xaml;;
 

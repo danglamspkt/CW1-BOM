@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using BomRnD.UserControlBomNL;
 using BomRnD.UserControlBomLK;
+using BomRnD.Basic_Info;
+using DevExpress.Xpf.Editors;
 
 namespace BomRnD.ViewModel
 {
@@ -25,6 +27,35 @@ namespace BomRnD.ViewModel
         //-------------------------Khai báo list hiển thị Phân loại nhỏ--------------------------------------------------
         private ObservableCollection<BOM_MaPLNhoSx> _PLNholist;
         public ObservableCollection<BOM_MaPLNhoSx> PLNholist { get => _PLNholist; set { _PLNholist = value; OnPropertyChanged(); } }
+
+        //-------------------------Khai báo list hiển thị Unit--------------------------------------------------
+        private ObservableCollection<BOM_Unit> _Unitlist;
+        public ObservableCollection<BOM_Unit> Unitlist { get => _Unitlist; set { _Unitlist = value; OnPropertyChanged(); } }
+
+        //-------------------------Khai báo list hiển thị Phân loại nhỏ--------------------------------------------------
+        private ObservableCollection<BOM_MaPLNhoSx> _PLNholist2;
+        public ObservableCollection<BOM_MaPLNhoSx> PLNholist2 { get => _PLNholist2; set { _PLNholist2 = value; OnPropertyChanged(); } }
+
+        //-------------------------Khai báo list hiển thị Phân loại lớn--------------------------------------------------
+        private ObservableCollection<BOM_MaPLLonSx> _PLLonlist2;
+        public ObservableCollection<BOM_MaPLLonSx> PLLonlist2 { get => _PLLonlist2; set { _PLLonlist2 = value; OnPropertyChanged(); } }
+
+        //-------------------------Khai báo list hiển thị PLKetoanERP--------------------------------------------------
+        private ObservableCollection<BOM_MaKeToanERP> _MaKeToanERPlist;
+        public ObservableCollection<BOM_MaKeToanERP> KeToanERPlist { get => _MaKeToanERPlist; set { _MaKeToanERPlist = value; OnPropertyChanged(); } }
+
+        //-------------------------Khai báo list hiển thị Phân loại nhỏ--------------------------------------------------
+        private ObservableCollection<BOM_MaPLLonERP> _PLLonERPlist;
+        public ObservableCollection<BOM_MaPLLonERP> PLLonERPlist { get => _PLLonERPlist; set { _PLLonERPlist = value; OnPropertyChanged(); } }
+
+        //-------------------------Khai báo list hiển thị Phân loại nhỏ--------------------------------------------------
+        private ObservableCollection<BOM_MaPLNhoERP> _PLNhoERPlist;
+        public ObservableCollection<BOM_MaPLNhoERP> PLNhoERPlist { get => _PLNhoERPlist; set { _PLNhoERPlist = value; OnPropertyChanged(); } }
+
+        //-------------------------Khai báo list hiển thị Phân loại nhỏ--------------------------------------------------
+        private ObservableCollection<BOM_MaPL4ERP> _PL4ERPlist;
+        public ObservableCollection<BOM_MaPL4ERP> PL4ERPlist { get => _PL4ERPlist; set { _PL4ERPlist = value; OnPropertyChanged(); } }
+
 
         private List<string> _Seachlist;
         public List<string> Seachlist { get => _Seachlist; set { _Seachlist = value; OnPropertyChanged(); } }
@@ -115,11 +146,176 @@ namespace BomRnD.ViewModel
         public string MaPLNhoSx { get => _MaPLNhoSx; set { _MaPLNhoSx = value; OnPropertyChanged(); } }
 
 
+        private string _MaBanVe21;
+        public string MaBanVe21 { get => _MaBanVe21; set { _MaBanVe21 = value; OnPropertyChanged(); } }
+
+        private string _MaBanVe22;
+        public string MaBanVe22 { get => _MaBanVe22; set { _MaBanVe22 = value; OnPropertyChanged(); } }
+
+        private string _DisplayName2;
+        public string DisplayName2 { get => _DisplayName2; set { _DisplayName2 = value; OnPropertyChanged(); } }
+
+        private string _TenTiengTrung2;
+        public string TenTiengTrung2 { get => _TenTiengTrung2; set { _TenTiengTrung2 = value; OnPropertyChanged(); } }
+
+        private string _MaBTPTW2;
+        public string MaBTPTW2 { get => _MaBTPTW2; set { _MaBTPTW2 = value; OnPropertyChanged(); } }
+
+        private string _MaBTPVN2;
+        public string MaBTPVN2 { get => _MaBTPVN2; set { _MaBTPVN2 = value; OnPropertyChanged(); } }
+
+        private string _NGC2;
+        public string NGC2 { get => _NGC2; set { _NGC2 = value; OnPropertyChanged(); } }
+
+        private string _ChatLieu2;
+        public string ChatLieu2 { get => _ChatLieu2; set { _ChatLieu2 = value; OnPropertyChanged(); } }
+
+        private string _QuyCach2;
+        public string QuyCach2 { get => _QuyCach2; set { _QuyCach2 = value; OnPropertyChanged(); } }
+
+        private double? _T2;
+        public double? T2 { get => _T2; set { _T2 = value; OnPropertyChanged(); } }
+
+        private double? _W2;
+        public double? W2 { get => _W2; set { _W2 = value; OnPropertyChanged(); } }
+
+        private double? _L2;
+        public double? L2 { get => _L2; set { _L2 = value; OnPropertyChanged(); } }
+
+        private int? _Version2;
+        public int? Version2 { get => _Version2; set { _Version2 = value; OnPropertyChanged(); } }
+
+        private string _UnitERP2;
+        public string UnitERP2 { get => _UnitERP2; set { _UnitERP2 = value; OnPropertyChanged(); } }
+
+        private string _UnitSx2;
+        public string UnitSx2 { get => _UnitSx2; set { _UnitSx2 = value; OnPropertyChanged(); } }
+
+        private double? _TyLeChuyenDoi2;
+        public double? TyLeChuyenDoi2 { get => _TyLeChuyenDoi2; set { _TyLeChuyenDoi2 = value; OnPropertyChanged(); } }
+
+        private int? _MaKeToanERP2;
+        public int? MaKeToanERP2 { get => _MaKeToanERP2; set { _MaKeToanERP2 = value; OnPropertyChanged(); } }
+
+        private int? _MaPLLonERP2;
+        public int? MaPLLonERP2 { get => _MaPLLonERP2; set { _MaPLLonERP2 = value; OnPropertyChanged(); } }
+
+        private int? _MaPLNhoERP2;
+        public int? MaPLNhoERP2 { get => _MaPLNhoERP2; set { _MaPLNhoERP2 = value; OnPropertyChanged(); } }
+
+        private int? _MaPL4ERP2;
+        public int? MaPL4ERP2 { get => _MaPL4ERP2; set { _MaPL4ERP2 = value; OnPropertyChanged(); } }
+
+        private string _MaPLLonSx2;
+        public string MaPLLonSx2 { get => _MaPLLonSx2; set { _MaPLLonSx2 = value; OnPropertyChanged(); } }
+
+        private string _MaPLNhoSx2;
+        public string MaPLNhoSx2 { get => _MaPLNhoSx2; set { _MaPLNhoSx2 = value; OnPropertyChanged(); } }
+
+        private string _LinkImg2;
+        public string LinkImg2 { get => _LinkImg2; set { _LinkImg2 = value; OnPropertyChanged(); } }
+
+        private string _IDImg2;
+        public string IDImg2 { get => _IDImg2; set { _IDImg2 = value; OnPropertyChanged(); } }
+
+
+
+        private string _MaHang3;
+        public string MaHang3 { get => _MaHang3; set { _MaHang3 = value; OnPropertyChanged(); } }
+
+        private string _MaBanVe31;
+        public string MaBanVe31 { get => _MaBanVe31; set { _MaBanVe31 = value; OnPropertyChanged(); } }
+
+        private string _MaBanVe32;
+        public string MaBanVe32 { get => _MaBanVe32; set { _MaBanVe32 = value; OnPropertyChanged(); } }
+
+        private string _DisplayName3;
+        public string DisplayName3 { get => _DisplayName3; set { _DisplayName3 = value; OnPropertyChanged(); } }
+
+        private string _TenTiengTrung3;
+        public string TenTiengTrung3 { get => _TenTiengTrung3; set { _TenTiengTrung3 = value; OnPropertyChanged(); } }
+
+        private string _MaBTPTW3;
+        public string MaBTPTW3 { get => _MaBTPTW3; set { _MaBTPTW3 = value; OnPropertyChanged(); } }
+
+        private string _MaBTPVN3;
+        public string MaBTPVN3 { get => _MaBTPVN3; set { _MaBTPVN3 = value; OnPropertyChanged(); } }
+
+        private string _NGC3;
+        public string NGC3 { get => _NGC3; set { _NGC3 = value; OnPropertyChanged(); } }
+
+        private string _ChatLieu3;
+        public string ChatLieu3 { get => _ChatLieu3; set { _ChatLieu3 = value; OnPropertyChanged(); } }
+
+        private string _QuyCach3;
+        public string QuyCach3 { get => _QuyCach3; set { _QuyCach3 = value; OnPropertyChanged(); } }
+
+        private double? _T3;
+        public double? T3 { get => _T3; set { _T3 = value; OnPropertyChanged(); } }
+
+        private double? _W3;
+        public double? W3 { get => _W3; set { _W3 = value; OnPropertyChanged(); } }
+
+        private double? _L3;
+        public double? L3 { get => _L3; set { _L3 = value; OnPropertyChanged(); } }
+
+        private int? _Version3;
+        public int? Version3 { get => _Version3; set { _Version3 = value; OnPropertyChanged(); } }
+
+        private string _UnitERP3;
+        public string UnitERP3 { get => _UnitERP3; set { _UnitERP3 = value; OnPropertyChanged(); } }
+
+        private string _UnitSx3;
+        public string UnitSx3 { get => _UnitSx3; set { _UnitSx3 = value; OnPropertyChanged(); } }
+
+        private double? _TyLeChuyenDoi3;
+        public double? TyLeChuyenDoi3 { get => _TyLeChuyenDoi3; set { _TyLeChuyenDoi3 = value; OnPropertyChanged(); } }
+
+        private int? _MaKeToanERP3;
+        public int? MaKeToanERP3 { get => _MaKeToanERP3; set { _MaKeToanERP3 = value; OnPropertyChanged(); } }
+
+        private int? _MaPLLonERP3;
+        public int? MaPLLonERP3 { get => _MaPLLonERP3; set { _MaPLLonERP3 = value; OnPropertyChanged(); } }
+
+        private int? _MaPLNhoERP3;
+        public int? MaPLNhoERP3 { get => _MaPLNhoERP3; set { _MaPLNhoERP3 = value; OnPropertyChanged(); } }
+
+        private int? _MaPL4ERP3;
+        public int? MaPL4ERP3 { get => _MaPL4ERP3; set { _MaPL4ERP3 = value; OnPropertyChanged(); } }
+
+        private string _MaPLLonSx3;
+        public string MaPLLonSx3 { get => _MaPLLonSx3; set { _MaPLLonSx3 = value; OnPropertyChanged(); } }
+
+        private string _MaPLNhoSx3;
+        public string MaPLNhoSx3 { get => _MaPLNhoSx3; set { _MaPLNhoSx3 = value; OnPropertyChanged(); } }
+
+        private string _LinkImg3;
+        public string LinkImg3 { get => _LinkImg3; set { _LinkImg3 = value; OnPropertyChanged(); } }
+
+        private string _IDImg3;
+        public string IDImg3 { get => _IDImg3; set { _IDImg3 = value; OnPropertyChanged(); } }
 
 
         public BomLKInfoWindows bomLKInfoWindows;
+
+        bool editdone = false;
+
         public ICommand TimLkcommand { get; set; }
         public ICommand ThemLkcommand { get; set; }
+        public ICommand SuaLkcommand { get; set; }
+        public ICommand AddCommand { get; set; }
+        public ICommand EditCommand { get; set; }
+        public ICommand LoadedaddCommand { get; set; }
+        public ICommand LoadedEditCommand { get; set; }
+        public ICommand LoadUnitCommand { get; set; }
+        public ICommand LoadPLLSxCommand { get; set; }
+        public ICommand LoadPLNSxCommand { get; set; }
+        public ICommand LoadKtERPCommand { get; set; }
+        public ICommand LoadPLLERPCommand { get; set; }
+        public ICommand LoadPLNERPCommand { get; set; }
+        public ICommand LoadPL4ERPCommand { get; set; }
+        public ICommand ChangeLinkingCommand2 { get; set; }
+        public ICommand ChangeLinkingCommand3 { get; set; }
 
         public BomBTPViewModel() 
         {
@@ -171,14 +367,271 @@ namespace BomRnD.ViewModel
 
             ThemLkcommand = new RelayCommand<WrapPanel>((p) => { return true; }, (p) =>
             {
-                TextBlock textBlock = new TextBlock();
-                textBlock.Text = "thêm nguyên liệu";
-                MainWindow win = Application.Current.MainWindow as MainWindow;
-
-                win.UCMain.Children.Clear();
-                win.UCMain.Children.Add(textBlock);
+                BomLKAddWindows bomLKAddWindows = new BomLKAddWindows();
+                bomLKAddWindows.ShowDialog();
+            });
+            SuaLkcommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BomLKEditWindows bomLKEditWindows = new BomLKEditWindows();
+                bomLKEditWindows.ShowDialog();
             });
 
+            LoadUnitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                UnitWindow unitWindow = new UnitWindow();
+                unitWindow.Show();
+            });
+            LoadPLLSxCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                PLLonSxWindow PLLxWindow = new PLLonSxWindow();
+                PLLxWindow.Show();
+            });
+            LoadPLNSxCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                PLNhoSxWindow PL = new PLNhoSxWindow();
+                PL.Show();
+            });
+            LoadKtERPCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaKeToanERPWindow Ma = new MaKeToanERPWindow();
+                Ma.Show();
+            });
+            LoadPLLERPCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                PLLonERPWindow pLLonERPWindow = new PLLonERPWindow();
+                pLLonERPWindow.Show();
+            });
+            LoadPLNERPCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                PLNhoERPWindow PL = new PLNhoERPWindow();
+                PL.Show();
+            });
+            LoadPL4ERPCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                PL4ERPWindow PL = new PL4ERPWindow();
+                PL.Show();
+            });
+
+            LoadedaddCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
+            {
+                Unitlist = new ObservableCollection<BOM_Unit>(DataProvider.Ins.DB.BOM_Unit);
+                PLLonlist2 = new ObservableCollection<BOM_MaPLLonSx>(DataProvider.Ins.DB.BOM_MaPLLonSx);
+                PLNholist2 = new ObservableCollection<BOM_MaPLNhoSx>(DataProvider.Ins.DB.BOM_MaPLNhoSx);
+                KeToanERPlist = new ObservableCollection<BOM_MaKeToanERP>(DataProvider.Ins.DB.BOM_MaKeToanERP);
+                PLLonERPlist = new ObservableCollection<BOM_MaPLLonERP>(DataProvider.Ins.DB.BOM_MaPLLonERP);
+                PLNhoERPlist = new ObservableCollection<BOM_MaPLNhoERP>(DataProvider.Ins.DB.BOM_MaPLNhoERP);
+                PL4ERPlist = new ObservableCollection<BOM_MaPL4ERP>(DataProvider.Ins.DB.BOM_MaPL4ERP);
+
+            });
+
+            LoadedEditCommand = new RelayCommand<StackPanel>((p) => { return true; }, (p) =>
+            {
+                Unitlist = new ObservableCollection<BOM_Unit>(DataProvider.Ins.DB.BOM_Unit);
+                PLLonlist2 = new ObservableCollection<BOM_MaPLLonSx>(DataProvider.Ins.DB.BOM_MaPLLonSx);
+                PLNholist2 = new ObservableCollection<BOM_MaPLNhoSx>(DataProvider.Ins.DB.BOM_MaPLNhoSx);
+                KeToanERPlist = new ObservableCollection<BOM_MaKeToanERP>(DataProvider.Ins.DB.BOM_MaKeToanERP);
+                PLLonERPlist = new ObservableCollection<BOM_MaPLLonERP>(DataProvider.Ins.DB.BOM_MaPLLonERP);
+                PLNhoERPlist = new ObservableCollection<BOM_MaPLNhoERP>(DataProvider.Ins.DB.BOM_MaPLNhoERP);
+                PL4ERPlist = new ObservableCollection<BOM_MaPL4ERP>(DataProvider.Ins.DB.BOM_MaPL4ERP);
+                var infolist = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == MaHang).First();
+                MaHang3 = infolist.MaHang;
+                MaBanVe31 = infolist.MaBanVe;
+                MaBanVe32 = infolist.MaBanVe2;
+                QuyCach3 = infolist.QuyCach;
+                DisplayName3 = infolist.DisplayName;
+                TenTiengTrung3 = infolist.TenTiengTrung;
+                ChatLieu3 = infolist.ChatLieu;
+                MaBTPTW3 = infolist.MaBTPTW;
+                MaBTPVN3 = infolist.MaBTPVN;
+                T3 = infolist.T;
+                W3 = infolist.W;
+                L3 = infolist.L;
+                UnitERP3 = infolist.UnitERP;
+                UnitSx3 = infolist.UnitSx;
+                NGC3 = infolist.NGC;
+                TyLeChuyenDoi3 = infolist.TyLeChuyenDoi;
+                Version3 = infolist.Version;
+                MaKeToanERP3 = infolist.MaKeToanERP;
+                MaPLLonERP3 = infolist.MaPLLonERP;
+                MaPLNhoERP3 = infolist.MaPLNhoERP;
+                MaPL4ERP3 = infolist.MaPL4ERP;
+                MaPLLonSx3 = infolist.MaPLLonSx;
+                MaPLNhoSx3 = infolist.MaPLNhoSx;
+                LinkImg3 = infolist.LinkImg;
+                IDImg3 = infolist.IDImg;
+
+
+                if (infolist.LinkImg == null || string.IsNullOrEmpty(infolist.LinkImg))
+                {
+                    PackIcon packIcon = new PackIcon();
+                    packIcon.Width = 300;
+                    packIcon.Height = 300;
+                    packIcon.HorizontalAlignment = HorizontalAlignment.Center;
+                    packIcon.VerticalAlignment = VerticalAlignment.Center;
+                    packIcon.Margin = new Thickness(10);
+                    packIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.Image360;
+                    packIcon.Foreground = System.Windows.Media.Brushes.Black;
+                    p?.Children.Clear();
+                    p.Children.Add(packIcon);
+                }
+                else
+                {
+                    Image imageBrush = new Image();
+                    imageBrush.Stretch = Stretch.Fill;
+                    imageBrush.Width = 300;
+                    imageBrush.Height = 300;
+                    imageBrush.Margin = new Thickness(10);
+                    imageBrush.HorizontalAlignment = HorizontalAlignment.Center;
+                    imageBrush.VerticalAlignment = VerticalAlignment.Center;
+                    string uri = "https://drive.google.com/uc?id=" + infolist.IDImg;
+                    imageBrush.Source = new BitmapImage(new Uri(uri));
+                    p?.Children.Clear();
+                    p.Children.Add(imageBrush);
+                }
+
+            });
+
+            AddCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
+            {
+                addLK();
+            });
+
+            EditCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
+            {
+                editNL();
+            });
+
+            ChangeLinkingCommand2 = new RelayCommand<StackPanel>((p) => { return true; }, (p) =>
+            {
+                Image imageBrush = new Image();
+                imageBrush.Stretch = Stretch.Fill;
+                imageBrush.Width = 300;
+                imageBrush.Height = 300;
+                imageBrush.Margin = new Thickness(10);
+                if (!LinkImg2.Contains("https://drive.google.com/file/d/"))
+                {
+                    MessageBox.Show("Link google drive lỗi!", "Link!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(IDImg2))
+                {
+                    string a = "https://drive.google.com/file/d/";
+                    IDImg2 = LinkImg2.Remove(0, 32);
+                    IDImg2 = IDImg2.Remove(IDImg2.IndexOf("/"));
+                }
+                string uri = "https://drive.google.com/uc?id=" + IDImg2;
+                imageBrush.Source = new BitmapImage(new Uri(uri));
+                p?.Children.Clear();
+                p.Children.Add(imageBrush);
+
+            });
+
+
+        }
+
+        void addLK()
+        {
+            var bomnl = DataProvider.Ins.DB.BOM_BomBtp;
+            var check = DataProvider.Ins.DB.BOM_BomBtp.Where(y => y.MaHang == MaBTPTW2);
+            if (MaBTPTW2 == null || check.Count() > 0 || MaBTPTW2.Length == 0)
+            {
+                MessageBox.Show("Mã BTP TW đã tồn tại hoặc trống!", "Thêm mã hàng lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                BOM_BomBtp BOM_BomBtp = new BOM_BomBtp();
+
+                BOM_BomBtp.MaHang = MaBTPTW2;
+                BOM_BomBtp.MaBanVe = MaBanVe21;
+                BOM_BomBtp.MaBanVe2 = MaBanVe22;
+                BOM_BomBtp.DisplayName = DisplayName2;
+                BOM_BomBtp.TenTiengTrung = TenTiengTrung2;
+                BOM_BomBtp.ChatLieu = ChatLieu2;
+                BOM_BomBtp.QuyCach = QuyCach2;
+                BOM_BomBtp.MaBTPTW = MaBTPTW2;
+                BOM_BomBtp.MaBTPVN = MaBTPVN2;
+                BOM_BomBtp.T = T2;
+                BOM_BomBtp.W = W2;
+                BOM_BomBtp.L = L2;
+                BOM_BomBtp.UnitERP = UnitERP2;
+                BOM_BomBtp.UnitSx = UnitSx2;
+                BOM_BomBtp.NGC = NGC2;
+                BOM_BomBtp.Version = Version2;
+                BOM_BomBtp.TyLeChuyenDoi = TyLeChuyenDoi2;
+                BOM_BomBtp.MaKeToanERP = MaKeToanERP2;
+                BOM_BomBtp.MaPLLonERP = MaPLLonERP2;
+                BOM_BomBtp.MaPLNhoERP = MaPLNhoERP2;
+                BOM_BomBtp.MaPL4ERP = MaPL4ERP2;
+                BOM_BomBtp.MaPLLonSx = MaPLLonSx2;
+                BOM_BomBtp.MaPLNhoSx = MaPLNhoSx2;
+                BOM_BomBtp.LinkImg = LinkImg2;
+                BOM_BomBtp.IDImg = IDImg2;
+                BOM_BomBtp.UserName = Properties.Settings.Default.UserName;
+
+                DataProvider.Ins.DB.BOM_BomBtp.Add(BOM_BomBtp);
+                DataProvider.Ins.DB.SaveChanges();
+                MaBanVe21 = null;
+                MaBanVe22 = null;
+                MaBTPTW2 = null;
+                MaBTPVN2 = null;
+                QuyCach2 = null;
+                DisplayName2 = null;
+                TenTiengTrung2 = null;
+                ChatLieu2 = null;
+                UnitERP2 = null;
+                UnitSx2 = null;
+                T2 = null;
+                W2 = null;
+                L2 = null;
+                NGC2 = null;
+                TyLeChuyenDoi2 = null;
+                Version2 = null;
+                MaKeToanERP2 = null;
+                MaPLLonERP2 = null;
+                MaPLNhoERP2 = null;
+                MaPL4ERP2 = null;
+                MaPLLonSx2 = null;
+                MaPLNhoSx2 = null;
+                LinkImg2 = null;
+                IDImg2 = null;
+            }
+        }
+
+        void editNL()
+        {
+            var bOM_BomBtp = DataProvider.Ins.DB.BOM_BomBtp.Where(y => y.MaHang == MaHang3).FirstOrDefault();
+            {
+
+                bOM_BomBtp.MaBanVe = MaBanVe31;
+                bOM_BomBtp.MaBanVe2 = MaBanVe32;
+                bOM_BomBtp.DisplayName = DisplayName3;
+                bOM_BomBtp.TenTiengTrung = TenTiengTrung3;
+                bOM_BomBtp.ChatLieu = ChatLieu3;
+                bOM_BomBtp.QuyCach = QuyCach3;
+                bOM_BomBtp.MaBTPTW = MaBTPTW3;
+                bOM_BomBtp.MaBTPVN = MaBTPVN3;
+                bOM_BomBtp.T = T3;
+                bOM_BomBtp.W = W3;
+                bOM_BomBtp.L = L3;
+                bOM_BomBtp.UnitERP = UnitERP3;
+                bOM_BomBtp.UnitSx = UnitSx3;
+                bOM_BomBtp.NGC = NGC3;
+                bOM_BomBtp.Version = Version3;
+                bOM_BomBtp.TyLeChuyenDoi = TyLeChuyenDoi3;
+                bOM_BomBtp.MaKeToanERP = MaKeToanERP3;
+                bOM_BomBtp.MaPLLonERP = MaPLLonERP3;
+                bOM_BomBtp.MaPLNhoERP = MaPLNhoERP3;
+                bOM_BomBtp.MaPL4ERP = MaPL4ERP3;
+                bOM_BomBtp.MaPLLonSx = MaPLLonSx3;
+                bOM_BomBtp.MaPLNhoSx = MaPLNhoSx3;
+                bOM_BomBtp.LinkImg = LinkImg3;
+                bOM_BomBtp.IDImg = IDImg3;
+                bOM_BomBtp.UserName = Properties.Settings.Default.UserName;
+
+                DataProvider.Ins.DB.SaveChanges();
+                editdone = true;
+
+            }
         }
 
         void additem(StackPanel stackPanel, int? BOMBTPPage)
@@ -449,11 +902,11 @@ namespace BomRnD.ViewModel
                     else
                     {
                         Image imageBrush = new Image();
-                        imageBrush.Stretch = Stretch.UniformToFill;
+                        imageBrush.Stretch = Stretch.Fill;
                         imageBrush.Width = 150;
                         imageBrush.Height = 150;
                         imageBrush.Margin = new Thickness(10);
-                        string uri = item.LinkImg;
+                        string uri = "https://drive.google.com/uc?id=" + item.IDImg;
                         imageBrush.Source = new BitmapImage(new Uri(uri));
                         stackPanel1.Children.Add(imageBrush);
                     }
@@ -530,7 +983,7 @@ namespace BomRnD.ViewModel
                             imageBrush.Margin = new Thickness(10);
                             imageBrush.HorizontalAlignment = HorizontalAlignment.Center;
                             imageBrush.VerticalAlignment = VerticalAlignment.Center;
-                            string uri = item.LinkImg;
+                            string uri = "https://drive.google.com/uc?id=" + item.IDImg;
                             imageBrush.Source = new BitmapImage(new Uri(uri));
                             bomLKInfoWindows.LKAvar.Children.Clear();
                             bomLKInfoWindows.LKAvar.Children.Add(imageBrush);
