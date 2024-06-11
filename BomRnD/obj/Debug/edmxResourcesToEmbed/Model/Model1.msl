@@ -128,6 +128,8 @@
     <EntitySetMapping Name="BOM_BomTp">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTp">
         <MappingFragment StoreEntitySet="BOM-BomTp">
+          <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
+          <ScalarProperty Name="IDImg" ColumnName="IDImg" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
           <ScalarProperty Name="MaPLLonSx" ColumnName="MaPLLonSx" />

@@ -4,15 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BomRnD.UserControlBomTH"
-             mc:Ignorable="d"  
-             
+             mc:Ignorable="d"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-             
+             xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:BomTHViewModel}"
+             DataContext="{StaticResource BomTHVM}"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-            TextElement.Foreground="{DynamicResource MaterialDesignBody}"            
-            TextElement.FontWeight="Medium"
-            TextElement.FontSize="14">
+             TextElement.FontWeight="Medium"
+             TextElement.FontSize="14">
+
     <Grid>
-        <TextBlock Foreground="Black">Bom tổng hợp</TextBlock>
+        <StackPanel x:Name="BomTPData"
+                    Orientation="Horizontal">
+            <StackPanel Width="500">
+                
+            </StackPanel>
+
+        </StackPanel>
+
+
+
+
     </Grid>
 </UserControl>

@@ -22,9 +22,8 @@
                                  Margin="10"
                                  UniformCornerRadius="15">
                 <StackPanel VerticalAlignment="Center">
-                    <ComboBox DisplayMemberPath="DisplayName"
-                              ItemsSource="{Binding PLLonlist}"
-                              Text="{Binding MaPLLon, Mode=TwoWay}"
+                    <ComboBox ItemsSource="{Binding PhanLoailist}"
+                              Text="{Binding MaPhanLoai, Mode=TwoWay}"
                               Foreground="Black"
                               FontWeight="Bold"
                               Margin="10 5 10 5"
@@ -68,7 +67,7 @@
                     Width="50"
                     Height="50"
                     Margin="10"
-                    Command="{Binding TimNLcommand}"
+                    Command="{Binding TimTPcommand}"
                     CommandParameter="{Binding ElementName=BomNLData}">
                 <materialDesign:PackIcon Width="24"
                                          Height="24"
@@ -80,7 +79,7 @@
                     Width="50"
                     Height="50"
                     Margin="10"
-                    Command="{Binding ThemNLcommand}">
+                    Command="{Binding ThemTPcommand}">
                 <materialDesign:PackIcon Width="24"
                                          Height="24"
                                          Kind="Plus" />

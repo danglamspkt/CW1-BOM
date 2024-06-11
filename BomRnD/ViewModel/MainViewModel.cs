@@ -1,8 +1,8 @@
 ﻿using BomRnD.Model;
-using BomRnD.UserControlBomKhac;
 using BomRnD.UserControlBomLK;
 using BomRnD.UserControlBomNL;
 using BomRnD.UserControlBomTH;
+using BomRnD.UserControlBomTp;
 using BomRnD.UserControlHome;
 using BomRnD.UserControlSetting;
 using DevExpress.Mvvm.Native;
@@ -122,9 +122,9 @@ namespace BomRnD.ViewModel
                             uccontrol = new BomLKMainControlUC();
                             break;
                         case 4:
-                            uc = new BomKhacMainUC();
-                            uctitle = new UserControl();
-                            uccontrol = new UserControl();
+                            uc = new BomTPMainUC();
+                            uctitle = new BomTPMainTitleUC();
+                            uccontrol = new BomTPMainControlUC();
                             break;
                         case 5:
                             uc = new SettingMainUC();

@@ -81,6 +81,8 @@
           <Property Name="MaPL4ERP" Type="int" />
           <Property Name="MaPLLonSx" Type="nvarchar(max)" />
           <Property Name="MaPLNhoSx" Type="nvarchar(max)" />
+          <Property Name="IDImg" Type="nvarchar(max)" />
+          <Property Name="LinkImg" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="BOM-BomTH">
@@ -240,7 +242,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTp__UnitE__6477ECF3">
+        <Association Name="FK__BOM-BomTp__UnitE__1B9317B3">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -252,7 +254,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTp__UnitS__656C112C">
+        <Association Name="FK__BOM-BomTp__UnitS__1C873BEC">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -312,7 +314,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaTp__634EBE90">
+        <Association Name="FK__BOM-BomTH__MaTp__1D7B6025">
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -368,11 +370,11 @@
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTp__UnitE__6477ECF3" Association="Self.FK__BOM-BomTp__UnitE__6477ECF3">
+          <AssociationSet Name="FK__BOM-BomTp__UnitE__1B9317B3" Association="Self.FK__BOM-BomTp__UnitE__1B9317B3">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTp__UnitS__656C112C" Association="Self.FK__BOM-BomTp__UnitS__656C112C">
+          <AssociationSet Name="FK__BOM-BomTp__UnitS__1C873BEC" Association="Self.FK__BOM-BomTp__UnitS__1C873BEC">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
           </AssociationSet>
@@ -392,7 +394,7 @@
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaTp__634EBE90" Association="Self.FK__BOM-BomTH__MaTp__634EBE90">
+          <AssociationSet Name="FK__BOM-BomTH__MaTp__1D7B6025" Association="Self.FK__BOM-BomTH__MaTp__1D7B6025">
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
@@ -625,6 +627,8 @@
           <NavigationProperty Name="BOM_Unit" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitE__6477ECF3" FromRole="BOM_BomTp" ToRole="BOM_Unit" />
           <NavigationProperty Name="BOM_Unit1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitS__656C112C" FromRole="BOM_BomTp" ToRole="BOM_Unit" />
           <NavigationProperty Name="BOM_BomTH" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90" FromRole="BOM_BomTp" ToRole="BOM_BomTH" />
+          <Property Name="IDImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BOM_BomTH">
           <Key>
@@ -958,6 +962,8 @@
           <EntitySetMapping Name="BOM_BomTp">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTp">
               <MappingFragment StoreEntitySet="BOM-BomTp">
+                <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
+                <ScalarProperty Name="IDImg" ColumnName="IDImg" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="MaPLNhoSx" ColumnName="MaPLNhoSx" />
                 <ScalarProperty Name="MaPLLonSx" ColumnName="MaPLLonSx" />

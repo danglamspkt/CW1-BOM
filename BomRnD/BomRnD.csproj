@@ -261,9 +261,6 @@
     <Compile Include="UserControl1\ControlBarMainUC.xaml.cs">
       <DependentUpon>ControlBarMainUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControlBomKhac\BomKhacMainUC.xaml.cs">
-      <DependentUpon>BomKhacMainUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControlBomLK\BomLKAddWindows.xaml.cs">
       <DependentUpon>BomLKAddWindows.xaml</DependentUpon>
     </Compile>
@@ -300,11 +297,29 @@
     <Compile Include="UserControlBomNL\BomNLMainUC.xaml.cs">
       <DependentUpon>BomNLMainUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomTH\BomTHMainTitleUC.xaml.cs">
+      <DependentUpon>BomTHMainTitleUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomTH\BomTHMainUC.xaml.cs">
       <DependentUpon>BomTHMainUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomTp\BomTPAddWindows.xaml.cs">
+      <DependentUpon>BomTPAddWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTp\BomTPEditWindows.xaml.cs">
+      <DependentUpon>BomTPEditWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTp\BomTPInfoWindows.xaml.cs">
+      <DependentUpon>BomTPInfoWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomTp\BomTPMainControlUC.xaml.cs">
       <DependentUpon>BomTPMainControlUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTp\BomTPMainTitleUC.xaml.cs">
+      <DependentUpon>BomTPMainTitleUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTp\BomTPMainUC.xaml.cs">
+      <DependentUpon>BomTPMainUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlHome\HomeMainUC.xaml.cs">
       <DependentUpon>HomeMainUC.xaml</DependentUpon>
@@ -316,6 +331,7 @@
     <Compile Include="ViewModel\BasicViewModel.cs" />
     <Compile Include="ViewModel\BomBTPViewModel.cs" />
     <Compile Include="ViewModel\BOMNguyenLieuViewModel.cs" />
+    <Compile Include="ViewModel\BomTHViewModel.cs" />
     <Compile Include="ViewModel\BomTPViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
@@ -380,10 +396,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControlBomKhac\BomKhacMainUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControlBomLK\BomLKAddWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -432,11 +444,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlBomTH\BomTHMainTitleUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlBomTH\BomTHMainUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlBomTp\BomTPAddWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTp\BomTPEditWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTp\BomTPInfoWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlBomTp\BomTPMainControlUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTp\BomTPMainTitleUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTp\BomTPMainUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

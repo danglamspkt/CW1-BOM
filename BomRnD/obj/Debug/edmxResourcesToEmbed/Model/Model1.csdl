@@ -220,6 +220,8 @@
     <NavigationProperty Name="BOM_Unit" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitE__6477ECF3" FromRole="BOM_BomTp" ToRole="BOM_Unit" />
     <NavigationProperty Name="BOM_Unit1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitS__656C112C" FromRole="BOM_BomTp" ToRole="BOM_Unit" />
     <NavigationProperty Name="BOM_BomTH" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90" FromRole="BOM_BomTp" ToRole="BOM_BomTH" />
+    <Property Name="IDImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LinkImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="BOM_BomTH">
     <Key>

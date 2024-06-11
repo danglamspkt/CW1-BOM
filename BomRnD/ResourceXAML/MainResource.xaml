@@ -9,6 +9,7 @@
     <viewmodel:BOMNguyenLieuViewModel x:Key="BomNLVM"></viewmodel:BOMNguyenLieuViewModel>
     <viewmodel:BomBTPViewModel x:Key="BomBTPVM"></viewmodel:BomBTPViewModel>
     <viewmodel:BomTPViewModel x:Key="BomTPVM"></viewmodel:BomTPViewModel>
+    <viewmodel:BomTHViewModel x:Key="BomTHVM"></viewmodel:BomTHViewModel>
     <viewmodel:BasicViewModel x:Key="BasicVM"></viewmodel:BasicViewModel>
 
 </ResourceDictionary>

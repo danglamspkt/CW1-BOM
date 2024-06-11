@@ -15,7 +15,6 @@ using System.Windows;
 using DevExpress.Data.Linq.Helpers;
 using BomRnD.UserControlBomNL;
 using MaterialDesignThemes.MahApps;
-using BomRnD.UserControlBomKhac;
 using BomRnD.UserControlBomLK;
 using BomRnD.UserControlBomTH;
 using BomRnD.UserControlHome;

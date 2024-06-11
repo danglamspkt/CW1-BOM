@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BomRnD.UserControlBomKhac
+namespace BomRnD.UserControlBomTp
 {
     /// <summary>
-    /// Interaction logic for BomKhacMainUC.xaml
+    /// Interaction logic for BomTPEditWindows.xaml
     /// </summary>
-    public partial class BomKhacMainUC : UserControl
+    public partial class BomTPEditWindows : Window
     {
-        public BomKhacMainUC()
+        public BomTPEditWindows()
         {
             InitializeComponent();
         }
