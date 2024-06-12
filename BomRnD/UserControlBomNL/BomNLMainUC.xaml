@@ -126,6 +126,7 @@
 
 
         </StackPanel>-->
+        
         <StackPanel x:Name="BomNLData"
                    Grid.Row="2">
             

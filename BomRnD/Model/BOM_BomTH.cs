@@ -23,6 +23,7 @@ namespace BomRnD.Model
         public Nullable<double> TiLeNlBtp { get; set; }
         public Nullable<int> HeSo { get; set; }
         public string GhiChu { get; set; }
+        public string ThiTruong { get; set; }
     
         public virtual BOM_BomBtp BOM_BomBtp { get; set; }
         public virtual BOM_BomBtp BOM_BomBtp1 { get; set; }

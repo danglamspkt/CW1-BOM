@@ -151,6 +151,7 @@
     <EntitySetMapping Name="BOM_BomTH">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTH">
         <MappingFragment StoreEntitySet="BOM-BomTH">
+          <ScalarProperty Name="ThiTruong" ColumnName="ThiTruong" />
           <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
           <ScalarProperty Name="HeSo" ColumnName="HeSo" />
           <ScalarProperty Name="TiLeNlBtp" ColumnName="TiLeNlBtp" />

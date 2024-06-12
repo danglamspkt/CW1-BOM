@@ -86,6 +86,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaTp" Type="nvarchar" MaxLength="40" />
+    <Property Name="ThiTruong" Type="nvarchar(max)" />
     <Property Name="MaBtp1" Type="nvarchar" MaxLength="60" />
     <Property Name="MaBtp2" Type="nvarchar" MaxLength="60" />
     <Property Name="MaBtp3" Type="nvarchar" MaxLength="60" />
@@ -261,7 +262,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTH__MaBtp__0880433F">
+  <Association Name="FK__BOM-BomTH__MaBtp__2F9A1060">
     <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
     <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
     <ReferentialConstraint>
@@ -273,7 +274,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTH__MaBtp__09746778">
+  <Association Name="FK__BOM-BomTH__MaBtp__308E3499">
     <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
     <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
     <ReferentialConstraint>
@@ -285,7 +286,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTH__MaBtp__0A688BB1">
+  <Association Name="FK__BOM-BomTH__MaBtp__318258D2">
     <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
     <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
     <ReferentialConstraint>
@@ -297,7 +298,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTH__MaMua__11158940">
+  <Association Name="FK__BOM-BomTH__MaMua__32767D0B">
     <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="0..1" />
     <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
     <ReferentialConstraint>
@@ -309,7 +310,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTH__MaTp__1D7B6025">
+  <Association Name="FK__BOM-BomTH__MaTp__336AA144">
     <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
     <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
     <ReferentialConstraint>
@@ -373,23 +374,23 @@
       <End Role="BOM-Unit" EntitySet="BOM-Unit" />
       <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTH__MaBtp__0880433F" Association="Self.FK__BOM-BomTH__MaBtp__0880433F">
+    <AssociationSet Name="FK__BOM-BomTH__MaBtp__2F9A1060" Association="Self.FK__BOM-BomTH__MaBtp__2F9A1060">
       <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTH__MaBtp__09746778" Association="Self.FK__BOM-BomTH__MaBtp__09746778">
+    <AssociationSet Name="FK__BOM-BomTH__MaBtp__308E3499" Association="Self.FK__BOM-BomTH__MaBtp__308E3499">
       <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTH__MaBtp__0A688BB1" Association="Self.FK__BOM-BomTH__MaBtp__0A688BB1">
+    <AssociationSet Name="FK__BOM-BomTH__MaBtp__318258D2" Association="Self.FK__BOM-BomTH__MaBtp__318258D2">
       <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTH__MaMua__11158940" Association="Self.FK__BOM-BomTH__MaMua__11158940">
+    <AssociationSet Name="FK__BOM-BomTH__MaMua__32767D0B" Association="Self.FK__BOM-BomTH__MaMua__32767D0B">
       <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTH__MaTp__1D7B6025" Association="Self.FK__BOM-BomTH__MaTp__1D7B6025">
+    <AssociationSet Name="FK__BOM-BomTH__MaTp__336AA144" Association="Self.FK__BOM-BomTH__MaTp__336AA144">
       <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>

@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\WPF\CW1-BOM\BomRnD\App.xaml
 35503258148
 2739969757
-68-236542507
+69904409899
 561847486389
 Basic Info\MaKeToanERPWindow.xaml;Basic Info\PL4ERPWindow.xaml;Basic Info\PLLonERPWindow.xaml;Basic Info\PLLonSxWindow.xaml;Basic Info\PLNhoERPWindow.xaml;Basic Info\PLNhoSxWindow.xaml;Basic Info\UnitWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;UserControl1\ControlBarBaseUC.xaml;UserControl1\ControlBarInfoUC.xaml;UserControl1\ControlBarMainUC.xaml;UserControlBomLK\BomLKAddWindows.xaml;UserControlBomLK\BomLKEditWindows.xaml;UserControlBomLK\BomLKInfoWindows.xaml;UserControlBomLK\BomLKMainControlUC.xaml;UserControlBomLK\BomLKMainTitleUC.xaml;UserControlBomLK\BomLKMainUC.xaml;UserControlBomNL\BomNLAddWindows.xaml;UserControlBomNL\BomNLEditWindows.xaml;UserControlBomNL\BomNLInfoWindows.xaml;UserControlBomNL\BomNLMainControlUC.xaml;UserControlBomNL\BomNLMainTItleUC.xaml;UserControlBomNL\BomNLMainUC.xaml;UserControlBomTH\BomTHMainTitleUC.xaml;UserControlBomTH\BomTHMainUC.xaml;UserControlBomTp\BomTPAddWindows.xaml;UserControlBomTp\BomTPEditWindows.xaml;UserControlBomTp\BomTPInfoWindows.xaml;UserControlBomTp\BomTPMainControlUC.xaml;UserControlBomTp\BomTPMainTitleUC.xaml;UserControlBomTp\BomTPMainUC.xaml;UserControlHome\HomeMainUC.xaml;UserControlSetting\SettingMainUC.xaml;
 
-False
+True
 

@@ -72,14 +72,14 @@
         <Grid Grid.Row="0">
             <uc:ControlBarMainUC Tag="{Binding Title, ElementName=mainWindow}" />
         </Grid>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
+        <DockPanel Grid.Row="1">
+            <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition />
                 <ColumnDefinition Width="auto" />
-            </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>-->
 
-            <Grid HorizontalAlignment="Left"
+            <Grid DockPanel.Dock="Left" HorizontalAlignment="Left"
                   Width="auto">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -222,41 +222,7 @@
                 </StackPanel>
             </Grid>
 
-            <Grid Grid.Column="1">
-                <materialDesign:Card UniformCornerRadius="40"                                     
-                                     materialDesign:ElevationAssist.Elevation="Dp0"
-                                     Margin="20"
-                                     Background="#FFFEBEAA"
-                                     Foreground="Black">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="auto" />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <StackPanel x:Name="UCTilte"
-                                    Grid.Row="0" 
-                                    Margin="10"/>
-                        <StackPanel x:Name="UCControl"
-                                    Grid.Row="1"
-                                    Margin="10" />
-                        <ScrollViewer Grid.Row="2"
-                                      materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
-                                      HorizontalScrollBarVisibility="Disabled"
-                                      VerticalScrollBarVisibility="Auto">
-                            <Grid x:Name="UCMain"
-                                  Margin="15 5 15 5"
-                                  Width="auto"
-                                  Height="auto">
-
-                            </Grid>
-                        </ScrollViewer>
-                    </Grid>
-                    
-                </materialDesign:Card>
-            </Grid>
-
-            <Grid Grid.Column="2">
+            <Grid DockPanel.Dock="Right" Grid.Column="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
@@ -288,6 +254,51 @@
                           VerticalAlignment="Bottom" />
 
             </Grid>
-        </Grid>
+
+            <Grid Grid.Column="1">
+                <materialDesign:Card UniformCornerRadius="40"                                     
+                                     materialDesign:ElevationAssist.Elevation="Dp0"
+                                     Margin="20"
+                                     Background="#FFFEBEAA"
+                                     Foreground="Black">
+                    <DockPanel x:Name="scroll1">
+                        <!--<Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>-->
+                        <StackPanel DockPanel.Dock="Top" x:Name="UCTilte"
+                                    Grid.Row="0" 
+                                    Margin="10"/>
+                        <StackPanel DockPanel.Dock="Top" x:Name="UCControl"
+                                    Grid.Row="1"
+                                    Margin="10" />
+
+
+                        <ScrollViewer DockPanel.Dock="Top"
+                                      HorizontalScrollBarVisibility="Disabled"
+                                      VerticalScrollBarVisibility="Auto">
+                            <Grid x:Name="UCMain"
+                                  Margin="15 5 15 5"
+                                  Width="auto"
+                                  Height="auto">
+
+                            </Grid>
+                        </ScrollViewer>
+
+                        <Grid DockPanel.Dock="Bottom"
+                                    x:Name="UCmainmain">
+
+                        </Grid>
+
+
+
+                    </DockPanel>
+                    
+                </materialDesign:Card>
+            </Grid>
+
+            
+        </DockPanel>
     </Grid>
 </Window>

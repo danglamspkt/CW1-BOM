@@ -190,6 +190,7 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\BomTHModel.cs" />
     <Compile Include="Model\BOM_BomBtp.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

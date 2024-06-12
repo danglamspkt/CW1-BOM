@@ -34,6 +34,7 @@ namespace BomRnD.ViewModel
         public Grid UCMain { get => _UCMain; set { _UCMain = value; OnPropertyChanged(); } }
 
         public UserControl uc { get; set; }
+        public UserControl ucmainmain { get; set; }
         public UserControl uctitle { get; set; }
         public UserControl uccontrol { get; set; }
 
@@ -102,38 +103,46 @@ namespace BomRnD.ViewModel
                     switch (SelectedIndex)
                     {
                         case 0:
+                            ucmainmain = new UserControl();
                             uc = new HomeMainUC();
                             uctitle = new UserControl();
                             uccontrol = new UserControl();
                             break;
                         case 1:
-                            uc = new BomTHMainUC();
-                            uctitle = new UserControl();
+                            ucmainmain = new BomTHMainUC();
+                            uc = new UserControl();
+                            uctitle = new BomTHMainTitleUC();
                             uccontrol = new UserControl();
                             break;
                         case 2:
+                            ucmainmain = new UserControl();
                             uc = new BomNLMainUC();
                             uctitle = new BomNLMainTItleUC();
                             uccontrol = new BomNLMainControlUC();
                             break;
                         case 3:
+                            ucmainmain = new UserControl();
                             uc = new BomLKMainUC();
                             uctitle = new BomLKMainTitleUC();
                             uccontrol = new BomLKMainControlUC();
                             break;
                         case 4:
+                            ucmainmain = new UserControl();
                             uc = new BomTPMainUC();
                             uctitle = new BomTPMainTitleUC();
                             uccontrol = new BomTPMainControlUC();
                             break;
                         case 5:
+                            ucmainmain = new UserControl();
                             uc = new SettingMainUC();
                             uctitle = new UserControl();
                             uccontrol = new UserControl();
                             break;
-                    }                    
+                    }
                     if (win.UCMain != null)
                     {
+                        win.UCmainmain.Children.Clear();
+                        win.UCmainmain.Children.Add(ucmainmain);
                         win.UCMain.Children.Clear();
                         win.UCMain.Children.Add(uc);
                         win.UCTilte.Children.Clear();

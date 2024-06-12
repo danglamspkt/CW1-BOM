@@ -241,6 +241,7 @@
     <NavigationProperty Name="BOM_BomBtp2" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__671F4F74" FromRole="BOM_BomTH" ToRole="BOM_BomBtp" />
     <NavigationProperty Name="BOM_BomTp" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90" FromRole="BOM_BomTH" ToRole="BOM_BomTp" />
     <NavigationProperty Name="BOM_BomNl" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__11158940" FromRole="BOM_BomTH" ToRole="BOM_BomNl" />
+    <Property Name="ThiTruong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="BOM_Unit">
     <Key>

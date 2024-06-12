@@ -21,6 +21,7 @@ using BomRnD.UserControlHome;
 using BomRnD.UserControlSetting;
 using BomRnD.Basic_Info;
 using MahApps.Metro.Controls;
+using DevExpress.Xpf.Core.Native;
 
 namespace BomRnD.ViewModel
 {
@@ -292,6 +293,7 @@ namespace BomRnD.ViewModel
                 additem(stackPanel, 1);
 
                 MainWindow win = Application.Current.MainWindow as MainWindow;
+                
 
                 win.UCMain.Children.Clear();
                 win.UCMain.Children.Add(stackPanel);

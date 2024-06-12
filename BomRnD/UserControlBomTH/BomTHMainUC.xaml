@@ -14,13 +14,115 @@
              TextElement.FontSize="14">
 
     <Grid>
-        <StackPanel x:Name="BomTPData"
-                    Orientation="Horizontal">
-            <StackPanel Width="500">
-                
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="{Binding MaTp, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             materialDesign:HintAssist.Hint="Mã thành phẩm"
+                             Width="180"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Margin="5">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="TextChanged">
+                                <i:InvokeCommandAction Command="{Binding valuechangecommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBox>
+                    <TextBox Text="{Binding ThiTruong, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             materialDesign:HintAssist.Hint="Thị trường"
+                             Width="120"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Margin="5">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="TextChanged">
+                                <i:InvokeCommandAction Command="{Binding valuechangecommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBox>
+                </StackPanel>
+                <ListView  ItemsSource="{Binding MaTPList}"
+                           SelectedItem="{Binding SelectedTPList, Mode=OneWayToSource}"
+                           MaxHeight="500">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mã thành phẩm"
+                                            DisplayMemberBinding="{Binding MaTp}"
+                                            Width="180"></GridViewColumn>
+                            <GridViewColumn Header="Thị trường"
+                                            DisplayMemberBinding="{Binding ThiTruong}"
+                                            Width="150"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </StackPanel>
-
-        </StackPanel>
+            <DataGrid DockPanel.Dock="Right"
+                      x:Name="bomdata"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding BomTHList}"
+                      IsReadOnly="True"
+                      Background="Transparent"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.CanContentScroll="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="NGC"
+                                        Binding="{Binding NGC}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Tên tiếng trung"
+                                        Binding="{Binding TenTiengTrung}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Display Name"
+                                        Binding="{Binding DisplayName}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Số hoạ 1"
+                                        Binding="{Binding MaBanVe1}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Số hoạ 2"
+                                        Binding="{Binding MaBanVe2}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã BtpTW1"
+                                        Binding="{Binding MaBtpTW1}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã BtpTW2"
+                                        Binding="{Binding MaBtpTW2}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã BtpTW3"
+                                        Binding="{Binding MaBtpTW3}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã BtpVN"
+                                        Binding="{Binding MaBtpVN}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã mua hàng"
+                                        Binding="{Binding MaMuaHang}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Tỉ lệ Nl/Btp"
+                                        Binding="{Binding TiLeNlBtp}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Quy cách"
+                                        Binding="{Binding QuyCach}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Chất liệu"
+                                        Binding="{Binding ChatLieu}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="T"
+                                        Binding="{Binding T}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="W"
+                                        Binding="{Binding W}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="L"
+                                        Binding="{Binding L}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Hệ số"
+                                        Binding="{Binding HeSo}"
+                                        Width="auto" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
 
 
 

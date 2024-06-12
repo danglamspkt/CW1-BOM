@@ -919,7 +919,7 @@ namespace BomRnD.ViewModel
                     stackPanel1.Children.Add(textBlock1);
 
                     TextBlock textBlock2 = new TextBlock();
-                    textBlock2.Text = item.MaBanVe;
+                    textBlock2.Text = item.MaHang;
                     textBlock2.HorizontalAlignment = HorizontalAlignment.Center;
                     textBlock2.VerticalAlignment = VerticalAlignment.Center;
                     textBlock2.Margin = new Thickness(10);
