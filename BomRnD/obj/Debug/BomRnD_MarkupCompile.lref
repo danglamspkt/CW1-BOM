@@ -35,4 +35,10 @@ FC:\WPF\CW1-BOM\BomRnD\UserControlBomTp\BomTPMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlHome\HomeMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlSetting\SettingMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHMainTitleUC.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddWindows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddMaTpWindows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddMaBTP1Windows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddMaBTP2Windows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddMaBTP3Windows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddMaMuaHangWindows.xaml;;
 

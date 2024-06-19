@@ -16,6 +16,12 @@
     <Grid>
         <DockPanel>
             <StackPanel DockPanel.Dock="Left">
+                <Button Content="Update"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        Command="{Binding UpdateTHCommand}"
+                        Width="100"
+                        Background="Green"
+                        Margin="10"></Button>
                 <StackPanel Orientation="Horizontal">
                     <TextBox Text="{Binding MaTp, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                              VerticalAlignment="Center"
@@ -58,11 +64,46 @@
                         </GridView>
                     </ListView.View>
                 </ListView>
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            Background="Green"
+                            Width="50"
+                            Height="50"
+                            Margin="20"
+                            Command="{Binding ThemTHcommand}">
+                        <materialDesign:PackIcon Width="24"
+                                                 Height="24"
+                                                 Kind="Plus" />
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            Background="Orange"
+                            Width="50"
+                            Height="50"
+                            Margin="20"
+                            Command="{Binding SuaTHcommand}">
+                        <materialDesign:PackIcon Width="24"
+                                                 Height="24"
+                                                 Kind="Pencil" />
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            Background="Red"
+                            Width="50"
+                            Height="50"
+                            Margin="20"
+                            Command="{Binding XoaTHCommand}">
+                        <materialDesign:PackIcon Width="24"
+                                                 Height="24"
+                                                 Kind="Minus" />
+                    </Button>
+                </StackPanel>
             </StackPanel>
             <DataGrid DockPanel.Dock="Right"
                       x:Name="bomdata"
                       AutoGenerateColumns="False"
                       ItemsSource="{Binding BomTHList}"
+                      SelectedItem="{Binding SelectedTPItem, Mode=OneWayToSource}"
                       IsReadOnly="True"
                       Background="Transparent"
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -120,8 +161,78 @@
                     <DataGridTextColumn Header="Hệ số"
                                         Binding="{Binding HeSo}"
                                         Width="auto" />
+                    <DataGridTextColumn Header="Ghi chú"
+                                        Binding="{Binding GhiChu}"
+                                        Width="auto" />
                 </DataGrid.Columns>
             </DataGrid>
+            <!--<ListView DockPanel.Dock="Right"
+                      x:Name="bomdata"
+                      ItemsSource="{Binding BomTHList}"
+                      SelectedItem="{Binding SelectedTPItem, Mode=OneWayToSource}"
+                      Background="Transparent"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.CanContentScroll="True">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="NGC"
+                                        DisplayMemberBinding="{Binding NGC}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Tên tiếng trung"
+                                        DisplayMemberBinding="{Binding TenTiengTrung}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Display Name"
+                                        DisplayMemberBinding="{Binding DisplayName}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Số hoạ 1"
+                                        DisplayMemberBinding="{Binding MaBanVe1}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Số hoạ 2"
+                                        DisplayMemberBinding="{Binding MaBanVe2}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Mã BtpTW1"
+                                        DisplayMemberBinding="{Binding MaBtpTW1}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Mã BtpTW2"
+                                        DisplayMemberBinding="{Binding MaBtpTW2}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Mã BtpTW3"
+                                        DisplayMemberBinding="{Binding MaBtpTW3}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Mã BtpVN"
+                                        DisplayMemberBinding="{Binding MaBtpVN}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Mã mua hàng"
+                                        DisplayMemberBinding="{Binding MaMuaHang}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Tỉ lệ Nl/Btp"
+                                        DisplayMemberBinding="{Binding TiLeNlBtp}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Quy cách"
+                                        DisplayMemberBinding="{Binding QuyCach}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Chất liệu"
+                                        DisplayMemberBinding="{Binding ChatLieu}"
+                                            Width="auto" />
+                        <GridViewColumn Header="T"
+                                        DisplayMemberBinding="{Binding T}"
+                                            Width="auto" />
+                        <GridViewColumn Header="W"
+                                        DisplayMemberBinding="{Binding W}"
+                                            Width="auto" />
+                        <GridViewColumn Header="L"
+                                        DisplayMemberBinding="{Binding L}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Hệ số"
+                                        DisplayMemberBinding="{Binding HeSo}"
+                                            Width="auto" />
+                        <GridViewColumn Header="Ghi chú"
+                                        DisplayMemberBinding="{Binding GhiChu}"
+                                            Width="auto" />
+                    </GridView>
+                </ListView.View>
+            </ListView>-->
         </DockPanel>
 
 

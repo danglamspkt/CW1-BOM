@@ -298,6 +298,24 @@
     <Compile Include="UserControlBomNL\BomNLMainUC.xaml.cs">
       <DependentUpon>BomNLMainUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaBTP1Windows.xaml.cs">
+      <DependentUpon>BomTHAddMaBTP1Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaBTP2Windows.xaml.cs">
+      <DependentUpon>BomTHAddMaBTP2Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaBTP3Windows.xaml.cs">
+      <DependentUpon>BomTHAddMaBTP3Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaMuaHangWindows.xaml.cs">
+      <DependentUpon>BomTHAddMaMuaHangWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaTpWindows.xaml.cs">
+      <DependentUpon>BomTHAddMaTpWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddWindows.xaml.cs">
+      <DependentUpon>BomTHAddWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomTH\BomTHMainTitleUC.xaml.cs">
       <DependentUpon>BomTHMainTitleUC.xaml</DependentUpon>
     </Compile>
@@ -442,6 +460,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlBomNL\BomNLMainUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaBTP1Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaBTP2Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaBTP3Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaMuaHangWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaTpWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

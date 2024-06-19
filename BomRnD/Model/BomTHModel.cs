@@ -8,6 +8,7 @@ namespace BomRnD.Model
 {
     public class BomTHModel
     {
+        public int Id { get; set; }
         public string NGC { get; set; }
         public string TenTiengTrung { get; set; }
         public string DisplayName { get; set; }
@@ -25,5 +26,6 @@ namespace BomRnD.Model
         public Nullable<double> W { get; set; }
         public Nullable<double> L { get; set; }
         public Nullable<int> HeSo { get; set; }
+        public string GhiChu { get; set; }
     }
 }
