@@ -165,7 +165,7 @@
                             <TextBlock Text="{Binding MNP0005, Mode=TwoWay}"
                                        FontSize="20" />
                         </ListBoxItem>
-                        <ListBoxItem>
+                        <!--<ListBoxItem>
                             <ListBoxItem.Style>
                                 <Style TargetType="{x:Type ListBoxItem}"
                                        BasedOn="{StaticResource CustomColorMaterialDesign3NavigationListBoxItem}">
@@ -177,7 +177,7 @@
                             </ListBoxItem.Style>
                             <TextBlock Text="{Binding MNP0006, Mode=TwoWay}"
                                        FontSize="20" />
-                        </ListBoxItem>
+                        </ListBoxItem>-->
                     </ListBox>
                 </StackPanel>
                 <StackPanel Grid.Row="2"

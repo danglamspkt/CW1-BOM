@@ -6,14 +6,79 @@
              xmlns:local="clr-namespace:BomRnD.UserControlHome"
              mc:Ignorable="d"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:HomePageViewModel}"
+             DataContext="{StaticResource HomePageVM}"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              TextElement.FontWeight="Medium"
              TextElement.FontSize="14">
-    <Grid Width="auto" Height="auto">
+    <Grid>
+        <WrapPanel HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+            <materialDesign:Card UniformCornerRadius="10"
+                                 Background="White"
+                                 materialDesign:ElevationAssist.Elevation="Dp12"
+                                 Width="200"
+                                 Height="100"
+                                 Margin="20">
+                <StackPanel Margin="10">
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="Số lượng BOM tổng hợp"/>
+                    <Separator></Separator>
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="{Binding SLTH}"
+                               FontSize="32"/>
+                </StackPanel>                
+            </materialDesign:Card>
 
-        <Image Stretch="Uniform"
-               Source="/UserControlHome/error 404.png" />
+            <materialDesign:Card UniformCornerRadius="10"
+                                 Background="White"
+                                 materialDesign:ElevationAssist.Elevation="Dp12"
+                                 Width="200"
+                                 Height="100"
+                                 Margin="20">
+                <StackPanel Margin="10">
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="Số lượng mã thành phẩm"/>
+                    <Separator></Separator>
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="{Binding SLTp}"
+                               FontSize="32" />
+                </StackPanel>
+            </materialDesign:Card>
 
+            <materialDesign:Card UniformCornerRadius="10"
+                                 Background="White"
+                                 materialDesign:ElevationAssist.Elevation="Dp12"
+                                 Width="200"
+                                 Height="100"
+                                 Margin="20">
+                <StackPanel Margin="10">
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="Số lượng mã nguyên liệu" />
+                    <Separator></Separator>
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="{Binding SLNl}"
+                               FontSize="32" />
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card UniformCornerRadius="10"
+                                 Background="White"
+                                 materialDesign:ElevationAssist.Elevation="Dp12"
+                                 Width="200"
+                                 Height="100"
+                                 Margin="20">
+                <StackPanel Margin="10">
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="Số lượng mã BTP" />
+                    <Separator></Separator>
+                    <TextBlock HorizontalAlignment="Center"
+                               Text="{Binding SLBtp}"
+                               FontSize="32" />
+                </StackPanel>
+            </materialDesign:Card>
+
+        </WrapPanel>
     </Grid>
 </UserControl>

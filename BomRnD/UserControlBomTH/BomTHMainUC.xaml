@@ -98,12 +98,14 @@
                                                  Kind="Minus" />
                     </Button>
                 </StackPanel>
+                <!--<TextBlock Text="{Binding test}"></TextBlock>
+                <Button Command="{Binding testbutton}"></Button>-->
             </StackPanel>
             <DataGrid DockPanel.Dock="Right"
                       x:Name="bomdata"
                       AutoGenerateColumns="False"
                       ItemsSource="{Binding BomTHList}"
-                      SelectedItem="{Binding SelectedTPItem, Mode=OneWayToSource}"
+                      SelectedItem="{Binding SelectedTPItem, Mode=TwoWay}"
                       IsReadOnly="True"
                       Background="Transparent"
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"

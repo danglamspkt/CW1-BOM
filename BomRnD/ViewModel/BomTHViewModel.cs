@@ -29,6 +29,8 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BOM_BomTH> _BomTHList2;
         public ObservableCollection<BOM_BomTH> BomTHList2 { get => _BomTHList2; set { _BomTHList2 = value; OnPropertyChanged(); } }
 
+
+
         private ObservableCollection<BOM_BomTp> _ThanhPhamAddList;
         public ObservableCollection<BOM_BomTp> ThanhPhamAddList { get => _ThanhPhamAddList; set { _ThanhPhamAddList = value; OnPropertyChanged(); } }
 
@@ -61,6 +63,39 @@ namespace BomRnD.ViewModel
 
 
 
+
+        private ObservableCollection<BOM_BomTp> _ThanhPhamEditList;
+        public ObservableCollection<BOM_BomTp> ThanhPhamEditList { get => _ThanhPhamEditList; set { _ThanhPhamEditList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomTp> _ThanhPhamEditListFa;
+        public ObservableCollection<BOM_BomTp> ThanhPhamEditListFa { get => _ThanhPhamEditListFa; set { _ThanhPhamEditListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomBtp> _BTP1EditList;
+        public ObservableCollection<BOM_BomBtp> BTP1EditList { get => _BTP1EditList; set { _BTP1EditList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomBtp> _BTP1EditListFa;
+        public ObservableCollection<BOM_BomBtp> BTP1EditListFa { get => _BTP1EditListFa; set { _BTP1EditListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomBtp> _BTP2EditList;
+        public ObservableCollection<BOM_BomBtp> BTP2EditList { get => _BTP2EditList; set { _BTP2EditList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomBtp> _BTP2EditListFa;
+        public ObservableCollection<BOM_BomBtp> BTP2EditListFa { get => _BTP2EditListFa; set { _BTP2EditListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomBtp> _BTP3EditList;
+        public ObservableCollection<BOM_BomBtp> BTP3EditList { get => _BTP3EditList; set { _BTP3EditList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomBtp> _BTP3EditListFa;
+        public ObservableCollection<BOM_BomBtp> BTP3EditListFa { get => _BTP3EditListFa; set { _BTP3EditListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHangEditList;
+        public ObservableCollection<BOM_BomNl> MaMuaHangEditList { get => _MaMuaHangEditList; set { _MaMuaHangEditList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHangEditListFa;
+        public ObservableCollection<BOM_BomNl> MaMuaHangEditListFa { get => _MaMuaHangEditListFa; set { _MaMuaHangEditListFa = value; OnPropertyChanged(); } }
+
+
+
         private int _Id2;
         public int Id2 { get => _Id2; set { _Id2 = value; OnPropertyChanged(); } }
 
@@ -90,6 +125,38 @@ namespace BomRnD.ViewModel
 
         private string _ThiTruong2;
         public string ThiTruong2 { get => _ThiTruong2; set { _ThiTruong2 = value; OnPropertyChanged(); } }
+
+        private string _MaTpEdit;
+        public string MaTpEdit { get => _MaTpEdit; set { _MaTpEdit = value; OnPropertyChanged(); } }
+
+        private string _MaTpEditSeach;
+        public string MaTpEditSeach { get => _MaTpEditSeach; set { _MaTpEditSeach = value; OnPropertyChanged(); } }
+
+        private string _MaBTP1Edit;
+        public string MaBTP1Edit { get => _MaBTP1Edit; set { _MaBTP1Edit = value; OnPropertyChanged(); } }
+
+        private string _MaBTP1EditSeach;
+        public string MaBTP1EditSeach { get => _MaBTP1EditSeach; set { _MaBTP1EditSeach = value; OnPropertyChanged(); } }
+
+        private string _MaBTP2Edit;
+        public string MaBTP2Edit { get => _MaBTP2Edit; set { _MaBTP2Edit = value; OnPropertyChanged(); } }
+
+        private string _MaBTP2EditSeach;
+        public string MaBTP2EditSeach { get => _MaBTP2EditSeach; set { _MaBTP2EditSeach = value; OnPropertyChanged(); } }
+
+        private string _MaBTP3Edit;
+        public string MaBTP3Edit { get => _MaBTP3Edit; set { _MaBTP3Edit = value; OnPropertyChanged(); } }
+
+        private string _MaBTP3EditSeach;
+        public string MaBTP3EditSeach { get => _MaBTP3EditSeach; set { _MaBTP3EditSeach = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHangEdit;
+        public string MaMuaHangEdit { get => _MaMuaHangEdit; set { _MaMuaHangEdit = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHangEditSeach;
+        public string MaMuaHangEditSeach { get => _MaMuaHangEditSeach; set { _MaMuaHangEditSeach = value; OnPropertyChanged(); } }
+
+
 
 
         private int _Id3;
@@ -157,6 +224,9 @@ namespace BomRnD.ViewModel
 
 
 
+        private string _test;
+        public string test { get => _test; set { _test = value; OnPropertyChanged(); } }
+
         private string _MaTp;
         public string MaTp { get => _MaTp; set { _MaTp = value; OnPropertyChanged(); } }
 
@@ -210,24 +280,24 @@ namespace BomRnD.ViewModel
             }
         }
 
-        private BOM_BomTH _SelectedTPItem;
-        public BOM_BomTH SelectedTPItem
+        private BomTHModel _SelectedTPItem;
+        public BomTHModel SelectedTPItem
         {
             get => _SelectedTPItem; set
             {
                 _SelectedTPItem = value; OnPropertyChanged(); if (SelectedTPItem != null)
                 {
                     Id2 = SelectedTPItem.Id;
-                    MaTp2 = SelectedTPItem.MaTp;
-                    MaBtp21 = SelectedTPItem.MaBtp1;
-                    MaBtp22 = SelectedTPItem.MaBtp2;
-                    MaBtp23 = SelectedTPItem.MaBtp3;
-                    ThiTruong2 = SelectedTPItem.ThiTruong;
-                    MaMuaHang2 = SelectedTPItem.MaMuaHang;
-                    TiLeNlBtp2 = SelectedTPItem.TiLeNlBtp;
-                    HeSo2 = SelectedTPItem.HeSo;
-                    GhiChu2 = SelectedTPItem.GhiChu;
-                    MessageBox.Show(Id2.ToString());
+                    var bomth = DataProvider.Ins.DB.BOM_BomTH.Where(b => b.Id == Id2).FirstOrDefault();
+                    MaTp2 = bomth.MaTp;
+                    MaBtp21 = bomth.MaBtp1;
+                    MaBtp22 = bomth.MaBtp2;
+                    MaBtp23 = bomth.MaBtp3;
+                    ThiTruong2 = bomth.ThiTruong;
+                    MaMuaHang2 = bomth.MaMuaHang;
+                    TiLeNlBtp2 = bomth.TiLeNlBtp;
+                    HeSo2 = bomth.HeSo;
+                    GhiChu2 = bomth.GhiChu;
                 }
             }
         }
@@ -294,12 +364,80 @@ namespace BomRnD.ViewModel
         }
 
 
+        private BOM_BomTp _SelectedTPEditItem;
+        public BOM_BomTp SelectedTPEditItem
+        {
+            get => _SelectedTPEditItem; set
+            {
+                _SelectedTPEditItem = value; OnPropertyChanged(); if (SelectedTPEditItem != null)
+                {
+                    MaTpEdit = SelectedTPEditItem.MaHang;
+                }
+            }
+        }
+
+        private BOM_BomBtp _SelectedBTP1EditItem;
+        public BOM_BomBtp SelectedBTP1EditItem
+        {
+            get => _SelectedBTP1EditItem; set
+            {
+                _SelectedBTP1EditItem = value; OnPropertyChanged(); if (SelectedBTP1EditItem != null)
+                {
+                    MaBTP1Edit = SelectedBTP1EditItem.MaHang;
+                }
+            }
+        }
+
+        private BOM_BomBtp _SelectedBTP2EditItem;
+        public BOM_BomBtp SelectedBTP2EditItem
+        {
+            get => _SelectedBTP2EditItem; set
+            {
+                _SelectedBTP2EditItem = value; OnPropertyChanged(); if (SelectedBTP2EditItem != null)
+                {
+                    MaBTP2Edit = SelectedBTP2EditItem.MaHang;
+                }
+            }
+        }
+
+        private BOM_BomBtp _SelectedBTP3EditItem;
+        public BOM_BomBtp SelectedBTP3EditItem
+        {
+            get => _SelectedBTP3EditItem; set
+            {
+                _SelectedBTP3EditItem = value; OnPropertyChanged(); if (SelectedBTP3EditItem != null)
+                {
+                    MaBTP3Edit = SelectedBTP3EditItem.MaHang;
+                }
+            }
+        }
+
+        private BOM_BomNl _SelectedMuaHangEditItem;
+        public BOM_BomNl SelectedMuaHangEditItem
+        {
+            get => _SelectedMuaHangEditItem; set
+            {
+                _SelectedMuaHangEditItem = value; OnPropertyChanged(); if (SelectedMuaHangEditItem != null)
+                {
+                    MaMuaHangEdit = SelectedMuaHangEditItem.MaHang;
+                }
+            }
+        }
+
+
+        public ICommand testbutton { get; set; }
         public ICommand valuechangecommand { get; set; }
         public ICommand UpdateTHCommand { get; set; }
         public ICommand LoadedaddCommand { get; set; }
+        public ICommand LoadededitCommand { get; set; }
+
+
         public ICommand XoaTHCommand { get; set; }
         public ICommand ThemTHcommand { get; set; }
         public ICommand AddCommand { get; set; }
+        public ICommand SuaTHcommand { get; set; }
+        public ICommand EditCommand { get; set; }
+
         public ICommand LoadAddMaTpCommand { get; set; }
         public ICommand AddMaTpChangeCommand { get; set; }
         public ICommand AddMaTpApplyCommand { get; set; }
@@ -316,6 +454,22 @@ namespace BomRnD.ViewModel
         public ICommand AddMaMuaHangChangeCommand { get; set; }
         public ICommand AddMaMuaHangApplyCommand { get; set; }
 
+        public ICommand LoadEditMaTpCommand { get; set; }
+        public ICommand EditMaTpChangeCommand { get; set; }
+        public ICommand EditMaTpApplyCommand { get; set; }
+        public ICommand LoadEditMaBTP1Command { get; set; }
+        public ICommand EditMaBTP1ChangeCommand { get; set; }
+        public ICommand EditMaBTP1ApplyCommand { get; set; }
+        public ICommand LoadEditMaBTP2Command { get; set; }
+        public ICommand EditMaBTP2ChangeCommand { get; set; }
+        public ICommand EditMaBTP2ApplyCommand { get; set; }
+        public ICommand LoadEditMaBTP3Command { get; set; }
+        public ICommand EditMaBTP3ChangeCommand { get; set; }
+        public ICommand EditMaBTP3ApplyCommand { get; set; }
+        public ICommand LoadEditMaMuaHangCommand { get; set; }
+        public ICommand EditMaMuaHangChangeCommand { get; set; }
+        public ICommand EditMaMuaHangApplyCommand { get; set; }
+
 
         public BomTHAddWindows bomTHAddWindows;
         public BomTHAddMaTpWindows bomTHAddMaTpWindows;
@@ -324,13 +478,31 @@ namespace BomRnD.ViewModel
         public BomTHAddMaBTP3Windows bomTHAddMaBTP3Windows;
         public BomTHAddMaMuaHangWindows bomTHAddMaMuaHangWindows;
 
+        public BomTHEditWindows bomTHEditWindows;
+        public BomTHEditMaTpWindows bomTHEditMaTpWindows;
+        public BomTHEditMaBTP1Windows bomTHEditMaBTP1Windows;
+        public BomTHEditMaBTP2Windows bomTHEditMaBTP2Windows;
+        public BomTHEditMaBTP3Windows bomTHEditMaBTP3Windows;
+        public BomTHEditMaMuaHangWindows bomTHEditMaMuaHangWindows;
+
         public BomTHViewModel()
         {
             MaTPList = new ObservableCollection<BOM_BomTH>(DataProvider.Ins.DB.BOM_BomTH.GroupBy(x => new { x.MaTp, x.ThiTruong}).Select(x => x.FirstOrDefault()));
             MaTPList2 = MaTPList;
             MaTp = "";
             ThiTruong = "";
-                        
+
+            ThanhPhamEditListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
+            BTP1EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+            BTP2EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+            BTP3EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+            MaMuaHangEditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+
+            testbutton = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+
+                test = Id2.ToString();
+            });
             valuechangecommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
 
@@ -348,7 +520,12 @@ namespace BomRnD.ViewModel
                 bomTHAddWindows = new BomTHAddWindows();
                 bomTHAddWindows.Show();
             });
-            XoaTHCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            SuaTHcommand = new RelayCommand<object>((p) => { if (Id2 < 1) return false; return true; }, (p) =>
+            {
+                bomTHEditWindows = new BomTHEditWindows();
+                bomTHEditWindows.Show();
+            });
+            XoaTHCommand = new RelayCommand<object>((p) => { if (Id2 < 1) return false; return true; }, (p) =>
             {
                 if (Id2 < 1)  
                 { 
@@ -363,6 +540,8 @@ namespace BomRnD.ViewModel
                     DataProvider.Ins.DB.SaveChanges();
                     MaTPList = new ObservableCollection<BOM_BomTH>(DataProvider.Ins.DB.BOM_BomTH.GroupBy(x => new { x.MaTp, x.ThiTruong }).Select(x => x.FirstOrDefault()));
                     MaTPList2 = MaTPList;
+                    BomTHList = new ObservableCollection<BomTHModel>();
+                    Id2= 0;
                 };
             });
             LoadedaddCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
@@ -373,6 +552,16 @@ namespace BomRnD.ViewModel
                 BTP3AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
                 MaMuaHangAddListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
             });
+            LoadededitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                ThanhPhamEditListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
+                BTP1EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+                BTP2EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+                BTP3EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+                MaMuaHangEditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+
+            });
+
             AddCommand = new RelayCommand<object>((p) => 
             {
                 if (string.IsNullOrEmpty(MaTp3)) return false ;
@@ -408,7 +597,31 @@ namespace BomRnD.ViewModel
                 MaTPList2 = MaTPList;
 
             });
-            
+
+            EditCommand = new RelayCommand<object>((p) =>
+            {
+                if (string.IsNullOrEmpty(MaTp3)) return false;
+                return true;
+
+            }, (p) =>
+            {
+                var bOM_BomTH = DataProvider.Ins.DB.BOM_BomTH.Where(x=>x.Id==Id2).SingleOrDefault();
+                bOM_BomTH.MaTp = MaTp2;
+                bOM_BomTH.ThiTruong = ThiTruong2;
+                bOM_BomTH.MaBtp1 = MaBtp21;
+                bOM_BomTH.MaBtp2 = MaBtp22;
+                bOM_BomTH.MaBtp3 = MaBtp23;
+                bOM_BomTH.MaMuaHang = MaMuaHang2;
+                bOM_BomTH.TiLeNlBtp = TiLeNlBtp2;
+                bOM_BomTH.HeSo = HeSo2;
+                bOM_BomTH.GhiChu = GhiChu2;
+                DataProvider.Ins.DB.SaveChanges();
+
+                MaTPList = new ObservableCollection<BOM_BomTH>(DataProvider.Ins.DB.BOM_BomTH.GroupBy(x => new { x.MaTp, x.ThiTruong }).Select(x => x.FirstOrDefault()));
+                MaTPList2 = MaTPList;
+
+            });
+
             LoadAddMaTpCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 ThanhPhamAddList = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
@@ -487,6 +700,88 @@ namespace BomRnD.ViewModel
             {
                 MaMuaHang3 = MaMuaHangAdd;
                 bomTHAddMaMuaHangWindows.Close();
+            });
+
+
+
+            LoadEditMaTpCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                ThanhPhamEditList = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
+                bomTHEditMaTpWindows = new BomTHEditMaTpWindows();
+                bomTHEditMaTpWindows.Show();
+            });
+            EditMaTpChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                ThanhPhamEditList = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp.Where(x => x.MaHang.Contains(MaTpEditSeach)));
+            });
+            EditMaTpApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaTp2 = MaTpEdit;
+                bomTHEditMaTpWindows.Close();
+            });
+
+            LoadEditMaBTP1Command = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BTP1EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+                bomTHEditMaBTP1Windows = new BomTHEditMaBTP1Windows();
+                bomTHEditMaBTP1Windows.Show();
+            });
+            EditMaBTP1ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BTP1EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP1EditSeach)));
+            });
+            EditMaBTP1ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaBtp21 = MaBTP1Edit;
+                bomTHEditMaBTP1Windows.Close();
+            });
+
+            LoadEditMaBTP2Command = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BTP2EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+                bomTHEditMaBTP2Windows = new BomTHEditMaBTP2Windows();
+                bomTHEditMaBTP2Windows.Show();
+            });
+            EditMaBTP2ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BTP2EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP2EditSeach)));
+            });
+            EditMaBTP2ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaBtp22 = MaBTP2Edit;
+                bomTHEditMaBTP2Windows.Close();
+            });
+
+            LoadEditMaBTP3Command = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BTP3EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
+                bomTHEditMaBTP3Windows = new BomTHEditMaBTP3Windows();
+                bomTHEditMaBTP3Windows.Show();
+            });
+            EditMaBTP3ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BTP3EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP3EditSeach)));
+            });
+            EditMaBTP3ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaBtp23 = MaBTP3Edit;
+                bomTHEditMaBTP3Windows.Close();
+            });
+
+            LoadEditMaMuaHangCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHangEditList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                bomTHEditMaMuaHangWindows = new BomTHEditMaMuaHangWindows();
+                bomTHEditMaMuaHangWindows.Show();
+            });
+            EditMaMuaHangChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHangEditList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang.Contains(MaMuaHangEditSeach)));
+            });
+            EditMaMuaHangApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang2 = MaMuaHangEdit;
+                bomTHEditMaMuaHangWindows.Close();
             });
         }
 

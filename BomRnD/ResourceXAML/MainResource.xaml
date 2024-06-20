@@ -11,5 +11,6 @@
     <viewmodel:BomTPViewModel x:Key="BomTPVM"></viewmodel:BomTPViewModel>
     <viewmodel:BomTHViewModel x:Key="BomTHVM"></viewmodel:BomTHViewModel>
     <viewmodel:BasicViewModel x:Key="BasicVM"></viewmodel:BasicViewModel>
+    <viewmodel:HomePageViewModel x:Key="HomePageVM"></viewmodel:HomePageViewModel>
 
 </ResourceDictionary>

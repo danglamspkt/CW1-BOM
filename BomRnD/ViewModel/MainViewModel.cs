@@ -181,6 +181,10 @@ namespace BomRnD.ViewModel
                 {
                     p.Show();
                     langdata();
+                    uc = new HomeMainUC();
+                    MainWindow win2 = Application.Current.MainWindow as MainWindow;
+                    win2.UCMain.Children.Clear();
+                    win2.UCMain.Children.Add(uc);
                     Userlogin = BomRnD.Properties.Settings.Default.account;
                     DisplayName = DataProvider.Ins.DB.Users.Where(x => x.UserName == Userlogin).First().DisplayName;
                     Userlevel = DataProvider.Ins.DB.Users.Where(x => x.UserName == Userlogin).First().IdRole;

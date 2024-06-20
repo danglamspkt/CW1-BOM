@@ -280,3 +280,15 @@ C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaBTP1Windows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaBTP2Windows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaBTP3Windows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaMuaHangWindows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP1Windows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP2Windows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP3Windows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaMuaHangWindows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaTpWindows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditWindows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP1Windows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP2Windows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP3Windows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaMuaHangWindows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaTpWindows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditWindows.baml
