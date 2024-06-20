@@ -38,6 +38,9 @@ namespace BomRnD.Model
         public string IDImg { get; set; }
         public string LinkImg { get; set; }
         public string UserName { get; set; }
+        public string UserNameEdit { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> DateEdit { get; set; }
     
         public virtual BOM_Unit BOM_Unit { get; set; }
         public virtual BOM_Unit BOM_Unit1 { get; set; }

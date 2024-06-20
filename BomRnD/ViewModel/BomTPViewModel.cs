@@ -110,6 +110,40 @@ namespace BomRnD.ViewModel
         private string _MaPLNhoSx;
         public string MaPLNhoSx { get => _MaPLNhoSx; set { _MaPLNhoSx = value; OnPropertyChanged(); } }
 
+        private string _MauSon;
+        public string MauSon { get => _MauSon; set { _MauSon = value; OnPropertyChanged(); } }
+
+        private double? _HNet;
+        public double? HNet { get => _HNet; set { _HNet = value; OnPropertyChanged(); } }
+
+        private double? _WNet ;
+        public double? WNet  { get => _WNet ; set { _WNet  = value; OnPropertyChanged(); } }
+
+        private double? _DNet;
+        public double? DNet { get => _DNet ; set { _DNet  = value; OnPropertyChanged(); } }
+
+        private double? _HGross;
+        public double? HGross { get => _HGross; set { _HGross = value; OnPropertyChanged(); } }
+
+        private double? _WGross;
+        public double? WGross { get => _WGross; set { _WGross = value; OnPropertyChanged(); } }
+
+        private double? _DGross;
+        public double? DGross { get => _DGross; set { _DGross = value; OnPropertyChanged(); } }
+
+        private double? _NetWeight;
+        public double? NetWeight { get => _NetWeight; set { _NetWeight = value; OnPropertyChanged(); } }
+
+        private double? _GrossWeight;
+        public double? GrossWeight { get => _GrossWeight; set { _GrossWeight = value; OnPropertyChanged(); } }
+
+        private string _NetTu;
+        public string NetTu { get => _NetTu; set { _NetTu = value; OnPropertyChanged(); } }
+
+        private string _GrossTu;
+        public string GrossTu { get => _GrossTu; set { _GrossTu = value; OnPropertyChanged(); } }
+
+
 
         private string _MaHang2;
         public string MaHang2 { get => _MaHang2; set { _MaHang2 = value; OnPropertyChanged(); } }
@@ -158,6 +192,33 @@ namespace BomRnD.ViewModel
 
         private string _IDImg;
         public string IDImg { get => _IDImg; set { _IDImg = value; OnPropertyChanged(); } }
+
+        private string _MauSon2;
+        public string MauSon2 { get => _MauSon2; set { _MauSon2 = value; OnPropertyChanged(); } }
+
+        private double? _HNet2;
+        public double? HNet2 { get => _HNet2; set { _HNet2 = value; OnPropertyChanged(); } }
+
+        private double? _WNet2;
+        public double? WNet2 { get => _WNet2; set { _WNet2 = value; OnPropertyChanged(); } }
+
+        private double? _DNet2;
+        public double? DNet2 { get => _DNet2; set { _DNet2 = value; OnPropertyChanged(); } }
+
+        private double? _HGross2;
+        public double? HGross2 { get => _HGross2; set { _HGross2 = value; OnPropertyChanged(); } }
+
+        private double? _WGross2;
+        public double? WGross2 { get => _WGross2; set { _WGross2 = value; OnPropertyChanged(); } }
+
+        private double? _DGross2;
+        public double? DGross2 { get => _DGross2; set { _DGross2 = value; OnPropertyChanged(); } }
+
+        private double? _NetWeight2;
+        public double? NetWeight2 { get => _NetWeight2; set { _NetWeight2 = value; OnPropertyChanged(); } }
+
+        private double? _GrossWeight2;
+        public double? GrossWeight2 { get => _GrossWeight2; set { _GrossWeight2 = value; OnPropertyChanged(); } }
 
 
 
@@ -208,6 +269,33 @@ namespace BomRnD.ViewModel
 
         private string _IDImg3;
         public string IDImg3 { get => _IDImg3; set { _IDImg3 = value; OnPropertyChanged(); } }
+
+        private string _MauSon3;
+        public string MauSon3 { get => _MauSon3; set { _MauSon3 = value; OnPropertyChanged(); } }
+
+        private double? _HNet3;
+        public double? HNet3 { get => _HNet3; set { _HNet3 = value; OnPropertyChanged(); } }
+
+        private double? _WNet3;
+        public double? WNet3 { get => _WNet3; set { _WNet3 = value; OnPropertyChanged(); } }
+
+        private double? _DNet3;
+        public double? DNet3 { get => _DNet3; set { _DNet3 = value; OnPropertyChanged(); } }
+
+        private double? _HGross3;
+        public double? HGross3 { get => _HGross3; set { _HGross3 = value; OnPropertyChanged(); } }
+
+        private double? _WGross3;
+        public double? WGross3 { get => _WGross3; set { _WGross3 = value; OnPropertyChanged(); } }
+
+        private double? _DGross3;
+        public double? DGross3 { get => _DGross3; set { _DGross3 = value; OnPropertyChanged(); } }
+
+        private double? _NetWeight3;
+        public double? NetWeight3 { get => _NetWeight3; set { _NetWeight3 = value; OnPropertyChanged(); } }
+
+        private double? _GrossWeight3;
+        public double? GrossWeight3 { get => _GrossWeight3; set { _GrossWeight3 = value; OnPropertyChanged(); } }
 
         public BomTPInfoWindows bomTPInfoWindows;
 
@@ -355,6 +443,15 @@ namespace BomRnD.ViewModel
                 MaPLNhoSx3 = infolist.MaPLNhoSx;
                 LinkImg3 = infolist.LinkImg;
                 IDImg3 = infolist.IDImg;
+                MauSon3 = infolist.MauSon;
+                HNet3 = infolist.HNet;
+                WNet3 = infolist.WNet;
+                DNet3 = infolist.DNet;
+                HGross3 = infolist.HGross;
+                WGross3 = infolist.WGross;
+                DGross3 = infolist.DGross;
+                NetWeight3 = infolist.NetWeight;
+                GrossWeight3 = infolist.GrossWeight;
 
 
                 if (infolist.LinkImg == null || string.IsNullOrEmpty(infolist.LinkImg))
@@ -475,6 +572,15 @@ namespace BomRnD.ViewModel
                 bOM_BomTp.MaPLNhoSx = MaPLNhoSx2;
                 bOM_BomTp.LinkImg = LinkImg;
                 bOM_BomTp.IDImg = IDImg;
+                bOM_BomTp.HNet = HNet2;
+                bOM_BomTp.WNet = WNet2;
+                bOM_BomTp.DNet = DNet2;
+                bOM_BomTp.HGross = HGross2;
+                bOM_BomTp.WGross = WGross2;
+                bOM_BomTp.DGross = DGross2;
+                bOM_BomTp.NetWeight = NetWeight2;
+                bOM_BomTp.GrossWeight = GrossWeight2;
+                bOM_BomTp.MauSon = MauSon2;
                 bOM_BomTp.UserName = Properties.Settings.Default.UserName;
 
                 DataProvider.Ins.DB.BOM_BomTp.Add(bOM_BomTp);
@@ -495,6 +601,15 @@ namespace BomRnD.ViewModel
                 MaPLNhoSx2 = null;
                 LinkImg = null;
                 IDImg = null;
+                MauSon2 = null;
+                HNet2 = null;
+                WNet2 = null;
+                DNet2 = null;
+                HGross2 = null;
+                WGross2 = null;
+                DGross2 = null;
+                NetWeight2 = null;
+                GrossWeight2 = null;
             }
         }
 
@@ -518,6 +633,15 @@ namespace BomRnD.ViewModel
                 bOM_BomTp.MaPLNhoSx = MaPLNhoSx3;
                 bOM_BomTp.LinkImg = LinkImg3;
                 bOM_BomTp.IDImg = IDImg3;
+                bOM_BomTp.HNet = HNet3;
+                bOM_BomTp.WNet = WNet3;
+                bOM_BomTp.DNet = DNet3;
+                bOM_BomTp.HGross = HGross3;
+                bOM_BomTp.WGross = WGross3;
+                bOM_BomTp.DGross = DGross3;
+                bOM_BomTp.NetWeight = NetWeight3;
+                bOM_BomTp.GrossWeight = GrossWeight3;
+                bOM_BomTp.MauSon = MauSon3;
                 bOM_BomTp.UserName = Properties.Settings.Default.UserName;
                 DataProvider.Ins.DB.SaveChanges();
                 MaHang = MaHang3;
@@ -533,6 +657,15 @@ namespace BomRnD.ViewModel
                 MaPL4ERP = MaPL4ERP3;
                 MaPLLonSx = MaPLLonSx3;
                 MaPLNhoSx = MaPLNhoSx3;
+                MauSon = MauSon3;
+                HNet = HNet3;
+                WNet = WNet3;
+                DNet = DNet3;
+                HGross = HGross3;
+                WGross = WGross3;
+                DGross = DGross3;
+                NetWeight = NetWeight3;
+                GrossWeight = GrossWeight3;
                 editdone = true;
 
             }
@@ -732,6 +865,19 @@ namespace BomRnD.ViewModel
                         MaPL4ERP = item.MaPL4ERP;
                         MaPLLonSx = item.MaPLLonSx;
                         MaPLNhoSx = item.MaPLNhoSx;
+                        MauSon = item.MauSon;
+                        HNet = item.HNet;
+                        WNet = item.WNet;
+                        DNet = item.DNet;
+                        HGross = item.HGross;
+                        WGross = item.WGross;
+                        DGross = item.DGross;
+                        NetWeight = item.NetWeight;
+                        GrossWeight = item.GrossWeight;
+
+                        NetTu = HNet + " x " + WNet + " x " + DNet;
+                        GrossTu = HGross + " x " + WGross + " x " + DGross;
+
 
                         bomTPInfoWindows = new BomTPInfoWindows();
                         bomTPInfoWindows.Show();

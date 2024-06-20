@@ -17,5 +17,8 @@ namespace BomRnD.Model
         public string MaHang { get; set; }
         public string DisplayName { get; set; }
         public string UserName { get; set; }
+        public string UserNameEdit { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> DateEdit { get; set; }
     }
 }

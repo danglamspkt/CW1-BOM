@@ -28,6 +28,9 @@ namespace BomRnD.Model
         public string Unit { get; set; }
         public string DisplayName { get; set; }
         public string UserName { get; set; }
+        public string UserNameEdit { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> DateEdit { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BOM_BomBtp> BOM_BomBtp { get; set; }

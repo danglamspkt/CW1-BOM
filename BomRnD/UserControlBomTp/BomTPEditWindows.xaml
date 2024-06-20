@@ -23,8 +23,8 @@
         Background="#FFFFF8F5"
         Title="Sửa mã Nguyên liệu"
         FontWeight="Bold"
-        Height="650"
-        Width="800"
+        Height="700"
+        Width="1050"
         WindowState="Normal"
         BorderBrush="#FF2F49D8"
         BorderThickness="0.5">
@@ -115,8 +115,8 @@
                     </Button>
 
                 </StackPanel>
-                <Grid Width="450"
-                      Height="622">
+                <Grid Width="700"
+                      Height="672">
                     <ScrollViewer Grid.Row="2"
                                   materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
                                   HorizontalScrollBarVisibility="Disabled"
@@ -179,11 +179,7 @@
                                                  Margin="5">
                                         </TextBox>
                                     </StackPanel>
-                                </StackPanel>
-
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    
-                                    <StackPanel Margin="0">
+                                    <StackPanel Margin="10 0 0 0">
                                         <TextBlock Text="Quy cách"
                                                    HorizontalAlignment="Left"
                                                    FontSize="14"
@@ -204,6 +200,8 @@
                                         </TextBox>
                                     </StackPanel>
                                 </StackPanel>
+
+                                
 
                                 <StackPanel Orientation="Horizontal">
                                     <StackPanel>
@@ -270,7 +268,26 @@
                                                     Background="Teal"
                                                     Command="{Binding LoadUnitCommand}" />
                                         </StackPanel>
-
+                                    </StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Màu sơn"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding MauSon3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
                                     </StackPanel>
                                 </StackPanel>
 
@@ -295,7 +312,6 @@
                                                  Margin="5">
                                         </TextBox>
                                     </StackPanel>
-
                                     <StackPanel Margin="10 0 0 0">
                                         <TextBlock Text="Version"
                                                    HorizontalAlignment="Left"
@@ -305,6 +321,178 @@
                                                    Width="180">
                                         </TextBlock>
                                         <TextBox Text="{Binding Version3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">                                   
+                                    
+                                    <StackPanel Margin="0">
+                                        <TextBlock Text="Khối lượng tủ (kg)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding NetWeight3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Khối lượng đóng gói (kg)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding GrossWeight3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Margin="0">
+                                        <TextBlock Text="Chiều cao tủ (mm)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding HNet3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Chiều dài tủ (mm)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding WNet3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Chiều sâu tủ D (mm)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding DNet3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Margin="0">
+                                        <TextBlock Text="Chiều cao đóng gói H (mm)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding HGross3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Chiều dài đóng gói W (mm)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding WGross3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
+                                    </StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Chiều sâu đóng gói D (mm)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding DGross3, Mode=TwoWay}"
                                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                                  materialDesign:HintAssist.IsFloating="False"
@@ -384,10 +572,7 @@
                                                     Command="{Binding LoadPLLERPCommand}" />
                                         </StackPanel>
                                     </StackPanel>
-                                </StackPanel>
-
-                                <StackPanel Orientation="Horizontal">
-                                    <StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
                                         <TextBlock Text="Mã phân loại nhỏ (ERP)"
                                                    HorizontalAlignment="Left"
                                                    FontSize="14"
@@ -419,8 +604,10 @@
                                                     Command="{Binding LoadPLNERPCommand}" />
                                         </StackPanel>
                                     </StackPanel>
+                                </StackPanel>
 
-                                    <StackPanel Margin="10 0 0 0">
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Margin="0">
                                         <TextBlock Text="Mã phân loại cuối (ERP)"
                                                    HorizontalAlignment="Left"
                                                    FontSize="14"
@@ -452,10 +639,7 @@
                                                     Command="{Binding LoadPL4ERPCommand}" />
                                         </StackPanel>
                                     </StackPanel>
-                                </StackPanel>
-
-                                <StackPanel Orientation="Horizontal">
-                                    <StackPanel>
+                                    <StackPanel Margin="10 0 0 0">
                                         <TextBlock Text="Mã phân loại lớn (sản xuất)"
                                                    HorizontalAlignment="Left"
                                                    FontSize="14"

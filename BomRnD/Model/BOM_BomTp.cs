@@ -37,6 +37,18 @@ namespace BomRnD.Model
         public string UserName { get; set; }
         public string IDImg { get; set; }
         public string LinkImg { get; set; }
+        public string MauSon { get; set; }
+        public Nullable<double> HNet { get; set; }
+        public Nullable<double> WNet { get; set; }
+        public Nullable<double> DNet { get; set; }
+        public Nullable<double> HGross { get; set; }
+        public Nullable<double> WGross { get; set; }
+        public Nullable<double> DGross { get; set; }
+        public Nullable<double> NetWeight { get; set; }
+        public Nullable<double> GrossWeight { get; set; }
+        public string UserNameEdit { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> DateEdit { get; set; }
     
         public virtual BOM_Unit BOM_Unit { get; set; }
         public virtual BOM_Unit BOM_Unit1 { get; set; }

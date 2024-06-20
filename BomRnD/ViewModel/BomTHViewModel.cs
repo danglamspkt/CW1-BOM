@@ -3,6 +3,9 @@ using BomRnD.UserControlBomTH;
 using DevExpress.DashboardWeb;
 using DevExpress.Xpf.Data;
 using DevExpress.Xpf.Editors;
+using Microsoft.Win32;
+using OfficeOpenXml.Style;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,6 +15,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.IO;
+using DevExpress.Mvvm.Native;
+using DevExpress.Data.WcfLinq.Helpers;
+using DevExpress.Data.ODataLinq.Helpers;
 
 namespace BomRnD.ViewModel
 {
@@ -233,6 +240,12 @@ namespace BomRnD.ViewModel
         private string _ThiTruong;
         public string ThiTruong { get => _ThiTruong; set { _ThiTruong = value; OnPropertyChanged(); } }
 
+        private string _MaTpth;
+        public string MaTpth { get => _MaTpth; set { _MaTpth = value; OnPropertyChanged(); } }
+
+        private string _ThiTruongth;
+        public string ThiTruongth { get => _ThiTruongth; set { _ThiTruongth = value; OnPropertyChanged(); } }
+
         private BOM_BomTH _SelectedTPList;
         public BOM_BomTH SelectedTPList
         {
@@ -241,8 +254,11 @@ namespace BomRnD.ViewModel
                 _SelectedTPList = value; OnPropertyChanged(); if (SelectedTPList != null)
                 {
                     BomTHList = new ObservableCollection<BomTHModel>();
+                    MaTpth = SelectedTPList.MaTp;
+                    ThiTruongth = SelectedTPList.ThiTruong;
 
                     var lktp = DataProvider.Ins.DB.BOM_BomTH.Where(x => x.MaTp == SelectedTPList.MaTp && x.ThiTruong == SelectedTPList.ThiTruong);
+
 
                     //lktp.OrderBy(x => new { x.MaTp, x.ThiTruong });
                     foreach (var item in lktp)
@@ -273,6 +289,7 @@ namespace BomRnD.ViewModel
                         model.HeSo = item.HeSo;
                         model.Id = item.Id;
                         model.GhiChu = item.GhiChu;
+                        
 
                         BomTHList.Add(model);
                     }
@@ -430,6 +447,7 @@ namespace BomRnD.ViewModel
         public ICommand UpdateTHCommand { get; set; }
         public ICommand LoadedaddCommand { get; set; }
         public ICommand LoadededitCommand { get; set; }
+        public ICommand ExportExcelCommand { get; set; }
 
 
         public ICommand XoaTHCommand { get; set; }
@@ -579,6 +597,10 @@ namespace BomRnD.ViewModel
                 bOM_BomTH.TiLeNlBtp = TiLeNlBtp3;
                 bOM_BomTH.HeSo = HeSo3;
                 bOM_BomTH.GhiChu = GhiChu3;
+                bOM_BomTH.UserName = BomRnD.Properties.Settings.Default.UserName;
+                bOM_BomTH.Date = DateTime.Today;
+                bOM_BomTH.UserNameEdit = BomRnD.Properties.Settings.Default.UserName;
+                bOM_BomTH.DateEdit = DateTime.Today;
 
                 DataProvider.Ins.DB.BOM_BomTH.Add(bOM_BomTH);
                 DataProvider.Ins.DB.SaveChanges();
@@ -615,6 +637,8 @@ namespace BomRnD.ViewModel
                 bOM_BomTH.TiLeNlBtp = TiLeNlBtp2;
                 bOM_BomTH.HeSo = HeSo2;
                 bOM_BomTH.GhiChu = GhiChu2;
+                bOM_BomTH.UserNameEdit = BomRnD.Properties.Settings.Default.UserName;
+                bOM_BomTH.DateEdit = DateTime.Today;
                 DataProvider.Ins.DB.SaveChanges();
 
                 MaTPList = new ObservableCollection<BOM_BomTH>(DataProvider.Ins.DB.BOM_BomTH.GroupBy(x => new { x.MaTp, x.ThiTruong }).Select(x => x.FirstOrDefault()));
@@ -782,6 +806,289 @@ namespace BomRnD.ViewModel
             {
                 MaMuaHang2 = MaMuaHangEdit;
                 bomTHEditMaMuaHangWindows.Close();
+            });
+
+            ExportExcelCommand = new RelayCommand<object>((p) => { if (BomTHList == null) return false; return true; }, (p) =>
+            {
+                string filePath = "";
+                // tạo SaveFileDialog để lưu file excel
+                SaveFileDialog dialog = new SaveFileDialog();
+
+                // chỉ lọc ra các file có định dạng Excel
+                dialog.Filter = "Excel Workbook |*.xlsx";
+
+                // Nếu mở file và chọn nơi lưu file thành công sẽ lưu đường dẫn lại dùng
+                if (dialog.ShowDialog() == true)
+                {
+                    filePath = dialog.FileName;
+                }
+
+                // nếu đường dẫn null hoặc rỗng thì báo không hợp lệ và return hàm
+                if (string.IsNullOrEmpty(filePath))
+                {
+                    MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+                    return;
+                }
+                try
+                {
+                    using (ExcelPackage excel = new ExcelPackage())
+                    {
+                        // đặt tên người tạo file
+                        excel.Workbook.Properties.Author = BomRnD.Properties.Settings.Default.account;
+
+                        // đặt tiêu đề cho file
+                        excel.Workbook.Properties.Title = "Export BOM";
+
+                        //Tạo một sheet để làm việc trên đó
+                        excel.Workbook.Worksheets.Add(MaTpth);
+
+                        // lấy sheet vừa add ra để thao tác
+                        ExcelWorksheet ws = excel.Workbook.Worksheets[1];
+
+                        var tp = DataProvider.Ins.DB.BOM_BomTp.Where(x => x.MaHang == MaTpth).FirstOrDefault();
+                        var th = DataProvider.Ins.DB.BOM_BomTH.Where(x => x.MaTp == MaTpth && x.ThiTruong == ThiTruongth);
+
+                        // đặt tên cho sheet
+                        ws.Name = "OutputTp";
+                        // fontsize mặc định cho cả sheet
+                        ws.Cells.Style.Font.Size = 11;
+                        // font family mặc định cho cả sheet
+                        ws.Cells.Style.Font.Name = "Times New Roman";
+
+                        ws.Column(1).Width = 7.5;
+                        ws.Column(2).Width = 5;
+                        ws.Column(3).Width = 18.38;
+                        ws.Column(4).Width = 19.38;
+                        ws.Column(5).Width = 13;
+                        ws.Column(6).Width = 18.63;
+                        ws.Column(7).Width = 17.13;
+                        ws.Column(8).Width = 14.38;
+                        ws.Column(9).Width = 21.63;
+                        ws.Column(10).Width = 10;
+                        ws.Column(11).Width = 6.5;
+                        ws.Column(12).Width = 6.5;
+                        ws.Column(13).Width = 6.5;
+                        ws.Column(14).Width = 5.5;
+                        ws.Column(15).Width = 5.5;
+
+                        ws.Row(1).Height = 25.5;
+                        ws.Row(2).Height = 30.75;
+                        ws.Row(3).Height = 18;
+                        ws.Row(4).Height = 18;
+                        
+
+                        //var border = ws.Cells[13, 1, 26, 6].Style.Border;
+                        //border.Bottom.Style =
+                        //        border.Top.Style =
+                        //        border.Left.Style =
+                        //        border.Right.Style = ExcelBorderStyle.Thin;
+
+                        ws.Cells[1, 2, 1, 15].Merge = true;
+                        ws.Cells[1, 2, 1, 15].Style.Font.Bold = true;
+                        ws.Cells[1, 2, 1, 15].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                        ws.Cells[2, 2, 2, 15].Merge = true;
+                        ws.Cells[2, 2, 2, 15].Style.Font.Bold = true;
+                        ws.Cells[2, 2, 2, 15].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                        ws.Cells[1, 2].Value = "CLEARWATER  METAL  VN  JOINT  STOCK  COMPANY";
+                        ws.Cells[1, 2].Style.Font.Size = 20;
+
+                        ws.Cells[2, 2].Value = "(BOM)";
+                        ws.Cells[2, 2].Style.Font.Size = 18;
+
+                        ws.Cells[3, 2].Value = "Mã thành phẩm：" + MaTpth;
+                        ws.Cells[3, 2].Style.Font.Size = 11;
+
+                        ws.Cells[3, 6].Value = "Khách hàng：" + ThiTruongth;
+                        ws.Cells[3, 6].Style.Font.Size = 11;
+
+                        ws.Cells[3, 11].Value = "Ngày Cập Nhật：";
+                        ws.Cells[3, 11].Style.Font.Size = 11;
+                        ws.Cells[3, 11].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+
+                        ws.Cells[3, 13].Value = th.Max(x=>x.DateEdit);
+                        ws.Cells[3, 13].Style.Font.Size = 11;
+
+                        ws.Cells[4, 2].Value = "Kích cỡ thùng：";
+                        ws.Cells[4, 2].Style.Font.Size = 11;
+
+                        ws.Cells[4, 5].Value = tp.MauSon;
+                        ws.Cells[4, 5].Style.Font.Size = 11;
+
+                        ws.Cells[4, 6].Value = "Số lượng tủ：";
+                        ws.Cells[4, 6].Style.Font.Size = 11;
+
+                        ws.Cells[4, 10, 4, 11].Merge = true;
+                        ws.Cells[4, 10, 4, 11].Style.Font.Bold = true;
+                        ws.Cells[4, 10, 4, 11].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[4, 10].Value = "Vận chuyển từ VN";
+                        ws.Cells[4, 10].Style.Font.Size = 11;
+
+                        ws.Cells[4, 12].Value = "Trọng lượng thô:";
+                        ws.Cells[4, 12].Style.Font.Size = 11;
+
+                        for (int j = 2;j< 11; j++)
+                        {
+                            ws.Cells[5, j, 6, j].Merge = true;
+                            ws.Cells[5, j, 6, j].Style.Font.Bold = true;
+                            ws.Cells[5, j, 6, j].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                            ws.Cells[5, j, 6, j].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        }
+
+                        ws.Cells[5, 11, 5, 13].Merge = true;
+                        ws.Cells[5, 11, 5, 13].Style.Font.Bold = true;
+                        ws.Cells[5, 11, 5, 13].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                        ws.Cells[5, 11, 5, 13].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                        ws.Cells[6, 11].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[6, 12].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[6, 13].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                        ws.Cells[5, 14, 6, 14].Merge = true;
+                        ws.Cells[5, 14, 6, 14].Style.Font.Bold = true;
+                        ws.Cells[5, 14, 6, 14].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                        ws.Cells[5, 14, 6, 14].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                        ws.Cells[5, 15, 6, 15].Merge = true;
+                        ws.Cells[5, 15, 6, 15].Style.Font.Bold = true;
+                        ws.Cells[5, 15, 6, 15].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                        ws.Cells[5, 15, 6, 15].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                        ws.Cells[5, 2].Value = "STT";
+                        ws.Cells[5, 2].Style.Font.Size = 11;
+
+                        ws.Cells[5, 3].Value = "Tên Tiếng Trung";
+                        ws.Cells[5, 3].Style.Font.Size = 11;
+
+                        ws.Cells[5, 4].Value = "Tiếng Việt";
+                        ws.Cells[5, 4].Style.Font.Size = 11;
+
+                        ws.Cells[5, 5].Value = "Số hoạ";
+                        ws.Cells[5, 5].Style.Font.Size = 11;
+
+                        ws.Cells[5, 6].Value = "Mã BTP TW";
+                        ws.Cells[5, 6].Style.Font.Size = 11;
+
+                        ws.Cells[5, 7].Value = "Mã BTP VN";
+                        ws.Cells[5, 7].Style.Font.Size = 11;
+
+                        ws.Cells[5, 8].Value = "Mã mua hàng";
+                        ws.Cells[5, 8].Style.Font.Size = 11;
+
+                        ws.Cells[5, 9].Value = "Quy cách";
+                        ws.Cells[5, 9].Style.Font.Size = 11;
+
+                        ws.Cells[5, 10].Value = "Chất liệu";
+                        ws.Cells[5, 10].Style.Font.Size = 11;
+
+                        ws.Cells[5, 11].Value = "mm";
+                        ws.Cells[5, 11].Style.Font.Size = 11;
+
+                        ws.Cells[6, 11].Value = "T";
+                        ws.Cells[6, 11].Style.Font.Size = 11;
+
+                        ws.Cells[6, 12].Value = "W";
+                        ws.Cells[6, 12].Style.Font.Size = 11;
+
+                        ws.Cells[6, 13].Value = "L";
+                        ws.Cells[6, 13].Style.Font.Size = 11;
+
+                        ws.Cells[5, 14].Value = "Hệ số";
+                        ws.Cells[5, 14].Style.Font.Size = 11;
+
+                        ws.Cells[5, 15].Value = "KG";
+                        ws.Cells[5, 15].Style.Font.Size = 11;
+
+                        int i = 7;
+                        foreach (var item in th)
+                        {
+                            var ITp = DataProvider.Ins.DB.BOM_BomTp.Where(x => x.MaHang == item.MaTp).FirstOrDefault();
+                            var INl = DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang == item.MaMuaHang).FirstOrDefault();
+                            var IBtp = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp1).FirstOrDefault();
+
+                            ws.Cells[i, 1].Value = IBtp.NGC;
+                            ws.Cells[i, 1].Style.Font.Size = 11;
+
+                            ws.Cells[i, 2].Value = i - 6;
+                            ws.Cells[i, 2].Style.Font.Size = 11;
+
+                            ws.Cells[i, 3].Value = IBtp.TenTiengTrung;
+                            ws.Cells[i, 3].Style.Font.Size = 11;
+
+                            ws.Cells[i, 4].Value = IBtp.DisplayName;
+                            ws.Cells[i, 4].Style.Font.Size = 11;
+
+                            ws.Cells[i, 5].Value = IBtp.MaBanVe;
+                            ws.Cells[i, 5].Style.Font.Size = 11;
+
+                            ws.Cells[i, 6].Value = item.MaBtp1;
+                            ws.Cells[i, 6].Style.Font.Size = 11;
+
+                            ws.Cells[i, 7].Value = IBtp.MaBTPVN;
+                            ws.Cells[i, 7].Style.Font.Size = 11;
+
+                            ws.Cells[i, 8].Value = item.MaMuaHang;
+                            ws.Cells[i, 8].Style.Font.Size = 11;
+
+                            ws.Cells[i, 9].Value = INl.QuyCach;
+                            ws.Cells[i, 9].Style.Font.Size = 11;
+
+                            ws.Cells[i, 10].Value = INl.ChatLieu;
+                            ws.Cells[i, 10].Style.Font.Size = 11;
+
+                            ws.Cells[i, 11].Value = IBtp.T;
+                            ws.Cells[i, 11].Style.Font.Size = 11;
+
+                            ws.Cells[i, 12].Value = IBtp.W;
+                            ws.Cells[i, 12].Style.Font.Size = 11;
+
+                            ws.Cells[i, 13].Value = IBtp.L;
+                            ws.Cells[i, 13].Style.Font.Size = 11;
+
+                            ws.Cells[i, 14].Value = item.HeSo;
+                            ws.Cells[i, 14].Style.Font.Size = 11;
+
+                            ws.Cells[i, 15].Value = IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo;
+                            ws.Cells[i, 15].Style.Font.Size = 11;
+                            i++;
+                        }
+
+
+
+
+
+
+                        //ws.PrinterSettings.PrintArea = ws.Cells[1, 1, 30, 6];
+                        //ws.PrinterSettings.PaperSize = ePaperSize.A4;
+                        //ws.PrinterSettings.Orientation = eOrientation.Portrait;
+                        //ws.PrinterSettings.HorizontalCentered = true;
+                        //ws.PrinterSettings.FitToPage = true;
+                        //ws.PrinterSettings.FitToWidth = 1;
+                        //ws.PrinterSettings.FitToHeight = 0;
+                        //ws.PrinterSettings.HeaderMargin = 0.31M;
+                        //ws.PrinterSettings.FooterMargin = 0.31M;
+                        //ws.PrinterSettings.TopMargin = 0.75M;
+                        //ws.PrinterSettings.BottomMargin = 0.75M;
+                        //ws.PrinterSettings.LeftMargin = 0.31M;
+                        //ws.PrinterSettings.RightMargin = 0.31M;
+
+
+
+                        Byte[] bin = excel.GetAsByteArray();
+                        File.WriteAllBytes(filePath, bin);
+
+                    }
+                    MessageBox.Show("Xuất excel thành công!");
+                    var excelApp = new Microsoft.Office.Interop.Excel.Application();
+                    excelApp.Visible = true;
+                    excelApp.Workbooks.Open(filePath);
+                }
+                catch (Exception EE)
+                {
+                    MessageBox.Show("Có lỗi khi lưu file!");
+                }
+
             });
         }
 

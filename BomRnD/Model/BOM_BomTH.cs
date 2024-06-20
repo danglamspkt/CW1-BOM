@@ -24,6 +24,10 @@ namespace BomRnD.Model
         public Nullable<int> HeSo { get; set; }
         public string GhiChu { get; set; }
         public string ThiTruong { get; set; }
+        public string UserName { get; set; }
+        public string UserNameEdit { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> DateEdit { get; set; }
     
         public virtual BOM_BomBtp BOM_BomBtp { get; set; }
         public virtual BOM_BomBtp BOM_BomBtp1 { get; set; }

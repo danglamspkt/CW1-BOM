@@ -13,7 +13,6 @@ C:\WPF\CW1-BOM\BomRnD\bin\Debug\BomRnD.pdb
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\ControlzEx.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EntityFramework.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EntityFramework.SqlServer.dll
-C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.Interfaces.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.System.Drawing.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\MahApps.Metro.dll
@@ -35,7 +34,6 @@ C:\WPF\CW1-BOM\BomRnD\bin\Debug\ControlzEx.pdb
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\ControlzEx.xml
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EntityFramework.xml
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EntityFramework.SqlServer.xml
-C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.xml
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\MahApps.Metro.pdb
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\MahApps.Metro.xml
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\MaterialDesignColors.pdb
@@ -292,3 +290,5 @@ C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP3Windows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaMuaHangWindows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaTpWindows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditWindows.baml
+C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.Core.dll
+C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.Core.xml

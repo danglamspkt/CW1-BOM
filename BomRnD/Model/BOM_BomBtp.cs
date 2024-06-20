@@ -52,6 +52,9 @@ namespace BomRnD.Model
         public string LinkBV { get; set; }
         public string IDBV2 { get; set; }
         public string LinkBV2 { get; set; }
+        public string UserNameEdit { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> DateEdit { get; set; }
     
         public virtual BOM_Unit BOM_Unit { get; set; }
         public virtual BOM_Unit BOM_Unit1 { get; set; }

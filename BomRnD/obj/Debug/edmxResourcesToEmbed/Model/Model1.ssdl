@@ -34,6 +34,9 @@
     <Property Name="IDBV2" Type="nvarchar(max)" />
     <Property Name="LinkBV2" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-BomNl">
     <Key>
@@ -57,6 +60,9 @@
     <Property Name="IDImg" Type="nvarchar(max)" />
     <Property Name="LinkImg" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-BomTp">
     <Key>
@@ -66,6 +72,15 @@
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="TenTiengTrung" Type="nvarchar(max)" />
     <Property Name="QuyCach" Type="nvarchar(max)" />
+    <Property Name="MauSon" Type="nvarchar(max)" />
+    <Property Name="HNet" Type="float" />
+    <Property Name="WNet" Type="float" />
+    <Property Name="DNet" Type="float" />
+    <Property Name="HGross" Type="float" />
+    <Property Name="WGross" Type="float" />
+    <Property Name="DGross" Type="float" />
+    <Property Name="NetWeight" Type="float" />
+    <Property Name="GrossWeight" Type="float" />
     <Property Name="Version" Type="int" />
     <Property Name="UnitERP" Type="nvarchar" MaxLength="40" />
     <Property Name="UnitSx" Type="nvarchar" MaxLength="40" />
@@ -79,6 +94,9 @@
     <Property Name="IDImg" Type="nvarchar(max)" />
     <Property Name="LinkImg" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-BomTH">
     <Key>
@@ -94,6 +112,10 @@
     <Property Name="TiLeNlBtp" Type="float" />
     <Property Name="HeSo" Type="int" />
     <Property Name="GhiChu" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-Image">
     <Key>
@@ -111,6 +133,9 @@
     <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-MaPL4ERP">
     <Key>
@@ -119,6 +144,9 @@
     <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-MaPLLonERP">
     <Key>
@@ -127,6 +155,9 @@
     <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-MaPLLonSx">
     <Key>
@@ -135,6 +166,9 @@
     <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-MaPLNhoERP">
     <Key>
@@ -143,6 +177,9 @@
     <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-MaPLNhoSx">
     <Key>
@@ -151,6 +188,9 @@
     <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="BOM-Unit">
     <Key>
@@ -159,6 +199,9 @@
     <Property Name="Unit" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="DisplayName" Type="nvarchar(max)" />
     <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
   </EntityType>
   <EntityType Name="Dev-Lang">
     <Key>
@@ -238,7 +281,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTp__UnitE__1B9317B3">
+  <Association Name="FK__BOM-BomTp__UnitE__41B8C09B">
     <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
     <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="*" />
     <ReferentialConstraint>
@@ -250,7 +293,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTp__UnitS__1C873BEC">
+  <Association Name="FK__BOM-BomTp__UnitS__42ACE4D4">
     <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
     <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="*" />
     <ReferentialConstraint>
@@ -310,7 +353,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BOM-BomTH__MaTp__336AA144">
+  <Association Name="FK__BOM-BomTH__MaTp__43A1090D">
     <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
     <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
     <ReferentialConstraint>
@@ -366,11 +409,11 @@
       <End Role="BOM-Unit" EntitySet="BOM-Unit" />
       <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTp__UnitE__1B9317B3" Association="Self.FK__BOM-BomTp__UnitE__1B9317B3">
+    <AssociationSet Name="FK__BOM-BomTp__UnitE__41B8C09B" Association="Self.FK__BOM-BomTp__UnitE__41B8C09B">
       <End Role="BOM-Unit" EntitySet="BOM-Unit" />
       <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTp__UnitS__1C873BEC" Association="Self.FK__BOM-BomTp__UnitS__1C873BEC">
+    <AssociationSet Name="FK__BOM-BomTp__UnitS__42ACE4D4" Association="Self.FK__BOM-BomTp__UnitS__42ACE4D4">
       <End Role="BOM-Unit" EntitySet="BOM-Unit" />
       <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
     </AssociationSet>
@@ -390,7 +433,7 @@
       <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>
-    <AssociationSet Name="FK__BOM-BomTH__MaTp__336AA144" Association="Self.FK__BOM-BomTH__MaTp__336AA144">
+    <AssociationSet Name="FK__BOM-BomTH__MaTp__43A1090D" Association="Self.FK__BOM-BomTH__MaTp__43A1090D">
       <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>

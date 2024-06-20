@@ -4,6 +4,9 @@
     <EntitySetMapping Name="BOM_MaPL4ERP">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPL4ERP">
         <MappingFragment StoreEntitySet="BOM-MaPL4ERP">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -13,6 +16,9 @@
     <EntitySetMapping Name="BOM_MaPLLonERP">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLLonERP">
         <MappingFragment StoreEntitySet="BOM-MaPLLonERP">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -22,6 +28,9 @@
     <EntitySetMapping Name="BOM_MaPLNhoERP">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLNhoERP">
         <MappingFragment StoreEntitySet="BOM-MaPLNhoERP">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -64,6 +73,9 @@
     <EntitySetMapping Name="BOM_MaPLLonSx">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLLonSx">
         <MappingFragment StoreEntitySet="BOM-MaPLLonSx">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
@@ -73,6 +85,9 @@
     <EntitySetMapping Name="BOM_MaPLNhoSx">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLNhoSx">
         <MappingFragment StoreEntitySet="BOM-MaPLNhoSx">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
@@ -92,6 +107,9 @@
     <EntitySetMapping Name="BOM_BomBtp">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomBtp">
         <MappingFragment StoreEntitySet="BOM-BomBtp">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="LinkBV2" ColumnName="LinkBV2" />
           <ScalarProperty Name="IDBV2" ColumnName="IDBV2" />
           <ScalarProperty Name="LinkBV" ColumnName="LinkBV" />
@@ -128,6 +146,18 @@
     <EntitySetMapping Name="BOM_BomTp">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTp">
         <MappingFragment StoreEntitySet="BOM-BomTp">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="DGross" ColumnName="DGross" />
+          <ScalarProperty Name="WGross" ColumnName="WGross" />
+          <ScalarProperty Name="HGross" ColumnName="HGross" />
+          <ScalarProperty Name="DNet" ColumnName="DNet" />
+          <ScalarProperty Name="WNet" ColumnName="WNet" />
+          <ScalarProperty Name="HNet" ColumnName="HNet" />
+          <ScalarProperty Name="MauSon" ColumnName="MauSon" />
           <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
           <ScalarProperty Name="IDImg" ColumnName="IDImg" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -151,6 +181,10 @@
     <EntitySetMapping Name="BOM_BomTH">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTH">
         <MappingFragment StoreEntitySet="BOM-BomTH">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="ThiTruong" ColumnName="ThiTruong" />
           <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
           <ScalarProperty Name="HeSo" ColumnName="HeSo" />
@@ -167,6 +201,9 @@
     <EntitySetMapping Name="BOM_Unit">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_Unit">
         <MappingFragment StoreEntitySet="BOM-Unit">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="Unit" ColumnName="Unit" />
@@ -176,6 +213,9 @@
     <EntitySetMapping Name="BOM_BomNl">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomNl">
         <MappingFragment StoreEntitySet="BOM-BomNl">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
           <ScalarProperty Name="IDImg" ColumnName="IDImg" />
@@ -200,6 +240,9 @@
     <EntitySetMapping Name="BOM_MaKeToanERP">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaKeToanERP">
         <MappingFragment StoreEntitySet="BOM-MaKeToanERP">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />

@@ -39,6 +39,9 @@
           <Property Name="IDBV2" Type="nvarchar(max)" />
           <Property Name="LinkBV2" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-BomNl">
           <Key>
@@ -62,6 +65,9 @@
           <Property Name="IDImg" Type="nvarchar(max)" />
           <Property Name="LinkImg" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-BomTp">
           <Key>
@@ -71,6 +77,15 @@
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="TenTiengTrung" Type="nvarchar(max)" />
           <Property Name="QuyCach" Type="nvarchar(max)" />
+          <Property Name="MauSon" Type="nvarchar(max)" />
+          <Property Name="HNet" Type="float" />
+          <Property Name="WNet" Type="float" />
+          <Property Name="DNet" Type="float" />
+          <Property Name="HGross" Type="float" />
+          <Property Name="WGross" Type="float" />
+          <Property Name="DGross" Type="float" />
+          <Property Name="NetWeight" Type="float" />
+          <Property Name="GrossWeight" Type="float" />
           <Property Name="Version" Type="int" />
           <Property Name="UnitERP" Type="nvarchar" MaxLength="40" />
           <Property Name="UnitSx" Type="nvarchar" MaxLength="40" />
@@ -84,6 +99,9 @@
           <Property Name="IDImg" Type="nvarchar(max)" />
           <Property Name="LinkImg" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-BomTH">
           <Key>
@@ -99,6 +117,10 @@
           <Property Name="TiLeNlBtp" Type="float" />
           <Property Name="HeSo" Type="int" />
           <Property Name="GhiChu" Type="nvarchar(max)" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-Image">
           <Key>
@@ -116,6 +138,9 @@
           <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-MaPL4ERP">
           <Key>
@@ -124,6 +149,9 @@
           <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-MaPLLonERP">
           <Key>
@@ -132,6 +160,9 @@
           <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-MaPLLonSx">
           <Key>
@@ -140,6 +171,9 @@
           <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-MaPLNhoERP">
           <Key>
@@ -148,6 +182,9 @@
           <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-MaPLNhoSx">
           <Key>
@@ -156,6 +193,9 @@
           <Property Name="MaHang" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="BOM-Unit">
           <Key>
@@ -164,6 +204,9 @@
           <Property Name="Unit" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="DisplayName" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DateEdit" Type="date" />
         </EntityType>
         <EntityType Name="Dev-Lang">
           <Key>
@@ -243,7 +286,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTp__UnitE__1B9317B3">
+        <Association Name="FK__BOM-BomTp__UnitE__41B8C09B">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -255,7 +298,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTp__UnitS__1C873BEC">
+        <Association Name="FK__BOM-BomTp__UnitS__42ACE4D4">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -315,7 +358,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaTp__336AA144">
+        <Association Name="FK__BOM-BomTH__MaTp__43A1090D">
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -371,11 +414,11 @@
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTp__UnitE__1B9317B3" Association="Self.FK__BOM-BomTp__UnitE__1B9317B3">
+          <AssociationSet Name="FK__BOM-BomTp__UnitE__41B8C09B" Association="Self.FK__BOM-BomTp__UnitE__41B8C09B">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTp__UnitS__1C873BEC" Association="Self.FK__BOM-BomTp__UnitS__1C873BEC">
+          <AssociationSet Name="FK__BOM-BomTp__UnitS__42ACE4D4" Association="Self.FK__BOM-BomTp__UnitS__42ACE4D4">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
           </AssociationSet>
@@ -395,7 +438,7 @@
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaTp__336AA144" Association="Self.FK__BOM-BomTH__MaTp__336AA144">
+          <AssociationSet Name="FK__BOM-BomTH__MaTp__43A1090D" Association="Self.FK__BOM-BomTH__MaTp__43A1090D">
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
@@ -415,6 +458,9 @@
           <Property Name="MaHang" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="BOM_MaPLLonERP">
           <Key>
@@ -423,6 +469,9 @@
           <Property Name="MaHang" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="BOM_MaPLNhoERP">
           <Key>
@@ -431,6 +480,9 @@
           <Property Name="MaHang" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="UserRole">
           <Key>
@@ -548,6 +600,9 @@
           <Property Name="MaHang" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="BOM_MaPLNhoSx">
           <Key>
@@ -556,6 +611,9 @@
           <Property Name="MaHang" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Dev_Lang">
           <Key>
@@ -605,6 +663,9 @@
           <Property Name="LinkBV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IDBV2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LinkBV2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="BOM_BomTp">
           <Key>
@@ -630,6 +691,18 @@
           <NavigationProperty Name="BOM_BomTH" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90" FromRole="BOM_BomTp" ToRole="BOM_BomTH" />
           <Property Name="IDImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LinkImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MauSon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HNet" Type="Double" />
+          <Property Name="WNet" Type="Double" />
+          <Property Name="DNet" Type="Double" />
+          <Property Name="HGross" Type="Double" />
+          <Property Name="WGross" Type="Double" />
+          <Property Name="DGross" Type="Double" />
+          <Property Name="NetWeight" Type="Double" />
+          <Property Name="GrossWeight" Type="Double" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="BOM_BomTH">
           <Key>
@@ -650,6 +723,10 @@
           <NavigationProperty Name="BOM_BomTp" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTp__634EBE90" FromRole="BOM_BomTH" ToRole="BOM_BomTp" />
           <NavigationProperty Name="BOM_BomNl" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__11158940" FromRole="BOM_BomTH" ToRole="BOM_BomNl" />
           <Property Name="ThiTruong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="BOM_Unit">
           <Key>
@@ -664,6 +741,9 @@
           <NavigationProperty Name="BOM_BomTp1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTp__UnitS__656C112C" FromRole="BOM_Unit" ToRole="BOM_BomTp" />
           <NavigationProperty Name="BOM_BomNl" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__0F2D40CE" FromRole="BOM_Unit" ToRole="BOM_BomNl" />
           <NavigationProperty Name="BOM_BomNl1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__10216507" FromRole="BOM_Unit" ToRole="BOM_BomNl" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <Association Name="FK__BOM_BomBt__UnitE__6FE99F9F">
           <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
@@ -786,6 +866,9 @@
           <NavigationProperty Name="BOM_Unit" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitE__0F2D40CE" FromRole="BOM_BomNl" ToRole="BOM_Unit" />
           <NavigationProperty Name="BOM_Unit1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomNl__UnitS__10216507" FromRole="BOM_BomNl" ToRole="BOM_Unit" />
           <NavigationProperty Name="BOM_BomTH" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__11158940" FromRole="BOM_BomNl" ToRole="BOM_BomTH" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="BOM_MaKeToanERP">
           <Key>
@@ -794,6 +877,9 @@
           <Property Name="MaHang" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DateEdit" Type="DateTime" Precision="0" />
         </EntityType>
         <Association Name="FK__BOM_BomNl__UnitE__0F2D40CE">
           <End Type="gla43158_QLSXCW1Model.BOM_Unit" Role="BOM_Unit" Multiplicity="0..1" />
@@ -840,6 +926,9 @@
           <EntitySetMapping Name="BOM_MaPL4ERP">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPL4ERP">
               <MappingFragment StoreEntitySet="BOM-MaPL4ERP">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -849,6 +938,9 @@
           <EntitySetMapping Name="BOM_MaPLLonERP">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLLonERP">
               <MappingFragment StoreEntitySet="BOM-MaPLLonERP">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -858,6 +950,9 @@
           <EntitySetMapping Name="BOM_MaPLNhoERP">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLNhoERP">
               <MappingFragment StoreEntitySet="BOM-MaPLNhoERP">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -900,6 +995,9 @@
           <EntitySetMapping Name="BOM_MaPLLonSx">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLLonSx">
               <MappingFragment StoreEntitySet="BOM-MaPLLonSx">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
@@ -909,6 +1007,9 @@
           <EntitySetMapping Name="BOM_MaPLNhoSx">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaPLNhoSx">
               <MappingFragment StoreEntitySet="BOM-MaPLNhoSx">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
@@ -928,6 +1029,9 @@
           <EntitySetMapping Name="BOM_BomBtp">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomBtp">
               <MappingFragment StoreEntitySet="BOM-BomBtp">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="LinkBV2" ColumnName="LinkBV2" />
                 <ScalarProperty Name="IDBV2" ColumnName="IDBV2" />
                 <ScalarProperty Name="LinkBV" ColumnName="LinkBV" />
@@ -964,6 +1068,18 @@
           <EntitySetMapping Name="BOM_BomTp">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTp">
               <MappingFragment StoreEntitySet="BOM-BomTp">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
+                <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+                <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+                <ScalarProperty Name="DGross" ColumnName="DGross" />
+                <ScalarProperty Name="WGross" ColumnName="WGross" />
+                <ScalarProperty Name="HGross" ColumnName="HGross" />
+                <ScalarProperty Name="DNet" ColumnName="DNet" />
+                <ScalarProperty Name="WNet" ColumnName="WNet" />
+                <ScalarProperty Name="HNet" ColumnName="HNet" />
+                <ScalarProperty Name="MauSon" ColumnName="MauSon" />
                 <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
                 <ScalarProperty Name="IDImg" ColumnName="IDImg" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -987,6 +1103,10 @@
           <EntitySetMapping Name="BOM_BomTH">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTH">
               <MappingFragment StoreEntitySet="BOM-BomTH">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="ThiTruong" ColumnName="ThiTruong" />
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="HeSo" ColumnName="HeSo" />
@@ -1003,6 +1123,9 @@
           <EntitySetMapping Name="BOM_Unit">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_Unit">
               <MappingFragment StoreEntitySet="BOM-Unit">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="Unit" ColumnName="Unit" />
@@ -1012,6 +1135,9 @@
           <EntitySetMapping Name="BOM_BomNl">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomNl">
               <MappingFragment StoreEntitySet="BOM-BomNl">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="LinkImg" ColumnName="LinkImg" />
                 <ScalarProperty Name="IDImg" ColumnName="IDImg" />
@@ -1036,6 +1162,9 @@
           <EntitySetMapping Name="BOM_MaKeToanERP">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_MaKeToanERP">
               <MappingFragment StoreEntitySet="BOM-MaKeToanERP">
+                <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
