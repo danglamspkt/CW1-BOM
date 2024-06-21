@@ -855,33 +855,34 @@ namespace BomRnD.ViewModel
                         // font family mặc định cho cả sheet
                         ws.Cells.Style.Font.Name = "Times New Roman";
 
-                        ws.Column(1).Width = 7.5;
-                        ws.Column(2).Width = 5;
-                        ws.Column(3).Width = 18.38;
-                        ws.Column(4).Width = 19.38;
-                        ws.Column(5).Width = 13;
-                        ws.Column(6).Width = 18.63;
-                        ws.Column(7).Width = 17.13;
-                        ws.Column(8).Width = 14.38;
-                        ws.Column(9).Width = 21.63;
-                        ws.Column(10).Width = 10;
-                        ws.Column(11).Width = 6.5;
-                        ws.Column(12).Width = 6.5;
-                        ws.Column(13).Width = 6.5;
-                        ws.Column(14).Width = 5.5;
-                        ws.Column(15).Width = 5.5;
+                        ws.Column(1).Width = 9.5;
+                        ws.Column(2).Width = 7;
+                        ws.Column(3).Width = 20.38;
+                        ws.Column(4).Width = 21.38;
+                        ws.Column(5).Width = 15;
+                        ws.Column(6).Width = 20.63;
+                        ws.Column(7).Width = 19.13;
+                        ws.Column(8).Width = 16.38;
+                        ws.Column(9).Width = 23.63;
+                        ws.Column(10).Width = 12;
+                        ws.Column(11).Width = 8.5;
+                        ws.Column(12).Width = 8.5;
+                        ws.Column(13).Width = 8.5;
+                        ws.Column(14).Width = 8.5;
+                        ws.Column(15).Width = 8.5;
 
                         ws.Row(1).Height = 25.5;
                         ws.Row(2).Height = 30.75;
                         ws.Row(3).Height = 18;
                         ws.Row(4).Height = 18;
-                        
 
-                        //var border = ws.Cells[13, 1, 26, 6].Style.Border;
-                        //border.Bottom.Style =
-                        //        border.Top.Style =
-                        //        border.Left.Style =
-                        //        border.Right.Style = ExcelBorderStyle.Thin;
+                        ws.Cells["O:O"].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
+
+                        var border2 = ws.Cells[5, 2, 6, 15].Style.Border;
+                        border2.Bottom.Style =
+                                border2.Top.Style =
+                                border2.Left.Style =
+                                border2.Right.Style = ExcelBorderStyle.Thin;
 
                         ws.Cells[1, 2, 1, 15].Merge = true;
                         ws.Cells[1, 2, 1, 15].Style.Font.Bold = true;
@@ -1001,6 +1002,7 @@ namespace BomRnD.ViewModel
                         ws.Cells[5, 15].Style.Font.Size = 11;
 
                         int i = 7;
+                        double? sum = 0;
                         foreach (var item in th)
                         {
                             var ITp = DataProvider.Ins.DB.BOM_BomTp.Where(x => x.MaHang == item.MaTp).FirstOrDefault();
@@ -1051,10 +1053,20 @@ namespace BomRnD.ViewModel
 
                             ws.Cells[i, 15].Value = IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo;
                             ws.Cells[i, 15].Style.Font.Size = 11;
+
+                            sum += (IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo);
+
+                            var border = ws.Cells[i, 2, i, 15].Style.Border;
+                            border.Bottom.Style =
+                                    border.Top.Style =
+                                    border.Left.Style =
+                                    border.Right.Style = ExcelBorderStyle.Thin;
+
                             i++;
                         }
 
-
+                        ws.Cells[4, 15].Value = sum;
+                        ws.Cells[4, 15].Style.Font.Size = 11;
 
 
 
