@@ -23,7 +23,7 @@
         Background="#FFFFF8F5"
         Title="Thêm mã tổng hợp"
         FontWeight="Bold"
-        Height="690"
+        Height="740"
         Width="700"
         WindowState="Normal">
 
@@ -48,7 +48,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <Grid Width="650"
-                  Height="652">
+                  Height="702">
                 <ScrollViewer Grid.Row="2"
                               materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
                               HorizontalScrollBarVisibility="Disabled"
@@ -195,39 +195,9 @@
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
-                                <StackPanel>
-                                    <TextBlock Text="Mã mua hàng"
-                                               HorizontalAlignment="Left"
-                                               FontSize="14"
-                                               FontWeight="Bold"
-                                               Margin="20 5 5 0"
-                                               Width="180">
-                                    </TextBlock>
-                                    <StackPanel Orientation="Horizontal"
-                                                Margin="5">
-                                        <ComboBox ItemsSource="{Binding MaMuaHangAddListFa}"
-                                                  DisplayMemberPath="MaHang"
-                                                  Text="{Binding MaMuaHang3, Mode=TwoWay}"
-                                                  materialDesign:ComboBoxAssist.MaxLength="10"
-                                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                  materialDesign:HintAssist.IsFloating="False"
-                                                  Padding="5"
-                                                  Width="250"
-                                                  HorizontalAlignment="Left"
-                                                  FontSize="14"
-                                                  FontWeight="Bold" />
-                                        <Button Content="..."
-                                                Padding="2"
-                                                Height="35"
-                                                Width="35"
-                                                Margin="5 0 0 0"
-                                                Background="Teal"
-                                                Command="{Binding LoadAddMaMuaHangCommand}" />
-                                    </StackPanel>
-                                </StackPanel>
+                               
 
-                                <StackPanel Margin="10 0 0 0">
+                                <StackPanel Margin="0 0 0 0">
                                     <TextBlock Text="Mã BTP 3"
                                                HorizontalAlignment="Left"
                                                FontSize="14"
@@ -258,30 +228,6 @@
                                                 Command="{Binding LoadAddMaBTP3Command}" />
                                     </StackPanel>
                                 </StackPanel>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal">
-                                <StackPanel>
-                                    <TextBlock Text="Tỷ lệ NL / BTP"
-                                               HorizontalAlignment="Left"
-                                               FontSize="14"
-                                               FontWeight="Bold"
-                                               Margin="20 5 5 0"
-                                               Width="180">
-                                    </TextBlock>
-                                    <TextBox Text="{Binding TiLeNlBtp3, Mode=TwoWay}"
-                                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                                             materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                             materialDesign:HintAssist.IsFloating="False"
-                                             Padding="5"
-                                             Width="290"
-                                             HorizontalAlignment="Left"
-                                             FontSize="14"
-                                             FontWeight="Bold"
-                                             Margin="5">
-                                    </TextBox>
-                                </StackPanel>
-
                                 <StackPanel Margin="10 0 0 0">
                                     <TextBlock Text="Hệ Số"
                                                HorizontalAlignment="Left"
@@ -303,6 +249,169 @@
                                     </TextBox>
                                 </StackPanel>
                             </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <TextBlock Text="Mã mua hàng 1"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <StackPanel Orientation="Horizontal"
+                                                Margin="5">
+                                        <ComboBox ItemsSource="{Binding MaMuaHangAddListFa}"
+                                                  DisplayMemberPath="MaHang"
+                                                  Text="{Binding MaMuaHang3, Mode=TwoWay}"
+                                                  materialDesign:ComboBoxAssist.MaxLength="10"
+                                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                  materialDesign:HintAssist.IsFloating="False"
+                                                  Padding="5"
+                                                  Width="250"
+                                                  HorizontalAlignment="Left"
+                                                  FontSize="14"
+                                                  FontWeight="Bold" />
+                                        <Button Content="..."
+                                                Padding="2"
+                                                Height="35"
+                                                Width="35"
+                                                Margin="5 0 0 0"
+                                                Background="Teal"
+                                                Command="{Binding LoadAddMaMuaHangCommand}" />
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock Text="Tỷ lệ NL / BTP 1"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <TextBox Text="{Binding TiLeNlBtp3, Mode=TwoWay}"
+                                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                             materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                             materialDesign:HintAssist.IsFloating="False"
+                                             Padding="5"
+                                             Width="290"
+                                             HorizontalAlignment="Left"
+                                             FontSize="14"
+                                             FontWeight="Bold"
+                                             Margin="5">
+                                    </TextBox>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <TextBlock Text="Mã mua hàng 2"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <StackPanel Orientation="Horizontal"
+                                                Margin="5">
+                                        <ComboBox ItemsSource="{Binding MaMuaHang2AddListFa}"
+                                                  DisplayMemberPath="MaHang"
+                                                  Text="{Binding MaMuaHang32, Mode=TwoWay}"
+                                                  materialDesign:ComboBoxAssist.MaxLength="10"
+                                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                  materialDesign:HintAssist.IsFloating="False"
+                                                  Padding="5"
+                                                  Width="250"
+                                                  HorizontalAlignment="Left"
+                                                  FontSize="14"
+                                                  FontWeight="Bold" />
+                                        <Button Content="..."
+                                                Padding="2"
+                                                Height="35"
+                                                Width="35"
+                                                Margin="5 0 0 0"
+                                                Background="Teal"
+                                                Command="{Binding LoadAddMaMuaHang2Command}" />
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock Text="Tỷ lệ NL / BTP 2"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <TextBox Text="{Binding TiLeNlBtp32, Mode=TwoWay}"
+                                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                             materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                             materialDesign:HintAssist.IsFloating="False"
+                                             Padding="5"
+                                             Width="290"
+                                             HorizontalAlignment="Left"
+                                             FontSize="14"
+                                             FontWeight="Bold"
+                                             Margin="5">
+                                    </TextBox>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <TextBlock Text="Mã mua hàng 3"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <StackPanel Orientation="Horizontal"
+                                                Margin="5">
+                                        <ComboBox ItemsSource="{Binding MaMuaHang3AddListFa}"
+                                                  DisplayMemberPath="MaHang"
+                                                  Text="{Binding MaMuaHang33, Mode=TwoWay}"
+                                                  materialDesign:ComboBoxAssist.MaxLength="10"
+                                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                  materialDesign:HintAssist.IsFloating="False"
+                                                  Padding="5"
+                                                  Width="250"
+                                                  HorizontalAlignment="Left"
+                                                  FontSize="14"
+                                                  FontWeight="Bold" />
+                                        <Button Content="..."
+                                                Padding="2"
+                                                Height="35"
+                                                Width="35"
+                                                Margin="5 0 0 0"
+                                                Background="Teal"
+                                                Command="{Binding LoadAddMaMuaHang3Command}" />
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock Text="Tỷ lệ NL / BTP 3"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <TextBox Text="{Binding TiLeNlBtp33, Mode=TwoWay}"
+                                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                             materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                             materialDesign:HintAssist.IsFloating="False"
+                                             Padding="5"
+                                             Width="290"
+                                             HorizontalAlignment="Left"
+                                             FontSize="14"
+                                             FontWeight="Bold"
+                                             Margin="5">
+                                    </TextBox>
+                                </StackPanel>
+                            </StackPanel>
+
 
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                 <StackPanel>

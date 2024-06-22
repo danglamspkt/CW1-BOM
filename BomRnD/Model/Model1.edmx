@@ -114,7 +114,11 @@
           <Property Name="MaBtp2" Type="nvarchar" MaxLength="60" />
           <Property Name="MaBtp3" Type="nvarchar" MaxLength="60" />
           <Property Name="MaMuaHang" Type="nvarchar" MaxLength="40" />
+          <Property Name="MaMuaHang2" Type="nvarchar" MaxLength="40" />
+          <Property Name="MaMuaHang3" Type="nvarchar" MaxLength="40" />
           <Property Name="TiLeNlBtp" Type="float" />
+          <Property Name="TiLeNlBtp2" Type="float" />
+          <Property Name="TiLeNlBtp3" Type="float" />
           <Property Name="HeSo" Type="int" />
           <Property Name="GhiChu" Type="nvarchar(max)" />
           <Property Name="UserName" Type="nvarchar" MaxLength="100" />
@@ -310,7 +314,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__2F9A1060">
+        <Association Name="FK__BOM-BomTH__MaBtp__5F492382">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -322,7 +326,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__308E3499">
+        <Association Name="FK__BOM-BomTH__MaBtp__603D47BB">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -334,7 +338,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__318258D2">
+        <Association Name="FK__BOM-BomTH__MaBtp__61316BF4">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -346,7 +350,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaMua__32767D0B">
+        <Association Name="FK__BOM-BomTH__MaMua__6225902D">
           <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -358,7 +362,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaTp__43A1090D">
+        <Association Name="FK__BOM-BomTH__MaTp__6319B466">
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -422,23 +426,23 @@
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__2F9A1060" Association="Self.FK__BOM-BomTH__MaBtp__2F9A1060">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__5F492382" Association="Self.FK__BOM-BomTH__MaBtp__5F492382">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__308E3499" Association="Self.FK__BOM-BomTH__MaBtp__308E3499">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__603D47BB" Association="Self.FK__BOM-BomTH__MaBtp__603D47BB">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__318258D2" Association="Self.FK__BOM-BomTH__MaBtp__318258D2">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__61316BF4" Association="Self.FK__BOM-BomTH__MaBtp__61316BF4">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaMua__32767D0B" Association="Self.FK__BOM-BomTH__MaMua__32767D0B">
+          <AssociationSet Name="FK__BOM-BomTH__MaMua__6225902D" Association="Self.FK__BOM-BomTH__MaMua__6225902D">
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaTp__43A1090D" Association="Self.FK__BOM-BomTH__MaTp__43A1090D">
+          <AssociationSet Name="FK__BOM-BomTH__MaTp__6319B466" Association="Self.FK__BOM-BomTH__MaTp__6319B466">
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
@@ -727,6 +731,10 @@
           <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="DateEdit" Type="DateTime" Precision="0" />
+          <Property Name="MaMuaHang2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="MaMuaHang3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="TiLeNlBtp2" Type="Double" />
+          <Property Name="TiLeNlBtp3" Type="Double" />
         </EntityType>
         <EntityType Name="BOM_Unit">
           <Key>
@@ -1103,6 +1111,10 @@
           <EntitySetMapping Name="BOM_BomTH">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTH">
               <MappingFragment StoreEntitySet="BOM-BomTH">
+                <ScalarProperty Name="TiLeNlBtp3" ColumnName="TiLeNlBtp3" />
+                <ScalarProperty Name="TiLeNlBtp2" ColumnName="TiLeNlBtp2" />
+                <ScalarProperty Name="MaMuaHang3" ColumnName="MaMuaHang3" />
+                <ScalarProperty Name="MaMuaHang2" ColumnName="MaMuaHang2" />
                 <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />

@@ -47,4 +47,8 @@ FC:\WPF\CW1-BOM\BomRnD\UserControlBomTp\BomTPMainTitleUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlBomTp\BomTPMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlHome\HomeMainUC.xaml;;
 FC:\WPF\CW1-BOM\BomRnD\UserControlSetting\SettingMainUC.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddMaMuaHang2Windows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHAddMaMuaHang3Windows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHEditMaMuaHang2Windows.xaml;;
+FC:\WPF\CW1-BOM\BomRnD\UserControlBomTH\BomTHEditMaMuaHang3Windows.xaml;;
 

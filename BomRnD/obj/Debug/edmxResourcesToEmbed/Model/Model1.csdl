@@ -276,6 +276,10 @@
     <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Date" Type="DateTime" Precision="0" />
     <Property Name="DateEdit" Type="DateTime" Precision="0" />
+    <Property Name="MaMuaHang2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MaMuaHang3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TiLeNlBtp2" Type="Double" />
+    <Property Name="TiLeNlBtp3" Type="Double" />
   </EntityType>
   <EntityType Name="BOM_Unit">
     <Key>

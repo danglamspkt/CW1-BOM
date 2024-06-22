@@ -28,6 +28,10 @@ namespace BomRnD.Model
         public string UserNameEdit { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<System.DateTime> DateEdit { get; set; }
+        public string MaMuaHang2 { get; set; }
+        public string MaMuaHang3 { get; set; }
+        public Nullable<double> TiLeNlBtp2 { get; set; }
+        public Nullable<double> TiLeNlBtp3 { get; set; }
     
         public virtual BOM_BomBtp BOM_BomBtp { get; set; }
         public virtual BOM_BomBtp BOM_BomBtp1 { get; set; }

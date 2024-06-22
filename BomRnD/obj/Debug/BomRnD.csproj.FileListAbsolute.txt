@@ -292,3 +292,11 @@ C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaTpWindows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditWindows.baml
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.Core.dll
 C:\WPF\CW1-BOM\BomRnD\bin\Debug\EPPlus.Core.xml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaMuaHang2Windows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaMuaHang3Windows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaMuaHang2Windows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaMuaHang3Windows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaMuaHang2Windows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaMuaHang3Windows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaMuaHang2Windows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaMuaHang3Windows.baml

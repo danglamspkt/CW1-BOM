@@ -181,6 +181,10 @@
     <EntitySetMapping Name="BOM_BomTH">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTH">
         <MappingFragment StoreEntitySet="BOM-BomTH">
+          <ScalarProperty Name="TiLeNlBtp3" ColumnName="TiLeNlBtp3" />
+          <ScalarProperty Name="TiLeNlBtp2" ColumnName="TiLeNlBtp2" />
+          <ScalarProperty Name="MaMuaHang3" ColumnName="MaMuaHang3" />
+          <ScalarProperty Name="MaMuaHang2" ColumnName="MaMuaHang2" />
           <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />

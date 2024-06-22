@@ -65,8 +65,20 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BOM_BomNl> _MaMuaHangAddList;
         public ObservableCollection<BOM_BomNl> MaMuaHangAddList { get => _MaMuaHangAddList; set { _MaMuaHangAddList = value; OnPropertyChanged(); } }
 
+        private ObservableCollection<BOM_BomNl> _MaMuaHang2AddList;
+        public ObservableCollection<BOM_BomNl> MaMuaHang2AddList { get => _MaMuaHang2AddList; set { _MaMuaHang2AddList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHang3AddList;
+        public ObservableCollection<BOM_BomNl> MaMuaHang3AddList { get => _MaMuaHang3AddList; set { _MaMuaHang3AddList = value; OnPropertyChanged(); } }
+
         private ObservableCollection<BOM_BomNl> _MaMuaHangAddListFa;
         public ObservableCollection<BOM_BomNl> MaMuaHangAddListFa { get => _MaMuaHangAddListFa; set { _MaMuaHangAddListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHang2AddListFa;
+        public ObservableCollection<BOM_BomNl> MaMuaHang2AddListFa { get => _MaMuaHang2AddListFa; set { _MaMuaHang2AddListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHang3AddListFa;
+        public ObservableCollection<BOM_BomNl> MaMuaHang3AddListFa { get => _MaMuaHang3AddListFa; set { _MaMuaHang3AddListFa = value; OnPropertyChanged(); } }
 
 
 
@@ -98,8 +110,20 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BOM_BomNl> _MaMuaHangEditList;
         public ObservableCollection<BOM_BomNl> MaMuaHangEditList { get => _MaMuaHangEditList; set { _MaMuaHangEditList = value; OnPropertyChanged(); } }
 
+        private ObservableCollection<BOM_BomNl> _MaMuaHang2EditList;
+        public ObservableCollection<BOM_BomNl> MaMuaHang2EditList { get => _MaMuaHang2EditList; set { _MaMuaHang2EditList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHang3EditList;
+        public ObservableCollection<BOM_BomNl> MaMuaHang3EditList { get => _MaMuaHang3EditList; set { _MaMuaHang3EditList = value; OnPropertyChanged(); } }
+
         private ObservableCollection<BOM_BomNl> _MaMuaHangEditListFa;
         public ObservableCollection<BOM_BomNl> MaMuaHangEditListFa { get => _MaMuaHangEditListFa; set { _MaMuaHangEditListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHang2EditListFa;
+        public ObservableCollection<BOM_BomNl> MaMuaHang2EditListFa { get => _MaMuaHang2EditListFa; set { _MaMuaHang2EditListFa = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomNl> _MaMuaHang3EditListFa;
+        public ObservableCollection<BOM_BomNl> MaMuaHang3EditListFa { get => _MaMuaHang3EditListFa; set { _MaMuaHang3EditListFa = value; OnPropertyChanged(); } }
 
 
 
@@ -121,8 +145,20 @@ namespace BomRnD.ViewModel
         private string _MaMuaHang2;
         public string MaMuaHang2 { get => _MaMuaHang2; set { _MaMuaHang2 = value; OnPropertyChanged(); } }
 
+        private string _MaMuaHang22;
+        public string MaMuaHang22 { get => _MaMuaHang22; set { _MaMuaHang22 = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang23;
+        public string MaMuaHang23 { get => _MaMuaHang23; set { _MaMuaHang23 = value; OnPropertyChanged(); } }
+
         private Nullable<double> _TiLeNlBtp2;
         public Nullable<double> TiLeNlBtp2 { get => _TiLeNlBtp2; set { _TiLeNlBtp2 = value; OnPropertyChanged(); } }
+
+        private Nullable<double> _TiLeNlBtp22;
+        public Nullable<double> TiLeNlBtp22 { get => _TiLeNlBtp22; set { _TiLeNlBtp22 = value; OnPropertyChanged(); } }
+
+        private Nullable<double> _TiLeNlBtp23;
+        public Nullable<double> TiLeNlBtp23 { get => _TiLeNlBtp23; set { _TiLeNlBtp23 = value; OnPropertyChanged(); } }
 
         private Nullable<int> _HeSo2;
         public Nullable<int> HeSo2 { get => _HeSo2; set { _HeSo2 = value; OnPropertyChanged(); } }
@@ -160,8 +196,20 @@ namespace BomRnD.ViewModel
         private string _MaMuaHangEdit;
         public string MaMuaHangEdit { get => _MaMuaHangEdit; set { _MaMuaHangEdit = value; OnPropertyChanged(); } }
 
+        private string _MaMuaHang2Edit;
+        public string MaMuaHang2Edit { get => _MaMuaHang2Edit; set { _MaMuaHang2Edit = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang3Edit;
+        public string MaMuaHang3Edit { get => _MaMuaHang3Edit; set { _MaMuaHang3Edit = value; OnPropertyChanged(); } }
+
         private string _MaMuaHangEditSeach;
         public string MaMuaHangEditSeach { get => _MaMuaHangEditSeach; set { _MaMuaHangEditSeach = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang2EditSeach;
+        public string MaMuaHang2EditSeach { get => _MaMuaHang2EditSeach; set { _MaMuaHang2EditSeach = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang3EditSeach;
+        public string MaMuaHang3EditSeach { get => _MaMuaHang3EditSeach; set { _MaMuaHang3EditSeach = value; OnPropertyChanged(); } }
 
 
 
@@ -184,8 +232,20 @@ namespace BomRnD.ViewModel
         private string _MaMuaHang3;
         public string MaMuaHang3 { get => _MaMuaHang3; set { _MaMuaHang3 = value; OnPropertyChanged(); } }
 
+        private string _MaMuaHang32;
+        public string MaMuaHang32 { get => _MaMuaHang32; set { _MaMuaHang32 = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang33;
+        public string MaMuaHang33 { get => _MaMuaHang33; set { _MaMuaHang33 = value; OnPropertyChanged(); } }
+
         private Nullable<double> _TiLeNlBtp3;
         public Nullable<double> TiLeNlBtp3 { get => _TiLeNlBtp3; set { _TiLeNlBtp3 = value; OnPropertyChanged(); } }
+
+        private Nullable<double> _TiLeNlBtp32;
+        public Nullable<double> TiLeNlBtp32 { get => _TiLeNlBtp32; set { _TiLeNlBtp32 = value; OnPropertyChanged(); } }
+
+        private Nullable<double> _TiLeNlBtp33;
+        public Nullable<double> TiLeNlBtp33 { get => _TiLeNlBtp33; set { _TiLeNlBtp33 = value; OnPropertyChanged(); } }
 
         private Nullable<int> _HeSo3;
         public Nullable<int> HeSo3 { get => _HeSo3; set { _HeSo3 = value; OnPropertyChanged(); } }
@@ -223,8 +283,20 @@ namespace BomRnD.ViewModel
         private string _MaMuaHangAdd;
         public string MaMuaHangAdd { get => _MaMuaHangAdd; set { _MaMuaHangAdd = value; OnPropertyChanged(); } }
 
+        private string _MaMuaHang2Add;
+        public string MaMuaHang2Add { get => _MaMuaHang2Add; set { _MaMuaHang2Add = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang3Add;
+        public string MaMuaHang3Add { get => _MaMuaHang3Add; set { _MaMuaHang3Add = value; OnPropertyChanged(); } }
+
         private string _MaMuaHangAddSeach;
         public string MaMuaHangAddSeach { get => _MaMuaHangAddSeach; set { _MaMuaHangAddSeach = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang2AddSeach;
+        public string MaMuaHang2AddSeach { get => _MaMuaHang2AddSeach; set { _MaMuaHang2AddSeach = value; OnPropertyChanged(); } }
+
+        private string _MaMuaHang3AddSeach;
+        public string MaMuaHang3AddSeach { get => _MaMuaHang3AddSeach; set { _MaMuaHang3AddSeach = value; OnPropertyChanged(); } }
 
 
 
@@ -259,7 +331,7 @@ namespace BomRnD.ViewModel
 
                     var lktp = DataProvider.Ins.DB.BOM_BomTH.Where(x => x.MaTp == SelectedTPList.MaTp && x.ThiTruong == SelectedTPList.ThiTruong);
 
-
+                    int Stt = 1;
                     //lktp.OrderBy(x => new { x.MaTp, x.ThiTruong });
                     foreach (var item in lktp)
                     {
@@ -269,6 +341,10 @@ namespace BomRnD.ViewModel
                         var bomlk2 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp2).FirstOrDefault();
                         var bomlk3 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp3).FirstOrDefault();
                         var bomnl = DataProvider.Ins.DB.BOM_BomNl.Where(p => p.MaHang == item.MaMuaHang).FirstOrDefault();
+                        var bomnl2 = DataProvider.Ins.DB.BOM_BomNl.Where(p => p.MaHang == item.MaMuaHang2).FirstOrDefault();
+                        var bomnl3 = DataProvider.Ins.DB.BOM_BomNl.Where(p => p.MaHang == item.MaMuaHang3).FirstOrDefault();
+
+                        model.STT = Stt;
 
                         if (bomlk1 != null) model.NGC = bomlk1.NGC;
                         if (bomlk1 != null) model.TenTiengTrung = bomlk1.TenTiengTrung;
@@ -280,7 +356,11 @@ namespace BomRnD.ViewModel
                         model.MaBtpTW3 = item.MaBtp3;
                         if (bomlk1 != null) model.MaBtpVN = bomlk1.MaBTPVN;
                         model.MaMuaHang = item.MaMuaHang;
+                        model.MaMuaHang2 = item.MaMuaHang2;
+                        model.MaMuaHang3 = item.MaMuaHang3;
                         model.TiLeNlBtp = item.TiLeNlBtp;
+                        model.TiLeNlBtp2 = item.TiLeNlBtp2;
+                        model.TiLeNlBtp3 = item.TiLeNlBtp3;
                         if (bomnl != null) if (bomnl.QuyCach != null) model.QuyCach = bomnl.QuyCach; else if (bomlk1 != null) model.QuyCach = bomlk1.QuyCach;
                         if (bomnl != null) model.ChatLieu = bomnl.ChatLieu;
                         if (bomlk1 != null) model.T = bomlk1.T;
@@ -292,6 +372,7 @@ namespace BomRnD.ViewModel
                         
 
                         BomTHList.Add(model);
+                        Stt++;
                     }
                 }
             }
@@ -312,7 +393,11 @@ namespace BomRnD.ViewModel
                     MaBtp23 = bomth.MaBtp3;
                     ThiTruong2 = bomth.ThiTruong;
                     MaMuaHang2 = bomth.MaMuaHang;
+                    MaMuaHang22 = bomth.MaMuaHang2;
+                    MaMuaHang23 = bomth.MaMuaHang3;
                     TiLeNlBtp2 = bomth.TiLeNlBtp;
+                    TiLeNlBtp22 = bomth.TiLeNlBtp2;
+                    TiLeNlBtp23 = bomth.TiLeNlBtp3;
                     HeSo2 = bomth.HeSo;
                     GhiChu2 = bomth.GhiChu;
                 }
@@ -380,6 +465,30 @@ namespace BomRnD.ViewModel
             }
         }
 
+        private BOM_BomNl _SelectedMuaHang2AddItem;
+        public BOM_BomNl SelectedMuaHang2AddItem
+        {
+            get => _SelectedMuaHang2AddItem; set
+            {
+                _SelectedMuaHang2AddItem = value; OnPropertyChanged(); if (SelectedMuaHang2AddItem != null)
+                {
+                    MaMuaHang2Add = SelectedMuaHang2AddItem.MaHang;
+                }
+            }
+        }
+
+        private BOM_BomNl _SelectedMuaHang3AddItem;
+        public BOM_BomNl SelectedMuaHang3AddItem
+        {
+            get => _SelectedMuaHang3AddItem; set
+            {
+                _SelectedMuaHang3AddItem = value; OnPropertyChanged(); if (SelectedMuaHang3AddItem != null)
+                {
+                    MaMuaHang3Add = SelectedMuaHang3AddItem.MaHang;
+                }
+            }
+        }
+
 
         private BOM_BomTp _SelectedTPEditItem;
         public BOM_BomTp SelectedTPEditItem
@@ -441,6 +550,30 @@ namespace BomRnD.ViewModel
             }
         }
 
+        private BOM_BomNl _SelectedMuaHang2EditItem;
+        public BOM_BomNl SelectedMuaHang2EditItem
+        {
+            get => _SelectedMuaHang2EditItem; set
+            {
+                _SelectedMuaHang2EditItem = value; OnPropertyChanged(); if (SelectedMuaHang2EditItem != null)
+                {
+                    MaMuaHang2Edit = SelectedMuaHang2EditItem.MaHang;
+                }
+            }
+        }
+
+        private BOM_BomNl _SelectedMuaHang3EditItem;
+        public BOM_BomNl SelectedMuaHang3EditItem
+        {
+            get => _SelectedMuaHang3EditItem; set
+            {
+                _SelectedMuaHang3EditItem = value; OnPropertyChanged(); if (SelectedMuaHang3EditItem != null)
+                {
+                    MaMuaHang3Edit = SelectedMuaHang3EditItem.MaHang;
+                }
+            }
+        }
+
 
         public ICommand testbutton { get; set; }
         public ICommand valuechangecommand { get; set; }
@@ -471,6 +604,12 @@ namespace BomRnD.ViewModel
         public ICommand LoadAddMaMuaHangCommand { get; set; }
         public ICommand AddMaMuaHangChangeCommand { get; set; }
         public ICommand AddMaMuaHangApplyCommand { get; set; }
+        public ICommand LoadAddMaMuaHang2Command { get; set; }
+        public ICommand AddMaMuaHang2ChangeCommand { get; set; }
+        public ICommand AddMaMuaHang2ApplyCommand { get; set; }
+        public ICommand LoadAddMaMuaHang3Command { get; set; }
+        public ICommand AddMaMuaHang3ChangeCommand { get; set; }
+        public ICommand AddMaMuaHang3ApplyCommand { get; set; }
 
         public ICommand LoadEditMaTpCommand { get; set; }
         public ICommand EditMaTpChangeCommand { get; set; }
@@ -487,6 +626,12 @@ namespace BomRnD.ViewModel
         public ICommand LoadEditMaMuaHangCommand { get; set; }
         public ICommand EditMaMuaHangChangeCommand { get; set; }
         public ICommand EditMaMuaHangApplyCommand { get; set; }
+        public ICommand LoadEditMaMuaHang2Command { get; set; }
+        public ICommand EditMaMuaHang2ChangeCommand { get; set; }
+        public ICommand EditMaMuaHang2ApplyCommand { get; set; }
+        public ICommand LoadEditMaMuaHang3Command { get; set; }
+        public ICommand EditMaMuaHang3ChangeCommand { get; set; }
+        public ICommand EditMaMuaHang3ApplyCommand { get; set; }
 
 
         public BomTHAddWindows bomTHAddWindows;
@@ -495,6 +640,8 @@ namespace BomRnD.ViewModel
         public BomTHAddMaBTP2Windows bomTHAddMaBTP2Windows;
         public BomTHAddMaBTP3Windows bomTHAddMaBTP3Windows;
         public BomTHAddMaMuaHangWindows bomTHAddMaMuaHangWindows;
+        public BomTHAddMaMuaHang2Windows bomTHAddMaMuaHang2Windows;
+        public BomTHAddMaMuaHang3Windows bomTHAddMaMuaHang3Windows;
 
         public BomTHEditWindows bomTHEditWindows;
         public BomTHEditMaTpWindows bomTHEditMaTpWindows;
@@ -502,6 +649,8 @@ namespace BomRnD.ViewModel
         public BomTHEditMaBTP2Windows bomTHEditMaBTP2Windows;
         public BomTHEditMaBTP3Windows bomTHEditMaBTP3Windows;
         public BomTHEditMaMuaHangWindows bomTHEditMaMuaHangWindows;
+        public BomTHEditMaMuaHang2Windows bomTHEditMaMuaHang2Windows;
+        public BomTHEditMaMuaHang3Windows bomTHEditMaMuaHang3Windows;
 
         public BomTHViewModel()
         {
@@ -515,6 +664,8 @@ namespace BomRnD.ViewModel
             BTP2EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
             BTP3EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
             MaMuaHangEditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+            MaMuaHang2EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+            MaMuaHang3EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
 
             testbutton = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
@@ -569,6 +720,8 @@ namespace BomRnD.ViewModel
                 BTP2AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
                 BTP3AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
                 MaMuaHangAddListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                MaMuaHang2AddListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                MaMuaHang3AddListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
             });
             LoadededitCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
@@ -577,6 +730,8 @@ namespace BomRnD.ViewModel
                 BTP2EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
                 BTP3EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
                 MaMuaHangEditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                MaMuaHang2EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                MaMuaHang3EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
 
             });
 
@@ -594,7 +749,11 @@ namespace BomRnD.ViewModel
                 bOM_BomTH.MaBtp2 = MaBtp32;
                 bOM_BomTH.MaBtp3 = MaBtp33;
                 bOM_BomTH.MaMuaHang = MaMuaHang3;
+                bOM_BomTH.MaMuaHang2 = MaMuaHang32;
+                bOM_BomTH.MaMuaHang3 = MaMuaHang33;
                 bOM_BomTH.TiLeNlBtp = TiLeNlBtp3;
+                bOM_BomTH.TiLeNlBtp2 = TiLeNlBtp32;
+                bOM_BomTH.TiLeNlBtp3 = TiLeNlBtp33;
                 bOM_BomTH.HeSo = HeSo3;
                 bOM_BomTH.GhiChu = GhiChu3;
                 bOM_BomTH.UserName = BomRnD.Properties.Settings.Default.UserName;
@@ -610,7 +769,11 @@ namespace BomRnD.ViewModel
                 MaBtp32 = null;
                 MaBtp33 = null;
                 MaMuaHang3 = null;
+                MaMuaHang32 = null;
+                MaMuaHang33 = null;
                 TiLeNlBtp3 = null;
+                TiLeNlBtp32 = null;
+                TiLeNlBtp33 = null;
                 HeSo3 = null;
                 GhiChu3 = null;
                 ThiTruong3 = null;
@@ -634,7 +797,11 @@ namespace BomRnD.ViewModel
                 bOM_BomTH.MaBtp2 = MaBtp22;
                 bOM_BomTH.MaBtp3 = MaBtp23;
                 bOM_BomTH.MaMuaHang = MaMuaHang2;
+                bOM_BomTH.MaMuaHang2 = MaMuaHang22;
+                bOM_BomTH.MaMuaHang3 = MaMuaHang23;
                 bOM_BomTH.TiLeNlBtp = TiLeNlBtp2;
+                bOM_BomTH.TiLeNlBtp2 = TiLeNlBtp22;
+                bOM_BomTH.TiLeNlBtp3 = TiLeNlBtp23;
                 bOM_BomTH.HeSo = HeSo2;
                 bOM_BomTH.GhiChu = GhiChu2;
                 bOM_BomTH.UserNameEdit = BomRnD.Properties.Settings.Default.UserName;
@@ -726,6 +893,37 @@ namespace BomRnD.ViewModel
                 bomTHAddMaMuaHangWindows.Close();
             });
 
+            LoadAddMaMuaHang2Command = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang2AddList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                bomTHAddMaMuaHang2Windows = new BomTHAddMaMuaHang2Windows();
+                bomTHAddMaMuaHang2Windows.Show();
+            });
+            AddMaMuaHang2ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang2AddList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang.Contains(MaMuaHang2AddSeach)));
+            });
+            AddMaMuaHang2ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang32 = MaMuaHang2Add;
+                bomTHAddMaMuaHang2Windows.Close();
+            });
+
+            LoadAddMaMuaHang3Command = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang3AddList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                bomTHAddMaMuaHang3Windows = new BomTHAddMaMuaHang3Windows();
+                bomTHAddMaMuaHang3Windows.Show();
+            });
+            AddMaMuaHang3ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang3AddList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang.Contains(MaMuaHang3AddSeach)));
+            });
+            AddMaMuaHang3ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang33 = MaMuaHang3Add;
+                bomTHAddMaMuaHang3Windows.Close();
+            });
 
 
             LoadEditMaTpCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
@@ -808,6 +1006,38 @@ namespace BomRnD.ViewModel
                 bomTHEditMaMuaHangWindows.Close();
             });
 
+            LoadEditMaMuaHang2Command = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang2EditList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                bomTHEditMaMuaHang2Windows = new BomTHEditMaMuaHang2Windows();
+                bomTHEditMaMuaHang2Windows.Show();
+            });
+            EditMaMuaHang2ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang2EditList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang.Contains(MaMuaHang2EditSeach)));
+            });
+            EditMaMuaHang2ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang22 = MaMuaHang2Edit;
+                bomTHEditMaMuaHang2Windows.Close();
+            });
+
+            LoadEditMaMuaHang3Command = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang3EditList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
+                bomTHEditMaMuaHang3Windows = new BomTHEditMaMuaHang3Windows();
+                bomTHEditMaMuaHang3Windows.Show();
+            });
+            EditMaMuaHang3ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang3EditList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang.Contains(MaMuaHang3EditSeach)));
+            });
+            EditMaMuaHang3ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                MaMuaHang23 = MaMuaHang3Edit;
+                bomTHEditMaMuaHang3Windows.Close();
+            });
+
             ExportExcelCommand = new RelayCommand<object>((p) => { if (BomTHList == null) return false; return true; }, (p) =>
             {
                 string filePath = "";
@@ -857,40 +1087,55 @@ namespace BomRnD.ViewModel
 
                         ws.Column(1).Width = 9.5;
                         ws.Column(2).Width = 7;
-                        ws.Column(3).Width = 20.38;
-                        ws.Column(4).Width = 21.38;
+                        ws.Column(3).Width = 23;
+                        ws.Column(4).Width = 23;
                         ws.Column(5).Width = 15;
-                        ws.Column(6).Width = 20.63;
-                        ws.Column(7).Width = 19.13;
-                        ws.Column(8).Width = 16.38;
-                        ws.Column(9).Width = 23.63;
-                        ws.Column(10).Width = 12;
-                        ws.Column(11).Width = 8.5;
-                        ws.Column(12).Width = 8.5;
-                        ws.Column(13).Width = 8.5;
-                        ws.Column(14).Width = 8.5;
-                        ws.Column(15).Width = 8.5;
+                        ws.Column(6).Width = 15;
+                        ws.Column(7).Width = 23;
+                        ws.Column(8).Width = 16;
+                        ws.Column(9).Width = 23;
+                        ws.Column(10).Width = 16;
+                        ws.Column(11).Width = 23;
+                        ws.Column(12).Width = 16;
+                        ws.Column(13).Width = 23;
+                        ws.Column(14).Width = 23;
+                        ws.Column(15).Width = 16;
+                        ws.Column(16).Width = 16;
+                        ws.Column(17).Width = 23;
+                        ws.Column(18).Width = 23;
+                        ws.Column(19).Width = 16;
+                        ws.Column(20).Width = 16;
+                        ws.Column(21).Width = 23;
+                        ws.Column(22).Width = 23;
+                        ws.Column(23).Width = 16;
+                        ws.Column(24).Width = 16;
+                        ws.Column(25).Width = 16;
+                        ws.Column(26).Width = 8.5;
+                        ws.Column(27).Width = 8.5;
+                        ws.Column(28).Width = 8.5;
+                        ws.Column(29).Width = 8.5;
+                        ws.Column(30).Width = 8.5;
 
                         ws.Row(1).Height = 25.5;
                         ws.Row(2).Height = 30.75;
                         ws.Row(3).Height = 18;
                         ws.Row(4).Height = 18;
 
-                        ws.Cells["O:O"].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
+                        ws.Cells["AD:AD"].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
 
-                        var border2 = ws.Cells[5, 2, 6, 15].Style.Border;
+                        var border2 = ws.Cells[5, 2, 6, 30].Style.Border;
                         border2.Bottom.Style =
                                 border2.Top.Style =
                                 border2.Left.Style =
                                 border2.Right.Style = ExcelBorderStyle.Thin;
 
-                        ws.Cells[1, 2, 1, 15].Merge = true;
-                        ws.Cells[1, 2, 1, 15].Style.Font.Bold = true;
-                        ws.Cells[1, 2, 1, 15].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[1, 2, 1, 30].Merge = true;
+                        ws.Cells[1, 2, 1, 30].Style.Font.Bold = true;
+                        ws.Cells[1, 2, 1, 30].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                        ws.Cells[2, 2, 2, 15].Merge = true;
-                        ws.Cells[2, 2, 2, 15].Style.Font.Bold = true;
-                        ws.Cells[2, 2, 2, 15].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[2, 2, 2, 30].Merge = true;
+                        ws.Cells[2, 2, 2, 30].Style.Font.Bold = true;
+                        ws.Cells[2, 2, 2, 30].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
                         ws.Cells[1, 2].Value = "CLEARWATER  METAL  VN  JOINT  STOCK  COMPANY";
                         ws.Cells[1, 2].Style.Font.Size = 20;
@@ -901,35 +1146,34 @@ namespace BomRnD.ViewModel
                         ws.Cells[3, 2].Value = "Mã thành phẩm：" + MaTpth;
                         ws.Cells[3, 2].Style.Font.Size = 11;
 
-                        ws.Cells[3, 6].Value = "Khách hàng：" + ThiTruongth;
-                        ws.Cells[3, 6].Style.Font.Size = 11;
+                        ws.Cells[3, 7].Value = "Khách hàng：" + ThiTruongth;
+                        ws.Cells[3, 7].Style.Font.Size = 11;
 
-                        ws.Cells[3, 11].Value = "Ngày Cập Nhật：";
-                        ws.Cells[3, 11].Style.Font.Size = 11;
-                        ws.Cells[3, 11].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        ws.Cells[3, 26].Value = "Ngày Cập Nhật：";
+                        ws.Cells[3, 26].Style.Font.Size = 11;
+                        ws.Cells[3, 26].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
 
-                        ws.Cells[3, 13].Value = th.Max(x=>x.DateEdit);
-                        ws.Cells[3, 13].Style.Font.Size = 11;
+                        ws.Cells[3, 28].Value = th.Max(x=>x.DateEdit);
+                        ws.Cells[3, 28].Style.Font.Size = 11;
 
                         ws.Cells[4, 2].Value = "Kích cỡ thùng：";
                         ws.Cells[4, 2].Style.Font.Size = 11;
 
-                        ws.Cells[4, 5].Value = tp.MauSon;
+                        ws.Cells[4, 5].Value = "Màu " + tp.MauSon;
                         ws.Cells[4, 5].Style.Font.Size = 11;
 
-                        ws.Cells[4, 6].Value = "Số lượng tủ：";
-                        ws.Cells[4, 6].Style.Font.Size = 11;
+                        ws.Cells[4, 7].Value = "Số lượng tủ：";
+                        ws.Cells[4, 7].Style.Font.Size = 11;
 
-                        ws.Cells[4, 10, 4, 11].Merge = true;
-                        ws.Cells[4, 10, 4, 11].Style.Font.Bold = true;
-                        ws.Cells[4, 10, 4, 11].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                        ws.Cells[4, 10].Value = "Vận chuyển từ VN";
-                        ws.Cells[4, 10].Style.Font.Size = 11;
+                        
+                        ws.Cells[4, 26].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                        ws.Cells[4, 26].Value = "Vận chuyển từ VN";
+                        ws.Cells[4, 26].Style.Font.Size = 11;
 
-                        ws.Cells[4, 12].Value = "Trọng lượng thô:";
-                        ws.Cells[4, 12].Style.Font.Size = 11;
+                        ws.Cells[4, 27].Value = "Trọng lượng thô:";
+                        ws.Cells[4, 27].Style.Font.Size = 11;
 
-                        for (int j = 2;j< 11; j++)
+                        for (int j = 2;j< 16; j++)
                         {
                             ws.Cells[5, j, 6, j].Merge = true;
                             ws.Cells[5, j, 6, j].Style.Font.Bold = true;
@@ -937,24 +1181,24 @@ namespace BomRnD.ViewModel
                             ws.Cells[5, j, 6, j].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                         }
 
-                        ws.Cells[5, 11, 5, 13].Merge = true;
-                        ws.Cells[5, 11, 5, 13].Style.Font.Bold = true;
-                        ws.Cells[5, 11, 5, 13].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
-                        ws.Cells[5, 11, 5, 13].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[5, 26, 5, 28].Merge = true;
+                        ws.Cells[5, 26, 5, 28].Style.Font.Bold = true;
+                        ws.Cells[5, 26, 5, 28].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                        ws.Cells[5, 26, 5, 28].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                        ws.Cells[6, 11].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                        ws.Cells[6, 12].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                        ws.Cells[6, 13].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[6, 26].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[6, 27].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[6, 28].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                        ws.Cells[5, 14, 6, 14].Merge = true;
-                        ws.Cells[5, 14, 6, 14].Style.Font.Bold = true;
-                        ws.Cells[5, 14, 6, 14].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
-                        ws.Cells[5, 14, 6, 14].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[5, 29, 6, 29].Merge = true;
+                        ws.Cells[5, 29, 6, 29].Style.Font.Bold = true;
+                        ws.Cells[5, 29, 6, 29].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                        ws.Cells[5, 29, 6, 29].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                        ws.Cells[5, 15, 6, 15].Merge = true;
-                        ws.Cells[5, 15, 6, 15].Style.Font.Bold = true;
-                        ws.Cells[5, 15, 6, 15].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
-                        ws.Cells[5, 15, 6, 15].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        ws.Cells[5, 30, 6, 30].Merge = true;
+                        ws.Cells[5, 30, 6, 30].Style.Font.Bold = true;
+                        ws.Cells[5, 30, 6, 30].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                        ws.Cells[5, 30, 6, 30].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
                         ws.Cells[5, 2].Value = "STT";
                         ws.Cells[5, 2].Style.Font.Size = 11;
@@ -965,41 +1209,86 @@ namespace BomRnD.ViewModel
                         ws.Cells[5, 4].Value = "Tiếng Việt";
                         ws.Cells[5, 4].Style.Font.Size = 11;
 
-                        ws.Cells[5, 5].Value = "Số hoạ";
+                        ws.Cells[5, 5].Value = "Số hoạ 1";
                         ws.Cells[5, 5].Style.Font.Size = 11;
 
-                        ws.Cells[5, 6].Value = "Mã BTP TW";
+                        ws.Cells[5, 6].Value = "Số hoạ 2";
                         ws.Cells[5, 6].Style.Font.Size = 11;
 
-                        ws.Cells[5, 7].Value = "Mã BTP VN";
+                        ws.Cells[5, 7].Value = "Mã BTP TW 1";
                         ws.Cells[5, 7].Style.Font.Size = 11;
 
-                        ws.Cells[5, 8].Value = "Mã mua hàng";
+                        ws.Cells[5, 8].Value = "Quy cách BTP 1";
                         ws.Cells[5, 8].Style.Font.Size = 11;
 
-                        ws.Cells[5, 9].Value = "Quy cách";
+                        ws.Cells[5, 9].Value = "Mã BTP TW 2";
                         ws.Cells[5, 9].Style.Font.Size = 11;
 
-                        ws.Cells[5, 10].Value = "Chất liệu";
+                        ws.Cells[5, 10].Value = "Quy cách BTP 2";
                         ws.Cells[5, 10].Style.Font.Size = 11;
 
-                        ws.Cells[5, 11].Value = "mm";
+                        ws.Cells[5, 11].Value = "Mã BTP TW 3";
                         ws.Cells[5, 11].Style.Font.Size = 11;
 
-                        ws.Cells[6, 11].Value = "T";
-                        ws.Cells[6, 11].Style.Font.Size = 11;
+                        ws.Cells[5, 12].Value = "Quy cách BTP 3";
+                        ws.Cells[5, 12].Style.Font.Size = 11;
 
-                        ws.Cells[6, 12].Value = "W";
-                        ws.Cells[6, 12].Style.Font.Size = 11;
+                        ws.Cells[5, 13].Value = "Mã BTP VN";
+                        ws.Cells[5, 13].Style.Font.Size = 11;
 
-                        ws.Cells[6, 13].Value = "L";
-                        ws.Cells[6, 13].Style.Font.Size = 11;
-
-                        ws.Cells[5, 14].Value = "Hệ số";
+                        ws.Cells[5, 14].Value = "Mã mua hàng 1";
                         ws.Cells[5, 14].Style.Font.Size = 11;
 
-                        ws.Cells[5, 15].Value = "KG";
+                        ws.Cells[5, 15].Value = "Tỉ lệ NL/BTP 1";
                         ws.Cells[5, 15].Style.Font.Size = 11;
+
+                        ws.Cells[5, 16].Value = "Chất liệu 1";
+                        ws.Cells[5, 16].Style.Font.Size = 11;
+
+                        ws.Cells[5, 17].Value = "Quy cách 1";
+                        ws.Cells[5, 17].Style.Font.Size = 11;
+
+                        ws.Cells[5, 18].Value = "Mã mua hàng 2";
+                        ws.Cells[5, 18].Style.Font.Size = 11;
+
+                        ws.Cells[5, 19].Value = "Tỉ lệ NL/BTP 2";
+                        ws.Cells[5, 19].Style.Font.Size = 11;
+
+                        ws.Cells[5, 20].Value = "Chất liệu 2";
+                        ws.Cells[5, 20].Style.Font.Size = 11;
+
+                        ws.Cells[5, 21].Value = "Quy cách 2";
+                        ws.Cells[5, 21].Style.Font.Size = 11;
+
+                        ws.Cells[5, 22].Value = "Mã mua hàng 3";
+                        ws.Cells[5, 22].Style.Font.Size = 11;
+
+                        ws.Cells[5, 23].Value = "Tỉ lệ NL/BTP 3";
+                        ws.Cells[5, 23].Style.Font.Size = 11;
+
+                        ws.Cells[5, 24].Value = "Chất liệu 3";
+                        ws.Cells[5, 24].Style.Font.Size = 11;
+
+                        ws.Cells[5, 25].Value = "Quy cách 3";
+                        ws.Cells[5, 25].Style.Font.Size = 11;
+
+                        ws.Cells[5, 26].Value = "mm";
+                        ws.Cells[5, 26].Style.Font.Size = 11;
+
+                        ws.Cells[6, 26].Value = "T";
+                        ws.Cells[6, 26].Style.Font.Size = 11;
+
+                        ws.Cells[6, 27].Value = "W";
+                        ws.Cells[6, 27].Style.Font.Size = 11;
+
+                        ws.Cells[6, 28].Value = "L";
+                        ws.Cells[6, 28].Style.Font.Size = 11;
+
+                        ws.Cells[5, 29].Value = "Hệ số";
+                        ws.Cells[5, 29].Style.Font.Size = 11;
+
+                        ws.Cells[5, 30].Value = "KG";
+                        ws.Cells[5, 30].Style.Font.Size = 11;
 
                         int i = 7;
                         double? sum = 0;
@@ -1007,7 +1296,11 @@ namespace BomRnD.ViewModel
                         {
                             var ITp = DataProvider.Ins.DB.BOM_BomTp.Where(x => x.MaHang == item.MaTp).FirstOrDefault();
                             var INl = DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang == item.MaMuaHang).FirstOrDefault();
+                            var INl2 = DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang == item.MaMuaHang2).FirstOrDefault();
+                            var INl3 = DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang == item.MaMuaHang3).FirstOrDefault();
                             var IBtp = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp1).FirstOrDefault();
+                            var IBtp2 = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp2).FirstOrDefault();
+                            var IBtp3 = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp3).FirstOrDefault();
 
                             ws.Cells[i, 1].Value = IBtp.NGC;
                             ws.Cells[i, 1].Style.Font.Size = 11;
@@ -1024,39 +1317,84 @@ namespace BomRnD.ViewModel
                             ws.Cells[i, 5].Value = IBtp.MaBanVe;
                             ws.Cells[i, 5].Style.Font.Size = 11;
 
-                            ws.Cells[i, 6].Value = item.MaBtp1;
+                            ws.Cells[i, 6].Value = IBtp.MaBanVe2;
                             ws.Cells[i, 6].Style.Font.Size = 11;
 
-                            ws.Cells[i, 7].Value = IBtp.MaBTPVN;
+                            ws.Cells[i, 7].Value = item.MaBtp1;
                             ws.Cells[i, 7].Style.Font.Size = 11;
 
-                            ws.Cells[i, 8].Value = item.MaMuaHang;
+                            ws.Cells[i, 8].Value = IBtp.QuyCach;
                             ws.Cells[i, 8].Style.Font.Size = 11;
 
-                            ws.Cells[i, 9].Value = INl.QuyCach;
+                            ws.Cells[i, 9].Value = item.MaBtp2;
                             ws.Cells[i, 9].Style.Font.Size = 11;
 
-                            ws.Cells[i, 10].Value = INl.ChatLieu;
+                            if (IBtp2 != null) ws.Cells[i, 10].Value = IBtp2.QuyCach;
                             ws.Cells[i, 10].Style.Font.Size = 11;
 
-                            ws.Cells[i, 11].Value = IBtp.T;
+                            ws.Cells[i, 11].Value = item.MaBtp3;
                             ws.Cells[i, 11].Style.Font.Size = 11;
 
-                            ws.Cells[i, 12].Value = IBtp.W;
+                            if (IBtp3 != null) ws.Cells[i, 12].Value = IBtp3.QuyCach;
                             ws.Cells[i, 12].Style.Font.Size = 11;
 
-                            ws.Cells[i, 13].Value = IBtp.L;
+                            ws.Cells[i, 13].Value = IBtp.MaBTPVN;
                             ws.Cells[i, 13].Style.Font.Size = 11;
 
-                            ws.Cells[i, 14].Value = item.HeSo;
+                            ws.Cells[i, 14].Value = item.MaMuaHang;
                             ws.Cells[i, 14].Style.Font.Size = 11;
 
-                            ws.Cells[i, 15].Value = IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo;
+                            ws.Cells[i, 15].Value = item.TiLeNlBtp;
                             ws.Cells[i, 15].Style.Font.Size = 11;
+
+                            ws.Cells[i, 16].Value = INl.ChatLieu;
+                            ws.Cells[i, 16].Style.Font.Size = 11;
+
+                            ws.Cells[i, 17].Value = INl.QuyCach;
+                            ws.Cells[i, 17].Style.Font.Size = 11;
+
+                            ws.Cells[i, 18].Value = item.MaMuaHang2;
+                            ws.Cells[i, 18].Style.Font.Size = 11;
+
+                            ws.Cells[i, 19].Value = item.TiLeNlBtp2;
+                            ws.Cells[i, 19].Style.Font.Size = 11;
+
+                            if (INl2 != null) ws.Cells[i, 20].Value = INl2.ChatLieu;
+                            ws.Cells[i, 20].Style.Font.Size = 11;
+
+                            if (INl2 != null) ws.Cells[i, 21].Value = INl2.QuyCach;
+                            ws.Cells[i, 21].Style.Font.Size = 11;
+
+                            ws.Cells[i, 22].Value = item.MaMuaHang3;
+                            ws.Cells[i, 22].Style.Font.Size = 11;
+
+                            ws.Cells[i, 23].Value = item.TiLeNlBtp3;
+                            ws.Cells[i, 23].Style.Font.Size = 11;
+
+                            if (INl3 != null) ws.Cells[i, 24].Value = INl3.ChatLieu;
+                            ws.Cells[i, 24].Style.Font.Size = 11;
+
+                            if (INl3 != null) ws.Cells[i, 25].Value = INl3.QuyCach;
+                            ws.Cells[i, 25].Style.Font.Size = 11;
+
+                            ws.Cells[i, 26].Value = IBtp.T;
+                            ws.Cells[i, 26].Style.Font.Size = 11;
+
+                            ws.Cells[i, 27].Value = IBtp.W;
+                            ws.Cells[i, 27].Style.Font.Size = 11;
+
+                            ws.Cells[i, 28].Value = IBtp.L;
+                            ws.Cells[i, 28].Style.Font.Size = 11;
+
+                            ws.Cells[i, 29].Value = item.HeSo;
+                            ws.Cells[i, 29].Style.Font.Size = 11;
+
+                            ws.Cells[i, 30].Value = IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo;
+                            ws.Cells[i, 30].Style.Font.Size = 11;
 
                             sum += (IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo);
 
-                            var border = ws.Cells[i, 2, i, 15].Style.Border;
+                            var border = ws.Cells[i, 2, i, 30].Style.Border;
                             border.Bottom.Style =
                                     border.Top.Style =
                                     border.Left.Style =
@@ -1065,8 +1403,8 @@ namespace BomRnD.ViewModel
                             i++;
                         }
 
-                        ws.Cells[4, 15].Value = sum;
-                        ws.Cells[4, 15].Style.Font.Size = 11;
+                        ws.Cells[4, 30].Value = sum;
+                        ws.Cells[4, 30].Style.Font.Size = 11;
 
 
 
