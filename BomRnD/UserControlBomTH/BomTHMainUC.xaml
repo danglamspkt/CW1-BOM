@@ -15,7 +15,8 @@
 
     <Grid>
         <DockPanel>
-            <StackPanel DockPanel.Dock="Left">
+            <StackPanel DockPanel.Dock="Left"
+                        Width="350">
                 <Button Content="Update"
                         Style="{StaticResource MaterialDesignRaisedButton}"
                         Command="{Binding UpdateTHCommand}"
@@ -26,7 +27,7 @@
                     <TextBox Text="{Binding MaTp, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
-                             materialDesign:HintAssist.Hint="Mã thành phẩm"
+                             materialDesign:HintAssist.Hint="Mã thành phẩm bộ"
                              Width="180"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                              Margin="5">
@@ -55,8 +56,8 @@
                            MaxHeight="500">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Mã thành phẩm"
-                                            DisplayMemberBinding="{Binding MaTp}"
+                            <GridViewColumn Header="Mã thành phẩm bộ"
+                                            DisplayMemberBinding="{Binding MaTpModul}"
                                             Width="180"></GridViewColumn>
                             <GridViewColumn Header="Thị trường"
                                             DisplayMemberBinding="{Binding ThiTruong}"
@@ -117,9 +118,12 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       ScrollViewer.CanContentScroll="True">
-                <DataGrid.Columns>
+                <DataGrid.Columns>                    
                     <DataGridTextColumn Header="NGC"
                                         Binding="{Binding NGC}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="STT"
+                                        Binding="{Binding STT}"
                                         Width="auto" />
                     <DataGridTextColumn Header="Tên tiếng trung"
                                         Binding="{Binding TenTiengTrung}"
@@ -136,11 +140,38 @@
                     <DataGridTextColumn Header="Mã BtpTW1"
                                         Binding="{Binding MaBtpTW1}"
                                         Width="auto" />
+                    <DataGridTextColumn Header="Quy cách BtpTW1"
+                                        Binding="{Binding QuyCachBtpTW1}"
+                                        Width="auto" />
                     <DataGridTextColumn Header="Mã BtpTW2"
                                         Binding="{Binding MaBtpTW2}"
                                         Width="auto" />
+                    <DataGridTextColumn Header="Quy cách BtpTW2"
+                                        Binding="{Binding QuyCachBtpTW2}"
+                                        Width="auto" />
                     <DataGridTextColumn Header="Mã BtpTW3"
                                         Binding="{Binding MaBtpTW3}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Quy cách BtpTW3"
+                                        Binding="{Binding QuyCachBtpTW3}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã BtpTW4"
+                                        Binding="{Binding MaBtpTW4}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Quy cách BtpTW4"
+                                        Binding="{Binding QuyCachBtpTW4}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã BtpTW5"
+                                        Binding="{Binding MaBtpTW5}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Quy cách BtpTW5"
+                                        Binding="{Binding QuyCachBtpTW5}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Mã BtpTW6"
+                                        Binding="{Binding MaBtpTW6}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Quy cách BtpTW6"
+                                        Binding="{Binding QuyCachBtpTW6}"
                                         Width="auto" />
                     <DataGridTextColumn Header="Mã BtpVN"
                                         Binding="{Binding MaBtpVN}"
@@ -151,11 +182,23 @@
                     <DataGridTextColumn Header="Tỉ lệ Nl/Btp 1"
                                         Binding="{Binding TiLeNlBtp}"
                                         Width="auto" />
+                    <DataGridTextColumn Header="Chất liệu"
+                                        Binding="{Binding ChatLieu}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Quy cách"
+                                        Binding="{Binding QuyCach}"
+                                        Width="auto" />
                     <DataGridTextColumn Header="Mã mua hàng 2"
                                         Binding="{Binding MaMuaHang2}"
                                         Width="auto" />
                     <DataGridTextColumn Header="Tỉ lệ Nl/Btp 2"
                                         Binding="{Binding TiLeNlBtp2}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Chất liệu 2"
+                                        Binding="{Binding ChatLieu2}"
+                                        Width="auto" />
+                    <DataGridTextColumn Header="Quy cách 2"
+                                        Binding="{Binding QuyCach2}"
                                         Width="auto" />
                     <DataGridTextColumn Header="Mã mua hàng 3"
                                         Binding="{Binding MaMuaHang3}"
@@ -163,11 +206,11 @@
                     <DataGridTextColumn Header="Tỉ lệ Nl/Btp 3"
                                         Binding="{Binding TiLeNlBtp3}"
                                         Width="auto" />
-                    <DataGridTextColumn Header="Quy cách"
-                                        Binding="{Binding QuyCach}"
+                    <DataGridTextColumn Header="Chất liệu 3"
+                                        Binding="{Binding ChatLieu3}"
                                         Width="auto" />
-                    <DataGridTextColumn Header="Chất liệu"
-                                        Binding="{Binding ChatLieu}"
+                    <DataGridTextColumn Header="Quy cách 3"
+                                        Binding="{Binding QuyCach3}"
                                         Width="auto" />
                     <DataGridTextColumn Header="T"
                                         Binding="{Binding T}"
@@ -184,6 +227,7 @@
                     <DataGridTextColumn Header="Ghi chú"
                                         Binding="{Binding GhiChu}"
                                         Width="auto" />
+                    
                 </DataGrid.Columns>
             </DataGrid>
             <!--<ListView DockPanel.Dock="Right"

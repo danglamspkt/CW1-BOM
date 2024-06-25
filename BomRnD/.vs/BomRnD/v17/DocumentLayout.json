@@ -7,24 +7,12 @@
       "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:viewmodel\\bomthviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|C:\\WPF\\CW1-BOM\\BomRnD\\viewmodel\\bomtpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:viewmodel\\bomtpviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\usercontrolbomth\\bomthmainuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomth\\bomthmainuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|C:\\WPF\\CW1-BOM\\BomRnD\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|C:\\WPF\\CW1-BOM\\BomRnD\\usercontrolbomtp\\bomtpeditwindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomtp\\bomtpeditwindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|C:\\WPF\\CW1-BOM\\BomRnD\\usercontrolbomtp\\bomtpaddwindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomtp\\bomtpaddwindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|C:\\WPF\\CW1-BOM\\BomRnD\\usercontrolbomtp\\bomtpinfowindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:usercontrolbomtp\\bomtpinfowindows.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|c:\\wpf\\cw1-bom\\bomrnd\\model\\bomthmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A7E872-6322-452F-BC8F-9F03D3384335}|BomRnD.csproj|solutionrelative:model\\bomthmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 353,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BomTHModel.cs",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\Model\\BomTHModel.cs",
+              "RelativeDocumentMoniker": "Model\\BomTHModel.cs",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\Model\\BomTHModel.cs",
+              "RelativeToolTip": "Model\\BomTHModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T06:42:45.916Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -46,74 +47,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BomTPViewModel.cs",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BomTPViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\BomTPViewModel.cs",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BomTPViewModel.cs",
-              "RelativeToolTip": "ViewModel\\BomTPViewModel.cs",
-              "ViewState": "AQIAAKkCAAAAAAAAAAAUwJcCAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T07:00:13.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BomTPInfoWindows.xaml",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTp\\BomTPInfoWindows.xaml",
-              "RelativeDocumentMoniker": "UserControlBomTp\\BomTPInfoWindows.xaml",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTp\\BomTPInfoWindows.xaml",
-              "RelativeToolTip": "UserControlBomTp\\BomTPInfoWindows.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-20T06:59:59.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BomTPEditWindows.xaml",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTp\\BomTPEditWindows.xaml",
-              "RelativeDocumentMoniker": "UserControlBomTp\\BomTPEditWindows.xaml",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTp\\BomTPEditWindows.xaml",
-              "RelativeToolTip": "UserControlBomTp\\BomTPEditWindows.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-20T06:59:57.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BomTPAddWindows.xaml",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTp\\BomTPAddWindows.xaml",
-              "RelativeDocumentMoniker": "UserControlBomTp\\BomTPAddWindows.xaml",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTp\\BomTPAddWindows.xaml",
-              "RelativeToolTip": "UserControlBomTp\\BomTPAddWindows.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-20T06:59:54.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\MainViewModel.cs",
-              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "ViewModel\\MainViewModel.cs",
-              "ViewState": "AQIAAOIAAAAAAAAAAAAawPYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T04:22:40.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BomTHViewModel.cs",
               "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BomTHViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\BomTHViewModel.cs",
               "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\ViewModel\\BomTHViewModel.cs",
               "RelativeToolTip": "ViewModel\\BomTHViewModel.cs",
-              "ViewState": "AQIAAEEBAAAAAAAAAIA2wHYBAAAeAAAA",
+              "ViewState": "AQIAAOIAAAAAAAAAAAAUwO8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:23:09.853Z",
+              "WhenOpened": "2024-06-25T06:41:09.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BomTHMainUC.xaml",
+              "DocumentMoniker": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTH\\BomTHMainUC.xaml",
+              "RelativeDocumentMoniker": "UserControlBomTH\\BomTHMainUC.xaml",
+              "ToolTip": "C:\\WPF\\CW1-BOM\\BomRnD\\UserControlBomTH\\BomTHMainUC.xaml",
+              "RelativeToolTip": "UserControlBomTH\\BomTHMainUC.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-25T04:11:07.218Z",
               "EditorCaption": ""
             }
           ]

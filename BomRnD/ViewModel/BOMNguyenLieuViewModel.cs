@@ -63,6 +63,15 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BOM_MaPL4ERP> _PL4ERPlist;
         public ObservableCollection<BOM_MaPL4ERP> PL4ERPlist { get => _PL4ERPlist; set { _PL4ERPlist = value; OnPropertyChanged(); } }
 
+        private ObservableCollection<BOM_BomTH> _MaTPList;
+        public ObservableCollection<BOM_BomTH> MaTPList { get => _MaTPList; set { _MaTPList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BOM_BomTH> _MaBTPList;
+        public ObservableCollection<BOM_BomTH> MaBTPList { get => _MaBTPList; set { _MaBTPList = value; OnPropertyChanged(); } }
+
+        private ObservableCollection<BomTHModel> _MaBTPList2;
+        public ObservableCollection<BomTHModel> MaBTPList2 { get => _MaBTPList2; set { _MaBTPList2 = value; OnPropertyChanged(); } }
+
 
         private List<string> _Seachlist;
         public List<string> Seachlist { get => _Seachlist; set { _Seachlist = value; OnPropertyChanged(); } }
@@ -834,6 +843,23 @@ namespace BomRnD.ViewModel
 
                         bomNLInfoWindows = new BomNLInfoWindows();
                         bomNLInfoWindows.Show();
+
+                        MaTPList = new ObservableCollection<BOM_BomTH>(DataProvider.Ins.DB.BOM_BomTH.Where(x => (x.MaMuaHang == MaHang) || (x.MaMuaHang2 == MaHang) || (x.MaMuaHang3 == MaHang)).GroupBy(x => new { x.MaTp, x.ThiTruong }).Select(x => x.FirstOrDefault()));
+                        MaBTPList = new ObservableCollection<BOM_BomTH>(DataProvider.Ins.DB.BOM_BomTH.Where(x => (x.MaMuaHang == MaHang) || (x.MaMuaHang2 == MaHang) || (x.MaMuaHang3 == MaHang)).GroupBy(x => x.MaBtp1).Select(x => x.FirstOrDefault()));
+                        MaBTPList2 = new ObservableCollection<BomTHModel>();
+                        foreach (var itemth  in MaBTPList)
+                        {
+                            BomTHModel model = new BomTHModel();
+                            var bomlk1 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == itemth.MaBtp1).FirstOrDefault();
+                            model.MaBtpTW1 = itemth.MaBtp1;
+                            model.MaBanVe1 = bomlk1.MaBanVe;
+                            model.MaBanVe2 = bomlk1.MaBanVe2;
+                            if (string.IsNullOrEmpty(bomlk1.QuyCach)) model.QuyCachBtpTW1 = bomlk1.T + " x " + bomlk1.W + " x " + bomlk1.L; else model.QuyCachBtpTW1 = bomlk1.QuyCach;
+                            MaBTPList2.Add(model);
+                        }
+
+
+
                         if (item.LinkImg == null)
                         {
                             PackIcon packIcon = new PackIcon();

@@ -18,6 +18,7 @@ namespace BomRnD.Model
         public BOM_BomTp()
         {
             this.BOM_BomTH = new HashSet<BOM_BomTH>();
+            this.BOM_BomTH1 = new HashSet<BOM_BomTH>();
         }
     
         public string MaHang { get; set; }
@@ -54,5 +55,7 @@ namespace BomRnD.Model
         public virtual BOM_Unit BOM_Unit1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BOM_BomTH> BOM_BomTH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BOM_BomTH> BOM_BomTH1 { get; set; }
     }
 }

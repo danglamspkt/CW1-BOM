@@ -107,6 +107,8 @@
     <EntitySetMapping Name="BOM_BomBtp">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomBtp">
         <MappingFragment StoreEntitySet="BOM-BomBtp">
+          <ScalarProperty Name="MauSon" ColumnName="MauSon" />
+          <ScalarProperty Name="Kg" ColumnName="Kg" />
           <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
@@ -181,6 +183,12 @@
     <EntitySetMapping Name="BOM_BomTH">
       <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTH">
         <MappingFragment StoreEntitySet="BOM-BomTH">
+          <ScalarProperty Name="MaTpModul" ColumnName="MaTpModul" />
+          <ScalarProperty Name="MauSon" ColumnName="MauSon" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MaBtp6" ColumnName="MaBtp6" />
+          <ScalarProperty Name="MaBtp5" ColumnName="MaBtp5" />
+          <ScalarProperty Name="MaBtp4" ColumnName="MaBtp4" />
           <ScalarProperty Name="TiLeNlBtp3" ColumnName="TiLeNlBtp3" />
           <ScalarProperty Name="TiLeNlBtp2" ColumnName="TiLeNlBtp2" />
           <ScalarProperty Name="MaMuaHang3" ColumnName="MaMuaHang3" />

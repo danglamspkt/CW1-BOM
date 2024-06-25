@@ -23,7 +23,7 @@
         Background="#FFFFF8F5"
         Title="Thêm mã tổng hợp"
         FontWeight="Bold"
-        Height="740"
+        Height="790"
         Width="700"
         WindowState="Normal">
 
@@ -48,7 +48,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <Grid Width="650"
-                  Height="702">
+                  Height="752">
                 <ScrollViewer Grid.Row="2"
                               materialDesign:ScrollViewerAssist.IsAutoHideEnabled="True"
                               HorizontalScrollBarVisibility="Disabled"
@@ -399,6 +399,49 @@
                                                Width="180">
                                     </TextBlock>
                                     <TextBox Text="{Binding TiLeNlBtp33, Mode=TwoWay}"
+                                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                             materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                             materialDesign:HintAssist.IsFloating="False"
+                                             Padding="5"
+                                             Width="290"
+                                             HorizontalAlignment="Left"
+                                             FontSize="14"
+                                             FontWeight="Bold"
+                                             Margin="5">
+                                    </TextBox>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Margin="0 0 0 0">
+                                    <TextBlock Text="Màu sơn"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <TextBox Text="{Binding MauSon3, Mode=TwoWay}"
+                                             Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                             materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                             materialDesign:HintAssist.IsFloating="False"
+                                             Padding="5"
+                                             Width="290"
+                                             HorizontalAlignment="Left"
+                                             FontSize="14"
+                                             FontWeight="Bold"
+                                             Margin="5">
+                                    </TextBox>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock Text="STT (Ưu tiên)"
+                                               HorizontalAlignment="Left"
+                                               FontSize="14"
+                                               FontWeight="Bold"
+                                               Margin="20 5 5 0"
+                                               Width="180">
+                                    </TextBlock>
+                                    <TextBox Text="{Binding STT3, Mode=TwoWay}"
                                              Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                              materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
                                              materialDesign:HintAssist.IsFloating="False"

@@ -307,6 +307,15 @@
     <Compile Include="UserControlBomTH\BomTHAddMaBTP3Windows.xaml.cs">
       <DependentUpon>BomTHAddMaBTP3Windows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaBTP4Windows.xaml.cs">
+      <DependentUpon>BomTHAddMaBTP4Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaBTP5Windows.xaml.cs">
+      <DependentUpon>BomTHAddMaBTP5Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaBTP6Windows.xaml.cs">
+      <DependentUpon>BomTHAddMaBTP6Windows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomTH\BomTHAddMaMuaHang2Windows.xaml.cs">
       <DependentUpon>BomTHAddMaMuaHang2Windows.xaml</DependentUpon>
     </Compile>
@@ -330,6 +339,15 @@
     </Compile>
     <Compile Include="UserControlBomTH\BomTHEditMaBTP3Windows.xaml.cs">
       <DependentUpon>BomTHEditMaBTP3Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHEditMaBTP4Windows.xaml.cs">
+      <DependentUpon>BomTHEditMaBTP4Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHEditMaBTP5Windows.xaml.cs">
+      <DependentUpon>BomTHEditMaBTP5Windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHEditMaBTP6Windows.xaml.cs">
+      <DependentUpon>BomTHEditMaBTP6Windows.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlBomTH\BomTHEditMaMuaHang2Windows.xaml.cs">
       <DependentUpon>BomTHEditMaMuaHang2Windows.xaml</DependentUpon>
@@ -506,6 +524,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaBTP4Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaBTP5Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaBTP6Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlBomTH\BomTHAddMaMuaHang2Windows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -535,6 +565,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlBomTH\BomTHEditMaBTP3Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHEditMaBTP4Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHEditMaBTP5Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHEditMaBTP6Windows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -32,11 +32,23 @@ namespace BomRnD.Model
         public string MaMuaHang3 { get; set; }
         public Nullable<double> TiLeNlBtp2 { get; set; }
         public Nullable<double> TiLeNlBtp3 { get; set; }
+        public string MaBtp4 { get; set; }
+        public string MaBtp5 { get; set; }
+        public string MaBtp6 { get; set; }
+        public Nullable<int> STT { get; set; }
+        public string MauSon { get; set; }
+        public string MaTpModul { get; set; }
     
         public virtual BOM_BomBtp BOM_BomBtp { get; set; }
         public virtual BOM_BomBtp BOM_BomBtp1 { get; set; }
         public virtual BOM_BomBtp BOM_BomBtp2 { get; set; }
         public virtual BOM_BomTp BOM_BomTp { get; set; }
         public virtual BOM_BomNl BOM_BomNl { get; set; }
+        public virtual BOM_BomBtp BOM_BomBtp3 { get; set; }
+        public virtual BOM_BomBtp BOM_BomBtp4 { get; set; }
+        public virtual BOM_BomBtp BOM_BomBtp5 { get; set; }
+        public virtual BOM_BomNl BOM_BomNl1 { get; set; }
+        public virtual BOM_BomNl BOM_BomNl2 { get; set; }
+        public virtual BOM_BomTp BOM_BomTp1 { get; set; }
     }
 }

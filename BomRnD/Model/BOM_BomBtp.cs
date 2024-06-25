@@ -20,6 +20,9 @@ namespace BomRnD.Model
             this.BOM_BomTH = new HashSet<BOM_BomTH>();
             this.BOM_BomTH1 = new HashSet<BOM_BomTH>();
             this.BOM_BomTH2 = new HashSet<BOM_BomTH>();
+            this.BOM_BomTH3 = new HashSet<BOM_BomTH>();
+            this.BOM_BomTH4 = new HashSet<BOM_BomTH>();
+            this.BOM_BomTH5 = new HashSet<BOM_BomTH>();
         }
     
         public string MaHang { get; set; }
@@ -55,6 +58,8 @@ namespace BomRnD.Model
         public string UserNameEdit { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<System.DateTime> DateEdit { get; set; }
+        public Nullable<double> Kg { get; set; }
+        public string MauSon { get; set; }
     
         public virtual BOM_Unit BOM_Unit { get; set; }
         public virtual BOM_Unit BOM_Unit1 { get; set; }
@@ -64,5 +69,11 @@ namespace BomRnD.Model
         public virtual ICollection<BOM_BomTH> BOM_BomTH1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BOM_BomTH> BOM_BomTH2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BOM_BomTH> BOM_BomTH3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BOM_BomTH> BOM_BomTH4 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BOM_BomTH> BOM_BomTH5 { get; set; }
     }
 }

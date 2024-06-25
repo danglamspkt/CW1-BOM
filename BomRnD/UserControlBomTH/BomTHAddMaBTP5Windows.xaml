@@ -1,0 +1,118 @@
+﻿<Window x:Class="BomRnD.UserControlBomTH.BomTHAddMaBTP5Windows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BomRnD.UserControlBomTH"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:BomRnD.UserControl1"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:viewmodel="clr-namespace:BomRnD.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:BomTHViewModel}"
+        DataContext="{StaticResource BomTHVM}"
+        mc:Ignorable="d"
+        TextElement.Foreground="Black"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        x:Name="mainWindow"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFFFF8F5"
+        Title="Mã Bán Thành Phẩm"
+        FontWeight="Bold"
+        Height="690"
+        Width="1200"
+        WindowState="Normal">
+
+    <!--<i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedaddCommand}"
+                                   CommandParameter="{Binding ElementName=mainWindow}" />
+        </i:EventTrigger>
+        --><!--<i:EventTrigger EventName="Loaded">
+        <i:InvokeCommandAction Command="{Binding Homedata}" 
+                           CommandParameter="{Binding ElementName=UCMain}"/>
+    </i:EventTrigger>--><!--
+    </i:Interaction.Triggers>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarInfoUC Tag="{Binding Title, ElementName=mainWindow}" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Chọn"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        Command="{Binding AddMaBTP5ApplyCommand}"
+                        Width="100"
+                        Background="Green"
+                        Margin="10"></Button>
+                <TextBox Text="{Binding MaBTP5AddSeach, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         materialDesign:HintAssist.Hint="Mã Bán thành phẩm"
+                         Width="180"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         Margin="5">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="TextChanged">
+                            <i:InvokeCommandAction Command="{Binding AddMaBTP5ChangeCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2">
+            <ListView DockPanel.Dock="Right"
+                      ItemsSource="{Binding BTP5AddList}"
+                      SelectedItem="{Binding SelectedBTP5AddItem, Mode=OneWayToSource}"
+                      Background="Transparent"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.CanContentScroll="True">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Mã bán thành phẩm"
+                                        DisplayMemberBinding="{Binding MaHang}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Tên tiếng trung"
+                                        DisplayMemberBinding="{Binding TenTiengTrung}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Display Name"
+                                        DisplayMemberBinding="{Binding DisplayName}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Mã bản vẽ 1"
+                                        DisplayMemberBinding="{Binding MaBanVe}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Mã bản vẽ 2"
+                                        DisplayMemberBinding="{Binding MaBanVe2}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Quy cách"
+                                        DisplayMemberBinding="{Binding QuyCach}"
+                                        Width="auto" />
+                        <GridViewColumn Header="T"
+                                        DisplayMemberBinding="{Binding T}"
+                                        Width="auto" />
+                        <GridViewColumn Header="W"
+                                        DisplayMemberBinding="{Binding W}"
+                                        Width="auto" />
+                        <GridViewColumn Header="L"
+                                        DisplayMemberBinding="{Binding L}"
+                                        Width="auto" />
+                        <GridViewColumn Header="Đơn vị"
+                                        DisplayMemberBinding="{Binding UnitSx}"
+                                        Width="auto" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>

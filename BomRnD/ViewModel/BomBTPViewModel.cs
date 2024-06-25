@@ -56,6 +56,9 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BOM_MaPL4ERP> _PL4ERPlist;
         public ObservableCollection<BOM_MaPL4ERP> PL4ERPlist { get => _PL4ERPlist; set { _PL4ERPlist = value; OnPropertyChanged(); } }
 
+        private ObservableCollection<BOM_BomTH> _MaTPList;
+        public ObservableCollection<BOM_BomTH> MaTPList { get => _MaTPList; set { _MaTPList = value; OnPropertyChanged(); } }
+
 
         private List<string> _Seachlist;
         public List<string> Seachlist { get => _Seachlist; set { _Seachlist = value; OnPropertyChanged(); } }
@@ -145,6 +148,12 @@ namespace BomRnD.ViewModel
         private string _MaPLNhoSx;
         public string MaPLNhoSx { get => _MaPLNhoSx; set { _MaPLNhoSx = value; OnPropertyChanged(); } }
 
+        private double? _Kg;
+        public double? Kg { get => _Kg; set { _Kg = value; OnPropertyChanged(); } }
+
+        private string _MauSon;
+        public string MauSon { get => _MauSon; set { _MauSon = value; OnPropertyChanged(); } }
+
 
         private string _MaBanVe21;
         public string MaBanVe21 { get => _MaBanVe21; set { _MaBanVe21 = value; OnPropertyChanged(); } }
@@ -217,6 +226,12 @@ namespace BomRnD.ViewModel
 
         private string _IDImg2;
         public string IDImg2 { get => _IDImg2; set { _IDImg2 = value; OnPropertyChanged(); } }
+
+        private double? _Kg2;
+        public double? Kg2 { get => _Kg2; set { _Kg2 = value; OnPropertyChanged(); } }
+
+        private string _MauSon2;
+        public string MauSon2 { get => _MauSon2; set { _MauSon2 = value; OnPropertyChanged(); } }
 
 
 
@@ -294,6 +309,12 @@ namespace BomRnD.ViewModel
 
         private string _IDImg3;
         public string IDImg3 { get => _IDImg3; set { _IDImg3 = value; OnPropertyChanged(); } }
+
+        private double? _Kg3;
+        public double? Kg3 { get => _Kg3; set { _Kg3 = value; OnPropertyChanged(); } }
+
+        private string _MauSon3;
+        public string MauSon3 { get => _MauSon3; set { _MauSon3 = value; OnPropertyChanged(); } }
 
 
         public BomLKInfoWindows bomLKInfoWindows;
@@ -459,6 +480,8 @@ namespace BomRnD.ViewModel
                 MaPLNhoSx3 = infolist.MaPLNhoSx;
                 LinkImg3 = infolist.LinkImg;
                 IDImg3 = infolist.IDImg;
+                Kg3 = infolist.Kg;
+                MauSon3 = infolist.MauSon;
 
 
                 if (infolist.LinkImg == null || string.IsNullOrEmpty(infolist.LinkImg))
@@ -567,6 +590,11 @@ namespace BomRnD.ViewModel
                 BOM_BomBtp.LinkImg = LinkImg2;
                 BOM_BomBtp.IDImg = IDImg2;
                 BOM_BomBtp.UserName = Properties.Settings.Default.UserName;
+                BOM_BomBtp.Date = DateTime.Today;
+                BOM_BomBtp.UserNameEdit = Properties.Settings.Default.UserName;
+                BOM_BomBtp.DateEdit = DateTime.Today;
+                BOM_BomBtp.Kg = Kg2;
+                BOM_BomBtp.MauSon = MauSon2;
 
                 DataProvider.Ins.DB.BOM_BomBtp.Add(BOM_BomBtp);
                 DataProvider.Ins.DB.SaveChanges();
@@ -594,6 +622,8 @@ namespace BomRnD.ViewModel
                 MaPLNhoSx2 = null;
                 LinkImg2 = null;
                 IDImg2 = null;
+                Kg2 = null;
+                MauSon2 = null;
             }
         }
 
@@ -626,7 +656,10 @@ namespace BomRnD.ViewModel
                 bOM_BomBtp.MaPLNhoSx = MaPLNhoSx3;
                 bOM_BomBtp.LinkImg = LinkImg3;
                 bOM_BomBtp.IDImg = IDImg3;
-                bOM_BomBtp.UserName = Properties.Settings.Default.UserName;
+                bOM_BomBtp.UserNameEdit = Properties.Settings.Default.UserName;
+                bOM_BomBtp.DateEdit = DateTime.Today;
+                bOM_BomBtp.Kg = Kg3;
+                bOM_BomBtp.MauSon = MauSon3;
 
                 DataProvider.Ins.DB.SaveChanges();
                 editdone = true;
@@ -957,10 +990,13 @@ namespace BomRnD.ViewModel
                         MaPL4ERP = item.MaPL4ERP;
                         MaPLLonSx = item.MaPLLonSx;
                         MaPLNhoSx = item.MaPLNhoSx;
+                        Kg = item.Kg;
+                        MauSon = item.MauSon;
 
                         bomLKInfoWindows = new BomLKInfoWindows();
                         bomLKInfoWindows.Show();
 
+                        MaTPList = new ObservableCollection<BOM_BomTH>(DataProvider.Ins.DB.BOM_BomTH.Where(x => (x.MaBtp1 == MaHang) || (x.MaBtp2 == MaHang) || (x.MaBtp3 == MaHang) || (x.MaBtp4 == MaHang) || (x.MaBtp5 == MaHang) || (x.MaBtp6 == MaHang)).GroupBy(x => new { x.MaTp, x.ThiTruong }).Select(x => x.FirstOrDefault()));
                         if (item.LinkImg == null)
                         {
                             PackIcon packIcon = new PackIcon();

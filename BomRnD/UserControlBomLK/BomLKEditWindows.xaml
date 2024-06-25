@@ -178,6 +178,7 @@
                                                  Margin="5">
                                         </TextBox>
                                     </StackPanel>
+                                    
 
 
                                 </StackPanel>
@@ -452,7 +453,28 @@
                                                     Command="{Binding LoadUnitCommand}" />
                                         </StackPanel>
                                     </StackPanel>
+                                    
+                                    <StackPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Trọng lượng (Kg)"
+                                                   HorizontalAlignment="Left"
+                                                   FontSize="14"
+                                                   FontWeight="Bold"
+                                                   Margin="20 5 5 0"
+                                                   Width="180">
+                                        </TextBlock>
+                                        <TextBox Text="{Binding Kg3, Mode=TwoWay}"
+                                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                                 materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
+                                                 materialDesign:HintAssist.IsFloating="False"
+                                                 Padding="5"
+                                                 Width="200"
+                                                 HorizontalAlignment="Left"
+                                                 FontSize="14"
+                                                 FontWeight="Bold"
+                                                 Margin="5">
+                                        </TextBox>
 
+                                    </StackPanel>
 
                                 </StackPanel>
 

@@ -18,9 +18,11 @@
           <Property Name="MaBTPVN" Type="nvarchar" MaxLength="60" />
           <Property Name="ChatLieu" Type="nvarchar(max)" />
           <Property Name="QuyCach" Type="nvarchar(max)" />
+          <Property Name="MauSon" Type="nvarchar(max)" />
           <Property Name="T" Type="float" />
           <Property Name="W" Type="float" />
           <Property Name="L" Type="float" />
+          <Property Name="Kg" Type="float" />
           <Property Name="NGC" Type="nvarchar(max)" />
           <Property Name="Version" Type="int" />
           <Property Name="UnitERP" Type="nvarchar" MaxLength="40" />
@@ -108,11 +110,17 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="STT" Type="int" />
+          <Property Name="MaTpModul" Type="nvarchar" MaxLength="40" />
           <Property Name="MaTp" Type="nvarchar" MaxLength="40" />
           <Property Name="ThiTruong" Type="nvarchar(max)" />
+          <Property Name="MauSon" Type="nvarchar(max)" />
           <Property Name="MaBtp1" Type="nvarchar" MaxLength="60" />
           <Property Name="MaBtp2" Type="nvarchar" MaxLength="60" />
           <Property Name="MaBtp3" Type="nvarchar" MaxLength="60" />
+          <Property Name="MaBtp4" Type="nvarchar" MaxLength="60" />
+          <Property Name="MaBtp5" Type="nvarchar" MaxLength="60" />
+          <Property Name="MaBtp6" Type="nvarchar" MaxLength="60" />
           <Property Name="MaMuaHang" Type="nvarchar" MaxLength="40" />
           <Property Name="MaMuaHang2" Type="nvarchar" MaxLength="40" />
           <Property Name="MaMuaHang3" Type="nvarchar" MaxLength="40" />
@@ -242,7 +250,7 @@
           <Property Name="IDHinhAnh" Type="nvarchar(max)" />
           <Property Name="LinkHinh" Type="nvarchar(max)" />
         </EntityType>
-        <Association Name="FK__BOM-BomBt__UnitE__0B5CAFEA">
+        <Association Name="FK__BOM-BomBt__UnitE__26CFC035">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -254,7 +262,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomBt__UnitS__0C50D423">
+        <Association Name="FK__BOM-BomBt__UnitS__27C3E46E">
           <End Role="BOM-Unit" Type="Self.BOM-Unit" Multiplicity="0..1" />
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="*" />
           <ReferentialConstraint>
@@ -314,7 +322,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__5F492382">
+        <Association Name="FK__BOM-BomTH__MaBtp__4DE98D56">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -326,7 +334,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__603D47BB">
+        <Association Name="FK__BOM-BomTH__MaBtp__4EDDB18F">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -338,7 +346,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaBtp__61316BF4">
+        <Association Name="FK__BOM-BomTH__MaBtp__4FD1D5C8">
           <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -350,7 +358,43 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaMua__6225902D">
+        <Association Name="FK__BOM-BomTH__MaBtp__50C5FA01">
+          <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
+          <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM-BomBtp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM-BomTH">
+              <PropertyRef Name="MaBtp4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM-BomTH__MaBtp__51BA1E3A">
+          <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
+          <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM-BomBtp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM-BomTH">
+              <PropertyRef Name="MaBtp5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM-BomTH__MaBtp__52AE4273">
+          <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
+          <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM-BomBtp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM-BomTH">
+              <PropertyRef Name="MaBtp6" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM-BomTH__MaMua__4A18FC72">
           <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -362,7 +406,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BOM-BomTH__MaTp__6319B466">
+        <Association Name="FK__BOM-BomTH__MaMua__4C0144E4">
+          <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="0..1" />
+          <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM-BomNl">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM-BomTH">
+              <PropertyRef Name="MaMuaHang2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM-BomTH__MaMua__4CF5691D">
+          <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="0..1" />
+          <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM-BomNl">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM-BomTH">
+              <PropertyRef Name="MaMuaHang3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM-BomTH__MaTp__4B0D20AB">
           <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
           <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
           <ReferentialConstraint>
@@ -371,6 +439,18 @@
             </Principal>
             <Dependent Role="BOM-BomTH">
               <PropertyRef Name="MaTp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM-BomTH__MaTpM__53A266AC">
+          <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
+          <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM-BomTp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM-BomTH">
+              <PropertyRef Name="MaTpModul" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -402,11 +482,11 @@
           <EntitySet Name="Dev-Lang" EntityType="Self.Dev-Lang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__BOM-BomBt__UnitE__0B5CAFEA" Association="Self.FK__BOM-BomBt__UnitE__0B5CAFEA">
+          <AssociationSet Name="FK__BOM-BomBt__UnitE__26CFC035" Association="Self.FK__BOM-BomBt__UnitE__26CFC035">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomBt__UnitS__0C50D423" Association="Self.FK__BOM-BomBt__UnitS__0C50D423">
+          <AssociationSet Name="FK__BOM-BomBt__UnitS__27C3E46E" Association="Self.FK__BOM-BomBt__UnitS__27C3E46E">
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
           </AssociationSet>
@@ -426,23 +506,47 @@
             <End Role="BOM-Unit" EntitySet="BOM-Unit" />
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__5F492382" Association="Self.FK__BOM-BomTH__MaBtp__5F492382">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__4DE98D56" Association="Self.FK__BOM-BomTH__MaBtp__4DE98D56">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__603D47BB" Association="Self.FK__BOM-BomTH__MaBtp__603D47BB">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__4EDDB18F" Association="Self.FK__BOM-BomTH__MaBtp__4EDDB18F">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaBtp__61316BF4" Association="Self.FK__BOM-BomTH__MaBtp__61316BF4">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__4FD1D5C8" Association="Self.FK__BOM-BomTH__MaBtp__4FD1D5C8">
             <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaMua__6225902D" Association="Self.FK__BOM-BomTH__MaMua__6225902D">
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__50C5FA01" Association="Self.FK__BOM-BomTH__MaBtp__50C5FA01">
+            <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
+            <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__51BA1E3A" Association="Self.FK__BOM-BomTH__MaBtp__51BA1E3A">
+            <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
+            <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM-BomTH__MaBtp__52AE4273" Association="Self.FK__BOM-BomTH__MaBtp__52AE4273">
+            <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
+            <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM-BomTH__MaMua__4A18FC72" Association="Self.FK__BOM-BomTH__MaMua__4A18FC72">
             <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
-          <AssociationSet Name="FK__BOM-BomTH__MaTp__6319B466" Association="Self.FK__BOM-BomTH__MaTp__6319B466">
+          <AssociationSet Name="FK__BOM-BomTH__MaMua__4C0144E4" Association="Self.FK__BOM-BomTH__MaMua__4C0144E4">
+            <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
+            <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM-BomTH__MaMua__4CF5691D" Association="Self.FK__BOM-BomTH__MaMua__4CF5691D">
+            <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
+            <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM-BomTH__MaTp__4B0D20AB" Association="Self.FK__BOM-BomTH__MaTp__4B0D20AB">
+            <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
+            <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM-BomTH__MaTpM__53A266AC" Association="Self.FK__BOM-BomTH__MaTpM__53A266AC">
             <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
             <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
           </AssociationSet>
@@ -587,6 +691,30 @@
             <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
             <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
           </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomTH__MaBtp__6F7F8B4B" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__6F7F8B4B">
+            <End Role="BOM_BomBtp" EntitySet="BOM_BomBtp" />
+            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomTH__MaBtp__7073AF84" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__7073AF84">
+            <End Role="BOM_BomBtp" EntitySet="BOM_BomBtp" />
+            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomTH__MaBtp__7167D3BD" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__7167D3BD">
+            <End Role="BOM_BomBtp" EntitySet="BOM_BomBtp" />
+            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomTH__MaMua__725BF7F6" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__725BF7F6">
+            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
+            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomTH__MaMua__73501C2F" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__73501C2F">
+            <End Role="BOM_BomNl" EntitySet="BOM_BomNl" />
+            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BOM_BomTH__MaTpM__53A266AC" Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTpM__53A266AC">
+            <End Role="BOM_BomTp" EntitySet="BOM_BomTp" />
+            <End Role="BOM_BomTH" EntitySet="BOM_BomTH" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="BOM_Image">
           <Key>
@@ -670,6 +798,11 @@
           <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="DateEdit" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="BOM_BomTH3" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__6F7F8B4B" FromRole="BOM_BomBtp" ToRole="BOM_BomTH" />
+          <NavigationProperty Name="BOM_BomTH4" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__7073AF84" FromRole="BOM_BomBtp" ToRole="BOM_BomTH" />
+          <NavigationProperty Name="BOM_BomTH5" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__7167D3BD" FromRole="BOM_BomBtp" ToRole="BOM_BomTH" />
+          <Property Name="Kg" Type="Double" />
+          <Property Name="MauSon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="BOM_BomTp">
           <Key>
@@ -707,6 +840,7 @@
           <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="DateEdit" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="BOM_BomTH1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTpM__53A266AC" FromRole="BOM_BomTp" ToRole="BOM_BomTH" />
         </EntityType>
         <EntityType Name="BOM_BomTH">
           <Key>
@@ -735,6 +869,18 @@
           <Property Name="MaMuaHang3" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="TiLeNlBtp2" Type="Double" />
           <Property Name="TiLeNlBtp3" Type="Double" />
+          <Property Name="MaBtp4" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="MaBtp5" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="MaBtp6" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BOM_BomBtp3" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__6F7F8B4B" FromRole="BOM_BomTH" ToRole="BOM_BomBtp" />
+          <NavigationProperty Name="BOM_BomBtp4" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__7073AF84" FromRole="BOM_BomTH" ToRole="BOM_BomBtp" />
+          <NavigationProperty Name="BOM_BomBtp5" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__7167D3BD" FromRole="BOM_BomTH" ToRole="BOM_BomBtp" />
+          <NavigationProperty Name="BOM_BomNl1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__725BF7F6" FromRole="BOM_BomTH" ToRole="BOM_BomNl" />
+          <NavigationProperty Name="BOM_BomNl2" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__73501C2F" FromRole="BOM_BomTH" ToRole="BOM_BomNl" />
+          <Property Name="STT" Type="Int32" />
+          <Property Name="MauSon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MaTpModul" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BOM_BomTp1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTpM__53A266AC" FromRole="BOM_BomTH" ToRole="BOM_BomTp" />
         </EntityType>
         <EntityType Name="BOM_Unit">
           <Key>
@@ -877,6 +1023,8 @@
           <Property Name="UserNameEdit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="DateEdit" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="BOM_BomTH1" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__725BF7F6" FromRole="BOM_BomNl" ToRole="BOM_BomTH" />
+          <NavigationProperty Name="BOM_BomTH2" Relationship="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__73501C2F" FromRole="BOM_BomNl" ToRole="BOM_BomTH" />
         </EntityType>
         <EntityType Name="BOM_MaKeToanERP">
           <Key>
@@ -922,6 +1070,78 @@
             </Principal>
             <Dependent Role="BOM_BomTH">
               <PropertyRef Name="MaMuaHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomTH__MaBtp__6F7F8B4B">
+          <End Type="gla43158_QLSXCW1Model.BOM_BomBtp" Role="BOM_BomBtp" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_BomBtp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM_BomTH">
+              <PropertyRef Name="MaBtp4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomTH__MaBtp__7073AF84">
+          <End Type="gla43158_QLSXCW1Model.BOM_BomBtp" Role="BOM_BomBtp" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_BomBtp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM_BomTH">
+              <PropertyRef Name="MaBtp5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomTH__MaBtp__7167D3BD">
+          <End Type="gla43158_QLSXCW1Model.BOM_BomBtp" Role="BOM_BomBtp" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_BomBtp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM_BomTH">
+              <PropertyRef Name="MaBtp6" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomTH__MaMua__725BF7F6">
+          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_BomNl">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM_BomTH">
+              <PropertyRef Name="MaMuaHang2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomTH__MaMua__73501C2F">
+          <End Type="gla43158_QLSXCW1Model.BOM_BomNl" Role="BOM_BomNl" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_BomNl">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM_BomTH">
+              <PropertyRef Name="MaMuaHang3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BOM_BomTH__MaTpM__53A266AC">
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTp" Role="BOM_BomTp" Multiplicity="0..1" />
+          <End Type="gla43158_QLSXCW1Model.BOM_BomTH" Role="BOM_BomTH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOM_BomTp">
+              <PropertyRef Name="MaHang" />
+            </Principal>
+            <Dependent Role="BOM_BomTH">
+              <PropertyRef Name="MaTpModul" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1037,6 +1257,8 @@
           <EntitySetMapping Name="BOM_BomBtp">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomBtp">
               <MappingFragment StoreEntitySet="BOM-BomBtp">
+                <ScalarProperty Name="MauSon" ColumnName="MauSon" />
+                <ScalarProperty Name="Kg" ColumnName="Kg" />
                 <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
@@ -1111,6 +1333,12 @@
           <EntitySetMapping Name="BOM_BomTH">
             <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTH">
               <MappingFragment StoreEntitySet="BOM-BomTH">
+                <ScalarProperty Name="MaTpModul" ColumnName="MaTpModul" />
+                <ScalarProperty Name="MauSon" ColumnName="MauSon" />
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="MaBtp6" ColumnName="MaBtp6" />
+                <ScalarProperty Name="MaBtp5" ColumnName="MaBtp5" />
+                <ScalarProperty Name="MaBtp4" ColumnName="MaBtp4" />
                 <ScalarProperty Name="TiLeNlBtp3" ColumnName="TiLeNlBtp3" />
                 <ScalarProperty Name="TiLeNlBtp2" ColumnName="TiLeNlBtp2" />
                 <ScalarProperty Name="MaMuaHang3" ColumnName="MaMuaHang3" />
