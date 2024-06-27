@@ -325,6 +325,9 @@
     <Compile Include="UserControlBomTH\BomTHAddMaMuaHangWindows.xaml.cs">
       <DependentUpon>BomTHAddMaMuaHangWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBomTH\BomTHAddMaTpModulWindows.xaml.cs">
+      <DependentUpon>BomTHAddMaTpModulWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBomTH\BomTHAddMaTpWindows.xaml.cs">
       <DependentUpon>BomTHAddMaTpWindows.xaml</DependentUpon>
     </Compile>
@@ -357,6 +360,9 @@
     </Compile>
     <Compile Include="UserControlBomTH\BomTHEditMaMuaHangWindows.xaml.cs">
       <DependentUpon>BomTHEditMaMuaHangWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHEditMaTpModulWindows.xaml.cs">
+      <DependentUpon>BomTHEditMaTpModulWindows.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlBomTH\BomTHEditMaTpWindows.xaml.cs">
       <DependentUpon>BomTHEditMaTpWindows.xaml</DependentUpon>
@@ -548,6 +554,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlBomTH\BomTHAddMaTpModulWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlBomTH\BomTHAddMaTpWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -589,6 +599,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlBomTH\BomTHEditMaMuaHangWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHEditMaTpModulWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

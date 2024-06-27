@@ -312,3 +312,7 @@ C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaBTP6Windows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP4Windows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP5Windows.baml
 C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaBTP6Windows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaTpModulWindows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaTpModulWindows.g.cs
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHAddMaTpModulWindows.baml
+C:\WPF\CW1-BOM\BomRnD\obj\Debug\UserControlBomTH\BomTHEditMaTpModulWindows.baml
