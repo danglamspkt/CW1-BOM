@@ -24,6 +24,7 @@ using BomRnD.UserControlBomNL;
 using BomRnD.UserControlBomTp;
 using BomRnD.UserControlHome;
 using BomRnD.UserControlSetting;
+using ControlzEx.Standard;
 
 namespace BomRnD.ViewModel
 {
@@ -38,33 +39,20 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BomTHModel> _BomTHList;
         public ObservableCollection<BomTHModel> BomTHList { get => _BomTHList; set { _BomTHList = value; OnPropertyChanged(); } }
 
-        private ObservableCollection<BOM_BomTH> _BomTHList2;
-        public ObservableCollection<BOM_BomTH> BomTHList2 { get => _BomTHList2; set { _BomTHList2 = value; OnPropertyChanged(); } }
-
         private ObservableCollection<BomTHModel> _BomTHList21;
         public ObservableCollection<BomTHModel> BomTHList21 { get => _BomTHList21; set { _BomTHList21 = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomTH> _BomTHList22;
-        public ObservableCollection<BOM_BomTH> BomTHList22 { get => _BomTHList22; set { _BomTHList22 = value; OnPropertyChanged(); } }
 
         private ObservableCollection<BomTHModel> _BomTHList31;
         public ObservableCollection<BomTHModel> BomTHList31 { get => _BomTHList31; set { _BomTHList31 = value; OnPropertyChanged(); } }
 
-        private ObservableCollection<BOM_BomTH> _BomTHList32;
-        public ObservableCollection<BOM_BomTH> BomTHList32 { get => _BomTHList32; set { _BomTHList32 = value; OnPropertyChanged(); } }
-
         private ObservableCollection<BomTHModel> _BomTHList41;
         public ObservableCollection<BomTHModel> BomTHList41 { get => _BomTHList41; set { _BomTHList41 = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomTH> _BomTHList42;
-        public ObservableCollection<BOM_BomTH> BomTHList42 { get => _BomTHList42; set { _BomTHList42 = value; OnPropertyChanged(); } }
 
         private ObservableCollection<BomTHModel> _BomTHList51;
         public ObservableCollection<BomTHModel> BomTHList51 { get => _BomTHList51; set { _BomTHList51 = value; OnPropertyChanged(); } }
 
-        private ObservableCollection<BOM_BomTH> _BomTHList52;
-        public ObservableCollection<BOM_BomTH> BomTHList52 { get => _BomTHList52; set { _BomTHList52 = value; OnPropertyChanged(); } }
-
+        private ObservableCollection<BOM_BomTHLK> _BomTHLkPhuList1;
+        public ObservableCollection<BOM_BomTHLK> BomTHLkPhuList1 { get => _BomTHLkPhuList1; set { _BomTHLkPhuList1 = value; OnPropertyChanged(); } }
 
 
         private ObservableCollection<BOM_BomTp> _ThanhPhamAddList;
@@ -85,35 +73,7 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BOM_BomBtp> _BTP1AddListFa;
         public ObservableCollection<BOM_BomBtp> BTP1AddListFa { get => _BTP1AddListFa; set { _BTP1AddListFa = value; OnPropertyChanged(); } }
 
-        private ObservableCollection<BOM_BomBtp> _BTP2AddList;
-        public ObservableCollection<BOM_BomBtp> BTP2AddList { get => _BTP2AddList; set { _BTP2AddList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP2AddListFa;
-        public ObservableCollection<BOM_BomBtp> BTP2AddListFa { get => _BTP2AddListFa; set { _BTP2AddListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP3AddList;
-        public ObservableCollection<BOM_BomBtp> BTP3AddList { get => _BTP3AddList; set { _BTP3AddList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP3AddListFa;
-        public ObservableCollection<BOM_BomBtp> BTP3AddListFa { get => _BTP3AddListFa; set { _BTP3AddListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP4AddList;
-        public ObservableCollection<BOM_BomBtp> BTP4AddList { get => _BTP4AddList; set { _BTP4AddList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP4AddListFa;
-        public ObservableCollection<BOM_BomBtp> BTP4AddListFa { get => _BTP4AddListFa; set { _BTP4AddListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP5AddList;
-        public ObservableCollection<BOM_BomBtp> BTP5AddList { get => _BTP5AddList; set { _BTP5AddList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP5AddListFa;
-        public ObservableCollection<BOM_BomBtp> BTP5AddListFa { get => _BTP5AddListFa; set { _BTP5AddListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP6AddList;
-        public ObservableCollection<BOM_BomBtp> BTP6AddList { get => _BTP6AddList; set { _BTP6AddList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP6AddListFa;
-        public ObservableCollection<BOM_BomBtp> BTP6AddListFa { get => _BTP6AddListFa; set { _BTP6AddListFa = value; OnPropertyChanged(); } }
+        
 
         private ObservableCollection<BOM_BomNl> _MaMuaHangAddList;
         public ObservableCollection<BOM_BomNl> MaMuaHangAddList { get => _MaMuaHangAddList; set { _MaMuaHangAddList = value; OnPropertyChanged(); } }
@@ -154,35 +114,7 @@ namespace BomRnD.ViewModel
         private ObservableCollection<BOM_BomBtp> _BTP1EditListFa;
         public ObservableCollection<BOM_BomBtp> BTP1EditListFa { get => _BTP1EditListFa; set { _BTP1EditListFa = value; OnPropertyChanged(); } }
 
-        private ObservableCollection<BOM_BomBtp> _BTP2EditList;
-        public ObservableCollection<BOM_BomBtp> BTP2EditList { get => _BTP2EditList; set { _BTP2EditList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP2EditListFa;
-        public ObservableCollection<BOM_BomBtp> BTP2EditListFa { get => _BTP2EditListFa; set { _BTP2EditListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP3EditList;
-        public ObservableCollection<BOM_BomBtp> BTP3EditList { get => _BTP3EditList; set { _BTP3EditList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP3EditListFa;
-        public ObservableCollection<BOM_BomBtp> BTP3EditListFa { get => _BTP3EditListFa; set { _BTP3EditListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP4EditList;
-        public ObservableCollection<BOM_BomBtp> BTP4EditList { get => _BTP4EditList; set { _BTP4EditList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP4EditListFa;
-        public ObservableCollection<BOM_BomBtp> BTP4EditListFa { get => _BTP4EditListFa; set { _BTP4EditListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP5EditList;
-        public ObservableCollection<BOM_BomBtp> BTP5EditList { get => _BTP5EditList; set { _BTP5EditList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP5EditListFa;
-        public ObservableCollection<BOM_BomBtp> BTP5EditListFa { get => _BTP5EditListFa; set { _BTP5EditListFa = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP6EditList;
-        public ObservableCollection<BOM_BomBtp> BTP6EditList { get => _BTP6EditList; set { _BTP6EditList = value; OnPropertyChanged(); } }
-
-        private ObservableCollection<BOM_BomBtp> _BTP6EditListFa;
-        public ObservableCollection<BOM_BomBtp> BTP6EditListFa { get => _BTP6EditListFa; set { _BTP6EditListFa = value; OnPropertyChanged(); } }
+       
 
         private ObservableCollection<BOM_BomNl> _MaMuaHangEditList;
         public ObservableCollection<BOM_BomNl> MaMuaHangEditList { get => _MaMuaHangEditList; set { _MaMuaHangEditList = value; OnPropertyChanged(); } }
@@ -218,21 +150,6 @@ namespace BomRnD.ViewModel
 
         private string _MaBtp21;
         public string MaBtp21 { get => _MaBtp21; set { _MaBtp21 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp22;
-        public string MaBtp22 { get => _MaBtp22; set { _MaBtp22 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp23;
-        public string MaBtp23 { get => _MaBtp23; set { _MaBtp23 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp24;
-        public string MaBtp24 { get => _MaBtp24; set { _MaBtp24 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp25;
-        public string MaBtp25 { get => _MaBtp25; set { _MaBtp25 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp26;
-        public string MaBtp26 { get => _MaBtp26; set { _MaBtp26 = value; OnPropertyChanged(); } }
 
         private string _MaMuaHang2;
         public string MaMuaHang2 { get => _MaMuaHang2; set { _MaMuaHang2 = value; OnPropertyChanged(); } }
@@ -282,35 +199,6 @@ namespace BomRnD.ViewModel
         private string _MaBTP1EditSeach;
         public string MaBTP1EditSeach { get => _MaBTP1EditSeach; set { _MaBTP1EditSeach = value; OnPropertyChanged(); } }
 
-        private string _MaBTP2Edit;
-        public string MaBTP2Edit { get => _MaBTP2Edit; set { _MaBTP2Edit = value; OnPropertyChanged(); } }
-
-        private string _MaBTP2EditSeach;
-        public string MaBTP2EditSeach { get => _MaBTP2EditSeach; set { _MaBTP2EditSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP3Edit;
-        public string MaBTP3Edit { get => _MaBTP3Edit; set { _MaBTP3Edit = value; OnPropertyChanged(); } }
-
-        private string _MaBTP3EditSeach;
-        public string MaBTP3EditSeach { get => _MaBTP3EditSeach; set { _MaBTP3EditSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP4Edit;
-        public string MaBTP4Edit { get => _MaBTP4Edit; set { _MaBTP4Edit = value; OnPropertyChanged(); } }
-
-        private string _MaBTP4EditSeach;
-        public string MaBTP4EditSeach { get => _MaBTP4EditSeach; set { _MaBTP4EditSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP5Edit;
-        public string MaBTP5Edit { get => _MaBTP5Edit; set { _MaBTP5Edit = value; OnPropertyChanged(); } }
-
-        private string _MaBTP5EditSeach;
-        public string MaBTP5EditSeach { get => _MaBTP5EditSeach; set { _MaBTP5EditSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP6Edit;
-        public string MaBTP6Edit { get => _MaBTP6Edit; set { _MaBTP6Edit = value; OnPropertyChanged(); } }
-
-        private string _MaBTP6EditSeach;
-        public string MaBTP6EditSeach { get => _MaBTP6EditSeach; set { _MaBTP6EditSeach = value; OnPropertyChanged(); } }
 
         private string _MaMuaHangEdit;
         public string MaMuaHangEdit { get => _MaMuaHangEdit; set { _MaMuaHangEdit = value; OnPropertyChanged(); } }
@@ -349,22 +237,7 @@ namespace BomRnD.ViewModel
 
         private string _MaBtp31;
         public string MaBtp31 { get => _MaBtp31; set { _MaBtp31 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp32;
-        public string MaBtp32 { get => _MaBtp32; set { _MaBtp32 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp33;
-        public string MaBtp33 { get => _MaBtp33; set { _MaBtp33 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp34;
-        public string MaBtp34 { get => _MaBtp34; set { _MaBtp34 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp35;
-        public string MaBtp35 { get => _MaBtp35; set { _MaBtp35 = value; OnPropertyChanged(); } }
-
-        private string _MaBtp36;
-        public string MaBtp36 { get => _MaBtp36; set { _MaBtp36 = value; OnPropertyChanged(); } }
-
+                
         private string _MaMuaHang3;
         public string MaMuaHang3 { get => _MaMuaHang3; set { _MaMuaHang3 = value; OnPropertyChanged(); } }
 
@@ -413,35 +286,6 @@ namespace BomRnD.ViewModel
         private string _MaBTP1AddSeach;
         public string MaBTP1AddSeach { get => _MaBTP1AddSeach; set { _MaBTP1AddSeach = value; OnPropertyChanged(); } }
 
-        private string _MaBTP2Add;
-        public string MaBTP2Add { get => _MaBTP2Add; set { _MaBTP2Add = value; OnPropertyChanged(); } }
-
-        private string _MaBTP2AddSeach;
-        public string MaBTP2AddSeach { get => _MaBTP2AddSeach; set { _MaBTP2AddSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP3Add;
-        public string MaBTP3Add { get => _MaBTP3Add; set { _MaBTP3Add = value; OnPropertyChanged(); } }
-
-        private string _MaBTP3AddSeach;
-        public string MaBTP3AddSeach { get => _MaBTP3AddSeach; set { _MaBTP3AddSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP4Add;
-        public string MaBTP4Add { get => _MaBTP4Add; set { _MaBTP4Add = value; OnPropertyChanged(); } }
-
-        private string _MaBTP4AddSeach;
-        public string MaBTP4AddSeach { get => _MaBTP4AddSeach; set { _MaBTP4AddSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP5Add;
-        public string MaBTP5Add { get => _MaBTP5Add; set { _MaBTP5Add = value; OnPropertyChanged(); } }
-
-        private string _MaBTP5AddSeach;
-        public string MaBTP5AddSeach { get => _MaBTP5AddSeach; set { _MaBTP5AddSeach = value; OnPropertyChanged(); } }
-
-        private string _MaBTP6Add;
-        public string MaBTP6Add { get => _MaBTP6Add; set { _MaBTP6Add = value; OnPropertyChanged(); } }
-
-        private string _MaBTP6AddSeach;
-        public string MaBTP6AddSeach { get => _MaBTP6AddSeach; set { _MaBTP6AddSeach = value; OnPropertyChanged(); } }
 
         private string _MaMuaHangAdd;
         public string MaMuaHangAdd { get => _MaMuaHangAdd; set { _MaMuaHangAdd = value; OnPropertyChanged(); } }
@@ -460,6 +304,12 @@ namespace BomRnD.ViewModel
 
         private string _MaMuaHang3AddSeach;
         public string MaMuaHang3AddSeach { get => _MaMuaHang3AddSeach; set { _MaMuaHang3AddSeach = value; OnPropertyChanged(); } }
+
+        private string _MaBTPPhuSeach1;
+        public string MaBTPPhuSeach1 { get => _MaBTPPhuSeach1; set { _MaBTPPhuSeach1 = value; OnPropertyChanged(); } }
+
+        private int _MaBTPPhuID1;
+        public int MaBTPPhuID1 { get => _MaBTPPhuID1; set { _MaBTPPhuID1 = value; OnPropertyChanged(); } }
 
 
 
@@ -535,11 +385,6 @@ namespace BomRnD.ViewModel
                     MaTpModul2 = bomth.MaTpModul;
                     STT2 = bomth.STT;
                     MaBtp21 = bomth.MaBtp1;
-                    MaBtp22 = bomth.MaBtp2;
-                    MaBtp23 = bomth.MaBtp3;
-                    MaBtp24 = bomth.MaBtp4;
-                    MaBtp25 = bomth.MaBtp5;
-                    MaBtp26 = bomth.MaBtp6;
                     ThiTruong2 = bomth.ThiTruong;
                     MaMuaHang2 = bomth.MaMuaHang;
                     MaMuaHang22 = bomth.MaMuaHang2;
@@ -567,11 +412,6 @@ namespace BomRnD.ViewModel
                     MaTpModul2 = bomth.MaTpModul;
                     STT2 = bomth.STT;
                     MaBtp21 = bomth.MaBtp1;
-                    MaBtp22 = bomth.MaBtp2;
-                    MaBtp23 = bomth.MaBtp3;
-                    MaBtp24 = bomth.MaBtp4;
-                    MaBtp25 = bomth.MaBtp5;
-                    MaBtp26 = bomth.MaBtp6;
                     ThiTruong2 = bomth.ThiTruong;
                     MaMuaHang2 = bomth.MaMuaHang;
                     MaMuaHang22 = bomth.MaMuaHang2;
@@ -599,11 +439,6 @@ namespace BomRnD.ViewModel
                     MaTpModul2 = bomth.MaTpModul;
                     STT2 = bomth.STT;
                     MaBtp21 = bomth.MaBtp1;
-                    MaBtp22 = bomth.MaBtp2;
-                    MaBtp23 = bomth.MaBtp3;
-                    MaBtp24 = bomth.MaBtp4;
-                    MaBtp25 = bomth.MaBtp5;
-                    MaBtp26 = bomth.MaBtp6;
                     ThiTruong2 = bomth.ThiTruong;
                     MaMuaHang2 = bomth.MaMuaHang;
                     MaMuaHang22 = bomth.MaMuaHang2;
@@ -631,11 +466,6 @@ namespace BomRnD.ViewModel
                     MaTpModul2 = bomth.MaTpModul;
                     STT2 = bomth.STT;
                     MaBtp21 = bomth.MaBtp1;
-                    MaBtp22 = bomth.MaBtp2;
-                    MaBtp23 = bomth.MaBtp3;
-                    MaBtp24 = bomth.MaBtp4;
-                    MaBtp25 = bomth.MaBtp5;
-                    MaBtp26 = bomth.MaBtp6;
                     ThiTruong2 = bomth.ThiTruong;
                     MaMuaHang2 = bomth.MaMuaHang;
                     MaMuaHang22 = bomth.MaMuaHang2;
@@ -663,11 +493,6 @@ namespace BomRnD.ViewModel
                     MaTpModul2 = bomth.MaTpModul;
                     STT2 = bomth.STT;
                     MaBtp21 = bomth.MaBtp1;
-                    MaBtp22 = bomth.MaBtp2;
-                    MaBtp23 = bomth.MaBtp3;
-                    MaBtp24 = bomth.MaBtp4;
-                    MaBtp25 = bomth.MaBtp5;
-                    MaBtp26 = bomth.MaBtp6;
                     ThiTruong2 = bomth.ThiTruong;
                     MaMuaHang2 = bomth.MaMuaHang;
                     MaMuaHang22 = bomth.MaMuaHang2;
@@ -718,65 +543,19 @@ namespace BomRnD.ViewModel
             }
         }
 
-        private BOM_BomBtp _SelectedBTP2AddItem;
-        public BOM_BomBtp SelectedBTP2AddItem
+       
+        private BomTHLkPhuModel _SelectedBTPPhuItem1;
+        public BomTHLkPhuModel SelectedBTPPhuItem1
         {
-            get => _SelectedBTP2AddItem; set
+            get => _SelectedBTPPhuItem1; set
             {
-                _SelectedBTP2AddItem = value; OnPropertyChanged(); if (SelectedBTP2AddItem != null)
+                _SelectedBTPPhuItem1 = value; OnPropertyChanged(); if (SelectedBTPPhuItem1 != null)
                 {
-                    MaBTP2Add = SelectedBTP2AddItem.MaHang;
+                    MaBTPPhuID1 = SelectedBTPPhuItem1.Id;
                 }
             }
         }
 
-        private BOM_BomBtp _SelectedBTP3AddItem;
-        public BOM_BomBtp SelectedBTP3AddItem
-        {
-            get => _SelectedBTP3AddItem; set
-            {
-                _SelectedBTP3AddItem = value; OnPropertyChanged(); if (SelectedBTP3AddItem != null)
-                {
-                    MaBTP3Add = SelectedBTP3AddItem.MaHang;
-                }
-            }
-        }
-
-        private BOM_BomBtp _SelectedBTP4AddItem;
-        public BOM_BomBtp SelectedBTP4AddItem
-        {
-            get => _SelectedBTP4AddItem; set
-            {
-                _SelectedBTP4AddItem = value; OnPropertyChanged(); if (SelectedBTP4AddItem != null)
-                {
-                    MaBTP4Add = SelectedBTP4AddItem.MaHang;
-                }
-            }
-        }
-
-        private BOM_BomBtp _SelectedBTP5AddItem;
-        public BOM_BomBtp SelectedBTP5AddItem
-        {
-            get => _SelectedBTP5AddItem; set
-            {
-                _SelectedBTP5AddItem = value; OnPropertyChanged(); if (SelectedBTP5AddItem != null)
-                {
-                    MaBTP5Add = SelectedBTP5AddItem.MaHang;
-                }
-            }
-        }
-
-        private BOM_BomBtp _SelectedBTP6AddItem;
-        public BOM_BomBtp SelectedBTP6AddItem
-        {
-            get => _SelectedBTP6AddItem; set
-            {
-                _SelectedBTP6AddItem = value; OnPropertyChanged(); if (SelectedBTP6AddItem != null)
-                {
-                    MaBTP6Add = SelectedBTP6AddItem.MaHang;
-                }
-            }
-        }
 
         private BOM_BomNl _SelectedMuaHangAddItem;
         public BOM_BomNl SelectedMuaHangAddItem
@@ -851,66 +630,7 @@ namespace BomRnD.ViewModel
             }
         }
 
-        private BOM_BomBtp _SelectedBTP2EditItem;
-        public BOM_BomBtp SelectedBTP2EditItem
-        {
-            get => _SelectedBTP2EditItem; set
-            {
-                _SelectedBTP2EditItem = value; OnPropertyChanged(); if (SelectedBTP2EditItem != null)
-                {
-                    MaBTP2Edit = SelectedBTP2EditItem.MaHang;
-                }
-            }
-        }
-
-        private BOM_BomBtp _SelectedBTP3EditItem;
-        public BOM_BomBtp SelectedBTP3EditItem
-        {
-            get => _SelectedBTP3EditItem; set
-            {
-                _SelectedBTP3EditItem = value; OnPropertyChanged(); if (SelectedBTP3EditItem != null)
-                {
-                    MaBTP3Edit = SelectedBTP3EditItem.MaHang;
-                }
-            }
-        }
-
-        private BOM_BomBtp _SelectedBTP4EditItem;
-        public BOM_BomBtp SelectedBTP4EditItem
-        {
-            get => _SelectedBTP4EditItem; set
-            {
-                _SelectedBTP4EditItem = value; OnPropertyChanged(); if (SelectedBTP4EditItem != null)
-                {
-                    MaBTP4Edit = SelectedBTP4EditItem.MaHang;
-                }
-            }
-        }
-
-        private BOM_BomBtp _SelectedBTP5EditItem;
-        public BOM_BomBtp SelectedBTP5EditItem
-        {
-            get => _SelectedBTP5EditItem; set
-            {
-                _SelectedBTP5EditItem = value; OnPropertyChanged(); if (SelectedBTP5EditItem != null)
-                {
-                    MaBTP5Edit = SelectedBTP5EditItem.MaHang;
-                }
-            }
-        }
-
-        private BOM_BomBtp _SelectedBTP6EditItem;
-        public BOM_BomBtp SelectedBTP6EditItem
-        {
-            get => _SelectedBTP6EditItem; set
-            {
-                _SelectedBTP6EditItem = value; OnPropertyChanged(); if (SelectedBTP6EditItem != null)
-                {
-                    MaBTP6Edit = SelectedBTP6EditItem.MaHang;
-                }
-            }
-        }
-
+        
         private BOM_BomNl _SelectedMuaHangEditItem;
         public BOM_BomNl SelectedMuaHangEditItem
         {
@@ -953,6 +673,7 @@ namespace BomRnD.ViewModel
         public ICommand UpdateTHCommand { get; set; }
         public ICommand LoadedaddCommand { get; set; }
         public ICommand LoadededitCommand { get; set; }
+        public ICommand LkPhuCommand { get; set; }
         public ICommand ExportExcelCommand { get; set; }
 
 
@@ -971,21 +692,7 @@ namespace BomRnD.ViewModel
         public ICommand LoadAddMaBTP1Command { get; set; }
         public ICommand AddMaBTP1ChangeCommand { get; set; }
         public ICommand AddMaBTP1ApplyCommand { get; set; }
-        public ICommand LoadAddMaBTP2Command { get; set; }
-        public ICommand AddMaBTP2ChangeCommand { get; set; }
-        public ICommand AddMaBTP2ApplyCommand { get; set; }
-        public ICommand LoadAddMaBTP3Command { get; set; }
-        public ICommand AddMaBTP3ChangeCommand { get; set; }
-        public ICommand AddMaBTP3ApplyCommand { get; set; }
-        public ICommand LoadAddMaBTP4Command { get; set; }
-        public ICommand AddMaBTP4ChangeCommand { get; set; }
-        public ICommand AddMaBTP4ApplyCommand { get; set; }
-        public ICommand LoadAddMaBTP5Command { get; set; }
-        public ICommand AddMaBTP5ChangeCommand { get; set; }
-        public ICommand AddMaBTP5ApplyCommand { get; set; }
-        public ICommand LoadAddMaBTP6Command { get; set; }
-        public ICommand AddMaBTP6ChangeCommand { get; set; }
-        public ICommand AddMaBTP6ApplyCommand { get; set; }
+        
         public ICommand LoadAddMaMuaHangCommand { get; set; }
         public ICommand AddMaMuaHangChangeCommand { get; set; }
         public ICommand AddMaMuaHangApplyCommand { get; set; }
@@ -995,6 +702,8 @@ namespace BomRnD.ViewModel
         public ICommand LoadAddMaMuaHang3Command { get; set; }
         public ICommand AddMaMuaHang3ChangeCommand { get; set; }
         public ICommand AddMaMuaHang3ApplyCommand { get; set; }
+        public ICommand MaBTPPhuChangeCommand { get; set; }
+
 
         public ICommand LoadEditMaTpCommand { get; set; }
         public ICommand EditMaTpChangeCommand { get; set; }
@@ -1005,21 +714,7 @@ namespace BomRnD.ViewModel
         public ICommand LoadEditMaBTP1Command { get; set; }
         public ICommand EditMaBTP1ChangeCommand { get; set; }
         public ICommand EditMaBTP1ApplyCommand { get; set; }
-        public ICommand LoadEditMaBTP2Command { get; set; }
-        public ICommand EditMaBTP2ChangeCommand { get; set; }
-        public ICommand EditMaBTP2ApplyCommand { get; set; }
-        public ICommand LoadEditMaBTP3Command { get; set; }
-        public ICommand EditMaBTP3ChangeCommand { get; set; }
-        public ICommand EditMaBTP3ApplyCommand { get; set; }
-        public ICommand LoadEditMaBTP4Command { get; set; }
-        public ICommand EditMaBTP4ChangeCommand { get; set; }
-        public ICommand EditMaBTP4ApplyCommand { get; set; }
-        public ICommand LoadEditMaBTP5Command { get; set; }
-        public ICommand EditMaBTP5ChangeCommand { get; set; }
-        public ICommand EditMaBTP5ApplyCommand { get; set; }
-        public ICommand LoadEditMaBTP6Command { get; set; }
-        public ICommand EditMaBTP6ChangeCommand { get; set; }
-        public ICommand EditMaBTP6ApplyCommand { get; set; }
+        
         public ICommand LoadEditMaMuaHangCommand { get; set; }
         public ICommand EditMaMuaHangChangeCommand { get; set; }
         public ICommand EditMaMuaHangApplyCommand { get; set; }
@@ -1035,11 +730,6 @@ namespace BomRnD.ViewModel
         public BomTHAddMaTpWindows bomTHAddMaTpWindows;
         public BomTHAddMaTpModulWindows bomTHAddMaTpModulWindows;
         public BomTHAddMaBTP1Windows bomTHAddMaBTP1Windows;
-        public BomTHAddMaBTP2Windows bomTHAddMaBTP2Windows;
-        public BomTHAddMaBTP3Windows bomTHAddMaBTP3Windows;
-        public BomTHAddMaBTP4Windows bomTHAddMaBTP4Windows;
-        public BomTHAddMaBTP5Windows bomTHAddMaBTP5Windows;
-        public BomTHAddMaBTP6Windows bomTHAddMaBTP6Windows;
         public BomTHAddMaMuaHangWindows bomTHAddMaMuaHangWindows;
         public BomTHAddMaMuaHang2Windows bomTHAddMaMuaHang2Windows;
         public BomTHAddMaMuaHang3Windows bomTHAddMaMuaHang3Windows;
@@ -1048,11 +738,6 @@ namespace BomRnD.ViewModel
         public BomTHEditMaTpWindows bomTHEditMaTpWindows;
         public BomTHEditMaTpModulWindows bomTHEditMaTpModulWindows;
         public BomTHEditMaBTP1Windows bomTHEditMaBTP1Windows;
-        public BomTHEditMaBTP2Windows bomTHEditMaBTP2Windows;
-        public BomTHEditMaBTP3Windows bomTHEditMaBTP3Windows;
-        public BomTHEditMaBTP4Windows bomTHEditMaBTP4Windows;
-        public BomTHEditMaBTP5Windows bomTHEditMaBTP5Windows;
-        public BomTHEditMaBTP6Windows bomTHEditMaBTP6Windows;
         public BomTHEditMaMuaHangWindows bomTHEditMaMuaHangWindows;
         public BomTHEditMaMuaHang2Windows bomTHEditMaMuaHang2Windows;
         public BomTHEditMaMuaHang3Windows bomTHEditMaMuaHang3Windows;
@@ -1067,8 +752,6 @@ namespace BomRnD.ViewModel
             ThanhPhamEditListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
             ThanhPhamModulEditListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
             BTP1EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-            BTP2EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-            BTP3EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
             MaMuaHangEditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
             MaMuaHang2EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
             MaMuaHang3EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
@@ -1145,11 +828,6 @@ namespace BomRnD.ViewModel
                 ThanhPhamAddListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
                 ThanhPhamModulAddListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
                 BTP1AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP2AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP3AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP4AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP5AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP6AddListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
                 MaMuaHangAddListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
                 MaMuaHang2AddListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
                 MaMuaHang3AddListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
@@ -1159,11 +837,6 @@ namespace BomRnD.ViewModel
                 ThanhPhamEditListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
                 ThanhPhamModulEditListFa = new ObservableCollection<BOM_BomTp>(DataProvider.Ins.DB.BOM_BomTp);
                 BTP1EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP2EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP3EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP4EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP5EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                BTP6EditListFa = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
                 MaMuaHangEditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
                 MaMuaHang2EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
                 MaMuaHang3EditListFa = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
@@ -1182,11 +855,6 @@ namespace BomRnD.ViewModel
                 bOM_BomTH.MaTpModul = MaTpModul3;
                 bOM_BomTH.ThiTruong = ThiTruong3;
                 bOM_BomTH.MaBtp1 = MaBtp31;
-                bOM_BomTH.MaBtp2 = MaBtp32;
-                bOM_BomTH.MaBtp3 = MaBtp33;
-                bOM_BomTH.MaBtp4 = MaBtp34;
-                bOM_BomTH.MaBtp5 = MaBtp35;
-                bOM_BomTH.MaBtp6 = MaBtp36;
                 bOM_BomTH.MaMuaHang = MaMuaHang3;
                 bOM_BomTH.MaMuaHang2 = MaMuaHang32;
                 bOM_BomTH.MaMuaHang3 = MaMuaHang33;
@@ -1208,8 +876,6 @@ namespace BomRnD.ViewModel
                 MaTp3 = null;
                 MaTpModul3 = null;
                 MaBtp31 = null;
-                MaBtp32 = null;
-                MaBtp33 = null;
                 MaMuaHang3 = null;
                 MaMuaHang32 = null;
                 MaMuaHang33 = null;
@@ -1240,11 +906,6 @@ namespace BomRnD.ViewModel
                 bOM_BomTH.MaTpModul = MaTpModul2;
                 bOM_BomTH.ThiTruong = ThiTruong2;
                 bOM_BomTH.MaBtp1 = MaBtp21;
-                bOM_BomTH.MaBtp2 = MaBtp22;
-                bOM_BomTH.MaBtp3 = MaBtp23;
-                bOM_BomTH.MaBtp4 = MaBtp24;
-                bOM_BomTH.MaBtp5 = MaBtp25;
-                bOM_BomTH.MaBtp6 = MaBtp26;
                 bOM_BomTH.MaMuaHang = MaMuaHang2;
                 bOM_BomTH.MaMuaHang2 = MaMuaHang22;
                 bOM_BomTH.MaMuaHang3 = MaMuaHang23;
@@ -1310,87 +971,7 @@ namespace BomRnD.ViewModel
                 MaBtp31 = MaBTP1Add;
                 bomTHAddMaBTP1Windows.Close();
             });
-
-            LoadAddMaBTP2Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP2AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHAddMaBTP2Windows = new BomTHAddMaBTP2Windows();
-                bomTHAddMaBTP2Windows.Show();
-            });
-            AddMaBTP2ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP2AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP2AddSeach)));
-            });
-            AddMaBTP2ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp32 = MaBTP2Add;
-                bomTHAddMaBTP2Windows.Close();
-            });
-
-            LoadAddMaBTP3Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP3AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHAddMaBTP3Windows = new BomTHAddMaBTP3Windows();
-                bomTHAddMaBTP3Windows.Show();
-            });
-            AddMaBTP3ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP3AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP3AddSeach)));
-            });
-            AddMaBTP3ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp33 = MaBTP3Add;
-                bomTHAddMaBTP3Windows.Close();
-            });
-
-            LoadAddMaBTP4Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP4AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHAddMaBTP4Windows = new BomTHAddMaBTP4Windows();
-                bomTHAddMaBTP4Windows.Show();
-            });
-            AddMaBTP4ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP4AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP4AddSeach)));
-            });
-            AddMaBTP4ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp34 = MaBTP4Add;
-                bomTHAddMaBTP4Windows.Close();
-            });
-
-            LoadAddMaBTP5Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP5AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHAddMaBTP5Windows = new BomTHAddMaBTP5Windows();
-                bomTHAddMaBTP5Windows.Show();
-            });
-            AddMaBTP5ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP5AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP5AddSeach)));
-            });
-            AddMaBTP5ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp35 = MaBTP5Add;
-                bomTHAddMaBTP5Windows.Close();
-            });
-
-            LoadAddMaBTP6Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP6AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHAddMaBTP6Windows = new BomTHAddMaBTP6Windows();
-                bomTHAddMaBTP6Windows.Show();
-            });
-            AddMaBTP6ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP6AddList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP6AddSeach)));
-            });
-            AddMaBTP6ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp36 = MaBTP6Add;
-                bomTHAddMaBTP6Windows.Close();
-            });
-
+                        
             LoadAddMaMuaHangCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 MaMuaHangAddList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
@@ -1488,86 +1069,6 @@ namespace BomRnD.ViewModel
                 bomTHEditMaBTP1Windows.Close();
             });
 
-            LoadEditMaBTP2Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP2EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHEditMaBTP2Windows = new BomTHEditMaBTP2Windows();
-                bomTHEditMaBTP2Windows.Show();
-            });
-            EditMaBTP2ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP2EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP2EditSeach)));
-            });
-            EditMaBTP2ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp22 = MaBTP2Edit;
-                bomTHEditMaBTP2Windows.Close();
-            });
-
-            LoadEditMaBTP3Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP3EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHEditMaBTP3Windows = new BomTHEditMaBTP3Windows();
-                bomTHEditMaBTP3Windows.Show();
-            });
-            EditMaBTP3ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP3EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP3EditSeach)));
-            });
-            EditMaBTP3ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp23 = MaBTP3Edit;
-                bomTHEditMaBTP3Windows.Close();
-            });
-
-            LoadEditMaBTP4Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP4EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHEditMaBTP4Windows = new BomTHEditMaBTP4Windows();
-                bomTHEditMaBTP4Windows.Show();
-            });
-            EditMaBTP4ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP4EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP4EditSeach)));
-            });
-            EditMaBTP4ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp24 = MaBTP4Edit;
-                bomTHEditMaBTP4Windows.Close();
-            });
-
-            LoadEditMaBTP5Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP5EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHEditMaBTP5Windows = new BomTHEditMaBTP5Windows();
-                bomTHEditMaBTP5Windows.Show();
-            });
-            EditMaBTP5ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP5EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP5EditSeach)));
-            });
-            EditMaBTP5ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp25 = MaBTP5Edit;
-                bomTHEditMaBTP5Windows.Close();
-            });
-
-            LoadEditMaBTP6Command = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP6EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp);
-                bomTHEditMaBTP6Windows = new BomTHEditMaBTP6Windows();
-                bomTHEditMaBTP6Windows.Show();
-            });
-            EditMaBTP6ChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                BTP6EditList = new ObservableCollection<BOM_BomBtp>(DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang.Contains(MaBTP6EditSeach)));
-            });
-            EditMaBTP6ApplyCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
-            {
-                MaBtp26 = MaBTP6Edit;
-                bomTHEditMaBTP6Windows.Close();
-            });
-
             LoadEditMaMuaHangCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 MaMuaHangEditList = new ObservableCollection<BOM_BomNl>(DataProvider.Ins.DB.BOM_BomNl);
@@ -1614,6 +1115,20 @@ namespace BomRnD.ViewModel
             {
                 MaMuaHang23 = MaMuaHang3Edit;
                 bomTHEditMaMuaHang3Windows.Close();
+            });
+
+            LkPhuCommand = new RelayCommand<object>((p) => {return true; }, (p) =>
+            {
+                BomTHLkPhuMainWindows bomTHLkPhuMainWindows = new BomTHLkPhuMainWindows();
+                bomTHLkPhuMainWindows.Show();
+                BomTHLkPhuList1 = new ObservableCollection<BOM_BomTHLK>(DataProvider.Ins.DB.BOM_BomTHLK);
+
+
+            });
+
+            MaBTPPhuChangeCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                BomTHLkPhuList1 = new ObservableCollection<BOM_BomTHLK>(DataProvider.Ins.DB.BOM_BomTHLK.Where(x => x.MaBtp.Contains(MaBTPPhuSeach1)));
             });
 
             ExportExcelCommand = new RelayCommand<object>((p) => { if (BomTHList == null) return false; return true; }, (p) =>
@@ -1737,10 +1252,16 @@ namespace BomRnD.ViewModel
                             ws.Cells[2, 2].Value = "(BOM)";
                             ws.Cells[2, 2].Style.Font.Size = 18;
 
+                            ws.Cells[3, 2, 3, 3].Merge = true;
+                            ws.Cells[3, 2, 3, 3].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
                             ws.Cells[3, 2].Value = "Mã thành phẩm：" + itemx.MaTp;
                             ws.Cells[3, 2].Style.Font.Size = 11;
 
-                            ws.Cells[3, 7].Value = "Khách hàng：" + ThiTruongth;
+
+                            ws.Cells[3, 7].Value = "Khách hàng:";
+                            ws.Cells[3, 7].Style.Font.Size = 11;
+
+                            ws.Cells[3, 8].Value = ThiTruongth;
                             ws.Cells[3, 7].Style.Font.Size = 11;
 
 
@@ -1750,8 +1271,11 @@ namespace BomRnD.ViewModel
                             ws.Cells[4, 2].Value = "Kích cỡ thùng：";
                             ws.Cells[4, 2].Style.Font.Size = 11;
 
-                            ws.Cells[4, 5].Value = "Màu " + tp.MauSon;
-                            ws.Cells[4, 5].Style.Font.Size = 11;
+                            ws.Cells[4, 3].Value = "Màu sơn:";
+                            ws.Cells[4, 3].Style.Font.Size = 11;
+
+                            ws.Cells[4, 4].Value = tp.MauSon;
+                            ws.Cells[4, 4].Style.Font.Size = 11;
 
                             ws.Cells[4, 7].Value = "Số lượng tủ：";
                             ws.Cells[4, 7].Style.Font.Size = 11;
@@ -1908,13 +1432,11 @@ namespace BomRnD.ViewModel
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
 
-                            ws.Cells[3, l].Value = "Ngày Cập Nhật：";
-                            ws.Cells[3, l].Style.Font.Size = 11;
-                            ws.Cells[3, l].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                            
 
-                            ws.Cells[4, l].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
-                            ws.Cells[4, l].Value = "Vận chuyển từ VN";
-                            ws.Cells[4, l].Style.Font.Size = 11;
+                            //ws.Cells[4, l].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                            //ws.Cells[4, l].Value = "Vận chuyển từ VN";
+                            //ws.Cells[4, l].Style.Font.Size = 11;
 
                             ws.Cells[5, l].Value = "mm";
                             ws.Cells[5, l].Style.Font.Size = 11;
@@ -1923,14 +1445,19 @@ namespace BomRnD.ViewModel
                             ws.Cells[6, l].Value = "T";
                             ws.Cells[6, l].Style.Font.Size = 11;
                             l++;
-
-                            ws.Cells[3, l].Value = th.Max(x => x.DateEdit);
-                            ws.Cells[3, l].Style.Font.Size = 11;
-
+                             
                             ws.Cells[6, l].Value = "W";
                             ws.Cells[6, l].Style.Font.Size = 11;
                             l++;
 
+                            ws.Cells[3, l, 3, l + 1].Merge = true;
+                            ws.Cells[3, l, 3, l + 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                            ws.Cells[3, l].Value = "Ngày:";
+                            ws.Cells[3, l].Style.Font.Size = 11;
+                            ws.Cells[3, l].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+
+                            ws.Cells[4, l, 4, l + 1].Merge = true;
+                            ws.Cells[4, l, 4, l + 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
                             ws.Cells[4, l].Value = "Trọng lượng thô:";
                             ws.Cells[4, l].Style.Font.Size = 11;
 
@@ -1941,6 +1468,9 @@ namespace BomRnD.ViewModel
                             ws.Cells[5, l].Value = "Hệ số";
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
+
+                            ws.Cells[3, l].Value = th.Max(x => x.DateEdit);
+                            ws.Cells[3, l].Style.Font.Size = 11;
 
                             ws.Cells[5, l].Value = "KG";
                             ws.Cells[5, l].Style.Font.Size = 11;
@@ -1976,11 +1506,7 @@ namespace BomRnD.ViewModel
                                 var INl2 = DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang == item.MaMuaHang2).FirstOrDefault();
                                 var INl3 = DataProvider.Ins.DB.BOM_BomNl.Where(x => x.MaHang == item.MaMuaHang3).FirstOrDefault();
                                 var IBtp = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp1).FirstOrDefault();
-                                var IBtp2 = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp2).FirstOrDefault();
-                                var IBtp3 = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp3).FirstOrDefault();
-                                var IBtp4 = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp4).FirstOrDefault();
-                                var IBtp5 = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp5).FirstOrDefault();
-                                var IBtp6 = DataProvider.Ins.DB.BOM_BomBtp.Where(x => x.MaHang == item.MaBtp6).FirstOrDefault();
+                                
 
                                 int k = 1;
 
@@ -2016,44 +1542,34 @@ namespace BomRnD.ViewModel
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
 
-                                ws.Cells[i, k].Value = item.MaBtp2;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                               
                                 k++;
 
-                                if (IBtp2 != null) ws.Cells[i, k].Value = IBtp2.QuyCach;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
-                                ws.Cells[i, k].Value = item.MaBtp3;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
-                                if (IBtp3 != null) ws.Cells[i, k].Value = IBtp3.QuyCach;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                               
                                 k++;
 
-                                ws.Cells[i, k].Value = item.MaBtp4;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
-                                if (IBtp4 != null) ws.Cells[i, k].Value = IBtp4.QuyCach;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
-                                ws.Cells[i, k].Value = item.MaBtp5;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
-                                if (IBtp5 != null) ws.Cells[i, k].Value = IBtp5.QuyCach;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
-                                ws.Cells[i, k].Value = item.MaBtp6;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
-                                if (IBtp6 != null) ws.Cells[i, k].Value = IBtp6.QuyCach;
-                                ws.Cells[i, k].Style.Font.Size = 11;
+                                
                                 k++;
 
                                 if (IBtp != null) ws.Cells[i, k].Value = IBtp.MaBTPVN;
@@ -2140,7 +1656,7 @@ namespace BomRnD.ViewModel
                                 ws.Cells[i, k].Style.Font.Size = 11;
 
 
-                                sum += (IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo);
+                                if ((IBtp != null) && (IBtp.T != null) && (IBtp.W != null) && (IBtp.L != null)) sum = sum + (IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo);
 
                                 var border = ws.Cells[i, 2, i, k].Style.Border;
                                 border.Bottom.Style =
@@ -2154,21 +1670,7 @@ namespace BomRnD.ViewModel
                             
                             ws.Cells[4, 36].Value = sum;
                             ws.Cells[4, 36].Style.Font.Size = 11;
-
-                            var border3 = ws.Cells[i + 2, 3, i + 5, 6].Style.Border;
-                            border3.Bottom.Style =
-                                    border3.Top.Style =
-                                    border3.Left.Style =
-                                    border3.Right.Style = ExcelBorderStyle.Thin;
-
-                            var border4 = ws.Cells[i + 7, 3, i + 10, 4].Style.Border;
-                            border4.Bottom.Style =
-                                    border4.Top.Style =
-                                    border4.Left.Style =
-                                    border4.Right.Style = ExcelBorderStyle.Thin;
-
-                            ws.Cells[i + 2, 3, i + 5, 6].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
-                            ws.Cells[i + 7, 3, i + 10, 5].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
+                            
 
                             ws.Cells[i + 2, 3].Value = "Kích thước tủ (mm)";
                             ws.Cells[i + 2, 3].Style.Font.Size = 13;
@@ -2179,6 +1681,8 @@ namespace BomRnD.ViewModel
                             ws.Cells[i + 2, 5].Value = tp.DNet;
                             ws.Cells[i + 2, 5].Style.Font.Size = 13;
 
+                            ws.Cells[i + 2, 6, i + 2, 7].Merge = true;
+                            ws.Cells[i + 2, 6, i + 2, 7].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
                             ws.Cells[i + 2, 6].Value = tp.HNet;
                             ws.Cells[i + 2, 6].Style.Font.Size = 13;
 
@@ -2192,6 +1696,8 @@ namespace BomRnD.ViewModel
                             ws.Cells[i + 3, 5].Value = tp.DNet / 25.4;
                             ws.Cells[i + 3, 5].Style.Font.Size = 13;
 
+                            ws.Cells[i + 3, 6, i + 3, 7].Merge = true;
+                            ws.Cells[i + 3, 6, i + 3, 7].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right; 
                             ws.Cells[i + 3, 6].Value = tp.HNet / 25.4;
                             ws.Cells[i + 3, 6].Style.Font.Size = 13;
 
@@ -2205,9 +1711,10 @@ namespace BomRnD.ViewModel
                             ws.Cells[i + 4, 5].Value = tp.DGross;
                             ws.Cells[i + 4, 5].Style.Font.Size = 13;
 
+                            ws.Cells[i + 4, 6, i + 4, 7].Merge = true;
+                            ws.Cells[i + 4, 6, i + 4, 7].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right; 
                             ws.Cells[i + 4, 6].Value = tp.HGross;
                             ws.Cells[i + 4, 6].Style.Font.Size = 13;
-
 
                             ws.Cells[i + 5, 3].Value = "Kích thước đóng gói (inch)";
                             ws.Cells[i + 5, 3].Style.Font.Size = 13;
@@ -2218,9 +1725,10 @@ namespace BomRnD.ViewModel
                             ws.Cells[i + 5, 5].Value = tp.DGross / 25.4;
                             ws.Cells[i + 5, 5].Style.Font.Size = 13;
 
+                            ws.Cells[i + 5, 6, i + 5, 7].Merge = true;
+                            ws.Cells[i + 5, 6, i + 5, 7].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right; 
                             ws.Cells[i + 5, 6].Value = tp.HGross / 25.4;
                             ws.Cells[i + 5, 6].Style.Font.Size = 13;
-
 
                             ws.Cells[i + 7, 3].Value = "Trọng lượng tủ (KG)";
                             ws.Cells[i + 7, 3].Style.Font.Size = 13;
@@ -2236,23 +1744,54 @@ namespace BomRnD.ViewModel
                             ws.Cells[i + 8, 4].Style.Font.Size = 13;
 
 
-                            ws.Cells[i + 9, 3].Value = "Trọng lượng tủ (KG)";
+                            ws.Cells[i + 9, 3].Value = "Trọng lượng đóng gói (KG)";
                             ws.Cells[i + 9, 3].Style.Font.Size = 13;
 
-                            ws.Cells[i + 9, 4].Value = tp.NetWeight;
+                            ws.Cells[i + 9, 4].Value = tp.GrossWeight;
                             ws.Cells[i + 9, 4].Style.Font.Size = 13;
 
 
-                            ws.Cells[i + 10, 3].Value = "Trọng lượng tủ (LBS)";
+                            ws.Cells[i + 10, 3].Value = "Trọng lượng đóng gói (LBS)";
                             ws.Cells[i + 10, 3].Style.Font.Size = 13;
 
-                            ws.Cells[i + 10, 4].Value = tp.NetWeight * 2.205;
+                            ws.Cells[i + 10, 4].Value = tp.GrossWeight * 2.205;
                             ws.Cells[i + 10, 4].Style.Font.Size = 13;
+                            
+                            ws.Cells[i + 2, 3, i + 5, 7].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
+                            ws.Cells[i + 7, 3, i + 10, 5].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
+
+                            ws.Cells[3, 36].Style.Numberformat.Format = "dd/mm/yyyy";
 
 
+
+                            var border3 = ws.Cells[i + 2, 3, i + 5, 7].Style.Border;
+                            border3.Bottom.Style =
+                                    border3.Top.Style =
+                                    border3.Left.Style =
+                                    border3.Right.Style = ExcelBorderStyle.Thin;
+
+                            var border4 = ws.Cells[i + 7, 3, i + 10, 4].Style.Border;
+                            border4.Bottom.Style =
+                                    border4.Top.Style =
+                                    border4.Left.Style =
+                                    border4.Right.Style = ExcelBorderStyle.Thin;
+
+                            ws.Cells.AutoFitColumns();
+                            ws.Column(6).Hidden = true;
+                            for (int c  = 9; c <= 18; c++)
+                            {
+                                ws.Column(c).Hidden = true;
+
+                            }
+                            for (int c = 24; c <= 31; c++)
+                            {
+                                ws.Column(c).Hidden = true;
+
+                            }
 
 
                         }
+
 
 
 
@@ -2292,7 +1831,7 @@ namespace BomRnD.ViewModel
 
         void hienthi()
         {
-            var lktp2 = DataProvider.Ins.DB.BOM_BomTH.Where(x => x.MaTpModul == MaTpth && x.ThiTruong == ThiTruongth).OrderBy(x => x.STT);
+            var lktp2 = DataProvider.Ins.DB.BOM_BomTH.Where(x => x.MaTpModul == MaTpth && x.ThiTruong == ThiTruongth);
 
             var th2 = DataProvider.Ins.DB.BOM_BomTH.Where(x => x.MaTpModul == MaTpth && x.ThiTruong == ThiTruongth).GroupBy(x => x.MaTp).Select(x => x.FirstOrDefault());
 
@@ -2321,60 +1860,62 @@ namespace BomRnD.ViewModel
                         break;
                 }
                 var lktp = lktp2.Where(x => x.MaTp == itemtp.MaTp).OrderBy(x => x.STT);
+                
                 foreach (var item in lktp)
                 {
                     BomTHModel model = new BomTHModel();
 
                     var bomlk1 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp1).FirstOrDefault();
-                    var bomlk2 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp2).FirstOrDefault();
-                    var bomlk3 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp3).FirstOrDefault();
-                    var bomlk4 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp4).FirstOrDefault();
-                    var bomlk5 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp5).FirstOrDefault();
-                    var bomlk6 = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == item.MaBtp6).FirstOrDefault();
                     var bomnl = DataProvider.Ins.DB.BOM_BomNl.Where(p => p.MaHang == item.MaMuaHang).FirstOrDefault();
                     var bomnl2 = DataProvider.Ins.DB.BOM_BomNl.Where(p => p.MaHang == item.MaMuaHang2).FirstOrDefault();
                     var bomnl3 = DataProvider.Ins.DB.BOM_BomNl.Where(p => p.MaHang == item.MaMuaHang3).FirstOrDefault();
 
+                    
+                    
                     model.STT = item.STT;
+                    
 
-                    if (bomlk1 != null) model.NGC = bomlk1.NGC;
-                    if (bomlk1 != null) model.TenTiengTrung = bomlk1.TenTiengTrung;
-                    if (bomlk1 != null) model.DisplayName = bomlk1.DisplayName;
-                    if (bomlk1 != null) model.MaBanVe1 = bomlk1.MaBanVe;
-                    if (bomlk1 != null) model.MaBanVe2 = bomlk1.MaBanVe2;
+
+                    if (bomlk1 != null) 
+                    {
+                        model.NGC = bomlk1.NGC;
+                        model.TenTiengTrung = bomlk1.TenTiengTrung;
+                        model.DisplayName = bomlk1.DisplayName;
+                        model.MaBanVe1 = bomlk1.MaBanVe;
+                        model.MaBanVe2 = bomlk1.MaBanVe2;
+                        model.QuyCachBtpTW1 = bomlk1.QuyCach;
+                        model.MaBtpVN = bomlk1.MaBTPVN;
+                        model.T = bomlk1.T;
+                        model.W = bomlk1.W;
+                        model.L = bomlk1.L;
+                        model.KgBtp = bomlk1.Kg;
+                    }
+                    if (bomnl != null)
+                    {
+                        model.QuyCach = bomnl.QuyCach;
+                        model.ChatLieu = bomnl.ChatLieu;
+                    }
+                    if (bomnl2 != null)
+                    {
+                        model.QuyCach2 = bomnl.QuyCach;
+                        model.ChatLieu2 = bomnl.ChatLieu;
+                    }
+                    if (bomnl3 != null)
+                    {
+                        model.QuyCach3 = bomnl.QuyCach;
+                        model.ChatLieu3 = bomnl.ChatLieu;
+                    }
                     model.MaBtpTW1 = item.MaBtp1;
-                    model.MaBtpTW2 = item.MaBtp2;
-                    model.MaBtpTW3 = item.MaBtp3;
-                    model.MaBtpTW4 = item.MaBtp4;
-                    model.MaBtpTW5 = item.MaBtp5;
-                    model.MaBtpTW6 = item.MaBtp6;
-                    if (bomlk1 != null) model.QuyCachBtpTW1 = bomlk1.QuyCach;
-                    if (bomlk2 != null) model.QuyCachBtpTW2 = bomlk2.QuyCach;
-                    if (bomlk3 != null) model.QuyCachBtpTW3 = bomlk3.QuyCach;
-                    if (bomlk4 != null) model.QuyCachBtpTW4 = bomlk4.QuyCach;
-                    if (bomlk5 != null) model.QuyCachBtpTW5 = bomlk5.QuyCach;
-                    if (bomlk6 != null) model.QuyCachBtpTW6 = bomlk6.QuyCach;
-                    if (bomlk1 != null) model.MaBtpVN = bomlk1.MaBTPVN;
                     model.MaMuaHang = item.MaMuaHang;
                     model.MaMuaHang2 = item.MaMuaHang2;
                     model.MaMuaHang3 = item.MaMuaHang3;
                     model.TiLeNlBtp = item.TiLeNlBtp;
                     model.TiLeNlBtp2 = item.TiLeNlBtp2;
                     model.TiLeNlBtp3 = item.TiLeNlBtp3;
-                    if (bomnl != null) model.QuyCach = bomnl.QuyCach;
-                    if (bomnl2 != null) model.QuyCach2 = bomnl.QuyCach;
-                    if (bomnl3 != null) model.QuyCach3 = bomnl.QuyCach;
-                    if (bomnl != null) model.ChatLieu = bomnl.ChatLieu;
-                    if (bomnl2 != null) model.ChatLieu2 = bomnl.ChatLieu;
-                    if (bomnl3 != null) model.ChatLieu3 = bomnl.ChatLieu;
-                    if (bomlk1 != null) model.T = bomlk1.T;
-                    if (bomlk1 != null) model.W = bomlk1.W;
-                    if (bomlk1 != null) model.L = bomlk1.L;
                     model.HeSo = item.HeSo;
                     model.Id = item.Id;
                     model.GhiChu = item.GhiChu;
                     model.Kg = model.T * model.W * model.L * 0.00000785 * model.HeSo;
-                    if (bomlk1 != null) model.KgBtp = bomlk1.Kg;
                     model.MauSon = item.MauSon;
 
                     switch (Stt)
@@ -2395,6 +1936,75 @@ namespace BomRnD.ViewModel
                             BomTHList51.Add(model);
                             break;
                     }
+
+                    var bomlkphuchung = DataProvider.Ins.DB.BOM_BomTHLK.Where(p => string.IsNullOrEmpty(p.MaTpModul) && (p.MaBtp == item.MaBtp1));
+                    var bomlkphurieng = DataProvider.Ins.DB.BOM_BomTHLK.Where(p => (p.MaTp == itemtp.MaTp) && (p.MaBtp == item.MaBtp1));
+
+
+                    if (bomlkphurieng.Count() > 0)
+                    {
+                        foreach ( var itemphu in bomlkphurieng)
+                        {
+                            BomTHModel modelphu = new BomTHModel();
+                            var bomlkphu = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == itemphu.MaBtpPhu).FirstOrDefault();
+                            modelphu.MaBtpTW1 = itemphu.MaBtpPhu;
+                            modelphu.DisplayName = bomlkphu.DisplayName;
+                            modelphu.QuyCachBtpTW1 = bomlkphu.QuyCach;
+                            modelphu.HeSo = itemphu.HeSo;
+                            modelphu.Id = item.Id;
+                            switch (Stt)
+                            {
+                                case 1:
+                                    BomTHList.Add(modelphu);
+                                    break;
+                                case 2:
+                                    BomTHList21.Add(modelphu);
+                                    break;
+                                case 3:
+                                    BomTHList31.Add(modelphu);
+                                    break;
+                                case 4:
+                                    BomTHList41.Add(modelphu);
+                                    break;
+                                case 5:
+                                    BomTHList51.Add(modelphu);
+                                    break;
+                            }
+                        }
+                    }
+                    else if (bomlkphuchung.Count() > 0)
+                    {
+                        foreach (var itemphu in bomlkphuchung)
+                        {
+                            BomTHModel modelphu = new BomTHModel();
+                            var bomlkphu = DataProvider.Ins.DB.BOM_BomBtp.Where(p => p.MaHang == itemphu.MaBtpPhu).FirstOrDefault();
+                            modelphu.MaBtpTW1 = itemphu.MaBtpPhu;
+                            modelphu.DisplayName = bomlkphu.DisplayName;
+                            modelphu.QuyCachBtpTW1 = bomlkphu.QuyCach;
+                            modelphu.HeSo = itemphu.HeSo;
+                            modelphu.Id = item.Id;
+                            switch (Stt)
+                            {
+                                case 1:
+                                    BomTHList.Add(modelphu);
+                                    break;
+                                case 2:
+                                    BomTHList21.Add(modelphu);
+                                    break;
+                                case 3:
+                                    BomTHList31.Add(modelphu);
+                                    break;
+                                case 4:
+                                    BomTHList41.Add(modelphu);
+                                    break;
+                                case 5:
+                                    BomTHList51.Add(modelphu);
+                                    break;
+                            }
+                        }
+                    }
+
+                    
 
 
                 }

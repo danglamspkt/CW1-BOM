@@ -190,6 +190,7 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\BomTHLkPhuModel.cs" />
     <Compile Include="Model\BomTHModel.cs" />
     <Compile Include="Model\BOM_BomBtp.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -198,6 +199,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\BOM_BomTH.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BOM_BomTHLK.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\BOM_BomTp.cs">
@@ -369,6 +373,9 @@
     </Compile>
     <Compile Include="UserControlBomTH\BomTHEditWindows.xaml.cs">
       <DependentUpon>BomTHEditWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBomTH\BomTHLkPhuMainWindows.xaml.cs">
+      <DependentUpon>BomTHLkPhuMainWindows.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlBomTH\BomTHMainTitleUC.xaml.cs">
       <DependentUpon>BomTHMainTitleUC.xaml</DependentUpon>
@@ -611,6 +618,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlBomTH\BomTHEditWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlBomTH\BomTHLkPhuMainWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

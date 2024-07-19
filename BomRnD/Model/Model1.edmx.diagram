@@ -38,6 +38,11 @@
         <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__725BF7F6" />
         <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaMua__73501C2F" />
         <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTpM__53A266AC" />
+        <EntityTypeShape EntityType="gla43158_QLSXCW1Model.BOM_BomTHLK" Width="1.5" PointX="16.375" PointY="10.375" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__5B438874" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaBtp__5C37ACAD" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTH__MaTpM__5D2BD0E6" />
+        <AssociationConnector Association="gla43158_QLSXCW1Model.FK__BOM_BomTHL__MaTp__5A4F643B" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

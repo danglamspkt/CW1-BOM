@@ -261,5 +261,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="BOM_BomTHLK">
+      <EntityTypeMapping TypeName="gla43158_QLSXCW1Model.BOM_BomTHLK">
+        <MappingFragment StoreEntitySet="BOM-BomTHLK">
+          <ScalarProperty Name="DateEdit" ColumnName="DateEdit" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserNameEdit" ColumnName="UserNameEdit" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="HeSo" ColumnName="HeSo" />
+          <ScalarProperty Name="MaBtpPhu" ColumnName="MaBtpPhu" />
+          <ScalarProperty Name="MaBtp" ColumnName="MaBtp" />
+          <ScalarProperty Name="ThiTruong" ColumnName="ThiTruong" />
+          <ScalarProperty Name="MaTp" ColumnName="MaTp" />
+          <ScalarProperty Name="MaTpModul" ColumnName="MaTpModul" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -235,6 +235,7 @@
                                     <!--Button-->
                                     <Grid Grid.Row="5">
                                         <Button   x:Name="btnLogin"
+                                                  IsDefault="True"
                                                   Content="{Binding LOG0001, Mode=TwoWay}"
                                                   Command="{Binding LoginCommand}"
                                                   CommandParameter="{Binding ElementName=loginWindow}"

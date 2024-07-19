@@ -129,6 +129,23 @@
     <Property Name="Date" Type="date" />
     <Property Name="DateEdit" Type="date" />
   </EntityType>
+  <EntityType Name="BOM-BomTHLK">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaTpModul" Type="nvarchar" MaxLength="40" />
+    <Property Name="MaTp" Type="nvarchar" MaxLength="40" />
+    <Property Name="ThiTruong" Type="nvarchar(max)" />
+    <Property Name="MaBtp" Type="nvarchar" MaxLength="60" />
+    <Property Name="MaBtpPhu" Type="nvarchar" MaxLength="60" />
+    <Property Name="HeSo" Type="int" />
+    <Property Name="GhiChu" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserNameEdit" Type="nvarchar" MaxLength="100" />
+    <Property Name="Date" Type="date" />
+    <Property Name="DateEdit" Type="date" />
+  </EntityType>
   <EntityType Name="BOM-Image">
     <Key>
       <PropertyRef Name="Id" />
@@ -389,6 +406,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__BOM-BomTH__MaBtp__5B438874">
+    <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
+    <End Role="BOM-BomTHLK" Type="Self.BOM-BomTHLK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOM-BomBtp">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="BOM-BomTHLK">
+        <PropertyRef Name="MaBtp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOM-BomTH__MaBtp__5C37ACAD">
+    <End Role="BOM-BomBtp" Type="Self.BOM-BomBtp" Multiplicity="0..1" />
+    <End Role="BOM-BomTHLK" Type="Self.BOM-BomTHLK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOM-BomBtp">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="BOM-BomTHLK">
+        <PropertyRef Name="MaBtpPhu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__BOM-BomTH__MaMua__4A18FC72">
     <End Role="BOM-BomNl" Type="Self.BOM-BomNl" Multiplicity="0..1" />
     <End Role="BOM-BomTH" Type="Self.BOM-BomTH" Multiplicity="*" />
@@ -449,6 +490,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__BOM-BomTH__MaTpM__5D2BD0E6">
+    <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
+    <End Role="BOM-BomTHLK" Type="Self.BOM-BomTHLK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOM-BomTp">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="BOM-BomTHLK">
+        <PropertyRef Name="MaTpModul" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BOM-BomTHL__MaTp__5A4F643B">
+    <End Role="BOM-BomTp" Type="Self.BOM-BomTp" Multiplicity="0..1" />
+    <End Role="BOM-BomTHLK" Type="Self.BOM-BomTHLK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOM-BomTp">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="BOM-BomTHLK">
+        <PropertyRef Name="MaTp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__Users__IdRole__04E4BC85">
     <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
@@ -466,6 +531,7 @@
     <EntitySet Name="BOM-BomNl" EntityType="Self.BOM-BomNl" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-BomTp" EntityType="Self.BOM-BomTp" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-BomTH" EntityType="Self.BOM-BomTH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BOM-BomTHLK" EntityType="Self.BOM-BomTHLK" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-Image" EntityType="Self.BOM-Image" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-MaKeToanERP" EntityType="Self.BOM-MaKeToanERP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BOM-MaPL4ERP" EntityType="Self.BOM-MaPL4ERP" Schema="dbo" store:Type="Tables" />
@@ -525,6 +591,14 @@
       <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
     </AssociationSet>
+    <AssociationSet Name="FK__BOM-BomTH__MaBtp__5B438874" Association="Self.FK__BOM-BomTH__MaBtp__5B438874">
+      <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
+      <End Role="BOM-BomTHLK" EntitySet="BOM-BomTHLK" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOM-BomTH__MaBtp__5C37ACAD" Association="Self.FK__BOM-BomTH__MaBtp__5C37ACAD">
+      <End Role="BOM-BomBtp" EntitySet="BOM-BomBtp" />
+      <End Role="BOM-BomTHLK" EntitySet="BOM-BomTHLK" />
+    </AssociationSet>
     <AssociationSet Name="FK__BOM-BomTH__MaMua__4A18FC72" Association="Self.FK__BOM-BomTH__MaMua__4A18FC72">
       <End Role="BOM-BomNl" EntitySet="BOM-BomNl" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
@@ -544,6 +618,14 @@
     <AssociationSet Name="FK__BOM-BomTH__MaTpM__53A266AC" Association="Self.FK__BOM-BomTH__MaTpM__53A266AC">
       <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
       <End Role="BOM-BomTH" EntitySet="BOM-BomTH" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOM-BomTH__MaTpM__5D2BD0E6" Association="Self.FK__BOM-BomTH__MaTpM__5D2BD0E6">
+      <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
+      <End Role="BOM-BomTHLK" EntitySet="BOM-BomTHLK" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BOM-BomTHL__MaTp__5A4F643B" Association="Self.FK__BOM-BomTHL__MaTp__5A4F643B">
+      <End Role="BOM-BomTp" EntitySet="BOM-BomTp" />
+      <End Role="BOM-BomTHLK" EntitySet="BOM-BomTHLK" />
     </AssociationSet>
     <AssociationSet Name="FK__Users__IdRole__04E4BC85" Association="Self.FK__Users__IdRole__04E4BC85">
       <End Role="UserRole" EntitySet="UserRole" />

@@ -86,14 +86,32 @@
                     <RowDefinition />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0"
-                           Text="LUXSO"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           FontSize="32"
-                           FontFamily="Arial Black"
-                           Margin="20"
-                           Foreground="#f2f2f2" />
+                <StackPanel Grid.Row="0">
+                    <TextBlock Text="LUXSO"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="32"
+                               FontFamily="Arial Black"
+                               Margin="20"
+                               Foreground="#f2f2f2" />
+                    <StackPanel>
+                        <TextBlock Text="{Binding MNP0008, Mode=TwoWay}"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel x:Name="ACImg"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center">
+
+                            </StackPanel>
+
+                            <StackPanel HorizontalAlignment="Left"
+                                        VerticalAlignment="Center">
+                                <TextBlock Text="{Binding DisplayName}"></TextBlock>
+                                <TextBlock Text="{Binding ChucVu}"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                
                 <StackPanel Grid.Row="1">                    
                     <ListBox VerticalAlignment="Top"
                              Foreground="#E8DEF8"
@@ -180,6 +198,7 @@
                         </ListBoxItem>-->
                     </ListBox>
                 </StackPanel>
+                
                 <StackPanel Grid.Row="2"
                             Height="50" Orientation="Horizontal">
                     <materialDesign:PackIcon Height="30"
@@ -221,40 +240,6 @@
                     </TextBlock>
                 </StackPanel>
             </Grid>
-
-            <Grid DockPanel.Dock="Right" Grid.Column="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Row="0">
-                    <TextBlock Text="{Binding MNP0008, Mode=TwoWay}"></TextBlock>
-                    <StackPanel Orientation="Horizontal">
-                        <StackPanel x:Name="ACImg"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center">
-
-                        </StackPanel>
-
-                        <StackPanel HorizontalAlignment="Left"
-                                    VerticalAlignment="Center">
-                            <TextBlock Text="{Binding DisplayName}"></TextBlock>
-                            <TextBlock Text="{Binding ChucVu}"></TextBlock>
-                        </StackPanel>
-                    </StackPanel>
-                </StackPanel>
-
-                <Calendar Grid.Row="1"
-                          Style="{StaticResource MaterialDesignCalendarPortrait}"
-                          materialDesign:CalendarAssist.IsHeaderVisible="False"
-                          Background="#262624"
-                          Foreground="#f2f2f2"
-                          Margin="0 20 0 20"
-                          VerticalAlignment="Bottom" />
-
-            </Grid>
-
             <Grid Grid.Column="1">
                 <materialDesign:Card UniformCornerRadius="40"                                     
                                      materialDesign:ElevationAssist.Elevation="Dp0"

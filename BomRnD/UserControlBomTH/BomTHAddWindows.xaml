@@ -169,7 +169,7 @@
 
                             <StackPanel Orientation="Horizontal">
                                 <StackPanel>
-                                    <TextBlock Text="Mã BTP 1"
+                                    <TextBlock Text="Mã BTP"
                                                HorizontalAlignment="Left"
                                                FontSize="14"
                                                FontWeight="Bold"
@@ -197,74 +197,6 @@
                                                 Margin="5 0 0 0"
                                                 Background="Teal"
                                                 Command="{Binding LoadAddMaBTP1Command}" />
-                                    </StackPanel>
-                                </StackPanel>
-
-                                <StackPanel Margin="10 0 0 0">
-                                    <TextBlock Text="Mã BTP 2"
-                                               HorizontalAlignment="Left"
-                                               FontSize="14"
-                                               FontWeight="Bold"
-                                               Margin="20 5 5 0"
-                                               Width="180">
-                                    </TextBlock>
-                                    <StackPanel Orientation="Horizontal"
-                                                Margin="5">
-                                        <ComboBox ItemsSource="{Binding BTP2AddListFa}"
-                                                  DisplayMemberPath="MaHang"
-                                                  Text="{Binding MaBtp32, Mode=TwoWay}"
-                                                  materialDesign:ComboBoxAssist.MaxLength="10"
-                                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                  materialDesign:HintAssist.IsFloating="False"
-                                                  Padding="5"
-                                                  Width="250"
-                                                  HorizontalAlignment="Left"
-                                                  FontSize="14"
-                                                  FontWeight="Bold" />
-                                        <Button Content="..."
-                                                Padding="2"
-                                                Height="35"
-                                                Width="35"
-                                                Margin="5 0 0 0"
-                                                Background="Teal"
-                                                Command="{Binding LoadAddMaBTP2Command}" />
-                                    </StackPanel>
-                                </StackPanel>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal">
-                               
-
-                                <StackPanel Margin="0 0 0 0">
-                                    <TextBlock Text="Mã BTP 3"
-                                               HorizontalAlignment="Left"
-                                               FontSize="14"
-                                               FontWeight="Bold"
-                                               Margin="20 5 5 0"
-                                               Width="180">
-                                    </TextBlock>
-                                    <StackPanel Orientation="Horizontal"
-                                                Margin="5">
-                                        <ComboBox ItemsSource="{Binding BTP3AddListFa}"
-                                                  DisplayMemberPath="MaHang"
-                                                  Text="{Binding MaBtp33, Mode=TwoWay}"
-                                                  materialDesign:ComboBoxAssist.MaxLength="10"
-                                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                                  materialDesign:TextFieldAssist.TextFieldCornerRadius="10"
-                                                  materialDesign:HintAssist.IsFloating="False"
-                                                  Padding="5"
-                                                  Width="250"
-                                                  HorizontalAlignment="Left"
-                                                  FontSize="14"
-                                                  FontWeight="Bold" />
-                                        <Button Content="..."
-                                                Padding="2"
-                                                Height="35"
-                                                Width="35"
-                                                Margin="5 0 0 0"
-                                                Background="Teal"
-                                                Command="{Binding LoadAddMaBTP3Command}" />
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel Margin="10 0 0 0">

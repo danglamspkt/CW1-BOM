@@ -40,5 +40,6 @@ namespace BomRnD.Model
         public virtual DbSet<BOM_Unit> BOM_Unit { get; set; }
         public virtual DbSet<BOM_BomNl> BOM_BomNl { get; set; }
         public virtual DbSet<BOM_MaKeToanERP> BOM_MaKeToanERP { get; set; }
+        public virtual DbSet<BOM_BomTHLK> BOM_BomTHLK { get; set; }
     }
 }

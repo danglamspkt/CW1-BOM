@@ -84,6 +84,7 @@
             </TextBox>
 
             <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    IsDefault="True"
                     Background="Orange"
                     Width="50"
                     Height="50"

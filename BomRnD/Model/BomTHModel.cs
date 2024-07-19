@@ -17,17 +17,7 @@ namespace BomRnD.Model
         public string MaBanVe1 { get; set; }
         public string MaBanVe2 { get; set; }
         public string MaBtpTW1 { get; set; } 
-        public string QuyCachBtpTW1 { get; set; }
-        public string MaBtpTW2 { get; set; }
-        public string QuyCachBtpTW2 { get; set; }
-        public string MaBtpTW3 { get; set; }
-        public string QuyCachBtpTW3 { get; set; }
-        public string MaBtpTW4 { get; set; }
-        public string QuyCachBtpTW4 { get; set; }
-        public string MaBtpTW5 { get; set; }
-        public string QuyCachBtpTW5 { get; set; }
-        public string MaBtpTW6 { get; set; }
-        public string QuyCachBtpTW6 { get; set; }
+        public string QuyCachBtpTW1 { get; set; }        
         public string MaBtpVN { get; set; }
         public string MaMuaHang { get; set; }
         public string MaMuaHang2 { get; set; }
