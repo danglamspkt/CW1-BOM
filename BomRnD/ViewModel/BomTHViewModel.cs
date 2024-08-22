@@ -1190,45 +1190,35 @@ namespace BomRnD.ViewModel
                             // font family mặc định cho cả sheet
                             ws.Cells.Style.Font.Name = "Times New Roman";
 
-                            ws.Column(1).Width = 9.5;
-                            ws.Column(2).Width = 7;
-                            ws.Column(3).Width = 23;
-                            ws.Column(4).Width = 23;
-                            ws.Column(5).Width = 15;
-                            ws.Column(6).Width = 15;
-                            ws.Column(7).Width = 20;
-                            ws.Column(8).Width = 20;
-                            ws.Column(9).Width = 20;
-                            ws.Column(10).Width = 20;
-                            ws.Column(11).Width = 20;
-                            ws.Column(12).Width = 20;
-                            ws.Column(13).Width = 20;
-                            ws.Column(14).Width = 20;
-                            ws.Column(15).Width = 20;
-                            ws.Column(16).Width = 20;
-                            ws.Column(17).Width = 20;
-                            ws.Column(18).Width = 20;
-                            ws.Column(19).Width = 25;
-                            ws.Column(20).Width = 20;
-                            ws.Column(21).Width = 13;
-                            ws.Column(22).Width = 13;
-                            ws.Column(23).Width = 20;
-                            ws.Column(24).Width = 20;
-                            ws.Column(25).Width = 13;
-                            ws.Column(26).Width = 13;
-                            ws.Column(27).Width = 20;
-                            ws.Column(28).Width = 20;
-                            ws.Column(29).Width = 13;
-                            ws.Column(30).Width = 13;
-                            ws.Column(31).Width = 20;
-                            ws.Column(32).Width = 8.5;
-                            ws.Column(33).Width = 8.5;
-                            ws.Column(34).Width = 8.5;
-                            ws.Column(35).Width = 8.5;
-                            ws.Column(36).Width = 8.5;
-                            ws.Column(37).Width = 8.5;
-                            ws.Column(38).Width = 13;
-                            ws.Column(39).Width = 30;
+                            //ws.Column(1).Width = 9.5;
+                            //ws.Column(2).Width = 7;
+                            //ws.Column(3).Width = 23;
+                            //ws.Column(4).Width = 23;
+                            //ws.Column(5).Width = 15;
+                            //ws.Column(6).Width = 15;
+                            //ws.Column(7).Width = 20;
+                            //ws.Column(8).Width = 20;
+                            //ws.Column(9).Width = 20;
+                            //ws.Column(10).Width = 20;
+                            //ws.Column(11).Width = 20;
+                            //ws.Column(12).Width = 20;
+                            //ws.Column(13).Width = 20;
+                            //ws.Column(14).Width = 20;
+                            //ws.Column(15).Width = 20;
+                            //ws.Column(16).Width = 20;
+                            //ws.Column(17).Width = 20;
+                            //ws.Column(18).Width = 20;
+                            //ws.Column(19).Width = 25;
+                            //ws.Column(20).Width = 20;
+                            //ws.Column(21).Width = 13;
+                            //ws.Column(22).Width = 13;
+                            //ws.Column(23).Width = 20;
+                            //ws.Column(24).Width = 20;
+                            //ws.Column(25).Width = 13;
+                            //ws.Column(26).Width = 13;
+                            //ws.Column(27).Width = 20;
+                            //ws.Column(28).Width = 20;
+                            //ws.Column(29).Width = 13;
 
                             ws.Row(1).Height = 25.5;
                             ws.Row(2).Height = 30.75;
@@ -1238,19 +1228,19 @@ namespace BomRnD.ViewModel
 
 
 
-                            ws.Cells[1, 2, 1, 30].Merge = true;
-                            ws.Cells[1, 2, 1, 30].Style.Font.Bold = true;
-                            ws.Cells[1, 2, 1, 30].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            ws.Cells[1, 1, 1, 29].Merge = true;
+                            ws.Cells[1, 1, 1, 29].Style.Font.Bold = true;
+                            ws.Cells[1, 1, 1, 29].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                            ws.Cells[2, 2, 2, 30].Merge = true;
-                            ws.Cells[2, 2, 2, 30].Style.Font.Bold = true;
-                            ws.Cells[2, 2, 2, 30].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            ws.Cells[2, 1, 2, 29].Merge = true;
+                            ws.Cells[2, 1, 2, 29].Style.Font.Bold = true;
+                            ws.Cells[2, 1, 2, 29].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                            ws.Cells[1, 2].Value = "CLEARWATER  METAL  VN  JOINT  STOCK  COMPANY";
-                            ws.Cells[1, 2].Style.Font.Size = 20;
+                            ws.Cells[1, 1].Value = "CLEARWATER  METAL  VN  JOINT  STOCK  COMPANY";
+                            ws.Cells[1, 1].Style.Font.Size = 20;
 
-                            ws.Cells[2, 2].Value = "(BOM)";
-                            ws.Cells[2, 2].Style.Font.Size = 18;
+                            ws.Cells[2, 1].Value = "(BOM)";
+                            ws.Cells[2, 1].Style.Font.Size = 18;
 
                             ws.Cells[3, 2, 3, 3].Merge = true;
                             ws.Cells[3, 2, 3, 3].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
@@ -1271,11 +1261,11 @@ namespace BomRnD.ViewModel
                             ws.Cells[4, 2].Value = "Kích cỡ thùng：";
                             ws.Cells[4, 2].Style.Font.Size = 11;
 
-                            ws.Cells[4, 3].Value = "Màu sơn:";
-                            ws.Cells[4, 3].Style.Font.Size = 11;
-
-                            ws.Cells[4, 4].Value = tp.MauSon;
+                            ws.Cells[4, 4].Value = "Màu sơn:";
                             ws.Cells[4, 4].Style.Font.Size = 11;
+
+                            ws.Cells[4, 5].Value = tp.MauSon;
+                            ws.Cells[4, 5].Style.Font.Size = 11;
 
                             ws.Cells[4, 7].Value = "Số lượng tủ：";
                             ws.Cells[4, 7].Style.Font.Size = 11;
@@ -1283,7 +1273,7 @@ namespace BomRnD.ViewModel
 
 
 
-                            for (int j = 2; j < 32; j++)
+                            for (int j = 2; j < 12; j++)
                             {
                                 ws.Cells[5, j, 6, j].Merge = true;
                                 ws.Cells[5, j, 6, j].Style.Font.Bold = true;
@@ -1292,16 +1282,16 @@ namespace BomRnD.ViewModel
                                 ws.Cells[5, j, 6, j].Style.WrapText = true;
                             }
 
-                            ws.Cells[5, 32, 5, 34].Merge = true;
-                            ws.Cells[5, 32, 5, 34].Style.Font.Bold = true;
-                            ws.Cells[5, 32, 5, 34].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
-                            ws.Cells[5, 32, 5, 34].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            ws.Cells[5, 12, 5, 14].Merge = true;
+                            ws.Cells[5, 12, 5, 14].Style.Font.Bold = true;
+                            ws.Cells[5, 12, 5, 14].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                            ws.Cells[5, 12, 5, 14].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                            ws.Cells[6, 32].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                            ws.Cells[6, 33].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                            ws.Cells[6, 34].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            ws.Cells[6, 12].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            ws.Cells[6, 13].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            ws.Cells[6, 14].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
-                            for (int j = 35; j <= 39; j++)
+                            for (int j = 15; j <= 29; j++)
                             {
                                 ws.Cells[5, j, 6, j].Merge = true;
                                 ws.Cells[5, j, 6, j].Style.Font.Bold = true;
@@ -1328,10 +1318,6 @@ namespace BomRnD.ViewModel
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
 
-                            ws.Cells[5, l].Value = "Số hoạ 2";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
                             ws.Cells[5, l].Value = "Mã BTP TW 1";
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
@@ -1340,45 +1326,6 @@ namespace BomRnD.ViewModel
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
 
-                            ws.Cells[5, l].Value = "Mã BTP TW 2";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách BTP 2";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Mã BTP TW 3";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách BTP 3";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Mã BTP TW 4";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách BTP 4";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Mã BTP TW 5";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách BTP 5";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Mã BTP TW 6";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách BTP 6";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
 
                             ws.Cells[5, l].Value = "Mã BTP VN";
                             ws.Cells[5, l].Style.Font.Size = 11;
@@ -1388,47 +1335,11 @@ namespace BomRnD.ViewModel
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
 
-                            ws.Cells[5, l].Value = "Tỉ lệ NL/BTP 1";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Chất liệu 1";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách 1";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
                             ws.Cells[5, l].Value = "Mã mua hàng 2";
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
 
-                            ws.Cells[5, l].Value = "Tỉ lệ NL/BTP 2";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Chất liệu 2";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách 2";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
                             ws.Cells[5, l].Value = "Mã mua hàng 3";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Tỉ lệ NL/BTP 3";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Chất liệu 3";
-                            ws.Cells[5, l].Style.Font.Size = 11;
-                            l++;
-
-                            ws.Cells[5, l].Value = "Quy cách 3";
                             ws.Cells[5, l].Style.Font.Size = 11;
                             l++;
 
@@ -1476,9 +1387,47 @@ namespace BomRnD.ViewModel
                             ws.Cells[5, l].Style.Font.Size = 11;
 
                             ws.Column(l).Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
-
                             l++;
 
+                            ws.Cells[5, l].Value = "Tỉ lệ NL/BTP 1";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Chất liệu 1";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Quy cách 1";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Tỉ lệ NL/BTP 2";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Chất liệu 2";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Quy cách 2";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Tỉ lệ NL/BTP 3";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Chất liệu 3";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Quy cách 3";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
+
+                            ws.Cells[5, l].Value = "Số hoạ 2";
+                            ws.Cells[5, l].Style.Font.Size = 11;
+                            l++;
                             ws.Cells[5, l].Value = "KG linh kiện";
                             ws.Cells[5, l].Style.Font.Size = 11;
 
@@ -1490,6 +1439,8 @@ namespace BomRnD.ViewModel
 
                             ws.Cells[5, l].Value = "Ghi chú";
                             ws.Cells[5, l].Style.Font.Size = 11;
+                            
+                            
 
                             var border2 = ws.Cells[5, 2, 6, l].Style.Border;
                             border2.Bottom.Style =
@@ -1530,10 +1481,6 @@ namespace BomRnD.ViewModel
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
 
-                                if (IBtp != null) ws.Cells[i, k].Value = IBtp.MaBanVe2;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
                                 ws.Cells[i, k].Value = item.MaBtp1;
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
@@ -1542,35 +1489,6 @@ namespace BomRnD.ViewModel
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
 
-                               
-                                k++;
-
-                                
-                                k++;
-
-                                
-                                k++;
-
-                               
-                                k++;
-
-                                
-                                k++;
-
-                                
-                                k++;
-
-                                
-                                k++;
-
-                                
-                                k++;
-
-                                
-                                k++;
-
-                                
-                                k++;
 
                                 if (IBtp != null) ws.Cells[i, k].Value = IBtp.MaBTPVN;
                                 ws.Cells[i, k].Style.Font.Size = 11;
@@ -1580,47 +1498,11 @@ namespace BomRnD.ViewModel
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
 
-                                ws.Cells[i, k].Value = item.TiLeNlBtp;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
-                                if (INl != null) ws.Cells[i, k].Value = INl.ChatLieu;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
-                                if (INl != null) ws.Cells[i, k].Value = INl.QuyCach;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
                                 ws.Cells[i, k].Value = item.MaMuaHang2;
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
 
-                                ws.Cells[i, k].Value = item.TiLeNlBtp2;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
-                                if (INl2 != null) ws.Cells[i, k].Value = INl2.ChatLieu;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
-                                if (INl2 != null) ws.Cells[i, k].Value = INl2.QuyCach;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
                                 ws.Cells[i, k].Value = item.MaMuaHang3;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
-                                ws.Cells[i, k].Value = item.TiLeNlBtp3;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
-                                if (INl3 != null) ws.Cells[i, k].Value = INl3.ChatLieu;
-                                ws.Cells[i, k].Style.Font.Size = 11;
-                                k++;
-
-                                if (INl3 != null) ws.Cells[i, k].Value = INl3.QuyCach;
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
 
@@ -1644,6 +1526,46 @@ namespace BomRnD.ViewModel
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
 
+                                ws.Cells[i, k].Value = item.TiLeNlBtp;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                if (INl != null) ws.Cells[i, k].Value = INl.ChatLieu;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                if (INl != null) ws.Cells[i, k].Value = INl.QuyCach;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                if (IBtp != null) ws.Cells[i, k].Value = IBtp.MaBanVe2;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                ws.Cells[i, k].Value = item.TiLeNlBtp2;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                if (INl2 != null) ws.Cells[i, k].Value = INl2.ChatLieu;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                if (INl2 != null) ws.Cells[i, k].Value = INl2.QuyCach;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                ws.Cells[i, k].Value = item.TiLeNlBtp3;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                if (INl3 != null) ws.Cells[i, k].Value = INl3.ChatLieu;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
+                                if (INl3 != null) ws.Cells[i, k].Value = INl3.QuyCach;
+                                ws.Cells[i, k].Style.Font.Size = 11;
+                                k++;
+
                                 if (IBtp != null) ws.Cells[i, k].Value = IBtp.Kg;
                                 ws.Cells[i, k].Style.Font.Size = 11;
                                 k++;
@@ -1654,6 +1576,7 @@ namespace BomRnD.ViewModel
 
                                 ws.Cells[i, k].Value = item.GhiChu;
                                 ws.Cells[i, k].Style.Font.Size = 11;
+                                
 
 
                                 if ((IBtp != null) && (IBtp.T != null) && (IBtp.W != null) && (IBtp.L != null)) sum = sum + (IBtp.T * IBtp.W * IBtp.L * 0.00000785 * item.HeSo);
@@ -1665,11 +1588,82 @@ namespace BomRnD.ViewModel
                                         border.Right.Style = ExcelBorderStyle.Thin;
 
                                 i++;
+
+                                var bomlkphuchung = DataProvider.Ins.DB.BOM_BomTHLK.Where(x => string.IsNullOrEmpty(x.MaTpModul) && (x.MaBtp == item.MaBtp1));
+                                var bomlkphurieng = DataProvider.Ins.DB.BOM_BomTHLK.Where(x => (x.MaTp == itemx.MaTp) && (x.MaBtp == item.MaBtp1));
+
+
+                                if (bomlkphurieng.Count() > 0)
+                                {
+                                    foreach (var itemphu in bomlkphurieng)
+                                    {
+                                        var bomlkphu = DataProvider.Ins.DB.BOM_BomBtp.Where(y => y.MaHang == itemphu.MaBtpPhu).FirstOrDefault();
+
+                                        ws.Cells[i, 6].Value = itemphu.MaBtpPhu;
+                                        ws.Cells[i, 4].Value = bomlkphu.DisplayName;
+                                        ws.Cells[i, 7].Value = bomlkphu.QuyCach;
+                                        ws.Cells[i, 15].Value = itemphu.HeSo;
+                                        var borderp1 = ws.Cells[i, 6].Style.Border;
+                                        var borderp2 = ws.Cells[i, 4].Style.Border;
+                                        var borderp3 = ws.Cells[i, 7].Style.Border;
+                                        var borderp4 = ws.Cells[i, 15].Style.Border;
+                                        borderp1.Bottom.Style =
+                                                borderp1.Top.Style =
+                                                borderp1.Left.Style =
+                                                borderp1.Right.Style =
+                                                borderp2.Bottom.Style =
+                                                borderp2.Top.Style =
+                                                borderp2.Left.Style =
+                                                borderp2.Right.Style =
+                                                borderp3.Bottom.Style =
+                                                borderp3.Top.Style =
+                                                borderp3.Left.Style =
+                                                borderp3.Right.Style =
+                                                borderp4.Bottom.Style =
+                                                borderp4.Top.Style =
+                                                borderp4.Left.Style =
+                                                borderp4.Right.Style = ExcelBorderStyle.Thin;
+                                        i++;
+                                    }
+                                }
+                                else if (bomlkphuchung.Count() > 0)
+                                {
+                                    foreach (var itemphu in bomlkphuchung)
+                                    {
+                                        var bomlkphu = DataProvider.Ins.DB.BOM_BomBtp.Where(y => y.MaHang == itemphu.MaBtpPhu).FirstOrDefault();
+
+                                        ws.Cells[i, 6].Value = itemphu.MaBtpPhu;
+                                        ws.Cells[i, 4].Value = bomlkphu.DisplayName;
+                                        ws.Cells[i, 7].Value = bomlkphu.QuyCach;
+                                        ws.Cells[i, 15].Value = itemphu.HeSo;
+                                        var borderp1 = ws.Cells[i, 6].Style.Border;
+                                        var borderp2 = ws.Cells[i, 4].Style.Border;
+                                        var borderp3 = ws.Cells[i, 7].Style.Border;
+                                        var borderp4 = ws.Cells[i, 15].Style.Border;
+                                        borderp1.Bottom.Style =
+                                                borderp1.Top.Style =
+                                                borderp1.Left.Style =
+                                                borderp1.Right.Style =
+                                                borderp2.Bottom.Style =
+                                                borderp2.Top.Style =
+                                                borderp2.Left.Style =
+                                                borderp2.Right.Style =
+                                                borderp3.Bottom.Style =
+                                                borderp3.Top.Style =
+                                                borderp3.Left.Style =
+                                                borderp3.Right.Style =
+                                                borderp4.Bottom.Style =
+                                                borderp4.Top.Style =
+                                                borderp4.Left.Style =
+                                                borderp4.Right.Style = ExcelBorderStyle.Thin;
+                                        i++;
+                                    }
+                                }
                             }
 
                             
-                            ws.Cells[4, 36].Value = sum;
-                            ws.Cells[4, 36].Style.Font.Size = 11;
+                            ws.Cells[4, 16].Value = sum;
+                            ws.Cells[4, 16].Style.Font.Size = 11;
                             
 
                             ws.Cells[i + 2, 3].Value = "Kích thước tủ (mm)";
@@ -1760,7 +1754,7 @@ namespace BomRnD.ViewModel
                             ws.Cells[i + 2, 3, i + 5, 7].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
                             ws.Cells[i + 7, 3, i + 10, 5].Style.Numberformat.Format = "_-* #,##0.00_-;-* #,##0.00_-;_-* \"-\"??_-;_-@_-";
 
-                            ws.Cells[3, 36].Style.Numberformat.Format = "dd/mm/yyyy";
+                            ws.Cells[3, 26].Style.Numberformat.Format = "dd/mm/yyyy";
 
 
 
@@ -1777,17 +1771,17 @@ namespace BomRnD.ViewModel
                                     border4.Right.Style = ExcelBorderStyle.Thin;
 
                             ws.Cells.AutoFitColumns();
-                            ws.Column(6).Hidden = true;
-                            for (int c  = 9; c <= 18; c++)
-                            {
-                                ws.Column(c).Hidden = true;
+                            //ws.Column(6).Hidden = true;
+                            //for (int c  = 9; c <= 18; c++)
+                            //{
+                            //    ws.Column(c).Hidden = true;
 
-                            }
-                            for (int c = 24; c <= 31; c++)
-                            {
-                                ws.Column(c).Hidden = true;
+                            //}
+                            //for (int c = 24; c <= 31; c++)
+                            //{
+                            //    ws.Column(c).Hidden = true;
 
-                            }
+                            //}
 
 
                         }
